@@ -1,0 +1,29 @@
+.container {
+  list-style-type: none;
+  justify-content: center;
+  column-gap: 4rem;
+}
+
+.container li a.link {
+  text-decoration: none;
+  color: var(--clr-900);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+}
+
+.container li {
+  position: relative;
+}
+
+.container li a.active {
+  color: var(--clr-blue-700);
+}
+
+.container li .underline {
+  width: 100%;
+  height: 2px;
+  background-color: var(--clr-blue-700);
+  position: absolute;
+  bottom: -0.5rem;
+}
