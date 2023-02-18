@@ -10,7 +10,6 @@ interface NavItem {
 
 const MainNav = () => {
   const router = useRouter();
-  console.log(router.pathname);
 
   const navItems: NavItem[] = [
     {
@@ -27,7 +26,7 @@ const MainNav = () => {
     },
     {
       name: `Instytut Medycyny Orientalnej`,
-      link: `/insytut_medycyny_orientalnej`,
+      link: `/instytut_medycyny_orientalnej`,
     },
     {
       name: `Szlachetne zdrowie`,

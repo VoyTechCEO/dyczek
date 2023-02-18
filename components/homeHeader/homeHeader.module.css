@@ -1,0 +1,40 @@
+.container {
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.container .baner {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.91),
+      #fff
+    ),
+    url('../../public/img/gabinet.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 100vh;
+  max-height: 52rem;
+  width: 100%;
+  position: absolute;
+  z-index: -9;
+}
+
+.container .head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.container h1.title {
+  color: var(--clr-blue-700);
+  font-size: 2.5rem;
+  font-family: var(--sub-font-2);
+}
+
+.container h2.undertitle {
+  color: var(--clr-red-100);
+  font-size: 1rem;
+  font-weight: 500;
+}

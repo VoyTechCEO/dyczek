@@ -2,6 +2,7 @@
   list-style-type: none;
   justify-content: center;
   column-gap: 4rem;
+  margin-bottom: 2rem;
 }
 
 .container li a.link {
@@ -10,6 +11,8 @@
   font-size: 1rem;
   font-weight: 700;
   padding: 0.5rem 1rem;
+  display: flex;
+  text-align: center;
 }
 
 .container li {
@@ -25,5 +28,5 @@
   height: 2px;
   background-color: var(--clr-blue-700);
   position: absolute;
-  bottom: -0.5rem;
+  bottom: 0;
 }

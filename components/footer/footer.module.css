@@ -1,0 +1,15 @@
+.container {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+  padding: 2rem 0;
+}
+
+.container p {
+  font-weight: 500;
+}
+
+.container p a {
+  text-decoration: underline;
+  color: var(--clr-blue-700);
+}
