@@ -2,3 +2,63 @@
   flex-direction: column;
   align-items: center;
 }
+
+.container article.frame {
+  width: 50rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 5rem;
+}
+
+.container article.frame .edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: solid 2px var(--clr-blue-700);
+  border-top: solid 2px var(--clr-blue-700);
+  width: 5rem;
+  height: 8rem;
+}
+
+.container article.frame .edge:last-of-type {
+  top: auto;
+  left: auto;
+  right: 0;
+  bottom: 0;
+  border-left: none;
+  border-top: none;
+  border-bottom: solid 2px var(--clr-blue-700);
+  border-right: solid 2px var(--clr-blue-700);
+}
+
+.container article.frame ul {
+  list-style-type: none;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.container article.frame ul li {
+  margin-top: 1rem;
+}
+
+.container article.frame ul li:before {
+  content: '\2014';
+  position: absolute;
+  margin-left: -2rem;
+  color: var(--clr-900);
+  font-weight: 400;
+}
+
+.container article.frame ul li span {
+  color: var(--clr-red-100);
+}
+
+.container article.frame ul li a {
+  color: var(--clr-blue-700);
+}
+
+.container article.frame p a {
+  color: var(--clr-900);
+  text-decoration: none;
+}

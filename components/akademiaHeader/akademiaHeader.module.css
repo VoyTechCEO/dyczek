@@ -1,0 +1,19 @@
+.container {
+  flex-direction: column;
+}
+
+.container .baner {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.91),
+      #fff
+    ),
+    url('../../public/img/gabinet.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 100vh;
+  max-height: 52rem;
+  width: 100%;
+  position: absolute;
+  z-index: -9;
+}

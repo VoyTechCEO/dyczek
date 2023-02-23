@@ -27,7 +27,7 @@ const HomeHeader = () => {
   return (
     <>
       <section className={`container ${homeHeaderStyles.container}`}>
-        <div className={homeHeaderStyles.baner} />
+        <div className={homeHeaderStyles.banner} />
         <div className={homeHeaderStyles.head}>
           <h1 className={homeHeaderStyles.title}>HENRYK DYCZEK</h1>
           <h2 className={homeHeaderStyles.undertitle}>

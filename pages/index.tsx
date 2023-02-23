@@ -12,7 +12,7 @@ export default function Home() {
         <HomeHeader />
         <MainNav />
         <HomeMainContent />
-        <Footer />
+        <Footer sinceYear={2008} />
       </main>
     </>
   );

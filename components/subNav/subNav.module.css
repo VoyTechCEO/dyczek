@@ -1,0 +1,20 @@
+.container {
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  row-gap: 1rem;
+  border-right: 2px solid var(--clr-blue-700);
+  padding: 3rem 0;
+}
+
+.container li:last-of-type {
+  margin-top: 2rem;
+}
+
+.container li a {
+  text-decoration: none;
+  color: var(--clr-900);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0 3.5rem;
+}

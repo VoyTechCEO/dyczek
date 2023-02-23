@@ -1,0 +1,41 @@
+.container {
+  flex-direction: column;
+}
+
+.container .banner {
+  background-image: linear-gradient(rgba(255, 255, 255, 0), var(--clr-blue-100)),
+    url('../../public/img/akupunktura.png');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  max-height: 35rem;
+  width: 100%;
+  position: absolute;
+}
+
+.container .overlay {
+  z-index: 9;
+  padding: 2rem 1.5rem;
+  position: relative;
+}
+
+.container .overlay img {
+  width: auto;
+  height: 6rem;
+}
+
+.container .overlay .bg {
+  background-color: var(--clr-blue-100);
+  width: 25rem;
+  height: 42rem;
+  opacity: 0.3;
+  position: absolute;
+  top: -25rem;
+  left: 0rem;
+  z-index: -9;
+  transform: rotate(65deg);
+}
+
+.container ul {
+  margin-top: 25rem;
+}

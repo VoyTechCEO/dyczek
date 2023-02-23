@@ -26,11 +26,16 @@ body {
   font-family: var(--main-font);
 }
 
-.main {
+#main {
   width: 100%;
   min-height: 100vh;
   position: relative;
   display: flex;
+  flex-direction: column;
+}
+
+.main-blue {
+  background-color: var(--clr-blue-100);
 }
 
 .container {
