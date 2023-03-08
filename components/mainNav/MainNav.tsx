@@ -1,6 +1,8 @@
+import { siteThemeState } from '@/recoilMain';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useRecoilState } from 'recoil';
 import mainNavStyles from './mainNav.module.css';
 
 interface NavItem {
@@ -10,6 +12,8 @@ interface NavItem {
 
 const MainNav = () => {
   const router = useRouter();
+
+  const [siteTheme, setSiteTheme] = useRecoilState(siteThemeState);
 
   const navItems: NavItem[] = [
     {
@@ -34,24 +38,32 @@ const MainNav = () => {
     },
   ];
 
+  const currentPath = navItems.reverse().find((item) => {
+    return router.pathname.includes(item.link);
+  });
+  navItems.reverse();
+
   return (
     <>
       <ul className={`container ${mainNavStyles.container}`}>
         {navItems.map((item: NavItem, index) => {
           return (
-            <li key={`${item}${index}`}>
+            <li
+              key={`${item}${index}`}
+              className={siteTheme === `imo` ? mainNavStyles.imo : ``}
+            >
               <Link
                 href={item.link}
                 className={
                   // extract the current route
-                  router.pathname === item.link
+                  currentPath === item
                     ? `${mainNavStyles.link} ${mainNavStyles.active}`
                     : mainNavStyles.link
                 }
               >
                 {item.name}
               </Link>
-              {router.pathname === item.link && (
+              {currentPath === item && (
                 <div className={mainNavStyles.underline} />
               )}
             </li>

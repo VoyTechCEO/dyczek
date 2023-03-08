@@ -38,6 +38,10 @@ body {
   background-color: var(--clr-blue-100);
 }
 
+.main-yellow {
+  background-color: var(--clr-yel);
+}
+
 .container {
   display: flex;
 }

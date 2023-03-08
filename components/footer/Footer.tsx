@@ -1,4 +1,6 @@
+import { siteThemeState } from '@/recoilMain';
 import React from 'react';
+import { useRecoilState } from 'recoil';
 import footerStyles from './footer.module.css';
 
 interface Props {
@@ -6,9 +8,15 @@ interface Props {
 }
 
 const Footer = ({ sinceYear }: Props) => {
+  const [siteTheme, setSiteTheme] = useRecoilState(siteThemeState);
+
   return (
     <>
-      <footer className={`container ${footerStyles.container}`}>
+      <footer
+        className={`container ${footerStyles.container} ${
+          siteTheme === `imo` ? footerStyles.imo : ``
+        }`}
+      >
         <p>
           © {sinceYear}-{new Date().getFullYear()} Henryk Dyczek. Wszystkie
           prawa zastrzeżone.

@@ -14,3 +14,11 @@
   text-decoration: underline;
   color: var(--clr-blue-700);
 }
+
+.container.imo p {
+  color: var(--clr-bro);
+}
+
+.container.imo p a {
+  color: var(--clr-red-200);
+}
