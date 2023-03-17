@@ -5,7 +5,11 @@ const AkademiaMotto = () => {
   return (
     <>
       <div className={`container ${akademiaMottoStyles.container}`}>
-        AkademiaMotto
+        <div className={akademiaMottoStyles.edge} />
+        <h1>
+          Uczymy od podstaw do efektów, <span>nie tylko pokazujemy</span>
+        </h1>
+        <div className={akademiaMottoStyles.edge} />
       </div>
     </>
   );

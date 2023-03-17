@@ -6,6 +6,17 @@
   margin-top: 3rem;
 }
 
+.container ul.socials {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.container ul.socials li a img {
+  width: 3rem;
+  height: auto;
+}
+
 .container p {
   font-weight: 500;
 }

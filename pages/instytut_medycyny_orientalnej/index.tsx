@@ -52,7 +52,7 @@ const IMO: NextPage = () => {
         <ImoHeader />
         <MainNav />
         <StandardMainContent subNavItems={subNavItems}>
-          <>
+          <article className={`container imo-container`}>
             <h1>AKUPUNKTURA</h1>
             <p>
               Pobudza naturalne możliwości przywracania dobrego stanu zdrowia
@@ -88,7 +88,7 @@ const IMO: NextPage = () => {
               akupunktury dla lekarzy medycyny i fizjoterapeutów w języku
               polskim i angielskim.
             </p>
-          </>
+          </article>
         </StandardMainContent>
         <Footer sinceYear={1999} />
       </main>

@@ -1,12 +1,14 @@
-import Footer from '../../components/footer/Footer';
 import { NextPage } from 'next';
 import React from 'react';
-import HeadSet from '../../components/headSet/HeadSet';
-import MainNav from '../../components/mainNav/MainNav';
-import AkademiaHeader from '../../components/akademiaHeader/AkademiaHeader';
+import Footer from '@/components/footer/Footer';
+import HeadSet from '@/components/headSet/HeadSet';
+import MainNav from '@/components/mainNav/MainNav';
+import AkademiaHeader from '@/components/akademiaHeader/AkademiaHeader';
 import StandardMainContent from '@/components/standardMainContent/StandardMainContent';
+import AkademiaTrainings from '@/components/akademiaTrainings/AkademiaTrainings';
 import { useRouter } from 'next/router';
 import SubNavItem from '@/interfaces/subNavItem';
+import SocialIcons from '@/interfaces/socialIcons';
 
 const Akademia: NextPage = () => {
   const router = useRouter();
@@ -30,6 +32,10 @@ const Akademia: NextPage = () => {
     },
     {
       name: `Praktyka`,
+      link: `${router.pathname}/praktyka`,
+    },
+    {
+      name: `Kurs`,
       link: `${router.pathname}/kurs`,
     },
     {
@@ -42,6 +48,14 @@ const Akademia: NextPage = () => {
     },
   ];
 
+  const socialIcons: SocialIcons[] = [
+    {
+      name: `Facebook Akademia Chiropraktyki`,
+      image: `/img/facebook.webp`,
+      link: `https://fb.watch/iUeTioOtwn/`,
+    },
+  ];
+
   return (
     <>
       <HeadSet
@@ -51,8 +65,9 @@ const Akademia: NextPage = () => {
       <main id='main'>
         <AkademiaHeader />
         <MainNav />
+        <AkademiaTrainings />
         <StandardMainContent subNavItems={subNavItems}>
-          <>
+          <article className={`container akademiaCh-container`}>
             <h1>AKUPUNKTURA</h1>
             <p>
               Pobudza naturalne możliwości przywracania dobrego stanu zdrowia
@@ -88,9 +103,9 @@ const Akademia: NextPage = () => {
               akupunktury dla lekarzy medycyny i fizjoterapeutów w języku
               polskim i angielskim.
             </p>
-          </>
+          </article>
         </StandardMainContent>
-        <Footer sinceYear={1999} />
+        <Footer sinceYear={1999} socialIcons={socialIcons} />
       </main>
     </>
   );

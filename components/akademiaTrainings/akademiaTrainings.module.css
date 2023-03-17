@@ -1,0 +1,14 @@
+.container {
+  justify-content: center;
+  column-gap: 9rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.container a {
+  text-decoration: none;
+  color: var(--clr-blue-700);
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 1.5rem;
+}

@@ -44,7 +44,7 @@ const AkuChi: NextPage = () => {
         <AkuChiHeader />
         <MainNav />
         <StandardMainContent subNavItems={subNavItems}>
-          <>
+          <article className={`container akuChiro-container`}>
             <h1>AKUPUNKTURA</h1>
             <p>
               Pobudza naturalne możliwości przywracania dobrego stanu zdrowia
@@ -80,7 +80,7 @@ const AkuChi: NextPage = () => {
               akupunktury dla lekarzy medycyny i fizjoterapeutów w języku
               polskim i angielskim.
             </p>
-          </>
+          </article>
         </StandardMainContent>
         <Footer sinceYear={1999} />
       </main>

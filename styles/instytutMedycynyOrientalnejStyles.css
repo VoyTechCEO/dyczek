@@ -1,28 +1,21 @@
-.container {
+.imo-container {
   flex-direction: column;
   padding: 1.5rem 3rem;
   width: 60rem;
-}
-
-.container.imo {
   color: var(--clr-bro);
 }
 
-.container h1 {
+.imo-container h1 {
   font-size: 1rem;
-  color: var(--clr-blue-700);
+  color: var(--clr-bro);
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-.container.imo h1 {
-  color: var(--clr-bro);
-}
-
-.container p {
+.imo-container p {
   margin-bottom: 1rem;
 }
 
-.container ul {
+.imo-container ul {
   margin: 0 0 1rem 1rem;
 }

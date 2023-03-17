@@ -2,7 +2,6 @@ import React from 'react';
 import SubNav from '../subNav/SubNav';
 import standardMainContentStyles from './standardMainContent.module.css';
 import SubNavItem from '../../interfaces/subNavItem';
-import ArticleContent from '../articleContent/ArticleContent';
 
 interface Props {
   subNavItems: SubNavItem[];
@@ -14,7 +13,7 @@ const StandardMainContent = ({ subNavItems, children }: Props) => {
     <>
       <section className={`container ${standardMainContentStyles.container}`}>
         <SubNav subNavItems={subNavItems} />
-        <ArticleContent>{children}</ArticleContent>
+        <div>{children}</div>
       </section>
     </>
   );
