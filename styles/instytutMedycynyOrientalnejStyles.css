@@ -1,7 +1,8 @@
 .imo-container {
   flex-direction: column;
+  align-items: center;
   padding: 1.5rem 3rem;
-  width: 60rem;
+  width: 55rem;
   color: var(--clr-bro);
 }
 
@@ -12,10 +13,31 @@
   margin-bottom: 1rem;
 }
 
-.imo-container p {
+.imo-container ul {
+  list-style-type: none;
+  position: relative;
+  width: 100%;
   margin-bottom: 1rem;
 }
 
-.imo-container ul {
-  margin: 0 0 1rem 1rem;
+.imo-container ul li {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.imo-container ul li::before {
+  content: '\2014';
+  position: absolute;
+  margin-left: -2rem;
+  color: var(--clr-red-200);
+  font-weight: 400;
+}
+
+.imo-container p {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.imo-container p span {
+  font-weight: 600;
 }

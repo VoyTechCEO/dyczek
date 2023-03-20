@@ -5,34 +5,10 @@ import HeadSet from '../../components/headSet/HeadSet';
 import MainNav from '../../components/mainNav/MainNav';
 import AkuChiHeader from '../../components/akuChiHeader/AkuChiHeader';
 import StandardMainContent from '../../components/standardMainContent/StandardMainContent';
-import SubNavItem from '../../interfaces/subNavItem';
-import { useRouter } from 'next/router';
+import useSetPageSpecs from '@/hooks/useSetPageSpecs';
 
 const AkuChi: NextPage = () => {
-  const router = useRouter();
-
-  const subNavItems: SubNavItem[] = [
-    {
-      name: `Główna`,
-      link: `${router.pathname}`,
-    },
-    {
-      name: `Kwalifikacje`,
-      link: `${router.pathname}/kwalifikacje`,
-    },
-    {
-      name: `Publikacje`,
-      link: `${router.pathname}/publikacje`,
-    },
-    {
-      name: `Kontakt`,
-      link: `${router.pathname}/kontakt`,
-    },
-    {
-      name: `English`,
-      link: `${router.pathname}/english`,
-    },
-  ];
+  const pageSpecs = useSetPageSpecs();
 
   return (
     <>
@@ -43,7 +19,7 @@ const AkuChi: NextPage = () => {
       <main id='main' className='main-blue'>
         <AkuChiHeader />
         <MainNav />
-        <StandardMainContent subNavItems={subNavItems}>
+        <StandardMainContent subNavItems={pageSpecs.subNavContent}>
           <article className={`container akuChiro-container`}>
             <h1>AKUPUNKTURA</h1>
             <p>

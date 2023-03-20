@@ -6,47 +6,11 @@ import MainNav from '@/components/mainNav/MainNav';
 import AkademiaHeader from '@/components/akademiaHeader/AkademiaHeader';
 import StandardMainContent from '@/components/standardMainContent/StandardMainContent';
 import AkademiaTrainings from '@/components/akademiaTrainings/AkademiaTrainings';
-import { useRouter } from 'next/router';
-import SubNavItem from '@/interfaces/subNavItem';
 import SocialIcons from '@/interfaces/socialIcons';
+import useSetPageSpecs from '@/hooks/useSetPageSpecs';
 
 const Akademia: NextPage = () => {
-  const router = useRouter();
-
-  const subNavItems: SubNavItem[] = [
-    {
-      name: `Główna`,
-      link: `${router.pathname}`,
-    },
-    {
-      name: `O Akademii`,
-      link: `${router.pathname}/o_akademii`,
-    },
-    {
-      name: `Terminologia`,
-      link: `${router.pathname}/terminologia`,
-    },
-    {
-      name: `Fakty`,
-      link: `${router.pathname}/fakty`,
-    },
-    {
-      name: `Praktyka`,
-      link: `${router.pathname}/praktyka`,
-    },
-    {
-      name: `Kurs`,
-      link: `${router.pathname}/kurs`,
-    },
-    {
-      name: `Absolwenci`,
-      link: `${router.pathname}/absolwenci`,
-    },
-    {
-      name: `Kontakt`,
-      link: `${router.pathname}/kontakt`,
-    },
-  ];
+  const pageSpecs = useSetPageSpecs();
 
   const socialIcons: SocialIcons[] = [
     {
@@ -66,7 +30,7 @@ const Akademia: NextPage = () => {
         <AkademiaHeader />
         <MainNav />
         <AkademiaTrainings />
-        <StandardMainContent subNavItems={subNavItems}>
+        <StandardMainContent subNavItems={pageSpecs.subNavContent}>
           <article className={`container akademiaCh-container`}>
             <h1>AKUPUNKTURA</h1>
             <p>
