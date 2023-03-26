@@ -23,7 +23,17 @@ const IMO: NextPage = () => {
         <MainNav />
         <StandardMainContent subNavItems={pageSpecs.subNavContent}>
           <article className='container imo-container'>
-            <h1>W przygotowaniu...</h1>
+            <h1>Najnowsze wydarzenia</h1>
+            <ul>
+              <li>
+                <h3>2004</h3>
+                <h4>Powstanie IMO</h4>
+                <p>
+                  W dniu 13.12.2004 został założony INSTYTUT MEDYCYNY
+                  ORIENTALNEJ.
+                </p>
+              </li>
+            </ul>
           </article>
         </StandardMainContent>
         <SmallerInfo />

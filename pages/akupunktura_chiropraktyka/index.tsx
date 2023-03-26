@@ -13,8 +13,9 @@ const AkuChi: NextPage = () => {
   return (
     <>
       <HeadSet
-        title='Henryk Dyczek - akupunktura i chiropraktyka'
-        keywords='akupunktura, chiropraktyka, henryk dyczek, medycyna niekonwencjonalna'
+        title={pageSpecs.title}
+        keywords={pageSpecs.keywords}
+        desc={pageSpecs.description}
       />
       <main id='main' className='main-blue'>
         <AkuChiHeader />
@@ -58,7 +59,7 @@ const AkuChi: NextPage = () => {
             </p>
           </article>
         </StandardMainContent>
-        <Footer sinceYear={1999} />
+        <Footer sinceYear={pageSpecs.sinceYear} />
       </main>
     </>
   );

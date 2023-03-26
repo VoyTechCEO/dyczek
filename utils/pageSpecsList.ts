@@ -1,12 +1,4 @@
-import SubNavItem from '../interfaces/subNavItem';
-
-interface PageSpecs {
-  name: string;
-  subNavContent: SubNavItem[];
-  title: string;
-  keywords: string;
-  description: string;
-}
+import PageSpecs from '../interfaces/pageSpecs';
 
 const pageSpecsList: PageSpecs[] = [
   {
@@ -48,6 +40,14 @@ const pageSpecsList: PageSpecs[] = [
     title: `AKADEMIA CHIROPRAKTYKI`,
     keywords: `akademia chiropraktyki, chiropraktyka, henryk dyczek, chiropraktycy, chiropraktyk`,
     description: ``,
+    sinceYear: 1999,
+    socialIcons: [
+      {
+        name: `Facebook Akademia Chiropraktyki`,
+        image: `/img/facebook.webp`,
+        link: `https://fb.watch/iUeTioOtwn/`,
+      },
+    ],
   },
   {
     name: `akuChiro`,
@@ -76,6 +76,7 @@ const pageSpecsList: PageSpecs[] = [
     title: `Henryk Dyczek - akupunktura i chiropraktyka`,
     keywords: `akupunktura, chiropraktyka, henryk dyczek, medycyna niekonwencjonalna`,
     description: ``,
+    sinceYear: 1999,
   },
   {
     name: `imo`,
@@ -112,6 +113,7 @@ const pageSpecsList: PageSpecs[] = [
     title: `Instytut Medycyny Orientalnej`,
     keywords: `instytut medycyny orientalnej, imo, medycyna orientalna, henryk dyczek`,
     description: ``,
+    sinceYear: 1999,
   },
 ];
 

@@ -23,7 +23,7 @@ const IMO: NextPage = () => {
         <StandardMainContent subNavItems={pageSpecs.subNavContent}>
           <article className='container imo-container'>
             <h1>Nasze cele</h1>
-            <ul>
+            <ul className='dashed'>
               <li>Propagowanie dziedzictwa nauki i sztuki orientalnej.</li>
               <li>
                 Organizowanie szkoleń w zakresie nauki i sztuki orientalnej.

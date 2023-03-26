@@ -14,19 +14,32 @@ const IMO: NextPage = () => {
   return (
     <>
       <HeadSet
-        title='Instytut Medycyny Orientalnej'
-        keywords='instytut medycyny orientalnej, imo, medycyna orientalna, henryk dyczek'
+        title={pageSpecs.title}
+        keywords={pageSpecs.keywords}
+        desc={pageSpecs.description}
       />
       <main id='main' className='main-yellow'>
         <ImoHeader />
         <MainNav />
         <StandardMainContent subNavItems={pageSpecs.subNavContent}>
           <article className='container imo-container'>
-            <h1>W przygotowaniu...</h1>
+            <h1>Gabinety Tradycyjnej Medycyny Chińskiej w Polsce</h1>
+            <p>
+              <span>Henryk Dyczek</span> <br />
+              ul. Tulipanowa 6 <br />
+              Przysiek k/ Torunia <br />
+              87-134 Zławieś Wielka <br />
+              <br />
+              tel./faks: (056) 6789 343 <br />
+              e-mail:{' '}
+              <a href='mailto: henryk.dyczek@man.torun.pl'>
+                henryk.dyczek@man.torun.pl
+              </a>
+            </p>
           </article>
         </StandardMainContent>
         <SmallerInfo />
-        <Footer sinceYear={1999} />
+        <Footer sinceYear={pageSpecs.sinceYear} />
       </main>
     </>
   );

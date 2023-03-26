@@ -1,28 +1,21 @@
 import { useRouter } from 'next/router';
-import SubNavItem from '../interfaces/subNavItem';
 import pageSpecsList from '../utils/pageSpecsList';
+import PageSpecs from '../interfaces/pageSpecs';
 
 const useSetSubNavContent = () => {
   const router = useRouter();
 
-  let subNavContent: SubNavItem[] = [];
-  let description = ``;
+  let pageSpecs!: PageSpecs;
 
   if (router.pathname.includes(`/akademia_chiropraktyki`)) {
-    subNavContent = pageSpecsList!.find(
-      (item) => item.name === `akademiaCh`
-    )!.subNavContent;
+    pageSpecs = pageSpecsList!.find((item) => item.name === `akademiaCh`)!;
   } else if (router.pathname.includes(`/akupunktura_chiropraktyka`)) {
-    subNavContent = pageSpecsList!.find(
-      (item) => item.name === `akuChiro`
-    )!.subNavContent;
+    pageSpecs = pageSpecsList!.find((item) => item.name === `akuChiro`)!;
   } else if (router.pathname.includes(`/instytut_medycyny_orientalnej`)) {
-    subNavContent = pageSpecsList!.find(
-      (item) => item.name === `imo`
-    )!.subNavContent;
+    pageSpecs = pageSpecsList!.find((item) => item.name === `imo`)!;
   }
 
-  return { subNavContent };
+  return pageSpecs;
 };
 
 export default useSetSubNavContent;

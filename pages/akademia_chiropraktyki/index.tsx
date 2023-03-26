@@ -6,25 +6,17 @@ import MainNav from '@/components/mainNav/MainNav';
 import AkademiaHeader from '@/components/akademiaHeader/AkademiaHeader';
 import StandardMainContent from '@/components/standardMainContent/StandardMainContent';
 import AkademiaTrainings from '@/components/akademiaTrainings/AkademiaTrainings';
-import SocialIcons from '@/interfaces/socialIcons';
 import useSetPageSpecs from '@/hooks/useSetPageSpecs';
 
 const Akademia: NextPage = () => {
   const pageSpecs = useSetPageSpecs();
 
-  const socialIcons: SocialIcons[] = [
-    {
-      name: `Facebook Akademia Chiropraktyki`,
-      image: `/img/facebook.webp`,
-      link: `https://fb.watch/iUeTioOtwn/`,
-    },
-  ];
-
   return (
     <>
       <HeadSet
-        title='AKADEMIA CHIROPRAKTYKI'
-        keywords='akademia chiropraktyki, chiropraktyka, henryk dyczek, chiropraktycy, chiropraktyk'
+        title={pageSpecs.title}
+        keywords={pageSpecs.keywords}
+        desc={pageSpecs.description}
       />
       <main id='main'>
         <AkademiaHeader />
@@ -69,7 +61,10 @@ const Akademia: NextPage = () => {
             </p>
           </article>
         </StandardMainContent>
-        <Footer sinceYear={1999} socialIcons={socialIcons} />
+        <Footer
+          sinceYear={pageSpecs.sinceYear}
+          socialIcons={pageSpecs.socialIcons}
+        />
       </main>
     </>
   );

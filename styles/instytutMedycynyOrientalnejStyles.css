@@ -25,7 +25,7 @@
   margin-bottom: 1rem;
 }
 
-.imo-container ul li::before {
+.imo-container ul.dashed li::before {
   content: '\2014';
   position: absolute;
   margin-left: -2rem;
@@ -40,4 +40,8 @@
 
 .imo-container p span {
   font-weight: 600;
+}
+
+.imo-container ul li h4 {
+  margin: 1rem 0;
 }
