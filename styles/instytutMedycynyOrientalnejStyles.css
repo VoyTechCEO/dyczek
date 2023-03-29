@@ -7,9 +7,15 @@
 }
 
 .imo-container h1 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--clr-bro);
   font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.imo-container h2 {
+  font-size: 1.1rem;
+  width: 100%;
   margin-bottom: 1rem;
 }
 
@@ -23,6 +29,16 @@
 .imo-container ul li {
   margin-left: 2rem;
   margin-bottom: 1rem;
+}
+
+.imo-container ul li h4 {
+  margin: 1rem 0;
+}
+
+.imo-container ul li a {
+  text-decoration: none;
+  color: var(--clr-red-200);
+  font-weight: 500;
 }
 
 .imo-container ul.dashed li::before {
@@ -42,6 +58,25 @@
   font-weight: 600;
 }
 
-.imo-container ul li h4 {
-  margin: 1rem 0;
+.imo-container p a {
+  text-decoration: none;
+  color: var(--clr-red-200);
+}
+
+.imo-container .align-left {
+  text-align: left;
+}
+
+.imo-container img {
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+  border: 1px var(--clr-bro) solid;
+}
+
+.imo-container li.post .line {
+  width: 6rem;
+  height: 1px;
+  background-color: var(--clr-red-200);
+  margin: 2rem auto;
 }

@@ -94,6 +94,10 @@ const pageSpecsList: PageSpecs[] = [
         link: `/instytut_medycyny_orientalnej/teksty_zrodlowe`,
       },
       {
+        name: `Publikacje`,
+        link: `/instytut_medycyny_orientalnej/publikacje`,
+      },
+      {
         name: `Gabinety TMC`,
         link: `/instytut_medycyny_orientalnej/gabinety_tmc`,
       },
