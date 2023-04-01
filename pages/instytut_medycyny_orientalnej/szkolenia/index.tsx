@@ -7,9 +7,38 @@ import StandardMainContent from '../../../components/standardMainContent/Standar
 import ImoHeader from '../../../components/imoHeader/ImoHeader';
 import SmallerInfo from '../../../components/smallerInfo/SmallerInfo';
 import useSetPageSpecs from '../../../hooks/useSetPageSpecs';
+import Link from 'next/link';
+
+interface Courses {
+  name: string;
+  link?: string;
+  desc?: string;
+}
 
 const IMO: NextPage = () => {
   const pageSpecs = useSetPageSpecs();
+
+  const coursesList: Courses[] = [
+    {
+      name: `SZKOŁA AKUPUNKTURY TRADYCYJNEJ`,
+      link: `https://szkolakupunktury.edu.pl/`,
+    },
+    {
+      name: `KURS TRADYCYJNEJ MEDYCYNY CHIŃSKIEJ`,
+      link: `/instytut_medycyny_orientalnej/szkolenia/kurs_tmc`,
+      desc: `Monumentalny kurs w zakresie Tradycyjnej Chińskiej Medycyny (TMC). Kurs został podzielony na pięć części, a w sumie składa się z 80 modułów o różnej tematyce.`,
+    },
+    {
+      name: `KURS QI GONG DLA ZDROWIA`,
+      desc: `Przeznaczony dla osób zainteresowanych wzmocnieniem i uaktywnieniem swojego Qi dla lepszego samopoczucia, zdrowia i optymalizacji indywidualnych umiejętności.`,
+    },
+    {
+      name: `SZKOŁA AKUPUNKTURY TRADYCYJNEJ`,
+    },
+    {
+      name: `SZKOŁA AKUPUNKTURY TRADYCYJNEJ`,
+    },
+  ];
 
   return (
     <>
@@ -23,23 +52,23 @@ const IMO: NextPage = () => {
         <MainNav />
         <StandardMainContent subNavItems={pageSpecs.subNavContent}>
           <article className='container imo-container'>
-            <h1>Dane Teleadresowe</h1>
-            <p>
-              <span>Henryk Dyczek</span>
-              <br />
-              ul. Tulipanowa 6<br />
-              Przysiek k/ Torunia
-              <br />
-              87-134 Zławieś Wielka
-              <br />
-              <br />
-              tel./faks: (56) 6789 343
-              <br />
-              e-mail: <a href='mailto: henryk@dyczek.pl'>henryk@dyczek.pl</a>
-            </p>
-            <br />
-            <h1>Mapa dojazdu</h1>
-            <img src='/img/mapka.gif' alt='mapa dojazdu' />
+            <h1>Propozycje szkoleń</h1>
+            <ul className='dashed'>
+              {coursesList.map((item) => {
+                return (
+                  <li key={`${item}courses`} className='space'>
+                    {item.link ? (
+                      <Link href={item.link} target='_blank'>
+                        <b>{item.name}</b>
+                      </Link>
+                    ) : (
+                      <b>{item.name}</b>
+                    )}
+                    {item.desc && <p className='description'>{item.desc}</p>}
+                  </li>
+                );
+              })}
+            </ul>
           </article>
         </StandardMainContent>
         <SmallerInfo />

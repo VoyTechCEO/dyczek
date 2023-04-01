@@ -23,12 +23,32 @@
   list-style-type: none;
   position: relative;
   width: 100%;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 .imo-container ul li {
   margin-left: 2rem;
   margin-bottom: 1rem;
+}
+
+.imo-container ul li.sector {
+  margin: 0;
+  padding: 1rem 2rem;
+  border-left: 2px solid var(--clr-red-200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imo-container ul li.sector button {
+  color: var(--clr-red-200);
+}
+
+.imo-container ul li.post .line {
+  width: 6rem;
+  height: 1px;
+  background-color: var(--clr-red-200);
+  margin: 2rem auto;
 }
 
 .imo-container ul li h4 {
@@ -49,6 +69,10 @@
   font-weight: 400;
 }
 
+.imo-container .modules {
+  width: 100%;
+}
+
 .imo-container p {
   margin-bottom: 1rem;
   text-align: center;
@@ -63,8 +87,15 @@
   color: var(--clr-red-200);
 }
 
+.imo-container p.description {
+  margin: 1.5rem auto;
+  width: 70%;
+  font-style: italic;
+}
+
 .imo-container .align-left {
   text-align: left;
+  width: 100%;
 }
 
 .imo-container img {
@@ -74,9 +105,7 @@
   border: 1px var(--clr-bro) solid;
 }
 
-.imo-container li.post .line {
-  width: 6rem;
-  height: 1px;
-  background-color: var(--clr-red-200);
-  margin: 2rem auto;
+.imo-container button {
+  all: unset;
+  cursor: pointer;
 }
