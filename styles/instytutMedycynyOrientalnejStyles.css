@@ -32,7 +32,7 @@
 }
 
 .imo-container ul li.sector {
-  margin: 0;
+  margin: 0 0 4rem 0;
   padding: 1rem 2rem;
   border-left: 2px solid var(--clr-red-200);
   display: flex;
