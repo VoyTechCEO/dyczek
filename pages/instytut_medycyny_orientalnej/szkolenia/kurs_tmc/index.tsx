@@ -13,6 +13,10 @@ import trainingModulesList from '../../../../utils/trainingModulesList';
 const IMO: NextPage = () => {
   const pageSpecs = useSetPageSpecs();
 
+  let prevAmount = 0;
+  let totalAmount = 0;
+  let totalModulesListLength = 0;
+
   return (
     <>
       <HeadSet
@@ -38,6 +42,11 @@ const IMO: NextPage = () => {
             </p>
             <ul>
               {trainingModulesList.map((sector, sectorIdx) => {
+                if (trainingModulesList[sectorIdx - 1]) {
+                  totalModulesListLength +=
+                    trainingModulesList[sectorIdx - 1].modules.length;
+                }
+
                 return (
                   <li key={`${sector.part}sectorlist`} className='sector'>
                     <h4>Część {sector.part}</h4>
@@ -45,22 +54,26 @@ const IMO: NextPage = () => {
                     <button>Rozwiń</button>
                     <div className='modules'>
                       <ul>
-                        {sector.list.map((module, moduleIdx) => {
-                          let modNum: number;
-                          if (!trainingModulesList[sectorIdx - 1]) {
-                            modNum = moduleIdx + 1;
-                          } else {
+                        {sector.modules.map((module, moduleIdx) => {
+                          let modNum = moduleIdx + 1;
+                          totalAmount += prevAmount;
+                          if (trainingModulesList[sectorIdx - 1]) {
                             modNum =
-                              trainingModulesList[sectorIdx - 1].list.length +
+                              totalModulesListLength +
                               moduleIdx +
+                              totalAmount +
                               1;
                           }
-
+                          prevAmount = 0;
+                          if (module.amount) {
+                            prevAmount = module.amount;
+                          }
                           return (
                             <ImoTrainingModules
-                              key={`${module}modulelists`}
-                              contentList={sector.list[moduleIdx]}
+                              key={`${module}modulelists${moduleIdx}`}
+                              contentList={sector.modules[moduleIdx].list}
                               number={modNum}
+                              amount={module.amount}
                             />
                           );
                         })}
