@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface Props {
-  contentList: string[];
+  contentList: string[] | JSX.Element[];
   number: number;
   amount?: number;
 }
