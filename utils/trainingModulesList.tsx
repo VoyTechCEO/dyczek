@@ -451,6 +451,8 @@ const trainingModulesList: TrainingModules[] = [
               <li>PUSTE CIEPŁO YIN XU SERCA</li>
               <li>QI ZHI</li>
             </ol>
+          </>,
+          <>
             <p className='align-left'>Bezsenność:</p>
             <ol>
               <li>
@@ -494,6 +496,8 @@ const trainingModulesList: TrainingModules[] = [
                 </ul>
               </li>
             </ol>
+          </>,
+          <>
             <p className='align-left'>Obrzęk podczas ciąży:</p>
             <ol>
               <li>QI XU Śledziony</li>
@@ -502,6 +506,270 @@ const trainingModulesList: TrainingModules[] = [
             </ol>
           </>,
         ],
+      },
+      {
+        list: [
+          `Syndrom BI (Syndrom Bolesnego Zastoju).`,
+          `Wiatr / Zimno / Wilgoć.`,
+          `Początkowe bóle.`,
+          `Szyja ramiona i plecy.`,
+          `Ciepło.`,
+          `Syndrom mieszany.`,
+        ],
+      },
+      {
+        list: [
+          <>
+            <p className='align-left'>Syndromy WEI - Atroficzne (Zaniku)</p>
+            <ol>
+              <li>Etiologia i patogeneza.</li>
+              <li>
+                <p className='align-left'>
+                  Analiza choroby i działanie terapeutyczne:
+                </p>
+                <ul className='dashed'>
+                  <li>Suchota śluzu Płucnego i Żołądkowego.</li>
+                  <li>Inwazja ciała przez Wilgotne - Ciepło.</li>
+                  <li>Xu Śledziony i Żołądka.</li>
+                  <li>Xu Wątroby i Nerek</li>
+                </ul>
+              </li>
+            </ol>
+          </>,
+          <>
+            <p className='align-left'>Stwardnienie Rozsiane</p>
+            <ol>
+              <li>Objawy.</li>
+              <li>
+                <p className='align-left'>
+                  Analiza choroby i działanie terapeutyczne:
+                </p>
+                <ul className='dashed'>
+                  <li>Inwazja meridianów przez Wiatr - Wilgoć.</li>
+                  <li>YIN XU Wątroby i Nerek.</li>
+                  <li>XU YANG Nerek.</li>
+                  <li>Zastój energii QI & Krwi.</li>
+                </ul>
+              </li>
+            </ol>
+          </>,
+        ],
+      },
+      {
+        list: [
+          <>
+            <p className='align-left'>Ból nadbrzuszy</p>
+            <ol>
+              <li>Zimno i Wilgoć atakujące Środkowe Jiao: (rodzaj Shi).</li>
+              <li>Zastój żywności: (rodzaj Shi).</li>
+              <li>
+                Zastój QI Wątroby: (rodzaj Shi). Dysharmonia pomiędzy Wątrobą i
+                Śledzioną.
+              </li>
+              <li>Zastój Krwi: (rodzaj Shi).</li>
+              <li>XU QI Żołądka i Śledziony z zastojem Wilgoci.</li>
+              <li>U QI Żołądka.</li>
+            </ol>
+          </>,
+          <>
+            <p className='align-left'>Wrzodziejące zapalenie okrężnicy</p>
+            <ol>
+              <li>Zastój Wilgoci - Ciepła.</li>
+              <li>Wilgoć - Zimno (XU Śledziony i Żołądka).</li>
+              <li>YIN XU.</li>
+            </ol>
+          </>,
+        ],
+      },
+      {
+        list: [
+          <>
+            <p className='align-left'>Przeziębienie</p>
+            <ol>
+              <li>Wiatr - Zimno</li>
+              <li>Wiatr - Ciepło</li>
+              <li>Letnie Ciepło - Wilgoć</li>
+            </ol>
+          </>,
+          <>Zapalenie zatok</>,
+          <>
+            <p className='align-left'>Rzężenie (Syndrom XIAO)</p>
+            <ul>
+              <p className='align-left'>Stan ostry</p>
+              <ol>
+                <li>Zimno</li>
+                <li>Ciepło</li>
+                <li>XU</li>
+              </ol>
+              <p className='align-left'>Remisja</p>
+              <ol>
+                <li>XU płuc</li>
+                <li>XU śledziony</li>
+                <li>XU nerek</li>
+              </ol>
+            </ul>
+          </>,
+          <>
+            <p className='align-left'>Zadyszka ( Syndrom Chuan)</p>
+            <ul>
+              <li>
+                <p className='align-left'>Rodzaj Shi</p>
+                <ol>
+                  <li>Wiatr - Zimno</li>
+                  <li>Śluz - Ciepło</li>
+                  <li>Śluz - Zimno</li>
+                  <li>Zastój QI</li>
+                </ol>
+              </li>
+              <li>
+                <p className='align-left'>Rodzaj XU</p>
+                <ol>
+                  <li>XU płuc</li>
+                  <li>XU nerek</li>
+                </ol>
+              </li>
+            </ul>
+          </>,
+        ],
+      },
+      {
+        list: [
+          `Nieregularności okresu.`,
+          `Problemy podczas krwawienia.`,
+          `Choroby ciąży.`,
+          `Choroby poporodowe.`,
+          `Klimakterium.`,
+        ],
+      },
+      {
+        list: [
+          <>
+            <p className='align-left'>Choroby skóry.</p>
+            <ol>
+              <li>
+                Egzema (Wilgoć - Ciepło / Gorąca Krew z Wiatrem / XU Śledziony &
+                Wilgoć / Xu Krwi i Suchy Wiatr ).
+              </li>
+              <li>
+                Łuszczyca (Gorąca Krew i Trujący Ogień / Xu Krwi i Suchy Wiatr /
+                Zastój Krwi / Trujący Ogień).
+              </li>
+              <li>
+                Trądzik (Ciepło w Płucach i Ciepła Krew / Wilgotne Ciepło Yang
+                Ming / Ciepła Krew i jej Zastój / Zastój Śluzu i Krwi)
+              </li>
+              <li>
+                Trądzik różowaty (Zastój Ciepła w Płucach i Żołądku / Zastój i
+                Ciepło Krwi).
+              </li>
+              <li>
+                Pokrzywka (Wiatr - Ciepło / Wiatr - Zimno / Wilgoć Śledziony i
+                Żołądka i Wiatr / Gorąca Krew produkująca Wiatr / Zastój Krwi).
+              </li>
+            </ol>
+          </>,
+        ],
+      },
+      {
+        list: [
+          <>
+            <p className='align-left'>Bóle i zawroty głowy.</p>
+            <ol>
+              <li>
+                <p className='align-left'>Przyczyny zewnętrzne:</p>
+                <p className='align-left'>
+                  Wiatr / Zimno (z i bez XU), Wiatr / Ciepło (z i bez XU),
+                  mieszany Wiatr / Zimno, mieszany Wiatr / Ciepło, Wiatr /
+                  Wilgoć, YIN JING LUO.
+                </p>
+              </li>
+              <li>
+                <p className='align-left'>Przyczyny wewnętrzne:</p>
+                <p className='align-left'>
+                  Unoszący się Yang Wątroby, Stagnacja QI Wątroby, SHAO Yang,
+                  Ogień Wątroby, Ogień Żołądka, Zimno w Kanale Wątroby, YIN XU
+                  Nerek z Unoszącym się Yang Wątroby, YIN XU Nerek, Yin Xu Nerek
+                  i Wątroby z Wiatrem, Yang Xu Nerek, QI & XUE XU, QI XU, XUE XU
+                  Serca, XUE XU Wątroby, XUE XU, Ognisty Śluz podburzający
+                  Serce, Mętny Śluz, Zastój XUE, Poważne trucizny.
+                </p>
+              </li>
+            </ol>
+          </>,
+          <>Choroby dziecięce</>,
+        ],
+      },
+      {
+        list: [
+          <>
+            <ol>
+              <li>
+                <p className='align-left'>Nerwice</p>
+                <p className='align-left'>
+                  Zastój QI Wątroby, YIN XU prowadzące do nad aktywnego
+                  buszującego Ognia, QI XU Śledziony prowadzący do XUE XU Serca,
+                  XUE Serca / YIN XU.
+                </p>
+              </li>
+              <li>
+                <p className='align-left'>Depresje psychiczne i emocjonalne</p>
+                <p className='align-left'>
+                  Depresja QI Wątroby, Depresja QI Wątroby prowadząca do nad
+                  aktywnego Ognia, Zastój QI i Śluzu, Stagnacja QI i Śluzu
+                  blokująca zmysły, Stagnacja QI Wątroby, Stagnacja XUE Wątroby,
+                  Ogień Wątroby, QI XU Śledziony z akumulacją Wilgoci w ZHONG
+                  JIAO, Zatrzymanie żywności w Żołądku, Śluz zamulający mózg,
+                  XUE XU, YIN XU Nerek z Nadaktywnym Ogniem,
+                </p>
+              </li>
+              <li>
+                <p className='align-left'>
+                  Psychozy, Schizofrenia, Szaleństwo (KUAN), Depresja (DIAN)
+                </p>
+                <p className='align-left'>Depresja - Zastój Śluzu / QI</p>
+                <p className='align-left'>
+                  Szaleństwo - Buszujący Ognisty Śluz
+                </p>
+              </li>
+              <li>
+                <p className='align-left'>Depresje psychiczne (BAI HE BING)</p>
+                <p className='align-left'>
+                  Yin XU Serca i Płuc, Wewnętrzne zaburzenie Gorącego Śluzu, YIN
+                  XU Serca, Zastój QI Wątroby, Zastój QI Śledziony, YIN XU Płuc
+                  i Nerek, Dysharmonia Ognia Serca i Wody Nerek.
+                </p>
+              </li>
+            </ol>
+          </>,
+        ],
+        amount: 7,
+      },
+      {
+        list: [
+          <>
+            <ol>
+              <li>Rak i HIV</li>
+              <li>Udar mózgu</li>
+            </ol>
+          </>,
+        ],
+      },
+      {
+        list: [`Bio-chemia ziół.`],
+      },
+    ],
+  },
+  {
+    part: `V`,
+    desc: `oferuje unikalną możliwość poznania QI QONG'u, czyli pracy z energią QI z użyciem rąk i systemu nerwowego terapeuty i chorego dla analizy, profilaktyki i regeneracji zdrowia.`,
+    modules: [
+      {
+        list: [
+          `Trening QI GONG.`,
+          `Istota QI GONG w pracy z TCM.`,
+          `Kliniczne zastosowanie.`,
+        ],
+        amount: 8,
       },
     ],
   },
