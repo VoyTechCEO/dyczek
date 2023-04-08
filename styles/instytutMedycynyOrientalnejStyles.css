@@ -31,6 +31,10 @@
   margin-bottom: 1rem;
 }
 
+.imo-container ul li.public-sector {
+  margin-left: 0;
+}
+
 .imo-container ul li.sector {
   margin: 0 0 4rem 0;
   padding: 1rem 2rem;

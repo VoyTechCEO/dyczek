@@ -7,14 +7,12 @@ import StandardMainContent from '../../../../components/standardMainContent/Stan
 import ImoHeader from '../../../../components/imoHeader/ImoHeader';
 import SmallerInfo from '../../../../components/smallerInfo/SmallerInfo';
 import useSetPageSpecs from '../../../../hooks/useSetPageSpecs';
-import ImoTrainingModules from '../../../../components/imoTrainingModules/ImoTrainingModules';
+import ImoTrainingSector from '../../../../components/imoTrainingSector/ImoTrainingSector';
 import trainingModulesList from '../../../../utils/trainingModulesList';
 
 const IMO: NextPage = () => {
   const pageSpecs = useSetPageSpecs();
 
-  let prevAmount = 0;
-  let totalAmount = 0;
   let totalModulesListLength = 0;
 
   return (
@@ -48,38 +46,11 @@ const IMO: NextPage = () => {
                 }
 
                 return (
-                  <li key={`${sector.part}sectorlist`} className='sector'>
-                    <h4>Część {sector.part}</h4>
-                    <p className='description'>{sector.desc}</p>
-                    <button>Rozwiń</button>
-                    <div className='modules'>
-                      <ul>
-                        {sector.modules.map((module, moduleIdx) => {
-                          let modNum = moduleIdx + 1;
-                          totalAmount += prevAmount;
-                          if (trainingModulesList[sectorIdx - 1]) {
-                            modNum =
-                              totalModulesListLength +
-                              moduleIdx +
-                              totalAmount +
-                              1;
-                          }
-                          prevAmount = 0;
-                          if (module.amount) {
-                            prevAmount = module.amount;
-                          }
-                          return (
-                            <ImoTrainingModules
-                              key={`${module}modulelists${moduleIdx}`}
-                              contentList={sector.modules[moduleIdx].list}
-                              number={modNum}
-                              amount={module.amount}
-                            />
-                          );
-                        })}
-                      </ul>
-                    </div>
-                  </li>
+                  <ImoTrainingSector
+                    sector={sector}
+                    sectorIdx={sectorIdx}
+                    totalModulesListLength={totalModulesListLength}
+                  />
                 );
               })}
             </ul>

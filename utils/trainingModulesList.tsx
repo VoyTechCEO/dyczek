@@ -1,13 +1,4 @@
-interface Module {
-  list: string[] | JSX.Element[];
-  amount?: number;
-}
-
-interface TrainingModules {
-  part: string;
-  desc: string | JSX.Element;
-  modules: Module[];
-}
+import TrainingModules from '../interfaces/trainingModules';
 
 const trainingModulesList: TrainingModules[] = [
   {
