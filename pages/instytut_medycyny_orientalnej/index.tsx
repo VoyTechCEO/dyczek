@@ -7,6 +7,7 @@ import StandardMainContent from '../../components/standardMainContent/StandardMa
 import ImoHeader from '../../components/imoHeader/ImoHeader';
 import SmallerInfo from '../../components/smallerInfo/SmallerInfo';
 import useSetPageSpecs from '../../hooks/useSetPageSpecs';
+import LangChangeBtn from '../../components/langChangeBtn/LangChangeBtn';
 
 const IMO: NextPage = () => {
   const pageSpecs = useSetPageSpecs();
@@ -20,6 +21,7 @@ const IMO: NextPage = () => {
       <main id='main' className='main-yellow'>
         <ImoHeader />
         <MainNav />
+        <LangChangeBtn />
         <StandardMainContent subNavItems={pageSpecs.subNavContent}>
           <article className='container imo-container'>
             <h1>Nasze cele</h1>

@@ -1,0 +1,10 @@
+.container {
+  justify-content: center;
+  margin-bottom: 6rem;
+}
+
+.container button {
+  all: unset;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
