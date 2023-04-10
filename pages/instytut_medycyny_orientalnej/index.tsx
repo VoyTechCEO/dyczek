@@ -9,8 +9,22 @@ import SmallerInfo from '../../components/smallerInfo/SmallerInfo';
 import useSetPageSpecs from '../../hooks/useSetPageSpecs';
 import LangChangeBtn from '../../components/langChangeBtn/LangChangeBtn';
 
-const IMO: NextPage = () => {
+interface Props {
+  locale: string;
+}
+
+export function getStaticProps({ locale }: Props) {
+  return {
+    props: {
+      locale,
+    },
+  };
+}
+
+const IMO: NextPage<Props> = (props) => {
   const pageSpecs = useSetPageSpecs();
+
+  console.log(props.locale);
 
   return (
     <>
