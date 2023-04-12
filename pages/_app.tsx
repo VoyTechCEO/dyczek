@@ -3,10 +3,11 @@ import '@/styles/akademiaChiropraktykiStyles.css';
 import '@/styles/akupunkturaChiropraktykaStyles.css';
 import '@/styles/instytutMedycynyOrientalnejStyles.css';
 import type { AppProps } from 'next/app';
-import { RecoilRoot, useRecoilState } from 'recoil';
+import { RecoilRoot } from 'recoil';
 import AppWrapper from '../components/appWrapper/AppWrapper';
+import { appWithTranslation } from 'next-i18next';
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <RecoilRoot>
       <AppWrapper>
@@ -15,3 +16,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </RecoilRoot>
   );
 }
+
+export default appWithTranslation(App);
