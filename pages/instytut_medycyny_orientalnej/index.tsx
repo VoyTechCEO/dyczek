@@ -8,23 +8,26 @@ import ImoHeader from '../../components/imoHeader/ImoHeader';
 import SmallerInfo from '../../components/smallerInfo/SmallerInfo';
 import useSetPageSpecs from '../../hooks/useSetPageSpecs';
 import LangChangeBtn from '../../components/langChangeBtn/LangChangeBtn';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 interface Props {
   locale: string;
 }
 
-export function getStaticProps({ locale }: Props) {
+export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      locale,
+      ...(await serverSideTranslations(locale, ['imoHome'])),
     },
   };
 }
 
 const IMO: NextPage<Props> = (props) => {
   const pageSpecs = useSetPageSpecs();
+  const { t } = useTranslation();
 
-  console.log(props.locale);
+  const list: string[] = t('imoHome:target', { returnObjects: true });
 
   return (
     <>
@@ -40,13 +43,9 @@ const IMO: NextPage<Props> = (props) => {
           <article className='container imo-container'>
             <h1>Nasze cele</h1>
             <ul className='dashed'>
-              <li>Propagowanie dziedzictwa nauki i sztuki orientalnej.</li>
-              <li>
-                Organizowanie szkoleń w zakresie nauki i sztuki orientalnej.
-              </li>
-              <li>
-                Tworzenie forum dla wymiany doświadczeń i zdobyczy naukowych.
-              </li>
+              {list.map((item, index) => {
+                return <li key={`${item}targets${index}`}>{item}</li>;
+              })}
             </ul>
             <h1>Nasza misja</h1>
             <p>
