@@ -53,7 +53,7 @@ const IMO: NextPage<Props> = (props) => {
             <p>{t('imoHome:date')}</p>
           </article>
         </StandardMainContent>
-        <SmallerInfo t={t} />
+        <SmallerInfo />
         <Footer sinceYear={1999} />
       </main>
     </>
