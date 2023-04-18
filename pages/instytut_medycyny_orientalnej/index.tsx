@@ -1,6 +1,5 @@
 import Footer from '../../components/footer/Footer';
 import { NextPage } from 'next';
-import React from 'react';
 import HeadSet from '../../components/headSet/HeadSet';
 import MainNav from '../../components/mainNav/MainNav';
 import StandardMainContent from '../../components/standardMainContent/StandardMainContent';
@@ -19,7 +18,7 @@ interface Props {
 export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['imoHome'])),
+      ...(await serverSideTranslations(locale, ['imoHome', 'imoMain'])),
     },
   };
 }
@@ -42,19 +41,19 @@ const IMO: NextPage<Props> = (props) => {
         <LangChangeBtn />
         <StandardMainContent subNavItems={pageSpecs.subNavContent}>
           <article className='container imo-container'>
-            <h1>Nasze cele</h1>
+            <h1>{t('imoHome:targetTitle')}</h1>
             <ul className='dashed'>
               {targetList.map((item, index) => {
                 return <li key={`${item}targets${index}`}>{item}</li>;
               })}
             </ul>
-            <h1>Nasza misja</h1>
+            <h1>{t('imoHome:missionTitle')}</h1>
             <ElementRef element='p' content={t('imoHome:mission')} />
             <h1>Henryk Dyczek</h1>
-            <p>Listopad, 2004</p>
+            <p>{t('imoHome:date')}</p>
           </article>
         </StandardMainContent>
-        <SmallerInfo />
+        <SmallerInfo t={t} />
         <Footer sinceYear={1999} />
       </main>
     </>
