@@ -7,6 +7,19 @@ import AkademiaHeader from '@/components/akademiaHeader/AkademiaHeader';
 import StandardMainContent from '@/components/standardMainContent/StandardMainContent';
 import AkademiaTrainings from '@/components/akademiaTrainings/AkademiaTrainings';
 import useSetPageSpecs from '@/hooks/useSetPageSpecs';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
+interface Props {
+  locale: string;
+}
+
+export async function getStaticProps({ locale }: Props) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['main'])),
+    },
+  };
+}
 
 const Akademia: NextPage = () => {
   const pageSpecs = useSetPageSpecs();

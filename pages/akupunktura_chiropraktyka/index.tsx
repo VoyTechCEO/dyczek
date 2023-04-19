@@ -6,6 +6,19 @@ import MainNav from '../../components/mainNav/MainNav';
 import AkuChiHeader from '../../components/akuChiHeader/AkuChiHeader';
 import StandardMainContent from '../../components/standardMainContent/StandardMainContent';
 import useSetPageSpecs from '@/hooks/useSetPageSpecs';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
+interface Props {
+  locale: string;
+}
+
+export async function getStaticProps({ locale }: Props) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['main'])),
+    },
+  };
+}
 
 const AkuChi: NextPage = () => {
   const pageSpecs = useSetPageSpecs();

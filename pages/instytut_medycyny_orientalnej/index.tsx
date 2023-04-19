@@ -18,7 +18,7 @@ interface Props {
 export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['imoHome', 'imoMain'])),
+      ...(await serverSideTranslations(locale, ['main', 'imoHome', 'imoMain'])),
     },
   };
 }
