@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import { useRecoilState } from 'recoil';
 import mainNavStyles from './mainNav.module.css';
+import { useTranslation } from 'next-i18next';
 
 interface NavItem {
   name: string;
@@ -12,31 +13,12 @@ interface NavItem {
 
 const MainNav = () => {
   const router = useRouter();
-
   const [siteTheme, setSiteTheme] = useRecoilState(siteThemeState);
+  const { t } = useTranslation();
 
-  const navItems: NavItem[] = [
-    {
-      name: `O mnie`,
-      link: `/`,
-    },
-    {
-      name: `Akademia Chiropraktyki`,
-      link: `/akademia_chiropraktyki`,
-    },
-    {
-      name: `Akupunktura Chiropraktyka`,
-      link: `/akupunktura_chiropraktyka`,
-    },
-    {
-      name: `Instytut Medycyny Orientalnej`,
-      link: `/instytut_medycyny_orientalnej`,
-    },
-    {
-      name: `Szlachetne zdrowie`,
-      link: `/szlachetne_zdrowie`,
-    },
-  ];
+  const navList: NavItem[] = t('main:mainNav', { returnObjects: true });
+
+  const navItems: NavItem[] = navList;
 
   const currentPath = navItems.reverse().find((item) => {
     return router.pathname.includes(item.link);

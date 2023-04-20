@@ -1,5 +1,27 @@
 {
-  "akademiaCh": [
+  "mainNav": [
+    {
+      "name": "About me",
+      "link": "/"
+    },
+    {
+      "name": "Akademia Chiropraktyki",
+      "link": "/akademia_chiropraktyki"
+    },
+    {
+      "name": "Akupunktura Chiropraktyka",
+      "link": "/akupunktura_chiropraktyka"
+    },
+    {
+      "name": "Instytut Medycyny Orientalnej",
+      "link": "/instytut_medycyny_orientalnej"
+    },
+    {
+      "name": "Szlachetne zdrowie",
+      "link": "/szlachetne_zdrowie"
+    }
+  ],
+  "akademiaChNav": [
     {
       "name": "Home",
       "link": "/akademia_chiropraktyki"
@@ -33,7 +55,7 @@
       "link": "/akademia_chiropraktyki/kontakt"
     }
   ],
-  "akuChiro": [
+  "akuChiroNav": [
     {
       "name": "Home",
       "link": "/akupunktura_chiropraktyka"
@@ -55,7 +77,7 @@
       "link": "/akupunktura_chiropraktyka/english"
     }
   ],
-  "imo": [
+  "imoNav": [
     {
       "name": "Home",
       "link": "/instytut_medycyny_orientalnej"
@@ -88,5 +110,7 @@
       "name": "Contact",
       "link": "/instytut_medycyny_orientalnej/kontakt"
     }
-  ]
+  ],
+  "footerRights": "Henryk Dyczek. All right reserved.",
+  "footerCredits": "Website made by"
 }

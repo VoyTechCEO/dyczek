@@ -4,6 +4,7 @@ import React from 'react';
 import { useRecoilState } from 'recoil';
 import footerStyles from './footer.module.css';
 import SocialIcons from '../../interfaces/socialIcons';
+import { useTranslation } from 'next-i18next';
 
 interface Props {
   sinceYear: number;
@@ -12,6 +13,7 @@ interface Props {
 
 const Footer = ({ sinceYear, socialIcons }: Props) => {
   const [siteTheme, setSiteTheme] = useRecoilState(siteThemeState);
+  const { t } = useTranslation();
 
   return (
     <>
@@ -32,11 +34,10 @@ const Footer = ({ sinceYear, socialIcons }: Props) => {
           })}
         </ul>
         <p>
-          © {sinceYear}-{new Date().getFullYear()} Henryk Dyczek. Wszystkie
-          prawa zastrzeżone.
+          © {sinceYear}-{new Date().getFullYear()} {t('main:footerRights')}
         </p>
         <p>
-          Strona wykonana przez{' '}
+          {t('main:footerCredits')}{' '}
           <a href='https://github.com/VoyTechCEO'>VoyTech</a>
         </p>
       </footer>

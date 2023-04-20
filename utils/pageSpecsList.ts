@@ -5,13 +5,13 @@ import SubNavItem from '@/interfaces/subNavItem';
 const pageSpecsList = (
   t: TFunction<'translation', undefined, 'translation'>
 ): PageSpecs[] => {
-  const akademiaChList: SubNavItem[] = t('main:akademiaCh', {
+  const akademiaChList: SubNavItem[] = t('main:akademiaChNav', {
     returnObjects: true,
   });
-  const akuChiroList: SubNavItem[] = t('main:akuChiro', {
+  const akuChiroList: SubNavItem[] = t('main:akuChiroNav', {
     returnObjects: true,
   });
-  const imoList: SubNavItem[] = t('main:imo', {
+  const imoList: SubNavItem[] = t('main:imoNav', {
     returnObjects: true,
   });
 

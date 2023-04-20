@@ -23,7 +23,7 @@ export async function getStaticProps({ locale }: Props) {
   };
 }
 
-const IMO: NextPage<Props> = (props) => {
+const IMO: NextPage<Props> = () => {
   const pageSpecs = useSetPageSpecs();
   const { t } = useTranslation();
 
@@ -38,7 +38,6 @@ const IMO: NextPage<Props> = (props) => {
       <main id='main' className='main-yellow'>
         <ImoHeader />
         <MainNav />
-        <LangChangeBtn />
         <StandardMainContent subNavItems={pageSpecs.subNavContent}>
           <article className='container imo-container'>
             <h1>{t('imoHome:targetTitle')}</h1>
