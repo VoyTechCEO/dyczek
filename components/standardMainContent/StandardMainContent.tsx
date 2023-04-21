@@ -2,6 +2,7 @@ import React from 'react';
 import SubNav from '../subNav/SubNav';
 import standardMainContentStyles from './standardMainContent.module.css';
 import SubNavItem from '../../interfaces/subNavItem';
+import LangChangeBtn from '../../components/langChangeBtn/LangChangeBtn';
 
 interface Props {
   subNavItems: SubNavItem[];
@@ -15,6 +16,7 @@ const StandardMainContent = ({ subNavItems, children }: Props) => {
         <SubNav subNavItems={subNavItems} />
         <div>{children}</div>
       </section>
+      <LangChangeBtn />
     </>
   );
 };

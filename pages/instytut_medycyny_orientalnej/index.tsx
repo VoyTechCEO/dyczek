@@ -6,7 +6,6 @@ import StandardMainContent from '../../components/standardMainContent/StandardMa
 import ImoHeader from '../../components/imoHeader/ImoHeader';
 import SmallerInfo from '../../components/smallerInfo/SmallerInfo';
 import useSetPageSpecs from '../../hooks/useSetPageSpecs';
-import LangChangeBtn from '../../components/langChangeBtn/LangChangeBtn';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import ElementRef from '../../components/elementRef/ElementRef';

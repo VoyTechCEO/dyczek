@@ -1,10 +1,25 @@
 .container {
   justify-content: center;
-  margin-bottom: 6rem;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  border-radius: 4px;
+  color: var(--clr-100);
+}
+
+.container.akademia_ch,
+.container.aku_chiro {
+  background-color: rgba(44, 43, 135, 0.8);
+}
+
+.container.imo {
+  background-color: rgba(102, 51, 0, 0.8);
 }
 
 .container button {
   all: unset;
+  cursor: pointer;
   font-size: 1.1rem;
   font-weight: 500;
+  padding: 0.5rem 1rem;
 }
