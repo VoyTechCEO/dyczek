@@ -9,6 +9,19 @@ import SmallerInfo from '../../../components/smallerInfo/SmallerInfo';
 import useSetPageSpecs from '../../../hooks/useSetPageSpecs';
 import Link from 'next/link';
 import imoPublicsList from '../../../utils/imoPublicsList';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
+interface Props {
+  locale: string;
+}
+
+export async function getStaticProps({ locale }: Props) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['main', 'imoMain'])),
+    },
+  };
+}
 
 const IMO: NextPage = () => {
   const pageSpecs = useSetPageSpecs();

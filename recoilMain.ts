@@ -11,4 +11,9 @@ const siteThemeState = atom({
   default: ``,
 });
 
-export { siteThemeState };
+const isLangBtnClosedState = atom({
+  key: `isLangBtnClosedState`,
+  default: false,
+});
+
+export { siteThemeState, isLangBtnClosedState };

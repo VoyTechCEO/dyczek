@@ -21,96 +21,105 @@
       "link": "/szlachetne_zdrowie"
     }
   ],
-  "akademiaChNav": [
-    {
-      "name": "Główna",
-      "link": "/akademia_chiropraktyki"
-    },
-    {
-      "name": "O Akademii",
-      "link": "/akademia_chiropraktyki/o_akademii"
-    },
-    {
-      "name": "Terminologia",
-      "link": "/akademia_chiropraktyki/terminologia"
-    },
-    {
-      "name": "Fakty",
-      "link": "/akademia_chiropraktyki/fakty"
-    },
-    {
-      "name": "Praktyka",
-      "link": "/akademia_chiropraktyki/praktyka"
-    },
-    {
-      "name": "Kurs",
-      "link": "/akademia_chiropraktyki/kurs"
-    },
-    {
-      "name": "Absolwenci",
-      "link": "/akademia_chiropraktyki/absolwenci"
-    },
-    {
-      "name": "Kontakt",
-      "link": "/akademia_chiropraktyki/kontakt"
-    }
-  ],
-  "akuChiroNav": [
-    {
-      "name": "Główna",
-      "link": "/akupunktura_chiropraktyka"
-    },
-    {
-      "name": "Kwalifikacje",
-      "link": "/akupunktura_chiropraktyka/kwalifikacje"
-    },
-    {
-      "name": "Publikacje",
-      "link": "/akupunktura_chiropraktyka/publikacje"
-    },
-    {
-      "name": "Kontakt",
-      "link": "/akupunktura_chiropraktyka/kontakt"
-    },
-    {
-      "name": "English",
-      "link": "/akupunktura_chiropraktyka/english"
-    }
-  ],
-  "imoNav": [
-    {
-      "name": "Główna",
-      "link": "/instytut_medycyny_orientalnej"
-    },
-    {
-      "name": "Szkolenia",
-      "link": "/instytut_medycyny_orientalnej/szkolenia"
-    },
-    {
-      "name": "Teksty źródłowe",
-      "link": "/instytut_medycyny_orientalnej/teksty_zrodlowe"
-    },
-    {
-      "name": "Publikacje",
-      "link": "/instytut_medycyny_orientalnej/publikacje"
-    },
-    {
-      "name": "Gabinety TMC",
-      "link": "/instytut_medycyny_orientalnej/gabinety_tmc"
-    },
-    {
-      "name": "Wydarzenia",
-      "link": "/instytut_medycyny_orientalnej/wydarzenia"
-    },
-    {
-      "name": "Linki",
-      "link": "/instytut_medycyny_orientalnej/linki"
-    },
-    {
-      "name": "Kontakt",
-      "link": "/instytut_medycyny_orientalnej/kontakt"
-    }
-  ],
+  "akademiaChSpecs": {
+    "nav": [
+      {
+        "name": "Główna",
+        "link": "/akademia_chiropraktyki"
+      },
+      {
+        "name": "O Akademii",
+        "link": "/akademia_chiropraktyki/o_akademii"
+      },
+      {
+        "name": "Terminologia",
+        "link": "/akademia_chiropraktyki/terminologia"
+      },
+      {
+        "name": "Fakty",
+        "link": "/akademia_chiropraktyki/fakty"
+      },
+      {
+        "name": "Praktyka",
+        "link": "/akademia_chiropraktyki/praktyka"
+      },
+      {
+        "name": "Kurs",
+        "link": "/akademia_chiropraktyki/kurs"
+      },
+      {
+        "name": "Absolwenci",
+        "link": "/akademia_chiropraktyki/absolwenci"
+      },
+      {
+        "name": "Kontakt",
+        "link": "/akademia_chiropraktyki/kontakt"
+      }
+    ],
+    "title": "Akademia Chiropraktyki"
+  },
+  "akuChiroSpecs": {
+    "nav": [
+      {
+        "name": "Główna",
+        "link": "/akupunktura_chiropraktyka"
+      },
+      {
+        "name": "Kwalifikacje",
+        "link": "/akupunktura_chiropraktyka/kwalifikacje"
+      },
+      {
+        "name": "Publikacje",
+        "link": "/akupunktura_chiropraktyka/publikacje"
+      },
+      {
+        "name": "Kontakt",
+        "link": "/akupunktura_chiropraktyka/kontakt"
+      },
+      {
+        "name": "English",
+        "link": "/akupunktura_chiropraktyka/english"
+      }
+    ],
+    "title": "Henryk Dyczek - akupunktura i chiropraktykas"
+  },
+  "imoSpecs": {
+    "nav": [
+      {
+        "name": "Główna",
+        "link": "/instytut_medycyny_orientalnej"
+      },
+      {
+        "name": "Szkolenia",
+        "link": "/instytut_medycyny_orientalnej/szkolenia"
+      },
+      {
+        "name": "Teksty źródłowe",
+        "link": "/instytut_medycyny_orientalnej/teksty_zrodlowe"
+      },
+      {
+        "name": "Publikacje",
+        "link": "/instytut_medycyny_orientalnej/publikacje"
+      },
+      {
+        "name": "Gabinety TMC",
+        "link": "/instytut_medycyny_orientalnej/gabinety_tmc"
+      },
+      {
+        "name": "Wydarzenia",
+        "link": "/instytut_medycyny_orientalnej/wydarzenia"
+      },
+      {
+        "name": "Linki",
+        "link": "/instytut_medycyny_orientalnej/linki"
+      },
+      {
+        "name": "Kontakt",
+        "link": "/instytut_medycyny_orientalnej/kontakt"
+      }
+    ],
+    "title": "Instytut Medycyny Orientalnej"
+  },
   "footerRights": "Henryk Dyczek. Wszystkie prawa zastrzeżone.",
   "footerCredits": "Strona wykonana przez"
 }

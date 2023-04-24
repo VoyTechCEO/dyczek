@@ -1,27 +1,46 @@
 .container {
   justify-content: center;
   position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-  border-radius: 4px;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 16px 0 16px 4px;
   color: var(--clr-100);
 }
 
 .container.akademia_ch,
-.container.aku_chiro {
+.container.aku_chiro,
+.container.aku_chiro button.close,
+.container.akademia_ch button.close {
   background-color: rgba(44, 43, 135, 0.8);
 }
 
-.container.imo {
+.container.imo,
+.container.imo button.close {
   background-color: rgba(102, 51, 0, 0.8);
+}
+
+.container button.close {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  top: -1.2rem;
+  right: 0;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.25rem 0 0.25rem;
+  border-radius: 8px 8px 0 0;
+}
+
+.container button.close svg {
+  fill: var(--clr-100);
 }
 
 .container a {
   all: unset;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
   width: 100%;
   display: flex;
   column-gap: 0.6rem;
@@ -30,5 +49,5 @@
 
 .container a svg {
   width: auto;
-  height: 1.4rem;
+  height: 1.2rem;
 }

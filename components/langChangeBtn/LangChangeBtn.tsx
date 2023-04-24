@@ -2,9 +2,13 @@ import React from 'react';
 import langChangeBtnStyles from './langChangeBtn.module.css';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { useRecoilState } from 'recoil';
+import { isLangBtnClosedState } from '@/recoilMain';
 
 const LangChangeBtn = () => {
   const router = useRouter();
+  const [isLangBtnClosed, setIsLangBtnClosed] =
+    useRecoilState(isLangBtnClosedState);
 
   let pageClass = ``;
   if (router.pathname.includes(`/akademia_chiropraktyki`)) {
@@ -20,6 +24,22 @@ const LangChangeBtn = () => {
       <div
         className={`container ${langChangeBtnStyles.container} ${pageClass}`}
       >
+        <button
+          className={langChangeBtnStyles.close}
+          onClick={() => setIsLangBtnClosed(true)}
+        >
+          <svg
+            width='10'
+            version='1.1'
+            viewBox='0 0 52.917 52.917'
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            <path
+              d='m16.734 43.194-9.7247 9.7221-7.0088-7.0088 19.444-19.449-19.444-19.449 7.0088-7.0088 19.449 19.444 19.449-19.444 7.0088 7.0088-19.444 19.449 19.444 19.449-7.0088 7.0088-19.449-19.444z'
+              strokeWidth='.26458'
+            />
+          </svg>
+        </button>
         <Link
           href={router.pathname}
           locale={router.locale !== `en` ? `en` : `pl`}

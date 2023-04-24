@@ -3,6 +3,8 @@ import SubNav from '../subNav/SubNav';
 import standardMainContentStyles from './standardMainContent.module.css';
 import SubNavItem from '../../interfaces/subNavItem';
 import LangChangeBtn from '../../components/langChangeBtn/LangChangeBtn';
+import { isLangBtnClosedState } from '@/recoilMain';
+import { useRecoilState } from 'recoil';
 
 interface Props {
   subNavItems: SubNavItem[];
@@ -10,13 +12,16 @@ interface Props {
 }
 
 const StandardMainContent = ({ subNavItems, children }: Props) => {
+  const [isLangBtnClosed, setIsLangBtnClosed] =
+    useRecoilState(isLangBtnClosedState);
+
   return (
     <>
       <section className={`container ${standardMainContentStyles.container}`}>
         <SubNav subNavItems={subNavItems} />
         <div>{children}</div>
       </section>
-      <LangChangeBtn />
+      {!isLangBtnClosed && <LangChangeBtn />}
     </>
   );
 };
