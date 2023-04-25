@@ -8,6 +8,7 @@ import ImoHeader from '../../../components/imoHeader/ImoHeader';
 import SmallerInfo from '../../../components/smallerInfo/SmallerInfo';
 import useSetPageSpecs from '../../../hooks/useSetPageSpecs';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 interface Props {
   locale: string;
@@ -16,13 +17,18 @@ interface Props {
 export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['main', 'imoMain'])),
+      ...(await serverSideTranslations(locale, [
+        'main',
+        'imoMain',
+        'imoGabinetyTMC',
+      ])),
     },
   };
 }
 
 const IMO: NextPage = () => {
   const pageSpecs = useSetPageSpecs();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -36,14 +42,14 @@ const IMO: NextPage = () => {
         <MainNav />
         <StandardMainContent subNavItems={pageSpecs.subNavContent}>
           <article className='container imo-container'>
-            <h1>Gabinety Tradycyjnej Medycyny Chińskiej w Polsce</h1>
+            <h1>{t('imoGabinetyTMC:head')}</h1>
             <p>
               <span>Henryk Dyczek</span> <br />
               ul. Tulipanowa 6 <br />
               Przysiek k/ Torunia <br />
               87-134 Zławieś Wielka <br />
               <br />
-              tel./faks: (056) 6789 343 <br />
+              {t('imoGabinetyTMC:contact')}: (056) 6789 343 <br />
               e-mail:{' '}
               <a href='mailto: henryk.dyczek@man.torun.pl'>
                 henryk.dyczek@man.torun.pl

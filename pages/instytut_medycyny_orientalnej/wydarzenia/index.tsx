@@ -7,9 +7,28 @@ import StandardMainContent from '../../../components/standardMainContent/Standar
 import ImoHeader from '../../../components/imoHeader/ImoHeader';
 import SmallerInfo from '../../../components/smallerInfo/SmallerInfo';
 import useSetPageSpecs from '../../../hooks/useSetPageSpecs';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
+
+interface Props {
+  locale: string;
+}
+
+export async function getStaticProps({ locale }: Props) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        'main',
+        'imoMain',
+        'imoWydarzenia',
+      ])),
+    },
+  };
+}
 
 const IMO: NextPage = () => {
   const pageSpecs = useSetPageSpecs();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -23,15 +42,12 @@ const IMO: NextPage = () => {
         <MainNav />
         <StandardMainContent subNavItems={pageSpecs.subNavContent}>
           <article className='container imo-container'>
-            <h1>Najnowsze wydarzenia</h1>
+            <h1>{t('imoWydarzenia:head')}</h1>
             <ul>
               <li>
                 <h3>2004</h3>
-                <h4>Powstanie IMO</h4>
-                <p>
-                  W dniu 13.12.2004 został założony INSTYTUT MEDYCYNY
-                  ORIENTALNEJ.
-                </p>
+                <h4>{t('imoWydarzenia:event')}</h4>
+                <p>{t('imoWydarzenia:eventContent')}</p>
               </li>
             </ul>
           </article>

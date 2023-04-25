@@ -31,8 +31,9 @@ const IMO: NextPage<Props> = () => {
   return (
     <>
       <HeadSet
-        title='Instytut Medycyny Orientalnej'
-        keywords='instytut medycyny orientalnej, imo, medycyna orientalna, henryk dyczek'
+        title={pageSpecs.title}
+        keywords={pageSpecs.keywords}
+        desc={pageSpecs.description}
       />
       <main id='main' className='main-yellow'>
         <ImoHeader />

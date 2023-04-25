@@ -47,27 +47,21 @@ const LangChangeBtn = () => {
           {router.locale === `en` ? (
             <>
               <svg
+                width='1e3'
+                height='500'
                 version='1.1'
-                viewBox='0 0 1e3 500'
+                viewBox='0 0 264.58 132.29'
                 xmlns='http://www.w3.org/2000/svg'
               >
-                <g transform='scale(16.667)' strokeWidth='1pt'>
-                  <rect width='60' height='30' fill='#006' />
-                  <path
-                    d='m0 0v3.3541l53.292 26.646h6.708v-3.354l-53.292-26.646h-6.708zm60 0v3.354l-53.292 26.646h-6.708v-3.354l53.292-26.646h6.708z'
-                    fill='#fff'
-                  />
-                  <path
-                    d='m25 0v30h10v-30h-10zm-25 10v10h60v-10h-60z'
-                    fill='#fff'
-                  />
-                  <path d='m0 12v6h60v-6h-60zm27-12v30h6v-30h-6z' fill='#c00' />
-                  <path
-                    d='m0 30 20-10h4.472l-20 10h-4.472zm0-30 20 10h-4.472l-15.528-7.7639v-2.2361zm35.528 10 20-10h4.472l-20 10h-4.472zm24.472 20-20-10h4.472l15.528 7.764v2.236z'
-                    fill='#c00'
-                  />
-                </g>
+                <rect
+                  y='-1.1102e-16'
+                  width='264.58'
+                  height='66.146'
+                  fill='#fff'
+                />
+                <rect y='66.146' width='264.58' height='66.146' fill='#c00' />
               </svg>
+
               <span>Polska wersja</span>
             </>
           ) : (
