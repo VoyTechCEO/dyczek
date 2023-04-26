@@ -1,0 +1,64 @@
+{
+  "head": "Articles",
+  "author": "Author",
+  "summaryHead": "Summary",
+  "download": "Take document",
+  "enVersion": "in English",
+  "plVersion": "in Polish",
+  "publicsList": [
+    {
+      "year": 2017,
+      "publics": [
+        {
+          "header": "Punkty Akupunktury – Jelito Grube i Płuca – monografia, s. 275.",
+          "author": "Henryk Dyczek",
+          "short": "<p class='align-left'>W przygotowaniu...</p>",
+          "doc": "Próbka_Punkty_Akupunktury_Płuca_i_Jelito_Grube.pdf"
+        }
+      ]
+    },
+    {
+      "year": 2014,
+      "publics": [
+        {
+          "header": "Anatomiczna Lokalizacja Punktów Akupunktury – monografia, s. 925.",
+          "author": "Henryk Dyczek",
+          "short": "<p class='align-left'>W przygotowaniu...</p>",
+          "doc": "Próbka_Anatomiczna_lokalizacja.pdf"
+        }
+      ]
+    },
+    {
+      "year": 2004,
+      "publics": [
+        {
+          "header": "The Principles Of Acupuncture Treatment Of Back Pain In The Cases When Manual Therapy Is Inefective.",
+          "author": "Henryk Dyczek",
+          "short": "<p class='align-left'>The purpose of the paper is to attract attention of those involved in manual therapy to consider the acupuncture treatment for the conditions of the spine in cases when the manual therapy seems to be ineffective. Rather different conceptions and understanding of human physiology and pathology by Traditional Chinese Medicine (TCM) widens the scope and effectiveness of therapy. According to TCM the condition of kidney's energy(Qi) is important when it comes to the TCM treatment plan and its efficacy.</p>",
+          "doc": "pub001.doc"
+        },
+        {
+          "header": "Anorexia nervosa - a study case of mother-daughter relationship in the light of Five Phases Cycle.",
+          "author": "Henryk Dyczek",
+          "short": "<p class='align-left'>This is the presentation of a study case of an anorexic female, who has commenced the acupuncture treatment for anorexia nervosa five years ago at the age of 23. Currently she is holding a university post as a lecturer and writes her PhD dissertation. She lives normal live both professionally and personally fulfilling. At the age of 17, the patient was diagnosed with anorexia nervosa. Within one year she lost 20 kilograms. When she arrived for treatment she was 23 years old and she suffered from:</p><ul class='dashed'><li>severe depression (at the time treated with Prozac),</li><li>drilling stomach pain, which did not react to any medication,</li><li>had duodenal ulcers,</li><li>was consumed by stress,</li><li>suffered from hypothermia & was totally exhausted.</li></ul><p class='align-left'>The patient's mother has also been treated by the same acupuncture practitioner, though with a lesser frequency. That coincidence gave the practitioner a valuable insight into a possible eitiology of the daughter's illness. The study not only describes the treatment procedures which were used during the patient' recovery period, but also attempts to analyse and draw conclusion from the mother-daughter relationship in the light of the Mother-Child Law of the Five Phase Cycle. (201 words).</p>",
+          "doc": "pub002.doc",
+          "english": true
+        },
+        {
+          "header": "Headaches - the missed causes.",
+          "author": "Henryk Dyczek",
+          "short": "<p class='align-left'>The idea for that presentation came out of the authors need to share the years long experience in treating headaches. The lengthy, at times TCM treatment of headaches, frequently supported by a vague diagnosis, can be aided and rapidly accelerated by the employment of basic craniosacral techniques. The presentation analyses the possible reasons for the mere therapeutic effects and offers possible fine solutions.</p>",
+          "doc": "pub003.pps",
+          "english": true
+        },
+        {
+          "header": "The analysis of the amalgamation of Alternative Medicine into the mainstream medicine in the period of time from 1965 to August 2003.",
+          "author": "Henryk Dyczek",
+          "short": "<p class='align-left'>Alternative medicine, namely acupuncture, chiropractic and homeopathy, appeared in the Western Europe in the sixties of the last century. To start with, it was feared and looked down on, but at present, it occupies the space of the majority in the medical journals, and the public demand for its services is on the increase. This study analyses all the articles on the subject of acupuncture, chiropractic and homoeopathy, which were available at the Medline Webside from 1965  to August 25th, 2003. The three prepared corpora of acupuncture, chiropractic and homeopathy where compared to BNC written sample in four time periods (i.e. 1965-1974, 1975-1984, 1985-1994, 1995-2003) with the use of Wmatrix program, thanks to the courtesy of Lancaster University, U.K., in the categories of word and semantic frequencies. The outcome of the study and the employed procedures revealed that there is a logical order within the studied data, which appears with apposite appreciation. Moreover the study confirms that while in the 1960s the notion of the word acupuncture caused some noticeable symptoms of bewilderment in interlocutors and for the majority it was a taboo word, let alone the medical profession that regarded acupuncture as an absolute witchcraft that should not be even touched with a barge pole, the turn of the century, as the data firmly presents, welcomes alternative medicine into the mainstream medicine.</p>",
+          "doc": "pub004.pps",
+          "english": true
+        }
+      ]
+    }
+  ]
+}

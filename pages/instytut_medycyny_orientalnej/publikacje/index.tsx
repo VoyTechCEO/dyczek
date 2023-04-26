@@ -10,6 +10,7 @@ import useSetPageSpecs from '../../../hooks/useSetPageSpecs';
 import Link from 'next/link';
 import imoPublicsList from '../../../utils/imoPublicsList';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 interface Props {
   locale: string;
@@ -18,13 +19,18 @@ interface Props {
 export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['main', 'imoMain'])),
+      ...(await serverSideTranslations(locale, [
+        'main',
+        'imoMain',
+        'imoPublikacje',
+      ])),
     },
   };
 }
 
 const IMO: NextPage = () => {
   const pageSpecs = useSetPageSpecs();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -38,9 +44,9 @@ const IMO: NextPage = () => {
         <MainNav />
         <StandardMainContent subNavItems={pageSpecs.subNavContent}>
           <article className='container imo-container'>
-            <h1>Publikacje</h1>
+            <h1>{t('imoPublikacje:head')}</h1>
             <ul>
-              {imoPublicsList.map((sector, sectorIdx) => {
+              {imoPublicsList(t).map((sector, sectorIdx) => {
                 return (
                   <li
                     key={`${sector}publicsSectors${sectorIdx}`}
@@ -54,13 +60,15 @@ const IMO: NextPage = () => {
                             <p className='align-left'>
                               <span>{item.header}</span>
                             </p>
-                            <h4>Autor:</h4>
+                            <h4>{t('imoPublikacje:author')}:</h4>
                             <p className='align-left'>{item.author}</p>
-                            <h4>Streszczenie:</h4>
-                            <div>{item.short}</div>
+                            <h4>{t('imoPublikacje:summaryHead')}:</h4>
+                            <>{item.short}</>
                             <Link href={`/docs/imo/${item.doc}`}>
-                              Pobierz pełen dokument ({item.doc})
-                              {item.english ? ` - po angielsku` : ``}
+                              {t('imoPublikacje:download')} ({item.doc})
+                              {item.english
+                                ? ` - ${t('imoPublikacje:enVersion')}`
+                                : ` - ${t('imoPublikacje:plVersion')}`}
                             </Link>
                             <div className='line' />
                           </li>

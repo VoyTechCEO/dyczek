@@ -8,6 +8,7 @@ import ImoHeader from '../../../components/imoHeader/ImoHeader';
 import SmallerInfo from '../../../components/smallerInfo/SmallerInfo';
 import useSetPageSpecs from '../../../hooks/useSetPageSpecs';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 interface Props {
   locale: string;
@@ -16,13 +17,18 @@ interface Props {
 export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['main', 'imoMain'])),
+      ...(await serverSideTranslations(locale, [
+        'main',
+        'imoMain',
+        'imoContact',
+      ])),
     },
   };
 }
 
 const IMO: NextPage = () => {
   const pageSpecs = useSetPageSpecs();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -36,7 +42,7 @@ const IMO: NextPage = () => {
         <MainNav />
         <StandardMainContent subNavItems={pageSpecs.subNavContent}>
           <article className='container imo-container'>
-            <h1>Dane Teleadresowe</h1>
+            <h1>{t('imoContact:head')}</h1>
             <p>
               <span>Henryk Dyczek</span>
               <br />
@@ -46,12 +52,12 @@ const IMO: NextPage = () => {
               87-134 Zławieś Wielka
               <br />
               <br />
-              tel./faks: (56) 6789 343
+              {t('imoContact:contactType')}: (56) 6789 343
               <br />
               e-mail: <a href='mailto: henryk@dyczek.pl'>henryk@dyczek.pl</a>
             </p>
             <br />
-            <h1>Mapa dojazdu</h1>
+            <h1>{t('imoContact:mapHead')}</h1>
             <img src='/img/mapka.gif' alt='mapa dojazdu' />
           </article>
         </StandardMainContent>
