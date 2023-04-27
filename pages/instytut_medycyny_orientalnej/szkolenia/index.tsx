@@ -8,6 +8,8 @@ import ImoHeader from '../../../components/imoHeader/ImoHeader';
 import SmallerInfo from '../../../components/smallerInfo/SmallerInfo';
 import useSetPageSpecs from '../../../hooks/useSetPageSpecs';
 import Link from 'next/link';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 interface Courses {
   name: string;
@@ -15,30 +17,29 @@ interface Courses {
   desc?: string;
 }
 
+interface Props {
+  locale: string;
+}
+
+export async function getStaticProps({ locale }: Props) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        'main',
+        'imoMain',
+        'imoSzkolenia',
+      ])),
+    },
+  };
+}
+
 const IMO: NextPage = () => {
   const pageSpecs = useSetPageSpecs();
+  const { t } = useTranslation();
 
-  const coursesList: Courses[] = [
-    {
-      name: `SZKOŁA AKUPUNKTURY TRADYCYJNEJ`,
-      link: `https://szkolakupunktury.edu.pl/`,
-    },
-    {
-      name: `KURS TRADYCYJNEJ MEDYCYNY CHIŃSKIEJ`,
-      link: `/instytut_medycyny_orientalnej/szkolenia/kurs_tmc`,
-      desc: `Monumentalny kurs w zakresie Tradycyjnej Chińskiej Medycyny (TMC). Kurs został podzielony na pięć części, a w sumie składa się z 80 modułów o różnej tematyce.`,
-    },
-    {
-      name: `KURS QI GONG DLA ZDROWIA`,
-      desc: `Przeznaczony dla osób zainteresowanych wzmocnieniem i uaktywnieniem swojego Qi dla lepszego samopoczucia, zdrowia i optymalizacji indywidualnych umiejętności.`,
-    },
-    {
-      name: `SZKOŁA AKUPUNKTURY TRADYCYJNEJ`,
-    },
-    {
-      name: `SZKOŁA AKUPUNKTURY TRADYCYJNEJ`,
-    },
-  ];
+  const coursesList: Courses[] = t('imoSzkolenia:coursesList', {
+    returnObjects: true,
+  });
 
   return (
     <>
@@ -52,7 +53,7 @@ const IMO: NextPage = () => {
         <MainNav />
         <StandardMainContent subNavItems={pageSpecs.subNavContent}>
           <article className='container imo-container'>
-            <h1>Propozycje szkoleń</h1>
+            <h1>{t('imoSzkolenia:coursesHead')}</h1>
             <ul className='dashed'>
               {coursesList.map((item) => {
                 return (
