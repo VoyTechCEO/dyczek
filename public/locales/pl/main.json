@@ -120,6 +120,31 @@
     ],
     "title": "Instytut Medycyny Orientalnej"
   },
+  "szlaZdSpecs": {
+    "nav": [
+      {
+        "name": "O nas",
+        "link": "/szlachetne_zdrowie"
+      },
+      {
+        "name": "Pytania",
+        "link": "/szlachetne_zdrowie/pytania"
+      },
+      {
+        "name": "Publikacje",
+        "link": "/szlachetne_zdrowie/publikacje"
+      },
+      {
+        "name": "Linki",
+        "link": "/szlachetne_zdrowie/linki"
+      },
+      {
+        "name": "Kontakt",
+        "link": "/szlachetne_zdrowie/kontakt"
+      }
+    ],
+    "title": "Szlachetne zdrowie"
+  },
   "footerRights": "Henryk Dyczek. Wszystkie prawa zastrzeżone.",
   "footerCredits": "Strona wykonana przez"
 }

@@ -19,6 +19,9 @@ const pageSpecsList = (
   const imoSpecs: Specs = t('main:imoSpecs', {
     returnObjects: true,
   });
+  const szlaZdSpecs: Specs = t('main:szlaZdSpecs', {
+    returnObjects: true,
+  });
 
   const pageSpecsList: PageSpecs[] = [
     {
@@ -51,6 +54,14 @@ const pageSpecsList = (
       keywords: `instytut medycyny orientalnej, imo, medycyna orientalna, henryk dyczek`,
       description: ``,
       sinceYear: 1999,
+    },
+    {
+      name: `szlaZd`,
+      subNavContent: szlaZdSpecs.nav,
+      title: szlaZdSpecs.title,
+      keywords: `szlachetne zdrowie, zdrowie, health, noble health, henryk dyczek`,
+      description: ``,
+      sinceYear: 2009,
     },
   ];
 

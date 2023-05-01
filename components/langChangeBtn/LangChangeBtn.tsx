@@ -17,6 +17,8 @@ const LangChangeBtn = () => {
     pageClass = langChangeBtnStyles.aku_chiro;
   } else if (router.pathname.includes(`/instytut_medycyny_orientalnej`)) {
     pageClass = langChangeBtnStyles.imo;
+  } else if (router.pathname.includes(`/szlachetne_zdrowie`)) {
+    pageClass = langChangeBtnStyles.szla_zd;
   }
 
   return (

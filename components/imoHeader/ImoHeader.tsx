@@ -1,7 +1,10 @@
 import React from 'react';
 import imoHeaderStyles from './imoHeader.module.css';
+import { useTranslation } from 'next-i18next';
 
 const ImoHeader = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <section className={`container ${imoHeaderStyles.container}`}>
@@ -13,7 +16,7 @@ const ImoHeader = () => {
                 src='/img/instytutMedycynyOrientalnej.png'
                 alt='Instytut Medycyny Orientalnej'
               />
-              <h1>INSTYTUT MEDYCYNY ORIENTALNEJ</h1>
+              <h1>{t('imoMain:pageName')}</h1>
             </div>
           </div>
         </div>

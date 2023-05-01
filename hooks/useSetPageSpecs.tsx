@@ -15,6 +15,8 @@ const useSetSubNavContent = () => {
     pageSpecs = pageSpecsList(t)!.find((item) => item.name === `akuChiro`)!;
   } else if (router.pathname.includes(`/instytut_medycyny_orientalnej`)) {
     pageSpecs = pageSpecsList(t)!.find((item) => item.name === `imo`)!;
+  } else if (router.pathname.includes(`/szlachetne_zdrowie`)) {
+    pageSpecs = pageSpecsList(t)!.find((item) => item.name === `szlaZd`)!;
   }
 
   return pageSpecs;

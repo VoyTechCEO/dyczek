@@ -53,7 +53,7 @@ const IMO: NextPage<Props> = () => {
           </article>
         </StandardMainContent>
         <SmallerInfo />
-        <Footer sinceYear={1999} />
+        <Footer sinceYear={pageSpecs.sinceYear} />
       </main>
     </>
   );

@@ -20,6 +20,11 @@
   background-color: rgba(102, 51, 0, 0.8);
 }
 
+.container.szla_zd,
+.container.szla_zd button.close {
+  background-color: rgba(68, 169, 108, 0.8);
+}
+
 .container button.close {
   all: unset;
   cursor: pointer;

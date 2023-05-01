@@ -13,7 +13,7 @@
       "link": "/akupunktura_chiropraktyka"
     },
     {
-      "name": "Instytut Medycyny Orientalnej",
+      "name": "THE INSTITUTE OF ORIENTAL MEDICINE",
       "link": "/instytut_medycyny_orientalnej"
     },
     {
@@ -119,6 +119,31 @@
       }
     ],
     "title": "The Institute of Oriental Medicine"
+  },
+  "szlaZdSpecs": {
+    "nav": [
+      {
+        "name": "About us",
+        "link": "/szlachetne_zdrowie"
+      },
+      {
+        "name": "Questions",
+        "link": "/szlachetne_zdrowie/pytania"
+      },
+      {
+        "name": "Articles",
+        "link": "/szlachetne_zdrowie/publikacje"
+      },
+      {
+        "name": "Links",
+        "link": "/szlachetne_zdrowie/linki"
+      },
+      {
+        "name": "Contact",
+        "link": "/szlachetne_zdrowie/kontakt"
+      }
+    ],
+    "title": "Szlachetne zdrowie"
   },
   "footerRights": "Henryk Dyczek. All right reserved.",
   "footerCredits": "Website made by"
