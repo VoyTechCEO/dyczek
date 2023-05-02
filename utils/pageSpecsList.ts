@@ -25,6 +25,19 @@ const pageSpecsList = (
 
   const pageSpecsList: PageSpecs[] = [
     {
+      name: `homeDyczek`,
+      subNavContent: [
+        {
+          name: `homeDyczek`,
+          link: `/`,
+        },
+      ],
+      title: `Henryk Dyczek - medycyna niekonwencjonalna`,
+      keywords: `henryk dyczek, dyczek, medycyna niekonwencjonalna, akupunktura, chiropraktyka`,
+      description: `opis`,
+      sinceYear: 1999,
+    },
+    {
       name: `akademiaCh`,
       subNavContent: akademiaChSpecs.nav,
       title: akademiaChSpecs.title,

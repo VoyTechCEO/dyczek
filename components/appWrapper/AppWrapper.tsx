@@ -15,6 +15,8 @@ const AppWrapper = ({ children }: Props) => {
   useEffect(() => {
     if (router.pathname.includes(`/instytut_medycyny_orientalnej`)) {
       setSiteTheme(`imo`);
+    } else if (router.pathname.includes(`/szlachetne_zdrowie`)) {
+      setSiteTheme(`szlaZd`);
     } else {
       setSiteTheme(``);
     }

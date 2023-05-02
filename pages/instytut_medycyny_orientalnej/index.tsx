@@ -30,11 +30,7 @@ const IMO: NextPage<Props> = () => {
 
   return (
     <>
-      <HeadSet
-        title={pageSpecs.title}
-        keywords={pageSpecs.keywords}
-        desc={pageSpecs.description}
-      />
+      <HeadSet />
       <main id='main' className='main-yellow'>
         <ImoHeader />
         <MainNav />

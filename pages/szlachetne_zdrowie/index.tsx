@@ -27,11 +27,7 @@ const SzlaZd: NextPage = () => {
 
   return (
     <>
-      <HeadSet
-        title={pageSpecs.title}
-        keywords={pageSpecs.keywords}
-        desc={pageSpecs.description}
-      />
+      <HeadSet />
       <main id='main'>
         <SzlaZdHeader />
         <MainNav />

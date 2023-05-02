@@ -9,7 +9,9 @@ const useSetSubNavContent = () => {
 
   let pageSpecs!: PageSpecs;
 
-  if (router.pathname.includes(`/akademia_chiropraktyki`)) {
+  if (router.pathname === `/`) {
+    pageSpecs = pageSpecsList(t)!.find((item) => item.name === `homeDyczek`)!;
+  } else if (router.pathname.includes(`/akademia_chiropraktyki`)) {
     pageSpecs = pageSpecsList(t)!.find((item) => item.name === `akademiaCh`)!;
   } else if (router.pathname.includes(`/akupunktura_chiropraktyka`)) {
     pageSpecs = pageSpecsList(t)!.find((item) => item.name === `akuChiro`)!;

@@ -42,3 +42,11 @@
 .container li.imo .underline {
   background-color: var(--clr-red-200);
 }
+
+.container li.szla_zd a.active {
+  color: var(--clr-gre);
+}
+
+.container li.szla_zd .underline {
+  background-color: var(--clr-gre);
+}

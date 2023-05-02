@@ -1,20 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
+import useSetPageSpecs from '../../hooks/useSetPageSpecs';
 
-interface Props {
-  title?: string;
-  desc?: string;
-  keywords?: string;
-}
+const HeadSet = () => {
+  const { title, description, keywords } = useSetPageSpecs();
 
-const HeadSet = ({ title, desc, keywords }: Props) => {
   return (
     <>
       <Head>
         <title>
           {title ? title : `Henryk Dyczek - medycyna niekonwencjonalna`}
         </title>
-        <meta name='description' content={desc ? desc : `opis`} />
+        <meta name='description' content={description ? description : `opis`} />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta
           name='keywords'

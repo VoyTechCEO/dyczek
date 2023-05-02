@@ -32,7 +32,13 @@ const MainNav = () => {
           return (
             <li
               key={`${item}${index}`}
-              className={siteTheme === `imo` ? mainNavStyles.imo : ``}
+              className={
+                siteTheme === `imo`
+                  ? mainNavStyles.imo
+                  : siteTheme === `szlaZd`
+                  ? mainNavStyles.szla_zd
+                  : ``
+              }
             >
               <Link
                 href={item.link}
