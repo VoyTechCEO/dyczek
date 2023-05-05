@@ -19,7 +19,11 @@ const Footer = ({ sinceYear, socialIcons }: Props) => {
     <>
       <footer
         className={`container ${footerStyles.container} ${
-          siteTheme === `imo` ? footerStyles.imo : ``
+          siteTheme === `imo`
+            ? footerStyles.imo
+            : siteTheme === `szlaZd`
+            ? footerStyles.szla_zd
+            : ``
         }`}
       >
         <ul className={footerStyles.socials}>

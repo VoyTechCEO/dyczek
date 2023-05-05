@@ -32,7 +32,52 @@ const SzlaZd: NextPage = () => {
         <SzlaZdHeader />
         <MainNav />
         <StandardMainContent subNavItems={pageSpecs.subNavContent}>
-          <article className={`container szlaZd-container`}></article>
+          <article className='container szlaZd-container about'>
+            <div className='quotes'>
+              <div className='quote'>
+                <p>
+                  XVI wiek
+                  <br />
+                  <br />
+                  Ślachetne zdrowie,
+                  <br /> Nikt się nie dowie,
+                  <br /> Jako smakujesz,
+                  <br /> Aż się zepsujesz.
+                </p>
+                <p className='author'>Jan Kochanowski (1530-1584)</p>
+              </div>
+              <div className='quote'>
+                <p>
+                  XXI wiek
+                  <br />
+                  <br />
+                  Zdrowie i choroba określone są na poziomie milionów komórek
+                  tworzących nasze ciało i organy.
+                </p>
+                <p className='author'>Dr med. Mathias Rath, 2007r.</p>
+              </div>
+            </div>
+            <h1>W obecnych czasach mamy:</h1>
+            <div className='descriptions'>
+              <ul className='description'>
+                <li>Wysoce wykwalifikowaną opiekę medyczną.</li>
+                <li>Setki diet.</li>
+                <li>Tyle samo ekspertów od żywienia</li>
+                <li>
+                  Dostęp do wielu suplementów diety, tj. witamin, minerałów,
+                  etc.
+                </li>
+              </ul>
+              <ul className='description'>
+                <li>
+                  Postępujący wzrost umieralności na choroby układu krążenia.
+                </li>
+                <li>Wzrost zachorowalności i umieralności na nowotwory.</li>
+                <li>Co trzeciego noworodka z alergią.</li>
+              </ul>
+              <div className='speech'></div>
+            </div>
+          </article>
         </StandardMainContent>
         <Footer sinceYear={pageSpecs.sinceYear} />
       </main>

@@ -33,3 +33,7 @@
 .container.imo p a {
   color: var(--clr-red-200);
 }
+
+.container.szla_zd p a {
+  color: var(--clr-gre);
+}

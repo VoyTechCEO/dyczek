@@ -19,7 +19,11 @@ const SubNav = ({ subNavItems }: Props) => {
     <>
       <ul
         className={`container ${subNavStyles.container} ${
-          siteTheme === `imo` ? subNavStyles.imo : ``
+          siteTheme === `imo`
+            ? subNavStyles.imo
+            : siteTheme === `szlaZd`
+            ? subNavStyles.szla_zd
+            : ``
         }`}
       >
         {subNavItems.map((item, index) => {
