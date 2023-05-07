@@ -57,8 +57,8 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  column-gap: 1rem;
-  row-gap: 1rem;
+  column-gap: 2rem;
+  row-gap: 4rem;
 }
 
 .szlaZd-container.about .descriptions ul.description {
@@ -77,5 +77,45 @@
   font-weight: 600;
 }
 
-.szlaZd-container.about .descriptions .speech {
+.szlaZd-container.about .descriptions .letter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.szlaZd-container.about .descriptions .letter a {
+  color: var(--clr-gre);
+}
+
+.szlaZd-container.about .descriptions .letter .content {
+  display: flex;
+  column-gap: 3rem;
+}
+
+.szlaZd-container.about .descriptions .letter .content .speech {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.szlaZd-container.about .descriptions .letter .content .speech p {
+  text-indent: 2rem;
+}
+
+.szlaZd-container.about .descriptions .letter .content .speech p span {
+  font-weight: 600;
+}
+
+.szlaZd-container.about .descriptions .letter .content .speech i {
+  font-size: 0.9rem;
+}
+
+.szlaZd-container.about .descriptions .letter .content img {
+  width: 11rem;
+  height: auto;
+}
+
+.szlaZd-container.about .descriptions .letter p.ending {
+  text-align: right;
 }

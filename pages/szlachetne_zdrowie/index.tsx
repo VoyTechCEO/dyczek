@@ -8,6 +8,8 @@ import StandardMainContent from '../../components/standardMainContent/StandardMa
 import useSetPageSpecs from '../../hooks/useSetPageSpecs';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
+import SmallerInfo from '../../components/smallerInfo/SmallerInfo';
 
 interface Props {
   locale: string;
@@ -16,7 +18,7 @@ interface Props {
 export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['main'])),
+      ...(await serverSideTranslations(locale, ['main', 'szlaZdMain'])),
     },
   };
 }
@@ -75,10 +77,47 @@ const SzlaZd: NextPage = () => {
                 <li>Wzrost zachorowalności i umieralności na nowotwory.</li>
                 <li>Co trzeciego noworodka z alergią.</li>
               </ul>
-              <div className='speech'></div>
+              <div className='letter'>
+                <div className='content'>
+                  <div className='speech'>
+                    <h4>Szanowni Państwo,</h4>
+                    <p>
+                      <span>Zdrowie</span> jest zbyt poważną sprawą, aby
+                      całkowicie powierzać je innym! Na stronach{' '}
+                      <span>Szlachetne Zdrowie</span> dzielę się moim ponad
+                      dwudziestoletnim doświadczeniem klinicznym, jak zdrowo żyć
+                      i jak się starzeć nie będąc ciężarem dla innych.
+                    </p>
+                    <p>
+                      Zalecenia prozdrowotne umieszczone na stronach Szlachetne
+                      Zdrowie są osobiście sprawdzone lub poparte rzetelnymi
+                      badaniami naukowymi. Lekturę proponuje rozpocząć od
+                      zakładki{' '}
+                      <Link href='/szlachetne_zdrowie/pytania'>pytania</Link>,
+                      następnie polecam{' '}
+                      <Link href='/szlachetne_zdrowie/pytania'>publikacje</Link>{' '}
+                      i <Link href='/szlachetne_zdrowie/pytania'>linki</Link>.
+                    </p>{' '}
+                    <p>
+                      Życzę wiele lat w dobrym zdrowiu fizycznym, psychicznym i
+                      duchowym.
+                    </p>{' '}
+                    <i>Styczeń 2009</i>
+                  </div>
+                  <img src='/img/dyczekHenryk2.jpg' alt='Henryk Dyczek' />
+                </div>
+                <p className='ending'>
+                  Z wyrazami szacunku,
+                  <br />
+                  dr n. med. Henryk Dyczek, D.C., B.Sc., M.A., Ac.M., FEA,
+                  M.B.Ac.C. <br />
+                  <Link href='/'>www.dyczek.pl</Link>
+                </p>
+              </div>
             </div>
           </article>
         </StandardMainContent>
+        <SmallerInfo />
         <Footer sinceYear={pageSpecs.sinceYear} />
       </main>
     </>

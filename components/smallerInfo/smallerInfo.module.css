@@ -8,5 +8,8 @@
   width: 40rem;
   text-align: center;
   font-size: 0.9rem;
+}
+
+.container p.imo {
   color: var(--clr-bro);
 }
