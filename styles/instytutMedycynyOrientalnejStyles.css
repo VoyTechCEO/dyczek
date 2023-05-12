@@ -46,6 +46,14 @@
 
 .imo-container ul li.sector button {
   color: var(--clr-red-200);
+  display: flex;
+  align-items: center;
+}
+
+.imo-container ul li.sector button svg {
+  fill: var(--clr-red-200);
+  transform: rotate(90deg);
+  margin-left: 0.5rem;
 }
 
 .imo-container ul li.post .line {

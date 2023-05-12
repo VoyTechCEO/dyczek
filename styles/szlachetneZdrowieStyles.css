@@ -9,6 +9,10 @@
   margin: 1rem 0;
 }
 
+/* ----------- ----- ----------- */
+/* ----------- ABOUT ----------- */
+/* ----------- ----- ----------- */
+
 .szlaZd-container.about .quotes {
   display: flex;
   justify-content: center;
@@ -43,7 +47,7 @@
   width: 22rem;
   padding: 3rem;
   font-family: var(--sub-font-3);
-  background: url('/img/kartkaZPiorem.png');
+  background-image: url('/img/kartkaZPiorem.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -82,6 +86,9 @@
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
+  background-image: url('/img/pen.jpg');
+  background-repeat: no-repeat;
+  background-position: 5% 90%;
 }
 
 .szlaZd-container.about .descriptions .letter a {
@@ -118,4 +125,76 @@
 
 .szlaZd-container.about .descriptions .letter p.ending {
   text-align: right;
+}
+
+/* ----------- --- ----------- */
+/* ----------- FAQ ----------- */
+/* ----------- --- ----------- */
+
+.szlaZd-container.faq ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.szlaZd-container.faq ul li {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(68, 169, 108, 0.1);
+}
+
+.szlaZd-container.faq ul li button.head {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.2rem;
+  padding: 1rem 1.2rem;
+  background-color: rgba(68, 169, 108, 0.25);
+  border-radius: 4px 4px 4px 2rem;
+  position: relative;
+}
+
+.szlaZd-container.faq ul li button.head p {
+  width: 100%;
+}
+
+.szlaZd-container.faq ul li button.head .more {
+  position: absolute;
+  bottom: -3.4rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--clr-gre);
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.szlaZd-container.faq ul li button.head .more svg {
+  fill: var(--clr-gre);
+  transform: rotate(90deg);
+}
+
+.szlaZd-container.faq ul li .answer {
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.szlaZd-container.faq ul li .answer p {
+  width: 100%;
+  text-indent: 2rem;
+}
+
+.szlaZd-container.faq ul li .answer p a {
+  color: var(--clr-gre);
+}
+
+.szlaZd-container.faq ul li .answer p b {
+  font-weight: 600;
 }

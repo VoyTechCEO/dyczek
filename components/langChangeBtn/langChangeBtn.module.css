@@ -6,6 +6,7 @@
   padding: 0.5rem;
   border-radius: 16px 0 16px 4px;
   color: var(--clr-100);
+  box-shadow: 2px 8px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 .container.akademia_ch,

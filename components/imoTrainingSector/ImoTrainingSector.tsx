@@ -26,6 +26,17 @@ const ImoTrainingSector = ({
         <p className='description'>{sector.desc}</p>
         <button onClick={() => setShow(!show)}>
           {show ? `Zwiń` : `Rozwiń`}
+          <svg
+            height='0.5rem'
+            version='1.1'
+            viewBox='0 0 60 50'
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            <path
+              transform='matrix(.37382 0 0 .26978 -8.7481 -1.207)'
+              d='m183.91 97.141-160.5 92.667v-92.667-92.667l80.252 46.334z'
+            />
+          </svg>
         </button>
         {show && (
           <div className='modules'>

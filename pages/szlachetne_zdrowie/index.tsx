@@ -5,11 +5,11 @@ import HeadSet from '../../components/headSet/HeadSet';
 import MainNav from '../../components/mainNav/MainNav';
 import SzlaZdHeader from '../../components/szlaZdHeader/SzlaZdHeader';
 import StandardMainContent from '../../components/standardMainContent/StandardMainContent';
+import SmallerInfo from '../../components/smallerInfo/SmallerInfo';
 import useSetPageSpecs from '../../hooks/useSetPageSpecs';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
-import SmallerInfo from '../../components/smallerInfo/SmallerInfo';
 
 interface Props {
   locale: string;
