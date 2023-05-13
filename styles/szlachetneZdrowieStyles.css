@@ -135,12 +135,14 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
+  row-gap: 4rem;
 }
 
 .szlaZd-container.faq ul li {
   display: flex;
   flex-direction: column;
   background-color: rgba(68, 169, 108, 0.1);
+  border-radius: 4px;
 }
 
 .szlaZd-container.faq ul li button.head {
@@ -162,7 +164,7 @@
 
 .szlaZd-container.faq ul li button.head .more {
   position: absolute;
-  bottom: -3.4rem;
+  bottom: -3.5rem;
   font-weight: 500;
   font-size: 0.9rem;
   color: var(--clr-gre);
@@ -174,7 +176,6 @@
 
 .szlaZd-container.faq ul li button.head .more svg {
   fill: var(--clr-gre);
-  transform: rotate(90deg);
 }
 
 .szlaZd-container.faq ul li .answer {
@@ -197,4 +198,20 @@
 
 .szlaZd-container.faq ul li .answer p b {
   font-weight: 600;
+}
+
+.szlaZd-container.faq ul li .answer table tr th,
+.szlaZd-container.faq ul li .answer table tr td {
+  padding: 0.5rem 1.5rem;
+  background-color: rgba(68, 169, 108, 0.25);
+  text-align: center;
+}
+
+.szlaZd-container.faq ul li .answer table tr td {
+  background-color: rgba(68, 169, 108, 0.1);
+}
+
+.szlaZd-container.faq ul li .answer h5 {
+  font-size: 0.8rem;
+  font-weight: 400;
 }
