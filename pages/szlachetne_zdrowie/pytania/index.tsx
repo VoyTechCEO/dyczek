@@ -37,7 +37,7 @@ const SzlaZd: NextPage = () => {
         <StandardMainContent subNavItems={pageSpecs.subNavContent}>
           <article className='container szlaZd-container faq'>
             <h1>F.A.Q. - Pytania i odpowiedzi</h1>
-            <ul>
+            <ul className='faq'>
               {faqList.map((item, index) => {
                 return (
                   <SzlaZdFAQElement
@@ -48,6 +48,18 @@ const SzlaZd: NextPage = () => {
                   />
                 );
               })}
+            </ul>
+            <p>Opracował: Henryk Dyczek</p>
+            <p>Biografia:</p>
+            <ul className='bio'>
+              <li>
+                Higa t. 2003. Rewolucja w ochronie naszej planety. Puławy:
+                Greenland-Technologia EM
+              </li>
+              <li>
+                Rath M. 2007. Dlaczego zwierzęta nie dostają zawałów serca?{' '}
+                <a href='www.rath-eduserv.com'>www.rath-eduserv.com</a>
+              </li>
             </ul>
           </article>
         </StandardMainContent>
