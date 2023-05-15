@@ -35,6 +35,7 @@ const pageSpecsList = (
       title: `Henryk Dyczek - medycyna niekonwencjonalna`,
       keywords: `henryk dyczek, dyczek, medycyna niekonwencjonalna, akupunktura, chiropraktyka`,
       description: `opis`,
+      favicon: `/svg/szlachetne_zdrowie_favicon.svg`,
       sinceYear: 1999,
     },
     {
@@ -42,7 +43,8 @@ const pageSpecsList = (
       subNavContent: akademiaChSpecs.nav,
       title: akademiaChSpecs.title,
       keywords: `akademia chiropraktyki, chiropraktyka, henryk dyczek, chiropraktycy, chiropraktyk`,
-      description: ``,
+      description: `Dowiedz się więcej o działalności oraz założeniach Akademii Chiropraktyki - zobacz dostępne szkolenia i kursy!`,
+      favicon: `/svg/szlachetne_zdrowie_favicon.svg`,
       sinceYear: 1999,
       socialIcons: [
         {
@@ -57,7 +59,8 @@ const pageSpecsList = (
       subNavContent: akuChiroSpecs.nav,
       title: akuChiroSpecs.title,
       keywords: `akupunktura, chiropraktyka, henryk dyczek, medycyna niekonwencjonalna`,
-      description: ``,
+      description: `Poznaj czym są akupunktura i chiropraktyka, oraz z jakimi problemami one pomagają. Skontaktuj się ze specjalistą przez internet!`,
+      favicon: `/img/akupunktura_chiropraktyka_favicon.png`,
       sinceYear: 1999,
     },
     {
@@ -65,7 +68,8 @@ const pageSpecsList = (
       subNavContent: imoSpecs.nav,
       title: imoSpecs.title,
       keywords: `instytut medycyny orientalnej, imo, medycyna orientalna, henryk dyczek`,
-      description: ``,
+      description: `Instytut Medycyny Orientalnej; poznaj jego cele, misje i filozofię, bądź podziel się z nami własną wiedzą i doświadczeniem.`,
+      favicon: `/img/instytutMedycynyOrientalnej.png`,
       sinceYear: 1999,
     },
     {
@@ -73,7 +77,8 @@ const pageSpecsList = (
       subNavContent: szlaZdSpecs.nav,
       title: szlaZdSpecs.title,
       keywords: `szlachetne zdrowie, zdrowie, health, noble health, henryk dyczek`,
-      description: ``,
+      description: `Zdrowie jest poważną sprawą, więc dzielę się moim ponad dwudziestoletnim doświadczeniem klinicznym, jak zdrowo żyć i jak się starzeć nie będąc ciężarem dla innych.`,
+      favicon: `/svg/szlachetne_zdrowie_favicon.svg`,
       sinceYear: 2009,
     },
   ];

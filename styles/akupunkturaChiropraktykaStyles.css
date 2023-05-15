@@ -11,10 +11,14 @@
   margin-bottom: 1rem;
 }
 
-.akuChiro-container p {
+/* ----------- ---- ----------- */
+/* ----------- HOME ----------- */
+/* ----------- ---- ----------- */
+
+.akuChiro-container.home p {
   margin-bottom: 1rem;
 }
 
-.akuChiro-container ul {
+.akuChiro-container.home ul {
   margin: 0 0 1rem 1rem;
 }

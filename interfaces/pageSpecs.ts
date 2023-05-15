@@ -7,6 +7,7 @@ export default interface PageSpecs {
   title: string;
   keywords: string;
   description: string;
+  favicon: string;
   sinceYear: number;
   socialIcons?: SocialIcons[];
 }

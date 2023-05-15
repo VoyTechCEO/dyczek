@@ -241,9 +241,9 @@
   color: var(--clr-gre);
 }
 
-/* ----------- ---------- ----------- */
-/* ----------- Publikacje ----------- */
-/* ----------- ---------- ----------- */
+/* ----------- ------- ----------- */
+/* ----------- Publics ----------- */
+/* ----------- ------- ----------- */
 
 .szlaZd-container.publics {
   row-gap: 1rem;
@@ -251,7 +251,6 @@
 
 .szlaZd-container.publics ul {
   margin-left: 1.2rem;
-  list-style: var(--clr-gre);
   display: flex;
   flex-direction: column;
   row-gap: 0.5rem;
@@ -259,4 +258,54 @@
 
 .szlaZd-container.publics ul li a {
   color: var(--clr-gre);
+}
+
+/* ----------- ----- ----------- */
+/* ----------- Links ----------- */
+/* ----------- ----- ----------- */
+
+.szlaZd-container.links ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  position: relative;
+  margin-left: 1rem;
+}
+
+.szlaZd-container.links ul li {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25rem;
+}
+
+.szlaZd-container.links ul li:before {
+  content: '\2014';
+  position: absolute;
+  margin-left: -2rem;
+  color: var(--clr-gre);
+  font-weight: 400;
+}
+
+.szlaZd-container.links ul li a {
+  color: var(--clr-gre);
+  font-size: 0.9rem;
+}
+
+/* ----------- ------- ----------- */
+/* ----------- Contact ----------- */
+/* ----------- ------- ----------- */
+
+.szlaZd-container.contact section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.szlaZd-container.contact section p a {
+  color: var(--clr-gre);
+}
+
+.szlaZd-container.contact section img {
+  height: 100%;
+  width: auto;
 }

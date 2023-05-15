@@ -3,7 +3,7 @@ import pageSpecsList from '../utils/pageSpecsList';
 import PageSpecs from '../interfaces/pageSpecs';
 import { useTranslation } from 'next-i18next';
 
-const useSetSubNavContent = () => {
+const useSetPageSpecs = () => {
   const router = useRouter();
   const { t } = useTranslation();
 
@@ -24,4 +24,4 @@ const useSetSubNavContent = () => {
   return pageSpecs;
 };
 
-export default useSetSubNavContent;
+export default useSetPageSpecs;

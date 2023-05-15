@@ -30,7 +30,7 @@ const AkuChi: NextPage = () => {
         <AkuChiHeader />
         <MainNav />
         <StandardMainContent subNavItems={pageSpecs.subNavContent}>
-          <article className={`container akuChiro-container`}>
+          <article className={`container akuChiro-container home`}>
             <h1>AKUPUNKTURA</h1>
             <p>
               Pobudza naturalne możliwości przywracania dobrego stanu zdrowia

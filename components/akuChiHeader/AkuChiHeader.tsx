@@ -9,12 +9,12 @@ const AkuChiHeader = () => {
     {
       name: `Szlachetne zdrowie`,
       link: `/szlachetne_zdrowie`,
-      src: `/img/akademia.png`,
+      src: `/img/szlachetne_zdrowie_logo.png`,
     },
     {
       name: `Akupunktura Kosmetyczna`,
       link: `/akupunktura_kosmetyczna`,
-      src: `/img/akupunkturaChiropraktyka.png`,
+      src: `/img/akupunktura_kosmetyczna_logo.png`,
     },
   ];
 
@@ -24,7 +24,7 @@ const AkuChiHeader = () => {
       <div className={akuChiHeaderStyles.overlay}>
         <Link href='/akupunktura_chiropraktyka'>
           <img
-            src='/img/akupunkturaChiropraktyka.png'
+            src='/svg/akupunktura_chiropraktyka_logo.svg'
             alt='Akupunktura Chiropraktyka'
           />
         </Link>
