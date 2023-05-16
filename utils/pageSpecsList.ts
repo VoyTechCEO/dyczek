@@ -34,8 +34,8 @@ const pageSpecsList = (
       ],
       title: `Henryk Dyczek - medycyna niekonwencjonalna`,
       keywords: `henryk dyczek, dyczek, medycyna niekonwencjonalna, akupunktura, chiropraktyka`,
-      description: `opis`,
-      favicon: `/svg/szlachetne_zdrowie_favicon.svg`,
+      description: `Nazywam się Henryk Dyczek, jestem dyplomowanym akupunkturzystą i chiropraktykiem zrzeszonym w Polskim Towarzystwie Medycyny Manualnej, British Acupuncture Council oraz British Association for Applied Chiropractic. `,
+      favicon: `/svg/henryk_dyczek_favicon.svg`,
       sinceYear: 1999,
     },
     {

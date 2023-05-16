@@ -14,14 +14,17 @@ const IconNav = ({ navItems }: Props) => {
         {navItems.map((item, index) => {
           return (
             <li key={`${item}${index}`}>
-              <Link href={item.link}>
-                <img
-                  className={item.showName ? iconNavStyles.text : ``}
-                  src={item.src}
-                  alt={item.name}
-                />
-                {item.showName ? <h3>{item.name}</h3> : ``}
-              </Link>
+              {item.component ? (
+                item.component
+              ) : (
+                <Link href={item.link!}>
+                  <img
+                    className={iconNavStyles.icon}
+                    src={item.src}
+                    alt={item.name}
+                  />
+                </Link>
+              )}
             </li>
           );
         })}

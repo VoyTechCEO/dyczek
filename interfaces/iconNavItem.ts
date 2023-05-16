@@ -1,6 +1,6 @@
 export default interface IconNavItem {
-  name: string;
-  link: string;
-  src: string;
-  showName?: boolean;
+  component?: JSX.Element;
+  name?: string;
+  link?: string;
+  src?: string;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import homeHeaderStyles from './homeHeader.module.css';
 import HomeIntroduction from '../homeIntroduction/HomeIntroduction';
 import IconNav from '../iconNav/IconNav';
+import ImoLogo from '../imoLogo/ImoLogo';
 import IconNavItem from '../../interfaces/iconNavItem';
 
 const HomeHeader = () => {
@@ -14,13 +15,10 @@ const HomeHeader = () => {
     {
       name: `Akupunktura Chiropraktyka`,
       link: `/akupunktura_chiropraktyka`,
-      src: `/img/akupunkturaChiropraktyka.png`,
+      src: `/svg/akupunktura_chiropraktyka_logo.svg`,
     },
     {
-      name: `Instytut Medycyny Orientalnej`,
-      link: `/instytut_medycyny_orientalnej`,
-      src: `/img/instytutMedycynyOrientalnej.png`,
-      showName: true,
+      component: <ImoLogo />,
     },
   ];
 

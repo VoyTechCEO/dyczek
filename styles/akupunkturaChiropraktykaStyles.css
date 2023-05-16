@@ -2,11 +2,11 @@
   flex-direction: column;
   padding: 1.5rem 3rem;
   width: 55rem;
+  color: var(--clr-blue-700);
 }
 
 .akuChiro-container h1 {
   font-size: 1rem;
-  color: var(--clr-blue-700);
   font-weight: 700;
   margin-bottom: 1rem;
 }
@@ -21,4 +21,67 @@
 
 .akuChiro-container.home ul {
   margin: 0 0 1rem 1rem;
+}
+
+/* ----------- -------------- ----------- */
+/* ----------- QUALIFICATIONS ----------- */
+/* ----------- -------------- ----------- */
+
+.akuChiro-container.qualifications p,
+.akuChiro-container.qualifications h4 {
+  margin-bottom: 1rem;
+}
+
+.akuChiro-container.qualifications p::first-letter {
+  font-weight: 600;
+}
+
+.akuChiro-container.qualifications section {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.akuChiro-container.qualifications section .intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.akuChiro-container.qualifications section img {
+  height: 16rem;
+  width: auto;
+}
+
+.akuChiro-container.qualifications a {
+  color: var(--clr-blue-700);
+  font-weight: 600;
+}
+
+/* ----------- ------- ----------- */
+/* ----------- CONTACT ----------- */
+/* ----------- ------- ----------- */
+
+.akuChiro-container.contact section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1rem;
+}
+
+.akuChiro-container.contact section img {
+  height: 19rem;
+  width: auto;
+}
+
+.akuChiro-container.contact section a {
+  color: var(--clr-blue-700);
+  font-weight: 600;
+}
+
+.akuChiro-container.contact .visit {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  align-items: center;
+  margin-top: 1rem;
 }

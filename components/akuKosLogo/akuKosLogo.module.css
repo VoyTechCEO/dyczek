@@ -1,0 +1,21 @@
+.container {
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  row-gap: 0.5rem;
+}
+
+.container img {
+  width: 60%;
+  height: auto;
+}
+
+.container h3 {
+  width: 60%;
+  color: var(--clr-pink);
+  font-family: var(--sub-font-2);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4rem;
+  text-align: center;
+}

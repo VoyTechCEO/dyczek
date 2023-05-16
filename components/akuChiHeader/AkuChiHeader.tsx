@@ -1,6 +1,7 @@
 import React from 'react';
 import akuChiHeaderStyles from './akuChiHeader.module.css';
 import IconNav from '../iconNav/IconNav';
+import AkuKosLogo from '../akuKosLogo/AkuKosLogo';
 import IconNavItem from '../../interfaces/iconNavItem';
 import Link from 'next/link';
 
@@ -12,9 +13,7 @@ const AkuChiHeader = () => {
       src: `/img/szlachetne_zdrowie_logo.png`,
     },
     {
-      name: `Akupunktura Kosmetyczna`,
-      link: `/akupunktura_kosmetyczna`,
-      src: `/img/akupunktura_kosmetyczna_logo.png`,
+      component: <AkuKosLogo />,
     },
   ];
 

@@ -1,0 +1,20 @@
+.container {
+  flex-direction: column;
+}
+
+.container img {
+  width: 50%;
+  height: auto;
+}
+
+.container h3 {
+  width: 50%;
+  color: var(--clr-red-200);
+  font-family: var(--sub-font-2);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4rem;
+  text-align: center;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+}
