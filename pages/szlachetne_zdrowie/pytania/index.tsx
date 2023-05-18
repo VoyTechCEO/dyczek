@@ -7,7 +7,6 @@ import SzlaZdHeader from '../../../components/szlaZdHeader/SzlaZdHeader';
 import StandardMainContent from '../../../components/standardMainContent/StandardMainContent';
 import SmallerInfo from '../../../components/smallerInfo/SmallerInfo';
 import SzlaZdFAQElement from '../../../components/szlaZdFAQElement/SzlaZdFAQElement';
-import useSetPageSpecs from '../../../hooks/useSetPageSpecs';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import faqList from '@/utils/szlaZdFAQList';
@@ -25,7 +24,6 @@ export async function getStaticProps({ locale }: Props) {
 }
 
 const SzlaZd: NextPage = () => {
-  const pageSpecs = useSetPageSpecs();
   const { t } = useTranslation();
 
   return (
@@ -34,7 +32,7 @@ const SzlaZd: NextPage = () => {
       <main id='main'>
         <SzlaZdHeader />
         <MainNav />
-        <StandardMainContent subNavItems={pageSpecs.subNavContent}>
+        <StandardMainContent>
           <article className='container szlaZd-container faq'>
             <h1>F.A.Q. - Pytania i odpowiedzi</h1>
             <ul className='faq'>
@@ -64,7 +62,7 @@ const SzlaZd: NextPage = () => {
           </article>
         </StandardMainContent>
         <SmallerInfo />
-        <Footer sinceYear={pageSpecs.sinceYear} />
+        <Footer />
       </main>
     </>
   );

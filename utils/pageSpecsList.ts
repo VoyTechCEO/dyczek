@@ -36,7 +36,7 @@ const pageSpecsList = (
       keywords: `henryk dyczek, dyczek, medycyna niekonwencjonalna, akupunktura, chiropraktyka`,
       description: `Nazywam się Henryk Dyczek, jestem dyplomowanym akupunkturzystą i chiropraktykiem zrzeszonym w Polskim Towarzystwie Medycyny Manualnej, British Acupuncture Council oraz British Association for Applied Chiropractic. `,
       favicon: `/svg/henryk_dyczek_favicon.svg`,
-      sinceYear: 1999,
+      sinceYear: 2008,
     },
     {
       name: `akademiaCh`,
@@ -44,7 +44,7 @@ const pageSpecsList = (
       title: akademiaChSpecs.title,
       keywords: `akademia chiropraktyki, chiropraktyka, henryk dyczek, chiropraktycy, chiropraktyk`,
       description: `Dowiedz się więcej o działalności oraz założeniach Akademii Chiropraktyki - zobacz dostępne szkolenia i kursy!`,
-      favicon: `/svg/szlachetne_zdrowie_favicon.svg`,
+      favicon: `/svg/akademia_chiropraktyki_favicon.svg`,
       sinceYear: 1999,
       socialIcons: [
         {

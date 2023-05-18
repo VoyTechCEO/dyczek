@@ -6,7 +6,6 @@ import MainNav from '../../../../components/mainNav/MainNav';
 import StandardMainContent from '../../../../components/standardMainContent/StandardMainContent';
 import ImoHeader from '../../../../components/imoHeader/ImoHeader';
 import SmallerInfo from '../../../../components/smallerInfo/SmallerInfo';
-import useSetPageSpecs from '../../../../hooks/useSetPageSpecs';
 import ImoTrainingSector from '../../../../components/imoTrainingSector/ImoTrainingSector';
 import trainingModulesList from '../../../../utils/trainingModulesList';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -24,8 +23,6 @@ export async function getStaticProps({ locale }: Props) {
 }
 
 const IMO: NextPage = () => {
-  const pageSpecs = useSetPageSpecs();
-
   let totalModulesListLength = 0;
 
   return (
@@ -34,7 +31,7 @@ const IMO: NextPage = () => {
       <main id='main' className='main-yellow'>
         <ImoHeader />
         <MainNav />
-        <StandardMainContent subNavItems={pageSpecs.subNavContent}>
+        <StandardMainContent>
           <article className='container imo-container'>
             <h1>KURS TRADYCYJNEJ MEDYCYNY CHIŃSKIEJ</h1>
             <p className='align-left'>Szanowni Państwo!</p>
@@ -102,7 +99,7 @@ const IMO: NextPage = () => {
           </article>
         </StandardMainContent>
         <SmallerInfo />
-        <Footer sinceYear={pageSpecs.sinceYear} />
+        <Footer />
       </main>
     </>
   );

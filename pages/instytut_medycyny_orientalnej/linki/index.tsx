@@ -6,7 +6,6 @@ import MainNav from '../../../components/mainNav/MainNav';
 import StandardMainContent from '../../../components/standardMainContent/StandardMainContent';
 import ImoHeader from '../../../components/imoHeader/ImoHeader';
 import SmallerInfo from '../../../components/smallerInfo/SmallerInfo';
-import useSetPageSpecs from '../../../hooks/useSetPageSpecs';
 import Link from 'next/link';
 import SubNavItem from '../../../interfaces/subNavItem';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -29,7 +28,6 @@ export async function getStaticProps({ locale }: Props) {
 }
 
 const IMO: NextPage = () => {
-  const pageSpecs = useSetPageSpecs();
   const { t } = useTranslation();
 
   const recommendedLinksList: SubNavItem[] = t(
@@ -47,7 +45,7 @@ const IMO: NextPage = () => {
       <main id='main' className='main-yellow'>
         <ImoHeader />
         <MainNav />
-        <StandardMainContent subNavItems={pageSpecs.subNavContent}>
+        <StandardMainContent>
           <article className='container imo-container'>
             <h1>{t('imoLinks:headRecommended')}</h1>
             <ul className='dashed'>
@@ -72,7 +70,7 @@ const IMO: NextPage = () => {
           </article>
         </StandardMainContent>
         <SmallerInfo />
-        <Footer sinceYear={pageSpecs.sinceYear} />
+        <Footer />
       </main>
     </>
   );

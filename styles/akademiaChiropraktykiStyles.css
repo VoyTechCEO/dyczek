@@ -2,19 +2,18 @@
   flex-direction: column;
   padding: 1.5rem 3rem;
   width: 55rem;
+  row-gap: 1.5rem;
 }
 
 .akademiaCh-container h1 {
   font-size: 1rem;
-  color: var(--clr-blue-700);
   font-weight: 700;
-  margin-bottom: 1rem;
 }
 
-.akademiaCh-container p {
-  margin-bottom: 1rem;
-}
+/* ----------- ---- ----------- */
+/* ----------- HOME ----------- */
+/* ----------- ---- ----------- */
 
-.akademiaCh-container ul {
-  margin: 0 0 1rem 1rem;
+.akademiaCh-container.home p {
+  text-align: center;
 }

@@ -1,3 +1,10 @@
 .container {
   justify-content: center;
 }
+
+.container.akademia_ch {
+  background-image: url('/img/liscie_lewe.png'), url('/img/liscie_prawe.png');
+  background-repeat: repeat-y;
+  background-position: 0, 100%;
+  border-radius: 4rem;
+}

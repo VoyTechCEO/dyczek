@@ -5,7 +5,6 @@ import HeadSet from '../../../components/headSet/HeadSet';
 import MainNav from '../../../components/mainNav/MainNav';
 import AkuChiHeader from '../../../components/akuChiHeader/AkuChiHeader';
 import StandardMainContent from '../../../components/standardMainContent/StandardMainContent';
-import useSetPageSpecs from '../../../hooks/useSetPageSpecs';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 
@@ -22,15 +21,13 @@ export async function getStaticProps({ locale }: Props) {
 }
 
 const AkuChi: NextPage = () => {
-  const pageSpecs = useSetPageSpecs();
-
   return (
     <>
       <HeadSet />
       <main id='main' className='main-blue'>
         <AkuChiHeader />
         <MainNav />
-        <StandardMainContent subNavItems={pageSpecs.subNavContent}>
+        <StandardMainContent>
           <article className={`container akuChiro-container qualifications`}>
             <section>
               <div className='intro'>
@@ -124,7 +121,7 @@ const AkuChi: NextPage = () => {
             </p>
           </article>
         </StandardMainContent>
-        <Footer sinceYear={pageSpecs.sinceYear} />
+        <Footer />
       </main>
     </>
   );

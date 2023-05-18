@@ -3,17 +3,13 @@ import Link from 'next/link';
 import React from 'react';
 import { useRecoilState } from 'recoil';
 import footerStyles from './footer.module.css';
-import SocialIcons from '../../interfaces/socialIcons';
 import { useTranslation } from 'next-i18next';
+import useSetPageSpecs from '@/hooks/useSetPageSpecs';
 
-interface Props {
-  sinceYear: number;
-  socialIcons?: SocialIcons[];
-}
-
-const Footer = ({ sinceYear, socialIcons }: Props) => {
+const Footer = () => {
   const [siteTheme, setSiteTheme] = useRecoilState(siteThemeState);
   const { t } = useTranslation();
+  const { socialIcons, sinceYear } = useSetPageSpecs();
 
   return (
     <>

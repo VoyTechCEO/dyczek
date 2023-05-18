@@ -10,7 +10,10 @@ const AkademiaHeader = () => {
         <div className={akademiaHeaderStyles.banner} />
         <div className={akademiaHeaderStyles.overlay}>
           <Link href='/akademia_chiropraktyki'>
-            <img src='/img/akademia.png' alt='Akademia Chiropraktyki' />
+            <img
+              src='/svg/akademia_chiropraktyki_logo.svg'
+              alt='Akademia Chiropraktyki'
+            />
           </Link>
         </div>
         <p className={akademiaHeaderStyles.quote}>

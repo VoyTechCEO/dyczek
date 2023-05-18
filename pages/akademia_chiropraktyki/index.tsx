@@ -6,7 +6,6 @@ import MainNav from '@/components/mainNav/MainNav';
 import AkademiaHeader from '@/components/akademiaHeader/AkademiaHeader';
 import StandardMainContent from '@/components/standardMainContent/StandardMainContent';
 import AkademiaTrainings from '@/components/akademiaTrainings/AkademiaTrainings';
-import useSetPageSpecs from '@/hooks/useSetPageSpecs';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 interface Props {
@@ -22,8 +21,6 @@ export async function getStaticProps({ locale }: Props) {
 }
 
 const Akademia: NextPage = () => {
-  const pageSpecs = useSetPageSpecs();
-
   return (
     <>
       <HeadSet />
@@ -31,49 +28,19 @@ const Akademia: NextPage = () => {
         <AkademiaHeader />
         <MainNav />
         <AkademiaTrainings />
-        <StandardMainContent subNavItems={pageSpecs.subNavContent}>
-          <article className={`container akademiaCh-container`}>
-            <h1>AKUPUNKTURA</h1>
+        <StandardMainContent>
+          <article className={`container akademiaCh-container home`}>
+            <h1>Opinie o szkoleniach. Dlaczego chiropraktyka?</h1>
+            <p>--- TU WSTAWIĆ FILMY ---</p>
+            <img src='/img/p_01.jpg' alt='Nauka w Akademii' />
             <p>
-              Pobudza naturalne możliwości przywracania dobrego stanu zdrowia
-              przez organizm ludzki.
+              <b>Akademia Chiropraktyki</b> oferuje Państwu wyjątkową możliwość
+              poznania sztuki i nauki <b>Chiropraktyki</b> całego aparatu ruchu.
             </p>
-            <h1>CHIROPRAKTYKA</h1>
-            <p>
-              Jest efektywną i bezpieczną metodą przywracania zdrowia przez
-              delikatne manipulacje dłońmi na kręgosłupie i innych stawach.
-            </p>
-            <h1>JEŻELI MASZ PROBLEM Z:</h1>
-            <p>BÓLAMI</p>
-            <ul>
-              <li>kręgosłupa</li>
-              <li>krzyża</li>
-              <li>głowy</li>
-              <li>mięśni</li>
-              <li>stawów</li>
-            </ul>{' '}
-            <p>ZABURZENIAMI</p>
-            <ul>
-              <li>trawienia</li>
-              <li>snu</li>
-              <li>krążenia </li>
-              <li>cyklu miesiączkowego</li>
-              <li>płodności</li>
-            </ul>
-            <p>NERWICAMI, STANAMI DEPRESYJNYMI, CHOROBAMI SKÓRY</p>
-            <h1>TO NIE TRAĆ CZASU TYLKO ZADZWOŃ DO MNIE LUB PRZYJDŹ!!!</h1>
-            <h1>Uwaga!!!</h1>
-            <p>
-              Organizuję kursy, szkoleniowe w zakresie chiropraktyki i
-              akupunktury dla lekarzy medycyny i fizjoterapeutów w języku
-              polskim i angielskim.
-            </p>
+            <p>Odwiedź również:</p>
           </article>
         </StandardMainContent>
-        <Footer
-          sinceYear={pageSpecs.sinceYear}
-          socialIcons={pageSpecs.socialIcons}
-        />
+        <Footer />
       </main>
     </>
   );

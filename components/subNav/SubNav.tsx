@@ -3,15 +3,12 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { useRecoilState } from 'recoil';
-import SubNavItem from '../../interfaces/subNavItem';
 import subNavStyles from './subNav.module.css';
+import useSetPageSpecs from '@/hooks/useSetPageSpecs';
 
-interface Props {
-  subNavItems: SubNavItem[];
-}
-
-const SubNav = ({ subNavItems }: Props) => {
+const SubNav = () => {
   const router = useRouter();
+  const { subNavContent } = useSetPageSpecs();
 
   const [siteTheme, setSiteTheme] = useRecoilState(siteThemeState);
 
@@ -26,7 +23,7 @@ const SubNav = ({ subNavItems }: Props) => {
             : ``
         }`}
       >
-        {subNavItems.map((item, index) => {
+        {subNavContent.map((item, index) => {
           return (
             <li key={`${item}${index}akuChi`}>
               <Link

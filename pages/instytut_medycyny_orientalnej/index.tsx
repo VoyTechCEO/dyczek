@@ -5,7 +5,6 @@ import MainNav from '../../components/mainNav/MainNav';
 import StandardMainContent from '../../components/standardMainContent/StandardMainContent';
 import ImoHeader from '../../components/imoHeader/ImoHeader';
 import SmallerInfo from '../../components/smallerInfo/SmallerInfo';
-import useSetPageSpecs from '../../hooks/useSetPageSpecs';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import ElementRef from '../../components/elementRef/ElementRef';
@@ -23,7 +22,6 @@ export async function getStaticProps({ locale }: Props) {
 }
 
 const IMO: NextPage<Props> = () => {
-  const pageSpecs = useSetPageSpecs();
   const { t } = useTranslation();
 
   const targetList: string[] = t('imoHome:target', { returnObjects: true });
@@ -34,7 +32,7 @@ const IMO: NextPage<Props> = () => {
       <main id='main' className='main-yellow'>
         <ImoHeader />
         <MainNav />
-        <StandardMainContent subNavItems={pageSpecs.subNavContent}>
+        <StandardMainContent>
           <article className='container imo-container'>
             <h1>{t('imoHome:targetTitle')}</h1>
             <ul className='dashed'>
@@ -49,7 +47,7 @@ const IMO: NextPage<Props> = () => {
           </article>
         </StandardMainContent>
         <SmallerInfo />
-        <Footer sinceYear={pageSpecs.sinceYear} />
+        <Footer />
       </main>
     </>
   );

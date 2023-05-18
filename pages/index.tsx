@@ -25,7 +25,7 @@ export default function Home() {
         <HomeHeader />
         <MainNav />
         <HomeMainContent />
-        <Footer sinceYear={2008} />
+        <Footer />
       </main>
     </>
   );

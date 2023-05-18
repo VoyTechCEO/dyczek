@@ -6,7 +6,6 @@ import MainNav from '../../../components/mainNav/MainNav';
 import SzlaZdHeader from '../../../components/szlaZdHeader/SzlaZdHeader';
 import StandardMainContent from '../../../components/standardMainContent/StandardMainContent';
 import SmallerInfo from '../../../components/smallerInfo/SmallerInfo';
-import useSetPageSpecs from '../../../hooks/useSetPageSpecs';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
@@ -30,7 +29,6 @@ export async function getStaticProps({ locale }: Props) {
 }
 
 const SzlaZd: NextPage = () => {
-  const pageSpecs = useSetPageSpecs();
   const { t } = useTranslation();
 
   const linksList: Site[] = [
@@ -98,7 +96,7 @@ const SzlaZd: NextPage = () => {
       <main id='main'>
         <SzlaZdHeader />
         <MainNav />
-        <StandardMainContent subNavItems={pageSpecs.subNavContent}>
+        <StandardMainContent>
           <article className='container szlaZd-container links'>
             <h1>Publikacje</h1>
             <ul>
@@ -116,7 +114,7 @@ const SzlaZd: NextPage = () => {
           </article>
         </StandardMainContent>
         <SmallerInfo />
-        <Footer sinceYear={pageSpecs.sinceYear} />
+        <Footer />
       </main>
     </>
   );
