@@ -1,13 +1,32 @@
 .akademiaCh-container {
   flex-direction: column;
+  align-items: center;
   padding: 1.5rem 3rem;
   width: 55rem;
   row-gap: 1.5rem;
 }
 
 .akademiaCh-container h1 {
+  width: 100%;
   font-size: 1rem;
   font-weight: 700;
+}
+
+.akademiaCh-container p {
+  width: 100%;
+}
+
+.akademiaCh-container p a {
+  color: var(--clr-blue-700);
+  font-weight: 600;
+}
+
+.akademiaCh-container img.view {
+  width: 50%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 5px 8px 10px #888888;
+  margin: 1rem 0;
 }
 
 /* ----------- ---- ----------- */
@@ -16,4 +35,65 @@
 
 .akademiaCh-container.home p {
   text-align: center;
+}
+
+.akademiaCh-container.home ul.logos {
+  list-style-type: none;
+  display: flex;
+  column-gap: 1rem;
+}
+
+.akademiaCh-container.home ul.logos li a {
+  padding: 0.5rem;
+  height: 6rem;
+  display: flex;
+}
+
+.akademiaCh-container.home ul.logos li a img {
+  height: 100%;
+  width: auto;
+}
+
+/* ----------- ----- ----------- */
+/* ----------- ABOUT ----------- */
+/* ----------- ----- ----------- */
+
+.akademiaCh-container.about ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  width: 100%;
+}
+
+.akademiaCh-container.about ul li {
+  margin-left: 1.1rem;
+}
+
+.akademiaCh-container.about p.hard::first-letter {
+  font-weight: 600;
+}
+
+/* ----------- ----- ----------- */
+/* ----------- TERMS ----------- */
+/* ----------- ----- ----------- */
+
+.akademiaCh-container.terms ul.explanation {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  width: 100%;
+  list-style-type: none;
+}
+
+.akademiaCh-container.terms ul.explanation ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  width: 100%;
+  margin-top: 0.5rem;
+  list-style-type: disc;
+}
+
+.akademiaCh-container.terms ul.explanation ul li {
+  margin-left: 1.1rem;
 }
