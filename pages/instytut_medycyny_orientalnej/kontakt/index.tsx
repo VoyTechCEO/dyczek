@@ -40,13 +40,12 @@ const IMO: NextPage = () => {
             <p>
               <span>Henryk Dyczek</span>
               <br />
-              ul. Tulipanowa 6<br />
-              Przysiek k/ Torunia
+              ul. Tulipanowa 6
               <br />
-              87-134 Zławieś Wielka
+              87-134 Przysiek k/ Torunia
               <br />
               <br />
-              {t('imoContact:contactType')}: (56) 6789 343
+              {t('imoContact:contactType')}: 56 6789 343
               <br />
               e-mail: <a href='mailto: henryk@dyczek.pl'>henryk@dyczek.pl</a>
             </p>

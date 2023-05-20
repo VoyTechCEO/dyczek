@@ -97,3 +97,65 @@
 .akademiaCh-container.terms ul.explanation ul li {
   margin-left: 1.1rem;
 }
+
+/* ----------- ----- ----------- */
+/* ----------- FACTS ----------- */
+/* ----------- ----- ----------- */
+
+.akademiaCh-container.facts ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  width: 100%;
+}
+
+.akademiaCh-container.facts ul li {
+  margin-left: 1.1rem;
+}
+
+/* ----------- -------- ----------- */
+/* ----------- PRACTICE ----------- */
+/* ----------- -------- ----------- */
+
+.akademiaCh-container.practice ol {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.akademiaCh-container.practice ol li a {
+  color: var(--clr-blue-700);
+}
+
+.akademiaCh-container.practice ol ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----------- ------ ----------- */
+/* ----------- COURSE ----------- */
+/* ----------- ------ ----------- */
+
+.akademiaCh-container.course ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  width: 100%;
+}
+
+.akademiaCh-container.course ul li {
+  margin-left: 1.1rem;
+}
+
+.akademiaCh-container.course ul li a {
+  color: var(--clr-blue-700);
+}
+
+/* ----------- --------- ----------- */
+/* ----------- GRADUATES ----------- */
+/* ----------- --------- ----------- */
+
+.akademiaCh-container.graduates {
+}
