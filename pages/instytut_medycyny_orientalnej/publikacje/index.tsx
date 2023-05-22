@@ -57,7 +57,7 @@ const IMO: NextPage = () => {
                             <h4>{t('imoPublikacje:author')}:</h4>
                             <p className='align-left'>{item.author}</p>
                             <h4>{t('imoPublikacje:summaryHead')}:</h4>
-                            <>{item.short}</>
+                            <>{item.short && item.short}</>
                             <Link href={`/docs/imo/${item.doc}`}>
                               {t('imoPublikacje:download')} ({item.doc})
                               {item.english

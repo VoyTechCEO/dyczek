@@ -35,7 +35,7 @@ const AkuChi: NextPage = () => {
                 <b>Henryk Dyczek</b>
                 <br />
                 ul. Tulipanowa 6<br />
-                87-134 Przysiek k/ Torunia
+                87-134 Przysiek k. Torunia
                 <br />
                 Tel/Fax: 56 6789 343
                 <br />

@@ -53,6 +53,7 @@ const IMO: NextPage = () => {
 
                 return (
                   <ImoTrainingSector
+                    key={`${sector}imoTrainingSectorModule${sectorIdx}`}
                     sector={sector}
                     sectorIdx={sectorIdx}
                     totalModulesListLength={totalModulesListLength}

@@ -69,12 +69,8 @@ const SzlaZd: NextPage = () => {
             <ul>
               {articlesList.map((item, index) => {
                 return (
-                  <li>
-                    <Link
-                      key={`${item}szlaZdArticlePublics${index}`}
-                      href={`/docs/szlaZd/${item}`}
-                      target='_blank'
-                    >
+                  <li key={`${item}szlaZdArticlePublics${index}`}>
+                    <Link href={`/docs/szlaZd/${item}`} target='_blank'>
                       {item}
                     </Link>
                   </li>
@@ -85,12 +81,8 @@ const SzlaZd: NextPage = () => {
             <ul>
               {presentationsList.map((item, index) => {
                 return (
-                  <li>
-                    <Link
-                      key={`${item}szlaZdPresentationPublics${index}`}
-                      href={`/docs/szlaZd/${item}`}
-                      target='_blank'
-                    >
+                  <li key={`${item}szlaZdPresentationPublics${index}`}>
+                    <Link href={`/docs/szlaZd/${item}`} target='_blank'>
                       {item}
                     </Link>
                   </li>

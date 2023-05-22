@@ -4,7 +4,7 @@ import ElementRef from '@/components/elementRef/ElementRef';
 interface Publics {
   header: string;
   author: string;
-  short: string;
+  short?: string;
   doc: string;
   english?: boolean;
 }
@@ -17,7 +17,7 @@ interface Sector {
 interface PublicsConverted {
   header: string;
   author: string;
-  short: JSX.Element;
+  short?: JSX.Element;
   doc: string;
   english?: boolean;
 }
@@ -36,14 +36,22 @@ const imoPublicsList = (
 
   const newPublicsList: SectorConverted[] = publicsListTrans.map((article) => {
     const newPublics = article.publics.map((item) => {
-      let newItem = {
+      let newItem: PublicsConverted = {
         header: item.header,
         author: item.author,
         short: <></>,
         doc: item.doc,
         english: item.english,
       };
-      newItem.short = <ElementRef element='div' content={item.short} />;
+      newItem.short = <ElementRef element='div' content={item.short!} />;
+      if (!item.short) {
+        newItem = {
+          header: item.header,
+          author: item.author,
+          doc: item.doc,
+          english: item.english,
+        };
+      }
 
       return newItem;
     });

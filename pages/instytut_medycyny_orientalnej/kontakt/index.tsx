@@ -42,7 +42,7 @@ const IMO: NextPage = () => {
               <br />
               ul. Tulipanowa 6
               <br />
-              87-134 Przysiek k/ Torunia
+              87-134 Przysiek k. Torunia
               <br />
               <br />
               {t('imoContact:contactType')}: 56 6789 343

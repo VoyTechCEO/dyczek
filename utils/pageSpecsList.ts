@@ -77,7 +77,7 @@ const pageSpecsList = (
       subNavContent: szlaZdSpecs.nav,
       title: szlaZdSpecs.title,
       keywords: `szlachetne zdrowie, zdrowie, health, noble health, henryk dyczek`,
-      description: `Zdrowie jest poważną sprawą, więc dzielę się moim ponad dwudziestoletnim doświadczeniem klinicznym, jak zdrowo żyć i jak się starzeć nie będąc ciężarem dla innych.`,
+      description: `Zdrowie jest poważną sprawą, więc dzielę się moim ponad trzydziestoletnim doświadczeniem klinicznym, jak zdrowo żyć i jak się starzeć nie będąc ciężarem dla innych.`,
       favicon: `/svg/szlachetne_zdrowie_favicon.svg`,
       sinceYear: 2009,
     },
