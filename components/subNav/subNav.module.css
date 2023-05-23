@@ -16,7 +16,9 @@
   color: var(--clr-900);
   font-weight: 700;
   font-size: 1rem;
-  padding: 0 3.5rem;
+  width: 13rem;
+  display: flex;
+  justify-content: center;
 }
 
 .container li a.active {

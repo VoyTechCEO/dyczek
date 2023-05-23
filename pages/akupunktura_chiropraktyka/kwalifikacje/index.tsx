@@ -86,7 +86,7 @@ const AkuChi: NextPage = () => {
             </p>
             <p>
               Od 1999 roku kształcę swoich następców w utworzonej przez siebie{' '}
-              <Link href='/akademia_chiropraktyki/'>
+              <Link href='/akademia_chiropraktyki/' target='_blank'>
                 Akademii Chiropraktyki
               </Link>{' '}
               .
@@ -112,8 +112,7 @@ const AkuChi: NextPage = () => {
             </p>
             <p>
               W czerwcu 2006r wspólnie z Januszem Zerbst otworzyłem Szkołę
-              Akupunktury Tradycyjnej w Bydgoszczy,{' '}
-              <Link href='www.akupunktura.edu.pl'>www.akupunktura.edu.pl</Link>.
+              Akupunktury Tradycyjnej w Bydgoszczy.
             </p>
             <p>
               W styczniu 2013r uzyskałem stopień naukowy doktora nauk medycznych

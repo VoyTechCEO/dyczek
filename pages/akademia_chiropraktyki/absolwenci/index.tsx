@@ -7,7 +7,6 @@ import AkademiaHeader from '../../../components/akademiaHeader/AkademiaHeader';
 import StandardMainContent from '../../../components/standardMainContent/StandardMainContent';
 import AkademiaTrainings from '../../../components/akademiaTrainings/AkademiaTrainings';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Link from 'next/link';
 
 interface Props {
   locale: string;

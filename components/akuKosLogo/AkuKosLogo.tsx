@@ -6,7 +6,8 @@ const AkuKosLogo = () => {
   return (
     <>
       <Link
-        href='/instytut_medycyny_orientalnej'
+        href='/akupunktura_kosmetyczna'
+        target='_blank'
         className={`container ${akuKosLogoStyles.container}`}
       >
         <img

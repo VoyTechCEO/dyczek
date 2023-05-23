@@ -52,7 +52,9 @@ const IMO: NextPage = () => {
               {recommendedLinksList.map((item) => {
                 return (
                   <li key={`${item}recommended`}>
-                    <Link href={item.link}>{item.name}</Link>
+                    <Link href={item.link} target='_blank'>
+                      {item.name}
+                    </Link>
                   </li>
                 );
               })}
@@ -62,7 +64,9 @@ const IMO: NextPage = () => {
               {otherLinksList.map((item) => {
                 return (
                   <li key={`${item}recommended`}>
-                    <a href={item.link}>{item.name}</a>
+                    <a href={item.link} target='_blank'>
+                      {item.name}
+                    </a>
                   </li>
                 );
               })}

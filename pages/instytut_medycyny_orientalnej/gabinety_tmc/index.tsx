@@ -40,10 +40,10 @@ const IMO: NextPage = () => {
             <p>
               <span>Henryk Dyczek</span> <br />
               ul. Tulipanowa 6 <br />
-              Przysiek k/ Torunia <br />
-              87-134 Zławieś Wielka <br />
+              87-134 Przysiek k. Torunia
               <br />
-              {t('imoGabinetyTMC:contact')}: (056) 6789 343 <br />
+              <br />
+              {t('imoGabinetyTMC:contact')}: 56 6789 343 <br />
               e-mail:{' '}
               <a href='mailto: henryk.dyczek@man.torun.pl'>
                 henryk.dyczek@man.torun.pl

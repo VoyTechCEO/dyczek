@@ -12,12 +12,11 @@ const faqList: FaqItem[] = [
     answer: (
       <>
         <p>
-          W opinii dr Rath, pioniera Medycyny Komórkowej (
-          <a href='www.rath-eduserv.com'>www.rath-eduserv.com</a>), ,,nie
-          powinniśmy się dać zwieść samozwańczym apostołom diety i mistrzom
-          jogi" (Rath, 2007:247). Źródłem zdrowia człowieka jest zapewnienie
-          każdej komórce człowieka wystarczającej ilości składników pokarmowych,
-          tj. makroelementów (białka, węglowodany i tłuszcze) i mikroelementów
+          W opinii dr Rath, pioniera Medycyny Komórkowej, ,,nie powinniśmy się
+          dać zwieść samozwańczym apostołom diety i mistrzom jogi" (Rath,
+          2007:247). Źródłem zdrowia człowieka jest zapewnienie każdej komórce
+          człowieka wystarczającej ilości składników pokarmowych, tj.
+          makroelementów (białka, węglowodany i tłuszcze) i mikroelementów
           (witaminy, minerały, pierwiastki śladowe i aminokwasy) (Rath, 2007).
         </p>
         <p>
@@ -347,7 +346,7 @@ const faqList: FaqItem[] = [
           będzie miał negatywny wpływ na prawidłowy rozwój dziecka w jej łonie.
           W czyim interesie może być rodzenie się dzieci takich jak na zdjęciu
           obok (Rys. 1). Zobacz również:{' '}
-          <a href='http://www.chiropraktycy.pl/'>
+          <a href='http://www.chiropraktycy.pl/' target='_blank'>
             http://www.chiropraktycy.pl/
           </a>{' '}
           zakładka <i>publikacje</i> prezentacja: 10. Skolioza idiopatyczna

@@ -70,7 +70,9 @@ const HomeMainContent = () => {
           <ul>
             <li>
               <strong>Akademii Chiropraktyki</strong> -{' '}
-              <Link href='/akademia_chiropraktyki'>Zobacz</Link>
+              <Link href='/akademia_chiropraktyki' target='_blank'>
+                Zobacz
+              </Link>
             </li>
             <li>
               <strong>Szkoły Akupunktury Tradycyjnej</strong> -{' '}

@@ -93,8 +93,10 @@ const SzlaZd: NextPage = () => {
                       zakładki{' '}
                       <Link href='/szlachetne_zdrowie/pytania'>pytania</Link>,
                       następnie polecam{' '}
-                      <Link href='/szlachetne_zdrowie/pytania'>publikacje</Link>{' '}
-                      i <Link href='/szlachetne_zdrowie/pytania'>linki</Link>.
+                      <Link href='/szlachetne_zdrowie/publikacje'>
+                        publikacje
+                      </Link>{' '}
+                      i <Link href='/szlachetne_zdrowie/linki'>linki</Link>.
                     </p>{' '}
                     <p>
                       Życzę wiele lat w dobrym zdrowiu fizycznym, psychicznym i

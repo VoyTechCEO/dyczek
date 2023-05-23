@@ -33,10 +33,6 @@ const Akademia: NextPage = () => {
       link: `/docs/akademiaCh/Kurs Akademii Chiropraktyki.pdf`,
     },
     {
-      name: `Kurs Tradycyjnej Medycyny Chińskiej (TMC)`,
-      link: `https://szkolakupunktury.edu.pl/`,
-    },
-    {
       name: `Kurs Terapii Czaszkowo-Krzyżowej`,
       link: `http://www.craniosacral.pl/`,
     },

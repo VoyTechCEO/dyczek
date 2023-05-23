@@ -55,8 +55,7 @@ const SzlaZd: NextPage = () => {
                 Greenland-Technologia EM
               </li>
               <li>
-                Rath M. 2007. Dlaczego zwierzęta nie dostają zawałów serca?{' '}
-                <a href='www.rath-eduserv.com'>www.rath-eduserv.com</a>
+                Rath M. 2007. Dlaczego zwierzęta nie dostają zawałów serca?
               </li>
             </ul>
           </article>
