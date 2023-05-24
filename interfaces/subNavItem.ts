@@ -1,4 +1,5 @@
 export default interface SubNavItem {
   name: string;
-  link: string;
+  link?: string;
+  dropdown?: SubNavItem[];
 }

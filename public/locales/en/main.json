@@ -49,7 +49,16 @@
       },
       {
         "name": "Graduates",
-        "link": "/akademia_chiropraktyki/absolwenci"
+        "dropdown": [
+          {
+            "name": "Graduates list",
+            "link": "/akademia_chiropraktyki/lista_absolwentow"
+          },
+          {
+            "name": "Graduates opinions",
+            "link": "/akademia_chiropraktyki/opinie_absolwentow"
+          }
+        ]
       },
       {
         "name": "Contact",

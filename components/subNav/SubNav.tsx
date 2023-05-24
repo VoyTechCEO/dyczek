@@ -25,15 +25,48 @@ const SubNav = () => {
       >
         {subNavContent.map((item, index) => {
           return (
-            <li key={`${item}${index}akuChi`}>
-              <Link
-                href={item.link}
-                className={
-                  router.pathname === item.link ? subNavStyles.active : ``
-                }
-              >
-                {item.name}
-              </Link>
+            <li key={`${item.name}${index}subNav`}>
+              {item.link ? (
+                <Link
+                  href={item.link!}
+                  className={
+                    router.pathname === item.link ? subNavStyles.active : ``
+                  }
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <div
+                  className={
+                    item.dropdown!.find(
+                      (dropdownItem, dropdownIndex) =>
+                        router.pathname === dropdownItem.link
+                    )
+                      ? `${subNavStyles.dropdown} ${subNavStyles.active}`
+                      : subNavStyles.dropdown
+                  }
+                >
+                  <p>{item.name}</p>
+                  <ul>
+                    {item.dropdown?.map((dropdownItem, dropdownIndex) => {
+                      return (
+                        <li key={`${dropdownItem.link}subNav${dropdownIndex}`}>
+                          <Link
+                            href={dropdownItem.link!}
+                            className={
+                              router.pathname === dropdownItem.link
+                                ? subNavStyles.active
+                                : ``
+                            }
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              )}
             </li>
           );
         })}

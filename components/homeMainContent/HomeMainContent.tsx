@@ -34,7 +34,7 @@ const HomeMainContent = () => {
     {
       name: `Polskim Towarzystwie Medycyny Manualnej`,
       text: `(członek zwyczajny od 1998)`,
-      link: `#test`,
+      link: `https://ptmm.pl/`,
     },
     {
       name: `Polskiego Stowarzyszenia Akupunkturzystów Zawodowych`,
@@ -61,7 +61,13 @@ const HomeMainContent = () => {
                   {item.text}.{` `}
                   {item.span ? <span>{item.span}</span> : ``}
                   {` `}
-                  {item.link ? <a href={item.link}>Zobacz</a> : ``}
+                  {item.link ? (
+                    <a href={item.link} target='_blank'>
+                      Zobacz
+                    </a>
+                  ) : (
+                    ``
+                  )}
                 </li>
               );
             })}
@@ -76,12 +82,14 @@ const HomeMainContent = () => {
             </li>
             <li>
               <strong>Szkoły Akupunktury Tradycyjnej</strong> -{' '}
-              <a href='#test'>Zobacz</a>
+              <a href='https://szkolakupunktury.edu.pl/' target='_blank'>
+                Zobacz
+              </a>
             </li>
           </ul>
           <p>
             Utworzyłem{' '}
-            <Link href='/instytut_medycyny_orientalnej'>
+            <Link href='/instytut_medycyny_orientalnej' target='_blank'>
               <strong>Instytut Medycyny Orientalnej</strong>
             </Link>{' '}
             dla stworzenia wiarygodnego źródła i informacji dotyczącej nauki i
@@ -89,6 +97,14 @@ const HomeMainContent = () => {
             Zapraszam do zapoznania się formami mojej działalności, klikając na
             poszczególne ikony.
           </p>
+          <h3>
+            <Link
+              href='/instytut_medycyny_orientalnej/publikacje'
+              target='_blank'
+            >
+              Tutaj zobaczysz moje publikacje.
+            </Link>
+          </h3>
           <div className={homeMainContentStyles.edge} />
         </article>
       </div>
