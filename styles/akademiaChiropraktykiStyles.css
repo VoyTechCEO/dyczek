@@ -156,21 +156,3 @@
 /* ----------- --------- ----------- */
 /* ----------- GRADUATES ----------- */
 /* ----------- --------- ----------- */
-
-.akademiaCh-container.graduates table {
-  border-radius: 1rem;
-}
-
-.akademiaCh-container.graduates table tr th,
-.akademiaCh-container.graduates table tr td {
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.akademiaCh-container.graduates table tr th {
-  background-color: rgba(44, 43, 135, 0.3);
-}
-
-.akademiaCh-container.graduates table tr td {
-  background-color: rgba(44, 43, 135, 0.1);
-}

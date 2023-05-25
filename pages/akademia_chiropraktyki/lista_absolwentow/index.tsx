@@ -33,6 +33,7 @@ const Akademia: NextPage = () => {
           <article className={`container akademiaCh-container graduates`}>
             <h1>Absolwenci Akademii Chiropraktyki</h1>
             <AkademiaGraduatesTable />
+            <AkademiaGraduatesTable newGrad={true} />
           </article>
         </StandardMainContent>
         <Footer />

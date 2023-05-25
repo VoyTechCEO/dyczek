@@ -1,17 +1,17 @@
-.container {
+.container table {
   border-radius: 1rem;
 }
 
-.container tr th,
-.container tr td {
+.container table tr th,
+.container table tr td {
   padding: 0.5rem;
   text-align: center;
 }
 
-.container tr th {
+.container table tr th {
   background-color: rgba(44, 43, 135, 0.3);
 }
 
-.container tr td {
+.container table tr td {
   background-color: rgba(44, 43, 135, 0.1);
 }
