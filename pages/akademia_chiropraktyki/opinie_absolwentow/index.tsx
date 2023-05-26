@@ -7,6 +7,7 @@ import AkademiaHeader from '../../../components/akademiaHeader/AkademiaHeader';
 import StandardMainContent from '../../../components/standardMainContent/StandardMainContent';
 import AkademiaTrainings from '../../../components/akademiaTrainings/AkademiaTrainings';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import AkademiaOpinions from '@/components/akademiaOpinions/AkademiaOpinions';
 
 interface Props {
   locale: string;
@@ -30,7 +31,8 @@ const Akademia: NextPage = () => {
         <AkademiaTrainings />
         <StandardMainContent>
           <article className={`container akademiaCh-container graduates`}>
-            <h1>Absolwenci Akademii Chiropraktyki</h1>
+            <h1>Opinie absolwentów Akademii Chiropraktyki</h1>
+            <AkademiaOpinions />
           </article>
         </StandardMainContent>
         <Footer />
