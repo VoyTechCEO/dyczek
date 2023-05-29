@@ -1,2 +1,65 @@
 .container {
+  list-style-type: none;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.container li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.container .border {
+  height: 1px;
+  width: 70%;
+  background-color: var(--clr-blue-700);
+  margin: 1rem 0;
+}
+
+.container h1 {
+  font-size: 1.3rem;
+  color: var(--clr-blue-700);
+}
+
+.container h4 {
+  width: 100%;
+}
+
+.container h4.year {
+  color: var(--clr-blue-700);
+  text-indent: 0.5rem;
+}
+
+.container ul.years {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.container ul.texts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  width: 100%;
+}
+
+.container ul.texts li.quote {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.container ul.texts ul {
+  list-style-type: disc;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  width: 100%;
+}
+
+.container ul.texts ul li {
+  display: list-item;
+  margin-left: 1.2rem;
 }

@@ -5,11 +5,7 @@
 }
 
 .container .banner {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.2),
-      rgba(255, 255, 255, 0.91),
-      #fff
-    ),
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), #fff 50%),
     url('../../public/img/gabinet.png');
   background-position: center top;
   background-repeat: no-repeat;

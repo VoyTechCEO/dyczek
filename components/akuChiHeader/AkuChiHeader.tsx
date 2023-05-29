@@ -10,7 +10,7 @@ const AkuChiHeader = () => {
     {
       name: `Szlachetne zdrowie`,
       link: `/szlachetne_zdrowie`,
-      src: `/img/szlachetne_zdrowie_logo.png`,
+      src: `/svg/szlachetne_zdrowie_logo.svg`,
     },
     {
       component: <AkuKosLogo />,

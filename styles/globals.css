@@ -39,6 +39,19 @@ body {
 
 .main-blue {
   background-color: var(--clr-blue-100);
+  position: relative;
+}
+
+.main-blue::after {
+  content: '';
+  background-image: url('/img/tekstura_AkCh.jpg');
+  opacity: 0.1;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 
 .main-yellow {

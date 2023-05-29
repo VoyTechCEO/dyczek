@@ -13,7 +13,7 @@ const ImoHeader = () => {
           <div className={imoHeaderStyles.signature}>
             <div className={imoHeaderStyles.icon}>
               <img
-                src='/img/instytutMedycynyOrientalnej.png'
+                src='/svg/instytut_medycyny_orientalnej_logo.svg'
                 alt='Instytut Medycyny Orientalnej'
               />
               <h1>{t('imoMain:pageName')}</h1>

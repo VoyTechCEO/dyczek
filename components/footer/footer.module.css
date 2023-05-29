@@ -4,6 +4,7 @@
   row-gap: 1rem;
   padding: 2rem 0;
   margin-top: 3rem;
+  z-index: 9;
 }
 
 .container ul.socials {

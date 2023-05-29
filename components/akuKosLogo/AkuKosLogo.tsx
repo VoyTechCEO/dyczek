@@ -11,7 +11,7 @@ const AkuKosLogo = () => {
         className={`container ${akuKosLogoStyles.container}`}
       >
         <img
-          src='/img/akupunktura_kosmetyczna_logo.png'
+          src='/svg/akupunktura_kosmetyczna_logo.svg'
           alt='Logo Akupunktury Kosmetycznej'
         />
         <h3>Akupunktura Kosmetyczna</h3>

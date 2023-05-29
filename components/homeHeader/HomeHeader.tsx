@@ -10,7 +10,7 @@ const HomeHeader = () => {
     {
       name: `Akademia Chiropraktyki`,
       link: `/akademia_chiropraktyki`,
-      src: `/img/akademia.png`,
+      src: `/svg/akademia_chiropraktyki_logo.svg`,
     },
     {
       name: `Akupunktura Chiropraktyka`,

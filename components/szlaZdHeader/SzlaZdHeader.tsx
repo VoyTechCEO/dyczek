@@ -13,7 +13,7 @@ const SzlaZdHeader = () => {
       <section className={`container ${szlaZdHeaderStyles.container}`}>
         <div className={szlaZdHeaderStyles.signature}>
           <img
-            src='/img/szlachetne_zdrowie_logo.png'
+            src='/svg/szlachetne_zdrowie_logo.svg'
             alt='szlachetne zdrowie logo'
           />
         </div>

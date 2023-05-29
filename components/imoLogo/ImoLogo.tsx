@@ -10,7 +10,7 @@ const ImoLogo = () => {
         className={`container ${imoLogoStyles.container}`}
       >
         <img
-          src='/img/instytutMedycynyOrientalnej.png'
+          src='/svg/instytut_medycyny_orientalnej_logo.svg'
           alt='Logo Instytutu Medycyny Orientalnej'
         />
         <h3>Instytut Medycyny Orientalnej</h3>

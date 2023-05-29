@@ -37,12 +37,12 @@ const Akademia: NextPage = () => {
     {
       link: `/akupunktura_kosmetyczna`,
       alt: `Akupunktura Kosmetyczna`,
-      src: `/img/akupunktura_kosmetyczna_logo.png`,
+      src: `/svg/akupunktura_kosmetyczna_logo.svg`,
     },
     {
       link: `/szlachetne_zdrowie`,
       alt: `Szlachetne Zdrowie`,
-      src: `/img/szlachetne_zdrowie_logo.png`,
+      src: `/svg/szlachetne_zdrowie_logo.svg`,
     },
   ];
 

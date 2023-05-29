@@ -59,7 +59,7 @@ const AkuChi: NextPage = () => {
             <h1>TO NIE TRAĆ CZASU TYLKO ZADZWOŃ DO MNIE LUB PRZYJDŹ!!!</h1>
             <h1>Uwaga!!!</h1>
             <p>
-              Organizuję kursy, szkoleniowe w zakresie chiropraktyki i
+              Organizuję kursy szkoleniowe w zakresie chiropraktyki i
               akupunktury dla lekarzy medycyny i fizjoterapeutów w języku
               polskim i angielskim.
             </p>
