@@ -1,5 +1,4 @@
 {
-    "head": "Dane teleadresowe",
-    "contactType": "tel./faks",
-    "mapHead": "Mapa dojazdu"
+  "head": "Dane teleadresowe",
+  "mapHead": "Mapa dojazdu"
 }

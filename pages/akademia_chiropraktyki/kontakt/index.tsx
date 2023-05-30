@@ -7,6 +7,7 @@ import AkademiaHeader from '../../../components/akademiaHeader/AkademiaHeader';
 import StandardMainContent from '../../../components/standardMainContent/StandardMainContent';
 import AkademiaTrainings from '../../../components/akademiaTrainings/AkademiaTrainings';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import ContactInfo from '@/components/contactInfo/ContactInfo';
 
 interface Props {
   locale: string;
@@ -32,16 +33,7 @@ const Akademia: NextPage = () => {
           <article className={`container akademiaCh-container contact`}>
             <h1>Biuro Akademii</h1>
             <section>
-              <p>
-                <b>Henryk Dyczek</b>
-                <br />
-                ul. Tulipanowa 6<br />
-                87-134 Przysiek k. Torunia
-                <br />
-                Tel/Fax: 56 6789 343
-                <br />
-                e-mail: <a href='mailto: henryk@dyczek.pl'>henryk@dyczek.pl</a>
-              </p>
+              <ContactInfo />
               <p>Zapraszam również na:</p>
               <a href='http://www.chiropraktycy.pl/'>
                 <img

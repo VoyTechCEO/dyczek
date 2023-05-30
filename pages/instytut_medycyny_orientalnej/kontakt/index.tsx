@@ -6,6 +6,7 @@ import MainNav from '../../../components/mainNav/MainNav';
 import StandardMainContent from '../../../components/standardMainContent/StandardMainContent';
 import ImoHeader from '../../../components/imoHeader/ImoHeader';
 import SmallerInfo from '../../../components/smallerInfo/SmallerInfo';
+import ContactInfo from '@/components/contactInfo/ContactInfo';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 
@@ -37,18 +38,7 @@ const IMO: NextPage = () => {
         <StandardMainContent>
           <article className='container imo-container'>
             <h1>{t('imoContact:head')}</h1>
-            <p>
-              <span>Henryk Dyczek</span>
-              <br />
-              ul. Tulipanowa 6
-              <br />
-              87-134 Przysiek k. Torunia
-              <br />
-              <br />
-              {t('imoContact:contactType')}: 56 6789 343
-              <br />
-              e-mail: <a href='mailto: henryk@dyczek.pl'>henryk@dyczek.pl</a>
-            </p>
+            <ContactInfo />
             <br />
             <h1>{t('imoContact:mapHead')}</h1>
             <img src='/img/mapka.gif' alt='mapa dojazdu' />

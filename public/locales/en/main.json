@@ -151,5 +151,8 @@
     "title": "Szlachetne zdrowie"
   },
   "footerRights": "Henryk Dyczek. All right reserved.",
-  "footerCredits": "Website made by"
+  "footerCredits": "Website made by",
+  "contact": {
+    "type": "tel./fax"
+  }
 }

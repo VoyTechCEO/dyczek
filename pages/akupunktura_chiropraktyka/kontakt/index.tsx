@@ -7,6 +7,7 @@ import AkuChiHeader from '../../../components/akuChiHeader/AkuChiHeader';
 import StandardMainContent from '../../../components/standardMainContent/StandardMainContent';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import AkuKosLogo from '../../../components/akuKosLogo/AkuKosLogo';
+import ContactInfo from '@/components/contactInfo/ContactInfo';
 
 interface Props {
   locale: string;
@@ -31,16 +32,7 @@ const AkuChi: NextPage = () => {
           <article className={`container akuChiro-container contact`}>
             <h1>KONTAKT</h1>
             <section>
-              <p>
-                <b>Henryk Dyczek</b>
-                <br />
-                ul. Tulipanowa 6<br />
-                87-134 Przysiek k. Torunia
-                <br />
-                Tel/Fax: 56 6789 343
-                <br />
-                e-mail: <a href='mailto: henryk@dyczek.pl'>henryk@dyczek.pl</a>
-              </p>
+              <ContactInfo />
               <img src='/img/map.gif' alt='mapa dojazdu' />
             </section>
             <div className='visit'>
