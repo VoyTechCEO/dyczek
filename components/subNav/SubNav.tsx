@@ -28,7 +28,7 @@ const SubNav = () => {
             <li key={`${item.name}${index}subNav`}>
               {item.link ? (
                 <Link
-                  href={item.link!}
+                  href={`${item.link!}#startView`}
                   className={
                     router.pathname === item.link ? subNavStyles.active : ``
                   }
@@ -52,7 +52,7 @@ const SubNav = () => {
                       return (
                         <li key={`${dropdownItem.link}subNav${dropdownIndex}`}>
                           <Link
-                            href={dropdownItem.link!}
+                            href={`${dropdownItem.link!}#startView`}
                             className={
                               router.pathname === dropdownItem.link
                                 ? subNavStyles.active

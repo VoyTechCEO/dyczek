@@ -56,7 +56,16 @@ const Akademia: NextPage = () => {
         <StandardMainContent>
           <article className={`container akademiaCh-container home`}>
             <h1>Opinie o szkoleniach. Dlaczego chiropraktyka?</h1>
-            <p>--- TU WSTAWIĆ FILMY ---</p>
+            <div className='videos'>
+              <video controls>
+                <source src='/video/film1.mp4' type='video/mp4' />
+                Your browser does not support HTML video.
+              </video>
+              <video controls>
+                <source src='/video/film3.mp4' type='video/mp4' />
+                Your browser does not support HTML video.
+              </video>
+            </div>
             <img
               className='view'
               src='/img/chiropraktyka1.png'

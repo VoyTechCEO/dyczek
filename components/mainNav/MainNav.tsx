@@ -27,7 +27,7 @@ const MainNav = () => {
 
   return (
     <>
-      <ul className={`container ${mainNavStyles.container}`}>
+      <ul id='startView' className={`container ${mainNavStyles.container}`}>
         {navItems.map((item: NavItem, index) => {
           return (
             <li
