@@ -26,7 +26,7 @@ const Footer = () => {
           {socialIcons?.map((item, index) => {
             return (
               <li key={`${item}${index}footer`}>
-                <Link href={item.link} target='_blank'>
+                <Link href={item.link} target='_blank' rel='noreferrer'>
                   <img src={item.image} alt={item.name} />
                 </Link>
               </li>

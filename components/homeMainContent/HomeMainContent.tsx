@@ -76,20 +76,32 @@ const HomeMainContent = () => {
           <ul>
             <li>
               <strong>Akademii Chiropraktyki</strong> -{' '}
-              <Link href='/akademia_chiropraktyki' target='_blank'>
+              <Link
+                href='/akademia_chiropraktyki'
+                target='_blank'
+                rel='noreferrer'
+              >
                 Zobacz
               </Link>
             </li>
             <li>
               <strong>Szkoły Akupunktury Tradycyjnej</strong> -{' '}
-              <a href='https://szkolakupunktury.edu.pl/' target='_blank'>
+              <a
+                href='https://szkolakupunktury.edu.pl/'
+                target='_blank'
+                rel='noreferrer'
+              >
                 Zobacz
               </a>
             </li>
           </ul>
           <p>
             Utworzyłem{' '}
-            <Link href='/instytut_medycyny_orientalnej' target='_blank'>
+            <Link
+              href='/instytut_medycyny_orientalnej'
+              target='_blank'
+              rel='noreferrer'
+            >
               <strong>Instytut Medycyny Orientalnej</strong>
             </Link>{' '}
             dla stworzenia wiarygodnego źródła i informacji dotyczącej nauki i
@@ -101,6 +113,7 @@ const HomeMainContent = () => {
             <Link
               href='/instytut_medycyny_orientalnej/publikacje'
               target='_blank'
+              rel='noreferrer'
             >
               Tutaj zobaczysz moje publikacje.
             </Link>
