@@ -62,7 +62,7 @@ const HomeMainContent = () => {
                   {item.span ? <span>{item.span}</span> : ``}
                   {` `}
                   {item.link ? (
-                    <a href={item.link} target='_blank'>
+                    <a href={item.link} target='_blank' rel='noreferrer'>
                       Zobacz
                     </a>
                   ) : (

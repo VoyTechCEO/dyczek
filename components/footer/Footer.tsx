@@ -38,7 +38,11 @@ const Footer = () => {
         </p>
         <p>
           {t('main:footerCredits')}{' '}
-          <a href='https://github.com/VoyTechCEO' target='_blank'>
+          <a
+            href='https://github.com/VoyTechCEO'
+            target='_blank'
+            rel='noreferrer'
+          >
             VoyTech
           </a>
         </p>
