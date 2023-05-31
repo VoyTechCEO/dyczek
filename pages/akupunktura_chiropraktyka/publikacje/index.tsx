@@ -6,6 +6,7 @@ import MainNav from '../../../components/mainNav/MainNav';
 import AkuChiHeader from '../../../components/akuChiHeader/AkuChiHeader';
 import StandardMainContent from '../../../components/standardMainContent/StandardMainContent';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 interface Props {
   locale: string;
@@ -19,12 +20,14 @@ interface Publication {
 export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['main'])),
+      ...(await serverSideTranslations(locale, ['main', 'akuChiArticles'])),
     },
   };
 }
 
 const AkuChi: NextPage = () => {
+  const { t } = useTranslation();
+
   const publicationsList: Publication[] = [
     {
       year: 2017,
@@ -218,7 +221,7 @@ const AkuChi: NextPage = () => {
         <MainNav />
         <StandardMainContent>
           <article className={`container akuChiro-container publics`}>
-            <h1>PUBLIKACJE</h1>
+            <h1>{t('akuChiArticles:header1')}</h1>
             <ul className='publications'>
               {publicationsList.map((item, index) => {
                 return (
@@ -229,7 +232,7 @@ const AkuChi: NextPage = () => {
                 );
               })}
             </ul>
-            <h1>W OPRACOWANIU</h1>
+            <h1>{t('akuChiArticles:header2')}</h1>
             <ul className='dev'>
               {inDevelopmentList.map((item, index) => {
                 return (

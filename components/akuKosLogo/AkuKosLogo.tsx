@@ -1,8 +1,11 @@
 import Link from 'next/link';
 import React from 'react';
 import akuKosLogoStyles from './akuKosLogo.module.css';
+import { useTranslation } from 'next-i18next';
 
 const AkuKosLogo = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Link

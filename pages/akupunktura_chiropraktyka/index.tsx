@@ -6,6 +6,7 @@ import MainNav from '../../components/mainNav/MainNav';
 import AkuChiHeader from '../../components/akuChiHeader/AkuChiHeader';
 import StandardMainContent from '../../components/standardMainContent/StandardMainContent';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 interface Props {
   locale: string;
@@ -14,12 +15,18 @@ interface Props {
 export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['main'])),
+      ...(await serverSideTranslations(locale, ['main', 'akuChiHome'])),
     },
   };
 }
 
 const AkuChi: NextPage = () => {
+  const { t } = useTranslation();
+  const placesList: string[] = t('akuChiHome:places', { returnObjects: true });
+  const sortsList: string[] = t('akuChiHome:sort', {
+    returnObjects: true,
+  });
+
   return (
     <>
       <HeadSet />
@@ -28,41 +35,27 @@ const AkuChi: NextPage = () => {
         <MainNav />
         <StandardMainContent>
           <article className={`container akuChiro-container home`}>
-            <h1>AKUPUNKTURA</h1>
-            <p>
-              Pobudza naturalne możliwości przywracania dobrego stanu zdrowia
-              przez organizm ludzki.
-            </p>
-            <h1>CHIROPRAKTYKA</h1>
-            <p>
-              Jest efektywną i bezpieczną metodą przywracania zdrowia przez
-              delikatne manipulacje dłońmi na kręgosłupie i innych stawach.
-            </p>
-            <h1>JEŻELI MASZ PROBLEM Z:</h1>
-            <p>BÓLAMI</p>
+            <h1>{t('akuChiHome:header1')}</h1>
+            <p>{t('akuChiHome:paragraph1')}</p>
+            <h1>{t('akuChiHome:header2')}</h1>
+            <p>{t('akuChiHome:paragraph2')}</p>
+            <h1>{t('akuChiHome:header3')}</h1>
+            <p>{t('akuChiHome:problem1')}</p>
             <ul>
-              <li>kręgosłupa</li>
-              <li>krzyża</li>
-              <li>głowy</li>
-              <li>mięśni</li>
-              <li>stawów</li>
-            </ul>{' '}
-            <p>ZABURZENIAMI</p>
-            <ul>
-              <li>trawienia</li>
-              <li>snu</li>
-              <li>krążenia </li>
-              <li>cyklu miesiączkowego</li>
-              <li>płodności</li>
+              {placesList.map((item, index) => {
+                return <li key={`${item}akuChiPlace${index}`}>{item}</li>;
+              })}
             </ul>
-            <p>NERWICAMI, STANAMI DEPRESYJNYMI, CHOROBAMI SKÓRY</p>
-            <h1>TO NIE TRAĆ CZASU TYLKO ZADZWOŃ DO MNIE LUB PRZYJDŹ!!!</h1>
-            <h1>Uwaga!!!</h1>
-            <p>
-              Organizuję kursy szkoleniowe w zakresie chiropraktyki i
-              akupunktury dla lekarzy medycyny i fizjoterapeutów w języku
-              polskim i angielskim.
-            </p>
+            <p>{t('akuChiHome:problem2')}</p>
+            <ul>
+              {sortsList.map((item, index) => {
+                return <li key={`${item}akuChiSort${index}`}>{item}</li>;
+              })}
+            </ul>
+            <p>{t('akuChiHome:diseases')}</p>
+            <h1>{t('akuChiHome:order')}</h1>
+            <h1>{t('akuChiHome:header4')}</h1>
+            <p>{t('akuChiHome:paragraph3')}</p>
           </article>
         </StandardMainContent>
         <Footer />

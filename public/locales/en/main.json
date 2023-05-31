@@ -1,19 +1,19 @@
 {
   "mainNav": [
     {
-      "name": "About me",
+      "name": "Henryk Dyczek",
       "link": "/"
     },
     {
-      "name": "Akademia Chiropraktyki",
+      "name": "Academy of Chiropractic",
       "link": "/akademia_chiropraktyki"
     },
     {
-      "name": "Akupunktura Chiropraktyka",
+      "name": "Acupuncture & Chiropractic",
       "link": "/akupunktura_chiropraktyka"
     },
     {
-      "name": "THE INSTITUTE OF ORIENTAL MEDICINE",
+      "name": "The Institute of Oriental Medicine",
       "link": "/instytut_medycyny_orientalnej"
     },
     {

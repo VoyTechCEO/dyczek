@@ -8,6 +8,7 @@ import StandardMainContent from '../../../components/standardMainContent/Standar
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import AkuKosLogo from '../../../components/akuKosLogo/AkuKosLogo';
 import ContactInfo from '@/components/contactInfo/ContactInfo';
+import { useTranslation } from 'next-i18next';
 
 interface Props {
   locale: string;
@@ -16,12 +17,14 @@ interface Props {
 export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['main'])),
+      ...(await serverSideTranslations(locale, ['main', 'akuChiContact'])),
     },
   };
 }
 
 const AkuChi: NextPage = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <HeadSet />
@@ -30,13 +33,13 @@ const AkuChi: NextPage = () => {
         <MainNav />
         <StandardMainContent>
           <article className={`container akuChiro-container contact`}>
-            <h1>KONTAKT</h1>
+            <h1>{t('akuChiContact:header1')}</h1>
             <section>
               <ContactInfo />
               <img src='/img/map.gif' alt='mapa dojazdu' />
             </section>
             <div className='visit'>
-              <p>Zapraszam również na stronę Akupunktury Kosmetycznej:</p>
+              <p>{t('akuChiContact:invitation')}</p>
               <AkuKosLogo />
             </div>
           </article>
