@@ -8,7 +8,7 @@ import StandardMainContent from '../../components/standardMainContent/StandardMa
 import SmallerInfo from '../../components/smallerInfo/SmallerInfo';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
-import Link from 'next/link';
+import ElementRef from '@/components/elementRef/ElementRef';
 
 interface Props {
   locale: string;
@@ -17,13 +17,23 @@ interface Props {
 export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['main', 'szlaZdMain'])),
+      ...(await serverSideTranslations(locale, [
+        'main',
+        'szlaZdMain',
+        'szlaZdHome',
+      ])),
     },
   };
 }
 
 const SzlaZd: NextPage = () => {
   const { t } = useTranslation();
+  const advantagesList: string[] = t('szlaZdHome:advantagesList', {
+    returnObjects: true,
+  });
+  const disadvantagesList: string[] = t('szlaZdHome:disadvantagesList', {
+    returnObjects: true,
+  });
 
   return (
     <>
@@ -60,59 +70,28 @@ const SzlaZd: NextPage = () => {
             <h1>W obecnych czasach mamy:</h1>
             <div className='descriptions'>
               <ul className='description'>
-                <li>Wysoce wykwalifikowaną opiekę medyczną.</li>
-                <li>Setki diet.</li>
-                <li>Tyle samo ekspertów od żywienia</li>
-                <li>
-                  Dostęp do wielu suplementów diety, tj. witamin, minerałów,
-                  etc.
-                </li>
+                {advantagesList.map((item, index) => {
+                  return (
+                    <li key={`${item}szlaZdHomeAdvantages${index}`}>{item}</li>
+                  );
+                })}
               </ul>
               <ul className='description'>
-                <li>
-                  Postępujący wzrost umieralności na choroby układu krążenia.
-                </li>
-                <li>Wzrost zachorowalności i umieralności na nowotwory.</li>
-                <li>Co trzeciego noworodka z alergią.</li>
+                {disadvantagesList.map((item, index) => {
+                  return (
+                    <li key={`${item}szlaZdHomeAdvantages${index}`}>{item}</li>
+                  );
+                })}
               </ul>
               <div className='letter'>
                 <div className='content'>
-                  <div className='speech'>
-                    <h4>Szanowni Państwo,</h4>
-                    <p>
-                      <span>Zdrowie</span> jest zbyt poważną sprawą, aby
-                      całkowicie powierzać je innym! Na stronach{' '}
-                      <span>Szlachetne Zdrowie</span> dzielę się moim ponad
-                      dwudziestoletnim doświadczeniem klinicznym, jak zdrowo żyć
-                      i jak się starzeć nie będąc ciężarem dla innych.
-                    </p>
-                    <p>
-                      Zalecenia prozdrowotne umieszczone na stronach Szlachetne
-                      Zdrowie są osobiście sprawdzone lub poparte rzetelnymi
-                      badaniami naukowymi. Lekturę proponuje rozpocząć od
-                      zakładki{' '}
-                      <Link href='/szlachetne_zdrowie/pytania'>pytania</Link>,
-                      następnie polecam{' '}
-                      <Link href='/szlachetne_zdrowie/publikacje'>
-                        publikacje
-                      </Link>{' '}
-                      i <Link href='/szlachetne_zdrowie/linki'>linki</Link>.
-                    </p>{' '}
-                    <p>
-                      Życzę wiele lat w dobrym zdrowiu fizycznym, psychicznym i
-                      duchowym.
-                    </p>{' '}
-                    <i>Styczeń 2009</i>
-                  </div>
+                  <ElementRef
+                    element='section'
+                    content={t('szlaZdHome:speech')}
+                  />
                   <img src='/img/dyczekHenryk2.jpg' alt='Henryk Dyczek' />
                 </div>
-                <p className='ending'>
-                  Z wyrazami szacunku,
-                  <br />
-                  dr n. med. Henryk Dyczek, D.C., B.Sc., M.A., Ac.M., FEA,
-                  M.B.Ac.C. <br />
-                  <Link href='/'>www.dyczek.pl</Link>
-                </p>
+                <ElementRef element='p' content={t('szlaZdHome:letterEnd')} />
               </div>
             </div>
           </article>

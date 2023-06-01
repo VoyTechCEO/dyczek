@@ -100,21 +100,22 @@
   column-gap: 3rem;
 }
 
-.szlaZd-container.about .descriptions .letter .content .speech {
+.szlaZd-container.about .descriptions .letter .content section {
   display: flex;
   flex-direction: column;
   row-gap: 0.5rem;
 }
 
-.szlaZd-container.about .descriptions .letter .content .speech p {
+.szlaZd-container.about .descriptions .letter .content section p {
+  text-align: left;
   text-indent: 2rem;
 }
 
-.szlaZd-container.about .descriptions .letter .content .speech p span {
+.szlaZd-container.about .descriptions .letter .content section p span {
   font-weight: 600;
 }
 
-.szlaZd-container.about .descriptions .letter .content .speech i {
+.szlaZd-container.about .descriptions .letter .content section i {
   font-size: 0.9rem;
 }
 
@@ -123,7 +124,7 @@
   height: auto;
 }
 
-.szlaZd-container.about .descriptions .letter p.ending {
+.szlaZd-container.about .descriptions .letter p {
   text-align: right;
 }
 
@@ -183,7 +184,7 @@
   fill: var(--clr-gre);
 }
 
-.szlaZd-container.faq ul.faq li.faq_element .answer {
+.szlaZd-container.faq ul.faq li.faq_element section {
   width: 100%;
   padding: 1.5rem;
   display: flex;
@@ -192,43 +193,43 @@
   row-gap: 1rem;
 }
 
-.szlaZd-container.faq ul.faq li.faq_element .answer p {
+.szlaZd-container.faq ul.faq li.faq_element section p {
   width: 100%;
   text-indent: 2rem;
 }
 
-.szlaZd-container.faq ul.faq li.faq_element .answer p a {
+.szlaZd-container.faq ul.faq li.faq_element section p a {
   color: var(--clr-gre);
 }
 
-.szlaZd-container.faq ul.faq li.faq_element .answer p b {
+.szlaZd-container.faq ul.faq li.faq_element section p b {
   font-weight: 600;
 }
 
-.szlaZd-container.faq ul.faq li.faq_element .answer table tr th,
-.szlaZd-container.faq ul.faq li.faq_element .answer table tr td {
+.szlaZd-container.faq ul.faq li.faq_element section table tr th,
+.szlaZd-container.faq ul.faq li.faq_element section table tr td {
   padding: 0.5rem 1.5rem;
   background-color: rgba(68, 169, 108, 0.25);
   text-align: center;
 }
 
-.szlaZd-container.faq ul.faq li.faq_element .answer table tr td {
+.szlaZd-container.faq ul.faq li.faq_element section table tr td {
   background-color: rgba(68, 169, 108, 0.1);
 }
 
-.szlaZd-container.faq ul.faq li.faq_element .answer h5 {
+.szlaZd-container.faq ul.faq li.faq_element section h5 {
   font-size: 0.8rem;
   font-weight: 400;
 }
 
-.szlaZd-container.faq ul.faq li.faq_element .answer ul {
+.szlaZd-container.faq ul.faq li.faq_element section ul {
   padding: 0 2rem;
   display: flex;
   flex-direction: column;
   row-gap: 0.5rem;
 }
 
-.szlaZd-container.faq ul.faq li.faq_element .answer img {
+.szlaZd-container.faq ul.faq li.faq_element section img {
   height: 100%;
   width: auto;
 }

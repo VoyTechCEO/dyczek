@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'next-i18next';
 
 interface Props {
   number: number;
@@ -8,6 +9,7 @@ interface Props {
 
 const SzlaZdFAQElement = ({ number, question, answer }: Props) => {
   const [show, setShow] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <>
@@ -33,7 +35,7 @@ const SzlaZdFAQElement = ({ number, question, answer }: Props) => {
             </div>
           )}
         </button>
-        {show && <div className='answer'>{answer}</div>}
+        {show && answer}
       </li>
     </>
   );

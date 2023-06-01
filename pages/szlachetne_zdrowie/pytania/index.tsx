@@ -18,13 +18,20 @@ interface Props {
 export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['main', 'szlaZdMain'])),
+      ...(await serverSideTranslations(locale, [
+        'main',
+        'szlaZdMain',
+        'szlaZdQuestions',
+      ])),
     },
   };
 }
 
 const SzlaZd: NextPage = () => {
   const { t } = useTranslation();
+  const bioList: string[] = t('szlaZdQuestions:bioList', {
+    returnObjects: true,
+  });
 
   return (
     <>
@@ -36,7 +43,7 @@ const SzlaZd: NextPage = () => {
           <article className='container szlaZd-container faq'>
             <h1>F.A.Q. - Pytania i odpowiedzi</h1>
             <ul className='faq'>
-              {faqList.map((item, index) => {
+              {faqList(t).map((item, index) => {
                 return (
                   <SzlaZdFAQElement
                     key={`${item}faqElement${index}`}
@@ -50,13 +57,11 @@ const SzlaZd: NextPage = () => {
             <p>Opracował: Henryk Dyczek</p>
             <p>Biografia:</p>
             <ul className='bio'>
-              <li>
-                Higa t. 2003. Rewolucja w ochronie naszej planety. Puławy:
-                Greenland-Technologia EM
-              </li>
-              <li>
-                Rath M. 2007. Dlaczego zwierzęta nie dostają zawałów serca?
-              </li>
+              {bioList.map((item, index) => {
+                return (
+                  <li key={`${item}szlaZdQuestionsBio${index}`}>{item}</li>
+                );
+              })}
             </ul>
           </article>
         </StandardMainContent>

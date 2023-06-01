@@ -30,7 +30,7 @@ interface SectorConverted {
 const imoPublicsList = (
   t: TFunction<'translation', undefined, 'translation'>
 ): SectorConverted[] => {
-  const publicsListTrans: Sector[] = t('imoPublikacje:publicsList', {
+  const publicsListTrans: Sector[] = t('imoPublikacje:faqList', {
     returnObjects: true,
   });
 
