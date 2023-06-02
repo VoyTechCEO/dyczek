@@ -1,0 +1,49 @@
+{
+  "intro": "My name is Henryk Dyczek.<br /><br />I am a certified Acupuncturist and Chiropractor affiliated with:",
+  "institutionsList": [
+    {
+      "name": "Traditional Acupuncture Society",
+      "text": "(ordinary member 1990 - 1995)",
+      "span": "Replaced by the British Acupuncture Council"
+    },
+    {
+      "name": "British Acupuncture Council",
+      "text": "(ordinary member 1995 - 2018)",
+      "link": "https://acupuncture.org.uk/"
+    },
+    {
+      "name": "British Association of Applied Chiropractic",
+      "text": "(ordinary member 1995 - 2018)",
+      "span": "No longer exists"
+    },
+    {
+      "name": "“Polish Chiropractors” Association",
+      "text": "KRS 0000082388 (initiator and founder, president since 2002 and honorary president since 2022)",
+      "link": "http://www.chiropraktycy.pl/"
+    },
+    {
+      "name": "Polish Society of Manual Medicine",
+      "text": "(ordinary member since 1998)",
+      "link": "https://ptmm.pl/"
+    },
+    {
+      "name": "Polish Association of Professional Acupuncturists",
+      "text": "(member of the Audit Committee until 2018)"
+    }
+  ],
+  "institutionButtonShow": "Check it",
+  "header1": "I am also the initiator and founder of:",
+  "schoolsList": [
+    {
+      "name": "Academy of Chiropractic",
+      "link": "/akademia_chiropraktyki"
+    },
+    {
+      "name": "School of Traditional Acupuncture",
+      "link": "https://szkolakupunktury.edu.pl/"
+    }
+  ],
+  "schoolButtonShow": "Check it",
+  "imo": "I created the <a href='/instytut_medycyny_orientalnej' target='_blank' rel='noreferrer'><strong>Institute of Oriental Medicine</strong></a> for the purpose of providing a reliable source and information regarding the science and art of the Far East.<br /><br />I invite you to learn more about the forms of my activity by clicking on the various icons.",
+  "publications": "Here you can see my publications."
+}

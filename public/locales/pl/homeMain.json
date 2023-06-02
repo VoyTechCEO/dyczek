@@ -1,0 +1,49 @@
+{
+  "intro": "Nazywam się Henryk Dyczek.<br /><br />Jestem dyplomowanym Akupunkturzystą i Chiropraktykiem zrzeszonym w:",
+  "institutionsList": [
+    {
+      "name": "Traditional Acupuncture Society",
+      "text": "(członek zwyczajny 1990 – 1995)",
+      "span": "Zastąpione przez British Acupuncture Council"
+    },
+    {
+      "name": "British Acupuncture Council",
+      "text": "(członek zwyczajny 1995 – 2018)",
+      "link": "https://acupuncture.org.uk/"
+    },
+    {
+      "name": "British Association of Applied Chiropractic",
+      "text": "(członek zwyczajny 1995 – 2018)",
+      "span": "Już nie istnieje"
+    },
+    {
+      "name": "Stowarzyszeniu „Chiropraktycy Polscy”",
+      "text": "KRS 0000082388 (pomysłodawca i założyciel, prezes od 2002 i prezes honorowy od 2022)",
+      "link": "http://www.chiropraktycy.pl/"
+    },
+    {
+      "name": "Polskim Towarzystwie Medycyny Manualnej",
+      "text": "(członek zwyczajny od 1998)",
+      "link": "https://ptmm.pl/"
+    },
+    {
+      "name": "Polskiego Stowarzyszenia Akupunkturzystów Zawodowych",
+      "text": "(członek Komisji Rewizyjnej do 2018)"
+    }
+  ],
+  "institutionButtonShow": "Zobacz",
+  "header1": "Jestem również pomysłodawcą i założycielem:",
+  "schoolsList": [
+    {
+      "name": "Akademii Chiropraktyki",
+      "link": "/akademia_chiropraktyki"
+    },
+    {
+      "name": "Szkoły Akupunktury Tradycyjnej",
+      "link": "https://szkolakupunktury.edu.pl/"
+    }
+  ],
+  "schoolButtonShow": "Zobacz",
+  "imo": "Utworzyłem <a href='/instytut_medycyny_orientalnej' target='_blank' rel='noreferrer'><strong>Instytut Medycyny Orientalnej</strong></a> dla stworzenia wiarygodnego źródła i informacji dotyczącej nauki i sztuki Dalekiego Wschodu.<br /><br />Zapraszam do zapoznania się formami mojej działalności, klikając na poszczególne ikony.",
+  "publications": "Tutaj zobaczysz moje publikacje."
+}

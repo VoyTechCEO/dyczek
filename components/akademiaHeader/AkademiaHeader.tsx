@@ -2,8 +2,11 @@ import Link from 'next/link';
 import React from 'react';
 import akademiaHeaderStyles from './akademiaHeader.module.css';
 import AkademiaMotto from '../akademiaMotto/AkademiaMotto';
+import { useTranslation } from 'next-i18next';
 
 const AkademiaHeader = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <section className={`container ${akademiaHeaderStyles.container}`}>
@@ -20,7 +23,7 @@ const AkademiaHeader = () => {
           Akademia Chiropraktyki oferuje prawdziwą niezmienną sztukę, istny
           majstersztyk w subtelnym wykonaniu.
         </p>
-        <h3>Kamil Rządkowski, grudzień 2022</h3>
+        <h3>Kamil Rządkowski, {t('akademiaChMain:quoteMonth')} 2022</h3>
         <AkademiaMotto />
       </section>
     </>

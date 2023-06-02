@@ -1,6 +1,11 @@
 import Link from 'next/link';
 import React from 'react';
 import homeMainContentStyles from './homeMainContent.module.css';
+import { useTranslation } from 'next-i18next';
+import ElementRef from '../elementRef/ElementRef';
+import { useRecoilState } from 'recoil';
+import { isLangBtnClosedState } from '@/recoilMain';
+import LangChangeBtn from '../langChangeBtn/LangChangeBtn';
 
 interface Company {
   name: string;
@@ -9,53 +14,33 @@ interface Company {
   link?: string;
 }
 
+interface School {
+  name: string;
+  link: string;
+}
+
 const HomeMainContent = () => {
-  const companies: Company[] = [
-    {
-      name: `Traditional Acupuncture Society`,
-      text: `(członek zwyczajny 1990 – 1995)`,
-      span: `Zastąpione przez British Acupuncture Council`,
-    },
-    {
-      name: `British Acupuncture Council`,
-      text: `(członek zwyczajny 1995 – 2018)`,
-      link: `https://acupuncture.org.uk/`,
-    },
-    {
-      name: `British Association of Applied Chiropractic`,
-      text: `(członek zwyczajny 1995 – 2018)`,
-      span: `Już nie istnieje`,
-    },
-    {
-      name: `Stowarzyszeniu „Chiropraktycy Polscy”`,
-      text: `KRS 0000082388 (pomysłodawca i założyciel, prezes od 2002 i prezes honorowy od 2022)`,
-      link: `http://www.chiropraktycy.pl/`,
-    },
-    {
-      name: `Polskim Towarzystwie Medycyny Manualnej`,
-      text: `(członek zwyczajny od 1998)`,
-      link: `https://ptmm.pl/`,
-    },
-    {
-      name: `Polskiego Stowarzyszenia Akupunkturzystów Zawodowych`,
-      text: `(członek Komisji Rewizyjnej do 2018)`,
-    },
-  ];
+  const { t } = useTranslation();
+  const institutionsList: Company[] = t('homeMain:institutionsList', {
+    returnObjects: true,
+  });
+  const schoolsList: School[] = t('homeMain:schoolsList', {
+    returnObjects: true,
+  });
+
+  const [isLangBtnClosed, setIsLangBtnClosed] =
+    useRecoilState(isLangBtnClosedState);
 
   return (
     <>
       <div className={`container ${homeMainContentStyles.container}`}>
         <article className={homeMainContentStyles.frame}>
           <div className={homeMainContentStyles.edge} />
-          <p>
-            Nazywam się Henryk Dyczek. <br />
-            <br />
-            Jestem dyplomowanym Akupunkturzystą i Chiropraktykiem zrzeszonym w:
-          </p>
+          <ElementRef element='p' content={t('homeMain:intro')} />
           <ul>
-            {companies.map((item, index) => {
+            {institutionsList.map((item, index) => {
               return (
-                <li key={`${item.name}${index}`}>
+                <li key={`${item.name}homeMainInstitution${index}`}>
                   <strong>{item.name}</strong>
                   {` `}
                   {item.text}.{` `}
@@ -63,7 +48,7 @@ const HomeMainContent = () => {
                   {` `}
                   {item.link ? (
                     <a href={item.link} target='_blank' rel='noreferrer'>
-                      Zobacz
+                      {t('homeMain:institutionButtonShow')}
                     </a>
                   ) : (
                     ``
@@ -72,55 +57,33 @@ const HomeMainContent = () => {
               );
             })}
           </ul>
-          <p>Jestem również pomysłodawcą i założycielem:</p>
+          <p>{t('homeMain:header1')}</p>
           <ul>
-            <li>
-              <strong>Akademii Chiropraktyki</strong> -{' '}
-              <Link
-                href='/akademia_chiropraktyki'
-                target='_blank'
-                rel='noreferrer'
-              >
-                Zobacz
-              </Link>
-            </li>
-            <li>
-              <strong>Szkoły Akupunktury Tradycyjnej</strong> -{' '}
-              <a
-                href='https://szkolakupunktury.edu.pl/'
-                target='_blank'
-                rel='noreferrer'
-              >
-                Zobacz
-              </a>
-            </li>
+            {schoolsList.map((item, index) => {
+              return (
+                <li key={`${item.name}homeMainSchool${index}`}>
+                  <strong>{item.name}</strong> -{' '}
+                  <Link href={item.link} target='_blank' rel='noreferrer'>
+                    {t('homeMain:schoolButtonShow')}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
-          <p>
-            Utworzyłem{' '}
-            <Link
-              href='/instytut_medycyny_orientalnej'
-              target='_blank'
-              rel='noreferrer'
-            >
-              <strong>Instytut Medycyny Orientalnej</strong>
-            </Link>{' '}
-            dla stworzenia wiarygodnego źródła i informacji dotyczącej nauki i
-            sztuki Dalekiego Wschodu. <br /> <br />
-            Zapraszam do zapoznania się formami mojej działalności, klikając na
-            poszczególne ikony.
-          </p>
+          <ElementRef element='p' content={t('homeMain:imo')} />
           <h3>
             <Link
               href='/instytut_medycyny_orientalnej/publikacje'
               target='_blank'
               rel='noreferrer'
             >
-              Tutaj zobaczysz moje publikacje.
+              {t('homeMain:publications')}
             </Link>
           </h3>
           <div className={homeMainContentStyles.edge} />
         </article>
       </div>
+      {!isLangBtnClosed && <LangChangeBtn />}
     </>
   );
 };

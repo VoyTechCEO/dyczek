@@ -11,7 +11,9 @@ const LangChangeBtn = () => {
     useRecoilState(isLangBtnClosedState);
 
   let pageClass = ``;
-  if (router.pathname.includes(`/akademia_chiropraktyki`)) {
+  if (router.pathname === `/`) {
+    pageClass = langChangeBtnStyles.home_main;
+  } else if (router.pathname.includes(`/akademia_chiropraktyki`)) {
     pageClass = langChangeBtnStyles.akademia_ch;
   } else if (router.pathname.includes(`/akupunktura_chiropraktyka`)) {
     pageClass = langChangeBtnStyles.aku_chiro;

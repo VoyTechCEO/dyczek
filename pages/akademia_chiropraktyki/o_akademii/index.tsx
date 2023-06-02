@@ -105,10 +105,6 @@ const Akademia: NextPage = () => {
                 );
               })}
             </ul>
-            <p>
-              <b>Akademia Chiropraktyki</b> dąży do uznania zawodu chiropraktyka
-              przez ustawodawstwo polskie.
-            </p>
           </article>
         </StandardMainContent>
         <Footer />

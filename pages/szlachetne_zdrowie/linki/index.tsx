@@ -70,7 +70,7 @@ const SzlaZd: NextPage = () => {
         <MainNav />
         <StandardMainContent>
           <article className='container szlaZd-container links'>
-            <h1>Publikacje</h1>
+            <h1>Linki</h1>
             <ul>
               {linksList.map((item, index) => {
                 return (

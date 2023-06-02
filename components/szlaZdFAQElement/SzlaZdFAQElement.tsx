@@ -20,7 +20,7 @@ const SzlaZdFAQElement = ({ number, question, answer }: Props) => {
           {/* zamiast znikać niech zjeżdża na dół */}
           {!show && (
             <div className='more'>
-              <p>Wyświetl odpowiedź</p>
+              <p>{t('szlaZdQuestions:buttonShow')}</p>
               <svg
                 height='4mm'
                 version='1.1'

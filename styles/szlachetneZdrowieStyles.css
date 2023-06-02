@@ -276,6 +276,7 @@
 .szlaZd-container.links ul li {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   row-gap: 0.25rem;
 }
 
@@ -290,6 +291,7 @@
 .szlaZd-container.links ul li a {
   color: var(--clr-gre);
   font-size: 0.9rem;
+  display: flex;
 }
 
 /* ----------- ------- ----------- */

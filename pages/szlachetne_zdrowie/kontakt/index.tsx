@@ -17,7 +17,11 @@ interface Props {
 export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['main', 'szlaZdMain'])),
+      ...(await serverSideTranslations(locale, [
+        'main',
+        'szlaZdMain',
+        'szlaZdContact',
+      ])),
     },
   };
 }
@@ -33,7 +37,7 @@ const SzlaZd: NextPage = () => {
         <MainNav />
         <StandardMainContent>
           <article className='container szlaZd-container contact'>
-            <h1>Publikacje</h1>
+            <h1>{t('szlaZdContact:headerMain')}</h1>
             <section>
               <ContactInfo />
               <img src='/img/mapka.gif' alt='mapa dojazdu' />

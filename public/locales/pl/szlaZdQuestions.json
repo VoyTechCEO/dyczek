@@ -67,5 +67,7 @@
   "bioList": [
     "Higa t. 2003. Rewolucja w ochronie naszej planety. Puławy: Greenland-Technologia EM",
     "Rath M. 2007. Dlaczego zwierzęta nie dostają zawałów serca?"
-  ]
+  ],
+  "buttonShow": "Wyświetl odpowiedź",
+  "buttonHide": "Schowaj odpowiedź"
 }

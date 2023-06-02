@@ -1,5 +1,5 @@
 {
-  "header1": "F.A.Q. - Pytania i odpowiedzi",
+  "header1": "Frequently Asked Questions",
   "faqList": [
     {
       "question": "I pay attention to what I eat and the sources of my food. Is this enough to ensure good health?",
@@ -14,7 +14,7 @@
       "answer": "<p>In the past, food had more micronutrients.  Since the 1960s, large-scale food production, meaning producing as quickly and as much as possible while using the smallest plot of land possible, means that modern food has only a small percentage of nutritional value compared to what it once had. Moreover, it’s contaminated with artificial fertilizers and pesticides.</p>"
     },
     {
-      "question": "Wszystkie warzywa i owoce, które konsumuję, produkuje sam. Nie używam nawozów sztucznych, ani chemicznych środków ochrony roślin. Czy zatem one również są niepełnowartościowe?",
+      "question": "All the fruit and vegetables I consume I also produce myself. I don’t use artificial fertilizers or chemical pesticides. Are they therefore also deficient?",
       "answer": "<p>A plant needs water in order to grow. Usually, this water is rainwater. As it turns out, water is a carrier of information about the environment it grows in. “You could say that water, like a magnetic tape, records the magnetic resonance of other substances, takes them for itself – you could say it imitates them and passes them as its own. This can be explained that water retains the information of contaminated substances in its molecular structure, so that their properties are still visible, even if the water has changed its form.” (Higa, 2003:138). Traditionally, evaporating water was purified by the sun’s rays in the higher layers of the atmosphere. Nowadays, the higher layers of the atmosphere are so polluted, that the purified water vapor, or water, is contaminated before it falls to the ground in the form of rain. The problem of water pollution is very serious. The consequence is widespread poisoning of soils by rainwater to a lesser or greater extent. Soil poisoning reduces the nutritional value of the plants growing on it. Table 1 shows the contents of several essential micronutrients needed for the health of cells, i.e. the production of the life energy, in 1985 and 2002. The data from 2992 compared to 1985 is already alarming. Since then, the content of micronutrients has most likely decreased even more, as the agricultural chemisation has rather increased. Perhaps here we should look for an increase in cancer, allergies, etc.</p><p><b>Mineral compounds and vitamins, content in milligrams per 100g of product</b></p><table><tr><th>Product</th><th>Ingredient</th><th>1985</th><th>2002</th><th>Difference</th></tr><tr><th colSpan='5'>Fruits</th></tr><tr><td>Apples</td><td>Vitamine C</td><td>5</td><td>2</td><td>-60%</td></tr><tr><td rowSpan='4'>Bananas</td><td>Calcium</td><td>8</td><td>7</td><td>-12%</td></tr><tr><td>Folic Acid</td><td>23</td><td>5</td><td>-79%</td></tr><tr><td>Magnesium</td><td>31</td><td>24</td><td>-23%</td></tr><tr><td>Vitamine B6</td><td>330</td><td>18</td><td>-95%</td></tr><tr><td rowSpan='2'>Strawberries</td><td>Calcium</td><td>21</td><td>12</td><td>-43%</td></tr><tr><td>Vitamine C</td><td>60</td><td>18</td><td>-87%</td></tr><tr><th colSpan='5'>Vegetables</th></tr><tr><td rowSpan='3'>Broccoli</td><td>Calcium</td><td>103</td><td>28</td><td>-73%</td></tr><tr><td>Folic Acid</td><td>47</td><td>18</td><td>-62%</td></tr><tr><td>Magnesium</td><td>24</td><td>11</td><td>-55%</td></tr><tr><td rowSpan='4'>Beans</td><td>Calcium</td><td>56</td><td>22</td><td>-51%</td></tr><tr><td>Folic Acid</td><td>39</td><td>30</td><td>-23%</td></tr><tr><td>Magnesium</td><td>26</td><td>18</td><td>-31%</td></tr><tr><td>Vitamine B6</td><td>140</td><td>32</td><td>-77%</td></tr><tr><td rowSpan='2'>Potatoes</td><td>Calcium</td><td>14</td><td>3</td><td>-78%</td></tr><tr><td>Magnesium</td><td>27</td><td>14</td><td>-48%</td></tr><tr><td rowSpan='2'>Carrots</td><td>Calcium</td><td>37</td><td>28</td><td>-24%</td></tr><tr><td>Magnesium</td><td>21</td><td>6</td><td>-75%</td></tr><tr><td rowSpan='2'>Spinach</td><td>Magnesium</td><td>62</td><td>15</td><td>-76%</td></tr><tr><td>Vitamine C</td><td>61</td><td>18</td><td>-65%</td></tr></table><h5>Table 1. Fruit and vegetables of yesterday and today</h5><h5>Source: 1985 Geigy (Switzerland) 1996 and 2002 Szwarcwald Oberthal sanatorium</h5><p>Do you think, in light of this information, that our diet will fully meet our bodies’ needs for micronutrients (vitamins and minerals)? The answer to this question immediately comes to mind. Therefore, we already need to take care of the micronutrients we supply to our body. And it’s not just about the mere supple of vitamins and minerals, but also about their quality and amount.</p>"
     },
     {
@@ -62,10 +62,12 @@
       "answer": "<p>With surprise, you may not even notice that the everyday journey you make no longer tires you so much, you don’t need an afternoon nap. You go up to the fourth floor, run up to the bus and do it without running out of breath. Surprisingly, you haven’t caught any flu and it’s already spring, and the cold, if you caught it, disappeared quickly and without any complications (cough, hoarseness, etc.). In the summer you notice that spring allergies somehow eluded you this year. The hairdresser notices that your hair has become thicker and shinier, while the hand cream lies useless. You notice how beautiful the world is. You smile more often to yourself and others, and you become more tolerant and understanding.</p>"
     }
   ],
-  "author": "Opracował: Henryk Dyczek",
-  "bioHeader": "Biografia:",
+  "author": "Compiled by: Henryk Dyczek",
+  "bioHeader": "Biography:",
   "bioList": [
-    "Higa t. 2003. Rewolucja w ochronie naszej planety. Puławy: Greenland-Technologia EM",
-    "Rath M. 2007. Dlaczego zwierzęta nie dostają zawałów serca?"
-  ]
+    "Higa t. 2003. A revolution in protecting our planet. Puławy: Greenland EM Technology",
+    "Rath M. 2007. Why don’t animals get heart attacks?"
+  ],
+  "buttonShow": "Show answer",
+  "buttonHide": "Hide answer"
 }

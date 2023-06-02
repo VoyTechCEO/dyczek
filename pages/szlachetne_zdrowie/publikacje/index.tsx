@@ -17,7 +17,11 @@ interface Props {
 export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['main', 'szlaZdMain'])),
+      ...(await serverSideTranslations(locale, [
+        'main',
+        'szlaZdMain',
+        'szlaZdPublications',
+      ])),
     },
   };
 }
@@ -64,8 +68,8 @@ const SzlaZd: NextPage = () => {
         <MainNav />
         <StandardMainContent>
           <article className='container szlaZd-container publics'>
-            <h1>Publikacje</h1>
-            <p>Artykuły</p>
+            <h1>{t('szlaZdPublications:headerMain')}</h1>
+            <p>{t('szlaZdPublications:header1')}</p>
             <ul>
               {articlesList.map((item, index) => {
                 return (
@@ -77,7 +81,7 @@ const SzlaZd: NextPage = () => {
                 );
               })}
             </ul>
-            <p>Prezentacje</p>
+            <p>{t('szlaZdPublications:header2')}</p>
             <ul>
               {presentationsList.map((item, index) => {
                 return (
