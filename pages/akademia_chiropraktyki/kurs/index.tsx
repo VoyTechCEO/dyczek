@@ -8,6 +8,7 @@ import StandardMainContent from '../../../components/standardMainContent/Standar
 import AkademiaTrainings from '../../../components/akademiaTrainings/AkademiaTrainings';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 
 interface Props {
   locale: string;
@@ -21,12 +22,18 @@ interface Course {
 export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['main'])),
+      ...(await serverSideTranslations(locale, [
+        'main',
+        'akademiaChMain',
+        'akademiaChCourse',
+      ])),
     },
   };
 }
 
 const Akademia: NextPage = () => {
+  const { t } = useTranslation();
+
   const coursesList: Course[] = [
     {
       name: `Kurs Akademii Chiropraktyki`,
@@ -47,7 +54,7 @@ const Akademia: NextPage = () => {
         <AkademiaTrainings />
         <StandardMainContent>
           <article className={`container akademiaCh-container course`}>
-            <h1>Akademia Chiropraktyki prowadzi następujące kursy:</h1>
+            <h1>{t('akademiaChCourse:header1')}</h1>
             <ul>
               {coursesList.map((item, index) => {
                 return (

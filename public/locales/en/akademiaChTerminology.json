@@ -1,0 +1,27 @@
+{
+  "expIntro": "<b>Chiropractic</b> is:",
+  "explanationsList": [
+    {
+      "name": "a form of health care",
+      "desc": "that harnesses the body’s innate and natural capacity for regeneration, or recovery, and is based on two premises:",
+      "ext": [
+        "The relationship between the structure and function of the human body plays an essential role in maintaining good health",
+        "An imbalance between the spine and the nervous system contributes to the process of disease formation"
+      ]
+    },
+    {
+      "name": "a medical science",
+      "desc": "that emphasises the need to maintain the structural integrity of the body"
+    },
+    {
+      "name": "metodą pracy",
+      "desc": "która delikatnymi mobilizacjami na kościach: głowy, kręgosłupa, miednicy oraz kończyn górnych i dolnych wspomaga prawidłowe funkcje układów: nerwowego i hormonalnego kontrolujących naturalne możliwości regeneracji organizmu"
+    },
+    {
+      "name": "a working method",
+      "desc": "that does not use pharmaceuticals or surgery."
+    }
+  ],
+  "chiropracticDef": "The word <b>''chiropractic''</b> is the name of a medical profession. The origin of the word comes from the Greek language, in which CHEIR means hand, and PRACTICOS means done.",
+  "chiropractorDef": "A <b>Chiropractor</b> is someone with relevant medical and chiropractic training who pays special attention to the biomechanics of the spine, the musculoskeletal, nervous and vascular systems, and diet."
+}

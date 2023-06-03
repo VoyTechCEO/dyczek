@@ -1,0 +1,27 @@
+{
+  "header1": "Rada naukowa",
+  "scientistsList": [
+    "prof. dr hab. Tadeusz Kasperczyk - specjalista fizjoterapii",
+    "prof. dr hab. Mariusz Posłuszny - specjalista: rehabilitacji ruchowej, anatomii funkcjonalnej, fizjologii i biomechaniki",
+    "lek. med. Piotr Godek - ortopeda trauamatolog",
+    "lek. med. Ihor Solowiow - neurolog"
+  ],
+  "header2": "Historia Akademii Chiropraktyki",
+  "history": "Akademia Chiropraktyki rozpoczęła swoją działalność w styczniu 1999 roku, kursem w zakresie chiropraktyki dla grupy fizjoterapeutów i lekarzy.  Założycielem i dyrektorem Akademii jest <a href='/'>Henryk Dyczek</a> absolwent chiropraktyki Oxford Brookes University, Wielka Brytania. Przez lata praktykował on w zawodzie chiropraktyka w Wielkiej Brytanii i w Polsce.",
+  "currently": "Akademia Chiropraktyki prowadzi obecnie zajęcia w <b>Szkole Chiropraktyki</b> w Toruniu.",
+  "header3": "Celem Akademii Chiropraktyki",
+  "target": "jest wykształcenie wysokiej klasy chiropraktyków. Jest to możliwe, gdyż studenci:",
+  "benefitsList1": [
+    "otrzymują teoretyczną i praktyczną wiedzę chiropraktyczną",
+    "rozwijają swoje umiejętności manualne",
+    "uczą się efektywnych sposobów porozumiewania się z pacjentem",
+    "poznają swoje mocne i słabe strony",
+    "poznają znaczenie dbałości o swoje zdrowie."
+  ],
+  "declaration": "wybiegając na przeciw powyższym założeniom Akademia Chiropraktyki:",
+  "benefitsList2": [
+    "stwarza przyjazną, pełną zrozumienia atmosferę, w której uczenie się nie jest wysiłkiem, a zdobywana wiedza i umiejętności przychodzą z łatwością.",
+    "zatrudnia wykładowców o wysokim poziomie wiedzy i o dużym doświadczeniu zawodowym",
+    "prezentuje uczącym się wartości, które motywują ich nauczycieli w codziennym życiu prywatnym i zawodowym, a które są niezbędne dla pełnej satysfakcji w zawodzie chiropraktyka."
+  ]
+}

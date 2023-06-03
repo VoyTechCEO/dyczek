@@ -8,6 +8,8 @@ import StandardMainContent from '@/components/standardMainContent/StandardMainCo
 import AkademiaTrainings from '@/components/akademiaTrainings/AkademiaTrainings';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
+import ElementRef from '@/components/elementRef/ElementRef';
 
 interface Props {
   locale: string;
@@ -22,12 +24,18 @@ interface Logo {
 export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['main', 'akademiaChMain'])),
+      ...(await serverSideTranslations(locale, [
+        'main',
+        'akademiaChMain',
+        'akademiaChHome',
+      ])),
     },
   };
 }
 
 const Akademia: NextPage = () => {
+  const { t } = useTranslation();
+
   const logosList: Logo[] = [
     {
       link: `http://www.chiropraktycy.pl/`,
@@ -55,15 +63,15 @@ const Akademia: NextPage = () => {
         <AkademiaTrainings />
         <StandardMainContent>
           <article className={`container akademiaCh-container home`}>
-            <h1>Opinie o szkoleniach. Dlaczego chiropraktyka?</h1>
+            <h1>{t('akademiaChHome:header1')}</h1>
             <div className='videos'>
               <video controls>
                 <source src='/video/film1.mp4' type='video/mp4' />
-                Your browser does not support HTML video.
+                {t('akademiaChHome:notSupported')}
               </video>
               <video controls>
                 <source src='/video/film3.mp4' type='video/mp4' />
-                Your browser does not support HTML video.
+                {t('akademiaChHome:notSupported')}
               </video>
             </div>
             <img
@@ -71,11 +79,8 @@ const Akademia: NextPage = () => {
               src='/img/chiropraktyka1.png'
               alt='Nauka w Akademii'
             />
-            <p>
-              <b>Akademia Chiropraktyki</b> oferuje Państwu wyjątkową możliwość
-              poznania sztuki i nauki <b>Chiropraktyki</b> całego aparatu ruchu.
-            </p>
-            <p>Odwiedź również:</p>
+            <ElementRef element='p' content={t('akademiaChHome:offer')} />
+            <p>{t('akademiaChHome:visit')}</p>
             <ul className='logos'>
               {logosList.map((item, index) => {
                 return (

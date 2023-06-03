@@ -1,0 +1,45 @@
+{
+  "header1": "Basic principles of practice.",
+  "chiroFact": "Chiropractic is based on three related and scientifically and clinically proven theories that are accepted in the scientific community:",
+  "basicsList": [
+    {
+      "name": "Disease can result from disruption of the nervous system.",
+      "desc": "There are many causes of disease, however, this is the most significant cause of disease aetiology. The nervous system coordinates cellular activity for its environmental adaptation. Factors and conditions that affect the nervous system, to which the body is unable to adapt, cause changes in the pattern of transmission of nerve impulses that deviate from the norm. As a result, many functional disorders of the nervous system can lead to disease."
+    },
+    {
+      "name": "Disorders of the nervous system can be caused by disorders in the motor system.",
+      "desc": "Disorders in the balance of the segments of the spine, pelvis and cranial bones in humans are often encountered in clinical practice. Prolonged, unnatural involvement of the nervous system can result from disorders, strains and stresses of the motor system caused by a person’s desire for upright posture. Mechanical damage or subluxations of spinal segments are often caused by asymmetrical gravitational load on the motor system and the appearance of developmental defects, or irritations: mechanical, thermal and psychological to the nervous system."
+    },
+    {
+      "name": "Disruption of the nervous system can cause or worsen disease and cause disorders in the functioning of the human body.",
+      "desc": "Disorders in the balance of the segments of the spine, pelvis and cranial bones can be related to common human ailments of organic, visceral and vasomotor origin. When the relevant circumstances arise, almost any element of the nervous system can directly or indirectly cause reactions in other elements of the nervous system. Together, independent causes of bodily malfunction can have a more debilitating effect than individual ones. Disturbances in the natural balance of the spinal, pelvic and cranial segments can initiate, or exacerbate, neurovascular and neuraxial stability disorders. Therefore, correction of musculoskeletal imbalances is absolutely necessary for effective management of the patient."
+    }
+  ],
+  "header2": "Methods used in chiropractic work",
+  "methodsList": [
+    {
+      "name": "Mobilisation of joint structures:",
+      "desc": "this is the most characteristic aspect of chiropractic care. Its goal is to normalise unnatural disorders of the motor system, in order to release the resulting states of tension of the motor system and eliminate disorders of vascular and nervous origin. The main method of chiropractic work taught in the Academy of Chiropractic is the McTimoney-Corley method, due to its <a href='#holistic'>holistic*</a>, effective, safe and soft nature."
+    },
+    {
+      "name": "Dietary consultation:",
+      "desc": "optimal diet is the basis for proper function of the motor and nervous systems."
+    },
+    {
+      "name": "Physiotherapy:",
+      "desc": "is often introduced into chiropractic care to enhance the therapeutic effect."
+    },
+    {
+      "name": "Behavioural recommendations:",
+      "desc": "are an essential part of chiropractic care. The posture of our bodies, the way we sit, walk, exercise out bodies, approach the problems of daily life has a direct impact on the state of our bodies."
+    }
+  ],
+  "header3": "*Holistic medicine",
+  "holDef": "Modern medicine, especially surgery, is brilliant at treating ailments of single human systems and excels at dealing with acute and traumatic cases. However, the treatment of complex and chronic diseases requires consideration of sociological, emotional and psychological aspects. In such a case, holistic medicine is very useful. It takes into account a wide range of patient requirements. Time, patience and understanding are essential tools of a therapist.",
+  "header4": "Holistic medicine, according to Hertha Larive, is based on four principles:",
+  "medHolList": [
+    "<p>Multilevel existence:</p><ul><li>PHYSICAL</li><li>MENTAL</li><li>EMOTIONAL</li><li>SPIRITUAL</li></ul>",
+    "<p>The human body has the natural ability to heal and regenerate itself and should remain in a state of homeostasis.</p>",
+    "<p>Each patient is a unique and special person. Diseases have similar symptoms, but the people suffering from them are different. What is important is the cooperation of the patient and their participation of his responsibility in the treatment process.</p>"
+  ]
+}

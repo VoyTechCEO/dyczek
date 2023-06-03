@@ -1,0 +1,27 @@
+{
+  "header1": "Scientific Council ",
+  "scientistsList": [
+    "Prof. Dr hab. Tadeusz Kasperczyk - specialist in physiotherapy",
+    "prof. dr hab. Mariusz Posłuszny - specialist in motor rehabilitation, functional anatomy, physiology and biomechanics",
+    "dr med. Piotr Godek - orthopaedist traumatologist",
+    "dr med. Ihor Solowiow – neurologist"
+  ],
+  "header2": "History of the Academy of Chiropractic",
+  "history": "The academy of Chiropractic began its activity in January 1999, with a course in chiropractic for a group of physiotherapists and doctors. The founder and director of the Academy is <a href='/'>Henryk Dyczek</a>, a chiropractic graduate of Oxford Brookes University, UK. Over the years he has specialised in the chiropractic profession in both UK and Poland.",
+  "currently": "The Academy of Chiropractic currently holds classes at the <b>School of Chiropractic</b> in Toruń.",
+  "header3": "The goal of the Academy of Chiropractic",
+  "target": "is to educate high quality chiropractors. This is possible because the students:",
+  "benefitsList1": [
+    "Receive both theoretical and practical chiropractic knowledge",
+    "Develop their manual skills",
+    "Learn effective mean of communicating with patients",
+    "Learn about their strengths and weaknesses",
+    "Learn the importance of caring for their health."
+  ],
+  "declaration": "Running against the assumptions above, the Academy:",
+  "benefitsList2": [
+    "Creates a friendly, understanding atmosphere in which learning isn’t an ordeal, and the knowledge and skills gained come easily",
+    "Employs faculty with a high level of knowledge and extensive professional experience",
+    "Introduces students to the values motivating their teachers in their daily personal and professional lives, which are essential for full satisfaction in the chiropractic profession."
+  ]
+}

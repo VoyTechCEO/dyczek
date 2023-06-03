@@ -1,0 +1,27 @@
+{
+  "expIntro": "<b>Chiropraktyka</b> jest:",
+  "explanationsList": [
+    {
+      "name": "formą opieki zdrowotnej",
+      "desc": "która wykorzystuje wrodzone i naturalne możliwości organizmu do regeneracji, czyli powrotu do zdrowia i opiera się na dwóch przesłankach:",
+      "ext": [
+        "związek pomiędzy strukturą i funkcjonowaniem ciała człowieka odgrywa zasadniczą rolę w utrzymaniu dobrego zdrowia",
+        "zaburzenie równowagi pomiędzy kręgosłupem i układem nerwowym przyczynia się do procesu powstawania choroby"
+      ]
+    },
+    {
+      "name": "nauką medyczną",
+      "desc": "która kładzie nacisk na potrzebę utrzymywania strukturalnej spójności organizmu."
+    },
+    {
+      "name": "metodą pracy",
+      "desc": "która delikatnymi mobilizacjami na kościach: głowy, kręgosłupa, miednicy oraz kończyn górnych i dolnych wspomaga prawidłowe funkcje układów: nerwowego i hormonalnego kontrolujących naturalne możliwości regeneracji organizmu"
+    },
+    {
+      "name": "metodą pracy",
+      "desc": "która nie stosuje farmaceutyków ani zabiegów chirurgicznych."
+    }
+  ],
+  "chiropracticDef": "Słowo <b>''chiropraktyka''</b> jest nazwą zawodu medycznego. Geneza słowa ''chiropraktyka'' wywodzi się z języka greckiego, w którym to C H E I R znaczy ręka, a P R A C T I C O S znaczy robione.",
+  "chiropractorDef": "<b>Chiropraktyk</b> jest osobą ze stosownym wykształceniem medycznym i chiropraktycznym, który poświęca szczególną uwagę biomechanice kręgosłupa, układowi ruchowemu, nerwowemu i naczyniowemu oraz zwraca uwagę na sposób odżywiania się."
+}

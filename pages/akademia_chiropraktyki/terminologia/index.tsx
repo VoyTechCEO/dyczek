@@ -7,6 +7,8 @@ import AkademiaHeader from '../../../components/akademiaHeader/AkademiaHeader';
 import StandardMainContent from '../../../components/standardMainContent/StandardMainContent';
 import AkademiaTrainings from '../../../components/akademiaTrainings/AkademiaTrainings';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
+import ElementRef from '@/components/elementRef/ElementRef';
 
 interface Props {
   locale: string;
@@ -21,34 +23,22 @@ interface Explanation {
 export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['main'])),
+      ...(await serverSideTranslations(locale, [
+        'main',
+        'akademiaChMain',
+        'akademiaChTerminology',
+      ])),
     },
   };
 }
 
 const Akademia: NextPage = () => {
-  const explanationsList: Explanation[] = [
-    {
-      name: `formą opieki zdrowotnej`,
-      desc: `która wykorzystuje wrodzone i naturalne możliwości organizmu do regeneracji, czyli powrotu do zdrowia i opiera się na dwóch przesłankach:`,
-      ext: [
-        `związek pomiędzy strukturą i funkcjonowaniem ciała człowieka odgrywa zasadniczą rolę w utrzymaniu dobrego zdrowia`,
-        `zaburzenie równowagi pomiędzy kręgosłupem i układem nerwowym przyczynia się do procesu powstawania choroby`,
-      ],
-    },
-    {
-      name: `nauką medyczną`,
-      desc: `która kładzie nacisk na potrzebę utrzymywania strukturalnej spójności organizmu.`,
-    },
-    {
-      name: `metodą pracy`,
-      desc: `która delikatnymi mobilizacjami na kościach: głowy, kręgosłupa, miednicy oraz kończyn górnych i dolnych wspomaga prawidłowe funkcje układów: nerwowego i hormonalnego kontrolujących naturalne możliwości regeneracji organizmu`,
-    },
-    {
-      name: `metodą pracy`,
-      desc: `która nie stosuje farmaceutyków ani zabiegów chirurgicznych.`,
-    },
-  ];
+  const { t } = useTranslation();
+
+  const explanationsList: Explanation[] = t(
+    'akademiaChTerminology:explanationsList',
+    { returnObjects: true }
+  );
 
   return (
     <>
@@ -64,9 +54,10 @@ const Akademia: NextPage = () => {
               alt='Nauka w Akademii'
               className='view'
             />
-            <p>
-              <b>Chiropraktyka</b> jest:
-            </p>
+            <ElementRef
+              element='p'
+              content={t('akademiaChTerminology:expIntro')}
+            />
             <ul className='explanation'>
               {explanationsList.map((item, index) => {
                 return (
@@ -87,17 +78,14 @@ const Akademia: NextPage = () => {
                 );
               })}
             </ul>
-            <p>
-              Słowo <b>"chiropraktyka"</b> jest nazwą zawodu medycznego. Geneza
-              słowa "chiropraktyka" wywodzi się z języka greckiego, w którym to
-              C H E I R znaczy ręka, a P R A C T I C O S znaczy robione.
-            </p>
-            <p>
-              <b>"Chiropraktyk"</b> jest osobą ze stosownym wykształceniem
-              medycznym i chiropraktycznym, który poświęca szczególną uwagę
-              biomechanice kręgosłupa, układowi ruchowemu, nerwowemu i
-              naczyniowemu oraz zwraca uwagę na sposób odżywiania się.
-            </p>
+            <ElementRef
+              element='p'
+              content={t('akademiaChTerminology:chiropracticDef')}
+            />
+            <ElementRef
+              element='p'
+              content={t('akademiaChTerminology:chiropractorDef')}
+            />
           </article>
         </StandardMainContent>
         <Footer />
