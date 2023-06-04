@@ -1,0 +1,33 @@
+{
+  "header1": "Links",
+  "linksList": [
+    {
+      "desc": "You want to benefit from my services:",
+      "link": "/",
+      "title": "Henryk Dyczek"
+    },
+    {
+      "desc": "You want to purchase equipment helping you live healthier, which I personally use (you may need my help in this):",
+      "link": "http://www.nikken.co.uk/connect/"
+    },
+    {
+      "desc": "You want to find a chiropractor who used to be my student:",
+      "link": "http://www.chiropraktycy.pl/"
+    },
+    {
+      "desc": "You want to learn the science and art of chiropractic:",
+      "link": "/akademia_chiropraktyki/",
+      "title": "Academy of Chiropractic"
+    },
+    {
+      "desc": "You want to improve your appearance and mood:",
+      "link": "/akupunktura_kosmetyczna/",
+      "title": "Cosmetic acupuncture"
+    },
+    {
+      "desc": "You are interested in oriental medicine:",
+      "link": "/instytut_medycyny_orientalnej/",
+      "title": "The Institute of Oriental Medicine"
+    }
+  ]
+}

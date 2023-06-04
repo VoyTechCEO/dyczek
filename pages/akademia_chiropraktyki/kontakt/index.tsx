@@ -8,6 +8,7 @@ import StandardMainContent from '../../../components/standardMainContent/Standar
 import AkademiaTrainings from '../../../components/akademiaTrainings/AkademiaTrainings';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import ContactInfo from '@/components/contactInfo/ContactInfo';
+import { useTranslation } from 'next-i18next';
 
 interface Props {
   locale: string;
@@ -16,12 +17,18 @@ interface Props {
 export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['main'])),
+      ...(await serverSideTranslations(locale, [
+        'main',
+        'akademiaChMain',
+        'akademiaChContact',
+      ])),
     },
   };
 }
 
 const Akademia: NextPage = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <HeadSet />
@@ -31,10 +38,10 @@ const Akademia: NextPage = () => {
         <AkademiaTrainings />
         <StandardMainContent>
           <article className={`container akademiaCh-container contact`}>
-            <h1>Biuro Akademii</h1>
+            <h1>{t('akademiaChContact:header1')}</h1>
             <section>
               <ContactInfo />
-              <p>Zapraszam również na:</p>
+              <p>{t('akademiaChContact:visit')}</p>
               <a href='http://www.chiropraktycy.pl/'>
                 <img
                   src='/img/chiropraktycy_polscy_logo.png'

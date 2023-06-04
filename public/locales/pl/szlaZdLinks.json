@@ -1,0 +1,33 @@
+{
+  "header1": "Linki",
+  "linksList": [
+    {
+      "desc": "Chcesz skorzystać z moich usług:",
+      "link": "/",
+      "title": "Henryk Dyczek"
+    },
+    {
+      "desc": "Chcesz zakupić i urządzenia pomagające zdrowiej żyć, z których osobiście korzystam (będziesz potrzebował w tym mojej pomocy):",
+      "link": "http://www.nikken.co.uk/connect/"
+    },
+    {
+      "desc": "Chcesz znaleźć chiropraktyka, który był kiedyś moim studentem:",
+      "link": "http://www.chiropraktycy.pl/"
+    },
+    {
+      "desc": "Chcesz sam poznać naukę i sztukę chiropraktyki:",
+      "link": "/akademia_chiropraktyki/",
+      "title": "Akademia Chiropraktyki"
+    },
+    {
+      "desc": "Chcesz poprawić swój wygład i samopoczucie:",
+      "link": "/akupunktura_kosmetyczna/",
+      "title": "Akupunktura kosmetyczna"
+    },
+    {
+      "desc": "Interesuje Cię medycyna orientalna:",
+      "link": "/instytut_medycyny_orientalnej/",
+      "title": "Instytut Medycyny Orientalnej"
+    }
+  ]
+}

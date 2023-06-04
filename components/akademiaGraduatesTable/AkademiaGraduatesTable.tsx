@@ -4,12 +4,15 @@ import {
   akademiaGraduates,
   akademiaGraduatesNew,
 } from '@/utils/akademiaGraduates';
+import { useTranslation } from 'next-i18next';
 
 interface Props {
   newGrad?: boolean;
 }
 
 const AkademiaGraduatesTable = ({ newGrad }: Props) => {
+  const { t } = useTranslation();
+
   let graduateNumber = 0;
   let ckNum = 0;
 
@@ -26,9 +29,9 @@ const AkademiaGraduatesTable = ({ newGrad }: Props) => {
           {!newGrad ? (
             <tbody>
               <tr>
-                <th>Rok akademicki</th>
-                <th>Numer DC</th>
-                <th>Imię i Nazwisko</th>
+                <th>{t('akademiaChGraduatesList:year')}</th>
+                <th>{t('akademiaChGraduatesList:dcNum')}</th>
+                <th>{t('akademiaChGraduatesList:name')}</th>
               </tr>
               {akademiaGraduates.map((item, index) => {
                 return (
@@ -66,10 +69,10 @@ const AkademiaGraduatesTable = ({ newGrad }: Props) => {
           ) : (
             <tbody>
               <tr>
-                <th>Rok akademicki</th>
-                <th>Numer CK</th>
-                <th>Imię i Nazwisko</th>
-                <th>Numer absolwenta</th>
+                <th>{t('akademiaChGraduatesList:year')}</th>
+                <th>{t('akademiaChGraduatesList:ckNum')}</th>
+                <th>{t('akademiaChGraduatesList:name')}</th>
+                <th>{t('akademiaChGraduatesList:gradNum')}</th>
               </tr>
               {akademiaGraduatesNew.map((item, index) => {
                 return (

@@ -23,7 +23,11 @@ interface Site {
 export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['main', 'szlaZdMain'])),
+      ...(await serverSideTranslations(locale, [
+        'main',
+        'szlaZdMain',
+        'szlaZdLinks',
+      ])),
     },
   };
 }
@@ -31,36 +35,7 @@ export async function getStaticProps({ locale }: Props) {
 const SzlaZd: NextPage = () => {
   const { t } = useTranslation();
 
-  const linksList: Site[] = [
-    {
-      desc: `Chcesz skorzystać z moich usług:`,
-      link: `/`,
-      title: `Henryk Dyczek`,
-    },
-    {
-      desc: `Chcesz zakupić i urządzenia pomagające zdrowiej żyć, z których osobiście korzystam (będziesz potrzebował w tym mojej pomocy):`,
-      link: `http://www.nikken.co.uk/connect/`,
-    },
-    {
-      desc: `Chcesz znaleźć chiropraktyka, który był kiedyś moim studentem:`,
-      link: `http://www.chiropraktycy.pl/`,
-    },
-    {
-      desc: `Chcesz sam poznać naukę i sztukę chiropraktyki:`,
-      link: `/akademia_chiropraktyki/`,
-      title: `Akademia Chiropraktyki`,
-    },
-    {
-      desc: `Chcesz poprawić swój wygład i samopoczucie:`,
-      link: `/akupunktura_kosmetyczna/`,
-      title: `Akupunktura kosmetyczna`,
-    },
-    {
-      desc: `Interesuje Cię medycyna orientalna:`,
-      link: `/instytut_medycyny_orientalnej/`,
-      title: `Instytut Medycyny Orientalnej`,
-    },
-  ];
+  const linksList: Site[] = t('szlaZdLinks:linksList', { returnObjects: true });
 
   return (
     <>
@@ -70,7 +45,7 @@ const SzlaZd: NextPage = () => {
         <MainNav />
         <StandardMainContent>
           <article className='container szlaZd-container links'>
-            <h1>Linki</h1>
+            <h1>{t('szlaZdLinks:header1')}</h1>
             <ul>
               {linksList.map((item, index) => {
                 return (

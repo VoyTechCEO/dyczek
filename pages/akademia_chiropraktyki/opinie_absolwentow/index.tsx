@@ -8,6 +8,7 @@ import StandardMainContent from '../../../components/standardMainContent/Standar
 import AkademiaTrainings from '../../../components/akademiaTrainings/AkademiaTrainings';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import AkademiaOpinions from '@/components/akademiaOpinions/AkademiaOpinions';
+import { useTranslation } from 'next-i18next';
 
 interface Props {
   locale: string;
@@ -16,12 +17,18 @@ interface Props {
 export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['main'])),
+      ...(await serverSideTranslations(locale, [
+        'main',
+        'akademiaChMain',
+        'akademiaChGraduatesOpinions',
+      ])),
     },
   };
 }
 
 const Akademia: NextPage = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <HeadSet />
@@ -31,7 +38,7 @@ const Akademia: NextPage = () => {
         <AkademiaTrainings />
         <StandardMainContent>
           <article className={`container akademiaCh-container graduates`}>
-            <h1>Opinie absolwentów Akademii Chiropraktyki</h1>
+            <h1>{t('akademiaChGraduatesOpinions:header1')}</h1>
             <AkademiaOpinions />
           </article>
         </StandardMainContent>
