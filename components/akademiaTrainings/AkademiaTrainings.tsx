@@ -8,15 +8,33 @@ const AkademiaTrainings = () => {
   const router = useRouter();
   const { t } = useTranslation();
 
+  const generateTraining = (route: string, translation: string) => {
+    return (
+      <div className={akademiaTrainingsStyles.block}>
+        {router.pathname.includes(route) && (
+          <>
+            <div className={akademiaTrainingsStyles.edge} />
+            <div className={akademiaTrainingsStyles.edge} />
+          </>
+        )}
+        <Link href={`${router.pathname}/${route}#startView`}>
+          {translation}
+        </Link>
+      </div>
+    );
+  };
+
   return (
     <>
       <div className={`container ${akademiaTrainingsStyles.container}`}>
-        <Link href={`${router.pathname}/szkolenie_podstawowe`}>
-          {t('akademiaChMain:basicTraining')}
-        </Link>
-        <Link href={`${router.pathname}/szkolenie_zaawansowane`}>
-          {t('akademiaChMain:advancedTraining')}
-        </Link>
+        {generateTraining(
+          `szkolenie_podstawowe`,
+          t('akademiaChMain:basicTraining')
+        )}
+        {generateTraining(
+          `szkolenie_zaawansowane`,
+          t('akademiaChMain:advancedTraining')
+        )}
       </div>
     </>
   );

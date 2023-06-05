@@ -5,10 +5,38 @@
   margin-bottom: 5rem;
 }
 
-.container a {
+.container .block {
+  position: relative;
+  display: flex;
+}
+
+.container .block:hover {
+  background-color: rgba(199, 208, 244, 0.3);
+}
+
+.container .block a {
   text-decoration: none;
   color: var(--clr-blue-700);
   font-size: 1.25rem;
   font-weight: 500;
-  padding: 1.5rem;
+  padding: 1.5rem 2rem;
+  z-index: 9;
+}
+
+.container .block .edge {
+  position: absolute;
+  left: 0;
+  border-left: solid 1px var(--clr-blue-700);
+  border-top: solid 1px var(--clr-blue-700);
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  z-index: 0;
+}
+
+.container .block .edge:last-of-type {
+  left: auto;
+  right: 0;
+  border: none;
+  border-right: solid 1px var(--clr-blue-700);
+  border-bottom: solid 1px var(--clr-blue-700);
 }

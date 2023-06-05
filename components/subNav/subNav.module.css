@@ -13,6 +13,7 @@
 
 .container li .dropdown {
   position: relative;
+  z-index: 99;
 }
 
 .container li .dropdown p {
