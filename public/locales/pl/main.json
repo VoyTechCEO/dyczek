@@ -21,6 +21,16 @@
       "link": "/szlachetne_zdrowie"
     }
   ],
+  "homeDyczekSpecs": {
+    "nav": [
+      {
+        "name": "homeDyczek",
+        "link": "/"
+      }
+    ],
+    "title": "Henryk Dyczek - medycyna niekonwencjonalna",
+    "description": "Nazywam się Henryk Dyczek, jestem dyplomowanym akupunkturzystą i chiropraktykiem zrzeszonym w Polskim Towarzystwie Medycyny Manualnej, British Acupuncture Council oraz British Association for Applied Chiropractic."
+  },
   "akademiaChSpecs": {
     "nav": [
       {
@@ -65,7 +75,8 @@
         "link": "/akademia_chiropraktyki/kontakt"
       }
     ],
-    "title": "Akademia Chiropraktyki"
+    "title": "Akademia Chiropraktyki",
+    "description": "Dowiedz się więcej o działalności oraz założeniach Akademii Chiropraktyki - zobacz dostępne szkolenia i kursy!"
   },
   "akuChiroSpecs": {
     "nav": [
@@ -86,7 +97,8 @@
         "link": "/akupunktura_chiropraktyka/kontakt"
       }
     ],
-    "title": "Henryk Dyczek - akupunktura i chiropraktykas"
+    "title": "Henryk Dyczek - akupunktura i chiropraktykas",
+    "description": "Poznaj czym są akupunktura i chiropraktyka, oraz z jakimi problemami one pomagają. Zapoznaj się też z licznymi publikacjami dotyczącymi akupunktury i chiropraktyki."
   },
   "imoSpecs": {
     "nav": [
@@ -123,7 +135,8 @@
         "link": "/instytut_medycyny_orientalnej/kontakt"
       }
     ],
-    "title": "Instytut Medycyny Orientalnej"
+    "title": "Instytut Medycyny Orientalnej",
+    "description": "Instytut Medycyny Orientalnej; poznaj jego cele, misje i filozofię oraz zapoznaj się z dostępnymi szkoleniami."
   },
   "szlaZdSpecs": {
     "nav": [
@@ -148,7 +161,8 @@
         "link": "/szlachetne_zdrowie/kontakt"
       }
     ],
-    "title": "Szlachetne zdrowie"
+    "title": "Szlachetne zdrowie",
+    "description": "Zdrowie jest poważną sprawą, więc dzielę się moim ponad trzydziestoletnim doświadczeniem klinicznym, jak zdrowo żyć i jak się starzeć nie będąc ciężarem dla innych."
   },
   "footerRights": "Henryk Dyczek. Wszystkie prawa zastrzeżone.",
   "footerCredits": "Strona wykonana przez",

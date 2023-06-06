@@ -21,6 +21,16 @@
       "link": "/szlachetne_zdrowie"
     }
   ],
+  "homeDyczekSpecs": {
+    "nav": [
+      {
+        "name": "homeDyczek",
+        "link": "/"
+      }
+    ],
+    "title": "Henryk Dyczek - unconventional medicine",
+    "description": "My name is Henryk Dyczek. I am a charted acupuncturist and chiropractor affiliated with the Polish Society of Manual Medicine, British Acupuncture Council and British Association."
+  },
   "akademiaChSpecs": {
     "nav": [
       {
@@ -65,7 +75,8 @@
         "link": "/akademia_chiropraktyki/kontakt"
       }
     ],
-    "title": "Akademia Chiropraktyki"
+    "title": "Academy of Chiropractic",
+    "description": "Find out more about the activities and objectives of the Academy of Chiropractic."
   },
   "akuChiroSpecs": {
     "nav": [
@@ -86,7 +97,8 @@
         "link": "/akupunktura_chiropraktyka/kontakt"
       }
     ],
-    "title": "Henryk Dyczek - akupunktura i chiropraktyka"
+    "title": "Henryk Dyczek - acupuncture & chiropractic",
+    "description": "Learn what acupuncture and chiropractic are and what issues the help with. Look into multiple publications regarding acupuncture and chiropractic."
   },
   "imoSpecs": {
     "nav": [
@@ -123,7 +135,8 @@
         "link": "/instytut_medycyny_orientalnej/kontakt"
       }
     ],
-    "title": "The Institute of Oriental Medicine"
+    "title": "The Institute of Oriental Medicine",
+    "description": "Oriental Medicine Institute; learn about its objectives, mission and philosophy and learn about the available courses."
   },
   "szlaZdSpecs": {
     "nav": [
@@ -148,7 +161,8 @@
         "link": "/szlachetne_zdrowie/kontakt"
       }
     ],
-    "title": "Szlachetne zdrowie"
+    "title": "Szlachetne zdrowie",
+    "description": "Health is a serious matter, so I share my over thirty years of clinical experience, how to live healthily and grow old without being a burden to others."
   },
   "footerRights": "Henryk Dyczek. All right reserved.",
   "footerCredits": "Website made by",
