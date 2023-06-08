@@ -1,13 +1,16 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import akademiaDocumentStyles from './akademiaDocument.module.css';
 import { Editor } from '@tinymce/tinymce-react';
 import { Editor as TinyMCEEditor } from 'tinymce';
+import ElementRef from '../elementRef/ElementRef';
 
 const AkademiaDocument = () => {
   const editorRef = useRef<TinyMCEEditor | null>(null);
-  const log = () => {
+  const [content, setContent] = useState('');
+
+  const viewContent = () => {
     if (editorRef.current) {
-      console.log(editorRef.current.getContent());
+      setContent(editorRef.current.getContent());
     }
   };
 
@@ -47,11 +50,35 @@ const AkademiaDocument = () => {
               'bold italic forecolor | alignleft aligncenter ' +
               'alignright alignjustify | bullist numlist outdent indent | ' +
               'removeformat | help',
-            content_style:
-              'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
           }}
         />
-        <button onClick={log}>Log editor content</button>
+        <div className={akademiaDocumentStyles.buttons}>
+          <button onClick={viewContent}>Wyświetl podgląd</button>
+          <div className={akademiaDocumentStyles.extended}>
+            <button onClick={viewContent}>Zamieść komunikat</button>
+            <svg
+              id='Warstwa_1'
+              data-name='Warstwa 1'
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 56 56'
+            >
+              <g>
+                <circle cx='28' cy='46' r='6' />
+                <polyline points='24.21 36 31.95 36 35 5 21 5' />
+              </g>
+              <circle cx='28' cy='28' r='27.5' strokeWidth='1' fill='none' />
+            </svg>
+            <p className={akademiaDocumentStyles.warning}>
+              Po zamieszczeniu komunikatu, będzie on widoczny w sekcji szkoleń
+              dla wszystkich użytkowników strony.
+            </p>
+          </div>
+        </div>
+        <ElementRef
+          element='section'
+          content={content}
+          className={akademiaDocumentStyles.preview}
+        />
       </div>
     </>
   );

@@ -195,3 +195,17 @@
 /* ----------- --------- ----------- */
 /* ----------- TRAININGS ----------- */
 /* ----------- --------- ----------- */
+
+.akademiaCh-container.trainings button.add {
+  all: unset;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--clr-blue-700);
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.akademiaCh-container.trainings button.add svg {
+  fill: var(--clr-blue-700);
+}
