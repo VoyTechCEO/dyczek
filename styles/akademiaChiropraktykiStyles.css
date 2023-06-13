@@ -196,9 +196,8 @@
 /* ----------- TRAININGS ----------- */
 /* ----------- --------- ----------- */
 
-.akademiaCh-container.trainings button.add {
-  all: unset;
-  cursor: pointer;
+.akademiaCh-container.trainings a.add {
+  text-decoration: none;
   padding: 0.5rem;
   color: var(--clr-blue-700);
   display: flex;
@@ -206,6 +205,8 @@
   column-gap: 0.5rem;
 }
 
-.akademiaCh-container.trainings button.add svg {
+.akademiaCh-container.trainings a.add svg {
   fill: var(--clr-blue-700);
+  height: 1.6rem;
+  width: auto;
 }

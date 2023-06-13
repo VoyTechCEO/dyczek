@@ -1,0 +1,51 @@
+.container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(2px) brightness(50%);
+  justify-content: center;
+  align-items: center;
+}
+
+.container .frame {
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: flex-end;
+  background-color: var(--clr-100);
+  padding: 1rem;
+  border-radius: 4px;
+  position: relative;
+}
+
+.container .frame button.back {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  padding: 0.5rem;
+  color: var(--clr-blue-700);
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+.container .frame p {
+  width: 100%;
+  margin-top: 2.5rem;
+}
+
+.container .frame input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--clr-900);
+  border-radius: 4px;
+}
+
+.container .frame button.confirm {
+  all: unset;
+  cursor: pointer;
+  width: fit-content;
+  padding: 0.5rem;
+}
