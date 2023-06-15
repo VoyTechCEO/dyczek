@@ -37,7 +37,11 @@ export default async function handler(
         content: req.body.content,
       };
       const parsedTraining = JSON.stringify(newTraining);
-      await fsPromises.writeFile(basicTrainingPath, parsedTraining);
+      try {
+        await fsPromises.writeFile(basicTrainingPath, parsedTraining);
+      } catch (err) {
+        console.log(err);
+      }
       status = 201;
       data.comment = 'Put';
       break;
