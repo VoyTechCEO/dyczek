@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 const AdminPassFrame = () => {
   const router = useRouter();
   const [password, setPassword] = useState('');
+  const [loginStatus, setLoginStatus] = useState('');
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -18,8 +19,9 @@ const AdminPassFrame = () => {
           password: password,
         }),
       });
-      const data = res.json();
+      const data = await res.json();
       console.log(data);
+      setLoginStatus(data.response.isLoggedIn);
     } catch (err) {
       console.log(err);
     }
