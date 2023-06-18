@@ -4,8 +4,9 @@ import homeMainContentStyles from './homeMainContent.module.css';
 import { useTranslation } from 'next-i18next';
 import ElementRef from '../elementRef/ElementRef';
 import { useRecoilState } from 'recoil';
-import { isLangBtnClosedState } from '@/recoilMain';
+import { isLangBtnClosedState, isUserLoggedInState } from '@/recoilMain';
 import LangChangeBtn from '../langChangeBtn/LangChangeBtn';
+import LogoutBtn from '../logoutBtn/LogoutBtn';
 
 interface Company {
   name: string;
@@ -30,6 +31,8 @@ const HomeMainContent = () => {
 
   const [isLangBtnClosed, setIsLangBtnClosed] =
     useRecoilState(isLangBtnClosedState);
+  const [isUserLoggedIn, setIsUserLoggedIn] =
+    useRecoilState(isUserLoggedInState);
 
   return (
     <>
@@ -84,6 +87,7 @@ const HomeMainContent = () => {
         </article>
       </div>
       {!isLangBtnClosed && <LangChangeBtn />}
+      {isUserLoggedIn && <LogoutBtn />}
     </>
   );
 };
