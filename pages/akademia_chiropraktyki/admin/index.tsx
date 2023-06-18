@@ -9,6 +9,8 @@ import AkademiaTrainings from '@/components/akademiaTrainings/AkademiaTrainings'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import AkademiaEditor from '@/components/akademiaEditor/AkademiaEditor';
 import AdminPassFrame from '@/components/adminPassFrame/AdminPassFrame';
+import { useRecoilState } from 'recoil';
+import { isUserLoggedInState } from '@/recoilMain';
 
 interface Props {
   locale: string;
@@ -23,6 +25,9 @@ export async function getStaticProps({ locale }: Props) {
 }
 
 const Akademia: NextPage = () => {
+  const [isUserLoggedIn, setIsUserLoggedIn] =
+    useRecoilState(isUserLoggedInState);
+
   return (
     <>
       <HeadSet />
@@ -30,10 +35,14 @@ const Akademia: NextPage = () => {
         <AkademiaHeader />
         <MainNav />
         <AkademiaTrainings />
-        <AdminPassFrame />
+        {!isUserLoggedIn && <AdminPassFrame />}
         <StandardMainContent>
           <article className={`container akademiaCh-container trainings`}>
-            <AkademiaEditor />
+            {isUserLoggedIn ? (
+              <AkademiaEditor />
+            ) : (
+              <h1>Brak dostępu do narzędzi administratora.</h1>
+            )}
           </article>
         </StandardMainContent>
         <Footer />

@@ -22,6 +22,7 @@ const AdminPassFrame = () => {
       const data = await res.json();
       console.log(data);
       setLoginStatus(data.response.isLoggedIn);
+      router.reload();
     } catch (err) {
       console.log(err);
     }

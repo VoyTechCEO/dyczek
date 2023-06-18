@@ -7,13 +7,18 @@ import type { AppProps } from 'next/app';
 import { RecoilRoot } from 'recoil';
 import AppWrapper from '../components/appWrapper/AppWrapper';
 import { appWithTranslation } from 'next-i18next';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+const queryClient = new QueryClient();
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <RecoilRoot>
-      <AppWrapper>
-        <Component {...pageProps} />
-      </AppWrapper>
+      <QueryClientProvider client={queryClient}>
+        <AppWrapper>
+          <Component {...pageProps} />
+        </AppWrapper>
+      </QueryClientProvider>
     </RecoilRoot>
   );
 }

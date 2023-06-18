@@ -16,4 +16,19 @@ const isLangBtnClosedState = atom({
   default: false,
 });
 
-export { siteThemeState, isLangBtnClosedState };
+const isUserLoggedInState = atom({
+  key: `isUserLoggedIn`,
+  default: false,
+});
+
+const isAppLoadedState = atom({
+  key: `isAppLoaded`,
+  default: false,
+});
+
+export {
+  siteThemeState,
+  isLangBtnClosedState,
+  isUserLoggedInState,
+  isAppLoadedState,
+};

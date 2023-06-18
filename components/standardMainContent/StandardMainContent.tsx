@@ -2,9 +2,10 @@ import React from 'react';
 import SubNav from '../subNav/SubNav';
 import standardMainContentStyles from './standardMainContent.module.css';
 import LangChangeBtn from '../../components/langChangeBtn/LangChangeBtn';
-import { isLangBtnClosedState } from '@/recoilMain';
+import { isLangBtnClosedState, isUserLoggedInState } from '@/recoilMain';
 import { useRecoilState } from 'recoil';
 import { useRouter } from 'next/router';
+import LogoutBtn from '../logoutBtn/LogoutBtn';
 
 interface Props {
   children: JSX.Element;
@@ -13,6 +14,8 @@ interface Props {
 const StandardMainContent = ({ children }: Props) => {
   const [isLangBtnClosed, setIsLangBtnClosed] =
     useRecoilState(isLangBtnClosedState);
+  const [isUserLoggedIn, setIsUserLoggedIn] =
+    useRecoilState(isUserLoggedInState);
   const router = useRouter();
 
   return (
@@ -27,6 +30,7 @@ const StandardMainContent = ({ children }: Props) => {
         <div>{children}</div>
       </section>
       {!isLangBtnClosed && <LangChangeBtn />}
+      {isUserLoggedIn && <LogoutBtn />}
     </>
   );
 };

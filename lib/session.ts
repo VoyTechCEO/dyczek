@@ -6,6 +6,7 @@ const sessionOptions: IronSessionOptions = {
   cookieName: 'loginCookie',
   cookieOptions: {
     secure: process.env.NODE_ENV === 'production',
+    maxAge: 21600,
   },
 };
 

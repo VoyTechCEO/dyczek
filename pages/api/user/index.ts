@@ -9,8 +9,6 @@ interface Data {
   response?: UserRes | { isPasswordCorrect: boolean };
 }
 
-export default withIronSessionApiRoute(handler, sessionOptions);
-
 async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   let status;
   let data: Data = { comment: 'unsupported method' };
@@ -21,13 +19,14 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
           isLoggedIn: true,
         };
         data.comment = 'Logged in';
+        status = 200;
       } else {
         data.response = {
           isLoggedIn: false,
         };
         data.comment = 'Not logged in';
+        status = 403;
       }
-      status = 200;
       break;
     case 'POST':
       try {
@@ -42,16 +41,17 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
             isPasswordCorrect: true,
           };
           data.comment = 'Correct password';
+          status = 200;
         } else {
           data.response = {
             isPasswordCorrect: false,
           };
           data.comment = 'Incorrect password';
+          status = 401;
         }
       } catch (err) {
         console.log(err);
       }
-      status = 200;
       break;
     case 'DELETE':
       req.session.destroy();
@@ -65,5 +65,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
       status = 405;
       break;
   }
-  res.status(status).json(data);
+  res.status(status!).json(data);
 }
+
+export default withIronSessionApiRoute(handler, sessionOptions);
