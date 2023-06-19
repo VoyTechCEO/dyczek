@@ -210,3 +210,22 @@
   height: 1.6rem;
   width: auto;
 }
+
+.akademiaCh-container.trainings section.notice {
+  width: 100%;
+}
+
+.akademiaCh-container.trainings section.notice h1 {
+  font-size: 2em;
+  width: none;
+  font-weight: bold;
+}
+
+.akademiaCh-container.trainings section.notice p {
+  width: none;
+}
+
+.akademiaCh-container.trainings section.notice p a {
+  color: revert;
+  font-weight: normal;
+}

@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import React from 'react';
+import React, { useState } from 'react';
 import Footer from '@/components/footer/Footer';
 import HeadSet from '@/components/headSet/HeadSet';
 import MainNav from '@/components/mainNav/MainNav';
@@ -8,8 +8,10 @@ import StandardMainContent from '@/components/standardMainContent/StandardMainCo
 import AkademiaTrainings from '@/components/akademiaTrainings/AkademiaTrainings';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
-import AkademiaEditor from '@/components/akademiaEditor/AkademiaEditor';
 import Link from 'next/link';
+import { useQuery } from 'react-query';
+import AkademiaTraining from '@/interfaces/akademiaTraining';
+import ElementRef from '@/components/elementRef/ElementRef';
 
 interface Props {
   locale: string;
@@ -24,7 +26,30 @@ export async function getStaticProps({ locale }: Props) {
 }
 
 const Akademia: NextPage = () => {
+  const [noticeData, setNoticeData] = useState<AkademiaTraining>({
+    date: '',
+    content: '',
+  });
   const { t } = useTranslation();
+
+  const getNoticeData = async () => {
+    try {
+      const res = await fetch(`/api/notices/basic`, {
+        method: `GET`,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      const data = await res.json();
+      setNoticeData(data.response);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const { isLoading, error } = useQuery(`noticeData`, async () => {
+    await getNoticeData();
+  });
 
   return (
     <>
@@ -35,7 +60,20 @@ const Akademia: NextPage = () => {
         <AkademiaTrainings />
         <StandardMainContent>
           <article className={`container akademiaCh-container trainings`}>
-            <AkademiaEditor />
+            {isLoading ? (
+              <h1>Trwa ładowanie komunikatu.</h1>
+            ) : error ? (
+              <h1>Nie udało się załadować komunikatu</h1>
+            ) : (
+              <>
+                <h1>Opublikowano: {noticeData.date}</h1>
+                <ElementRef
+                  element='section'
+                  content={noticeData.content}
+                  className='notice'
+                />
+              </>
+            )}
             <Link
               className='add'
               href='/akademia_chiropraktyki/admin#startView'

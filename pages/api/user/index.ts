@@ -19,14 +19,13 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
           isLoggedIn: true,
         };
         data.comment = 'Logged in';
-        status = 200;
       } else {
         data.response = {
           isLoggedIn: false,
         };
         data.comment = 'Not logged in';
-        status = 403;
       }
+      status = 200;
       break;
     case 'POST':
       try {

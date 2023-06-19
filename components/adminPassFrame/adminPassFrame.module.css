@@ -36,6 +36,12 @@
   margin-top: 2.5rem;
 }
 
+.container .frame p.wrong {
+  margin-top: 0;
+  color: var(--clr-red-100);
+  text-align: center;
+}
+
 .container .frame input {
   width: 100%;
   padding: 0.5rem;

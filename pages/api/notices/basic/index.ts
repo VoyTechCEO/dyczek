@@ -3,6 +3,8 @@ import AkademiaTraining from '@/interfaces/akademiaTraining';
 import basicTraining from '../../../../data/basicTraining.json';
 import fsPromises from 'fs/promises';
 import path from 'path';
+import { withIronSessionApiRoute } from 'iron-session/next';
+import sessionOptions from '@/lib/session';
 
 interface Data {
   comment: string;
@@ -11,10 +13,7 @@ interface Data {
 
 const basicTrainingPath = path.join(process.cwd(), 'data/basicTraining.json');
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
+async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   let status;
   let data: Data = { comment: 'unsupported method' };
   switch (req.method) {
@@ -24,6 +23,12 @@ export default async function handler(
       data.response = basicTraining;
       break;
     case 'PUT':
+      if (!req.session.user) {
+        status = 403;
+        data.comment =
+          'User does not have access to this method without admin permissions.';
+        break;
+      }
       const getDate = new Date();
       const currentDate = `${getDate.getFullYear()}-${
         getDate.getMonth() + 1 < 10
@@ -51,3 +56,5 @@ export default async function handler(
   }
   res.status(status).json(data);
 }
+
+export default withIronSessionApiRoute(handler, sessionOptions);

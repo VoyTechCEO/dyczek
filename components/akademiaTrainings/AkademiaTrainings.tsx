@@ -17,7 +17,7 @@ const AkademiaTrainings = () => {
             <div className={akademiaTrainingsStyles.edge} />
           </>
         )}
-        <Link href={`${router.pathname}/${route}#startView`}>
+        <Link href={`/akademia_chiropraktyki/${route}#startView`}>
           {translation}
         </Link>
       </div>
