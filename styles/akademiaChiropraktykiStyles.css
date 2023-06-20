@@ -196,21 +196,6 @@
 /* ----------- TRAININGS ----------- */
 /* ----------- --------- ----------- */
 
-.akademiaCh-container.trainings a.add {
-  text-decoration: none;
-  padding: 0.5rem;
-  color: var(--clr-blue-700);
-  display: flex;
-  align-items: center;
-  column-gap: 0.5rem;
-}
-
-.akademiaCh-container.trainings a.add svg {
-  fill: var(--clr-blue-700);
-  height: 1.6rem;
-  width: auto;
-}
-
 .akademiaCh-container.trainings section.notice {
   width: 100%;
 }
@@ -228,4 +213,11 @@
 .akademiaCh-container.trainings section.notice p a {
   color: revert;
   font-weight: normal;
+}
+
+.akademiaCh-container.trainings ul.notices {
+  display: flex;
+  column-gap: 1rem;
+  row-gap: 2rem;
+  list-style-type: none;
 }

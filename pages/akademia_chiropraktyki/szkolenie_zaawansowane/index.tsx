@@ -10,8 +10,8 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { useQuery } from 'react-query';
 import AkademiaTraining from '@/interfaces/akademiaTraining';
-import ElementRef from '@/components/elementRef/ElementRef';
 import AdminTools from '@/components/adminTools/AdminTools';
+import AkademiaNoticePanel from '@/components/akademiaNoticePanel/AkademiaNoticePanel';
 
 interface Props {
   locale: string;
@@ -26,29 +26,31 @@ export async function getStaticProps({ locale }: Props) {
 }
 
 const Akademia: NextPage = () => {
-  const [noticeData, setNoticeData] = useState<AkademiaTraining>({
-    date: '',
-    content: '',
-  });
+  const [noticesData, setNoticesData] = useState<AkademiaTraining[]>([
+    {
+      date: '',
+      content: '',
+    },
+  ]);
   const { t } = useTranslation();
 
-  const getNoticeData = async () => {
+  const getNoticesData = async () => {
     try {
-      const res = await fetch(`/api/notices/basic`, {
+      const res = await fetch(`/api/notices/advanced`, {
         method: `GET`,
         headers: {
           'Content-Type': 'application/json',
         },
       });
       const data = await res.json();
-      setNoticeData(data.response);
+      setNoticesData(data.response);
     } catch (err) {
       console.log(err);
     }
   };
 
-  const { isLoading, error } = useQuery(`noticeData`, async () => {
-    await getNoticeData();
+  const { isLoading, error } = useQuery(`noticesData`, async () => {
+    await getNoticesData();
   });
 
   return (
@@ -66,12 +68,21 @@ const Akademia: NextPage = () => {
               <h1>Nie udało się załadować komunikatu</h1>
             ) : (
               <>
-                <h1>Opublikowano: {noticeData.date}</h1>
-                <ElementRef
-                  element='section'
-                  content={noticeData.content}
-                  className='notice'
-                />
+                <h1>Szkolenia zaawansowane</h1>
+                <ul className='notices'>
+                  {noticesData.map((item, index) => {
+                    return (
+                      <li key={`${item}akademiaNotice${index}`}>
+                        <AkademiaNoticePanel
+                          id={item.id!}
+                          title={item.title!}
+                          desc={item.desc!}
+                          date={item.date}
+                        />
+                      </li>
+                    );
+                  })}
+                </ul>
               </>
             )}
             <AdminTools />

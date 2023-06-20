@@ -3,8 +3,10 @@ import akademiaDocumentStyles from './akademiaEditor.module.css';
 import { Editor } from '@tinymce/tinymce-react';
 import { Editor as TinyMCEEditor } from 'tinymce';
 import ElementRef from '../elementRef/ElementRef';
+import { useRouter } from 'next/router';
 
 const AkademiaDocument = () => {
+  const router = useRouter();
   const editorRef = useRef<TinyMCEEditor | null>(null);
   const [content, setContent] = useState('');
 
@@ -17,7 +19,7 @@ const AkademiaDocument = () => {
   const postContent = async () => {
     if (editorRef.current) {
       try {
-        const res = await fetch(`/api/notices/basic`, {
+        await fetch(`/api/notices/basic`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -26,8 +28,7 @@ const AkademiaDocument = () => {
             content: editorRef.current.getContent(),
           }),
         });
-        const data = await res.json();
-        console.log(data);
+        router.push('/akademia_chiropraktyki/szkolenie_podstawowe#startView');
       } catch (err) {
         console.log(err);
       }

@@ -29,7 +29,7 @@ const StandardMainContent = ({ children }: Props) => {
         <SubNav />
         <div>{children}</div>
       </section>
-      {!isLangBtnClosed && <LangChangeBtn />}
+      {!isLangBtnClosed && !router.pathname.includes('[') && <LangChangeBtn />}
       {isUserLoggedIn && <LogoutBtn />}
     </>
   );

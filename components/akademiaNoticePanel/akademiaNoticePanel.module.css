@@ -1,0 +1,26 @@
+.container {
+  text-decoration: none;
+  color: var(--clr-900);
+  padding: 1.5rem 1rem;
+  box-shadow: 2px 8px 10px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  width: 20rem;
+  height: min-content;
+}
+
+.container h4 {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--clr-700);
+}
+
+.container h2 {
+  font-size: 1.1rem;
+}
+
+.container p {
+  font-size: 0.9rem;
+  min-height: 5rem;
+}
