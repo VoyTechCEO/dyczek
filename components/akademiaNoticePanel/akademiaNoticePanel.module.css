@@ -1,4 +1,8 @@
 .container {
+  position: relative;
+}
+
+.container a {
   text-decoration: none;
   color: var(--clr-900);
   padding: 1.5rem 1rem;
@@ -23,4 +27,15 @@
 .container p {
   font-size: 0.9rem;
   min-height: 5rem;
+}
+
+.container button.delete {
+  all: unset;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  fill: var(--clr-700);
+  z-index: 999;
 }

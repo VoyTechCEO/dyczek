@@ -26,13 +26,13 @@ export async function getStaticProps({ locale }: Props) {
 }
 
 const Akademia: NextPage = () => {
+  const { t } = useTranslation();
   const [noticesData, setNoticesData] = useState<AkademiaTraining[]>([
     {
       date: '',
       content: '',
     },
   ]);
-  const { t } = useTranslation();
 
   const getNoticesData = async () => {
     try {
@@ -72,14 +72,13 @@ const Akademia: NextPage = () => {
                 <ul className='notices'>
                   {noticesData.map((item, index) => {
                     return (
-                      <li key={`${item}akademiaNotice${index}`}>
-                        <AkademiaNoticePanel
-                          id={item.id!}
-                          title={item.title!}
-                          desc={item.desc!}
-                          date={item.date}
-                        />
-                      </li>
+                      <AkademiaNoticePanel
+                        key={`${item}akademiaNotice${index}`}
+                        id={item.id!}
+                        title={item.title!}
+                        desc={item.desc!}
+                        date={item.date}
+                      />
                     );
                   })}
                 </ul>
