@@ -5,6 +5,7 @@ import {
   useRecoilState,
   useRecoilValue,
 } from 'recoil';
+import AkademiaTraining from '@/interfaces/akademiaTraining';
 
 const siteThemeState = atom({
   key: `siteThemeState`,
@@ -17,13 +18,23 @@ const isLangBtnClosedState = atom({
 });
 
 const isUserLoggedInState = atom({
-  key: `isUserLoggedIn`,
+  key: `isUserLoggedInState`,
   default: false,
 });
 
 const isAppLoadedState = atom({
-  key: `isAppLoaded`,
+  key: `isAppLoadedState`,
   default: false,
+});
+
+const advancedNoticesListState = atom({
+  key: `advancedNoticesListState`,
+  default: [
+    {
+      date: '',
+      content: '',
+    },
+  ] as AkademiaTraining[],
 });
 
 export {
@@ -31,4 +42,5 @@ export {
   isLangBtnClosedState,
   isUserLoggedInState,
   isAppLoadedState,
+  advancedNoticesListState,
 };

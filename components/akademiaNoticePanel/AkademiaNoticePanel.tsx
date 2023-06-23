@@ -2,7 +2,7 @@ import React from 'react';
 import akademiaNoticePanelStyles from './akademiaNoticePanel.module.css';
 import Link from 'next/link';
 import { useRecoilState } from 'recoil';
-import { isUserLoggedInState } from '@/recoilMain';
+import { advancedNoticesListState, isUserLoggedInState } from '@/recoilMain';
 
 interface Props {
   id: string;
@@ -14,11 +14,22 @@ interface Props {
 const AkademiaNoticePanel = ({ id, title, desc, date }: Props) => {
   const [isUserLoggedIn, setIsUserLoggedIn] =
     useRecoilState(isUserLoggedInState);
+  const [advancedNoticesList, setAdvancedNoticesList] = useRecoilState(
+    advancedNoticesListState
+  );
 
-  const deleteNotice = () => {
-    fetch(`/api/notices/advanced/${id}`, {
-      method: `DELETE`,
-    });
+  const deleteNotice = async () => {
+    try {
+      await fetch(`/api/notices/advanced/${id}`, {
+        method: `DELETE`,
+      });
+      const newList = advancedNoticesList.filter((item) => {
+        return item.id !== id;
+      });
+      setAdvancedNoticesList(newList);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (

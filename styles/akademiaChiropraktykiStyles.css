@@ -217,6 +217,7 @@
 
 .akademiaCh-container.trainings ul.notices {
   display: flex;
+  justify-content: space-around;
   column-gap: 1rem;
   row-gap: 2rem;
   list-style-type: none;

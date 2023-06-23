@@ -67,3 +67,23 @@
   font-size: 0.85rem;
   color: var(--clr-blue-700);
 }
+
+.container .label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.container .label input.advanced {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--clr-700);
+  border-radius: 4px;
+}
+
+.container .label select {
+  width: 15rem;
+  padding: 0.5rem;
+  border: 1px solid var(--clr-700);
+  border-radius: 4px;
+}

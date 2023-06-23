@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import React, { useState } from 'react';
+import React from 'react';
 import Footer from '@/components/footer/Footer';
 import HeadSet from '@/components/headSet/HeadSet';
 import MainNav from '@/components/mainNav/MainNav';
@@ -9,9 +9,10 @@ import AkademiaTrainings from '@/components/akademiaTrainings/AkademiaTrainings'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { useQuery } from 'react-query';
-import AkademiaTraining from '@/interfaces/akademiaTraining';
 import AdminTools from '@/components/adminTools/AdminTools';
 import AkademiaNoticePanel from '@/components/akademiaNoticePanel/AkademiaNoticePanel';
+import { useRecoilState } from 'recoil';
+import { advancedNoticesListState } from '@/recoilMain';
 
 interface Props {
   locale: string;
@@ -27,12 +28,9 @@ export async function getStaticProps({ locale }: Props) {
 
 const Akademia: NextPage = () => {
   const { t } = useTranslation();
-  const [noticesData, setNoticesData] = useState<AkademiaTraining[]>([
-    {
-      date: '',
-      content: '',
-    },
-  ]);
+  const [advancedNoticesList, setAdvancedNoticesList] = useRecoilState(
+    advancedNoticesListState
+  );
 
   const getNoticesData = async () => {
     try {
@@ -43,7 +41,7 @@ const Akademia: NextPage = () => {
         },
       });
       const data = await res.json();
-      setNoticesData(data.response);
+      setAdvancedNoticesList(data.response);
     } catch (err) {
       console.log(err);
     }
@@ -70,7 +68,7 @@ const Akademia: NextPage = () => {
               <>
                 <h1>Szkolenia zaawansowane</h1>
                 <ul className='notices'>
-                  {noticesData.map((item, index) => {
+                  {advancedNoticesList.map((item, index) => {
                     return (
                       <AkademiaNoticePanel
                         key={`${item}akademiaNotice${index}`}
