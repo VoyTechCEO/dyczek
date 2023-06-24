@@ -37,7 +37,7 @@ const AkademiaNoticePanel = ({ id, title, desc, date }: Props) => {
       <li className={`container ${akademiaNoticePanelStyles.container}`}>
         <Link
           className={`container ${akademiaNoticePanelStyles.container}`}
-          href={`/akademia_chiropraktyki/szkolenie_zaawansowane/${id}/`}
+          href={`/akademia_chiropraktyki/szkolenie_zaawansowane/${id}#startView`}
         >
           <h4>{date}</h4>
           <h2>{title}</h2>

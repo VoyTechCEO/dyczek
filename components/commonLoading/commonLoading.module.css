@@ -1,0 +1,17 @@
+.container {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.container svg.spinner {
+  animation: spinner;
+  animation-duration: 600ms;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -12,6 +12,8 @@ import { useQuery } from 'react-query';
 import AkademiaTraining from '@/interfaces/akademiaTraining';
 import ElementRef from '@/components/elementRef/ElementRef';
 import AdminTools from '@/components/adminTools/AdminTools';
+import CommonError from '@/components/commonError/CommonError';
+import CommonLoading from '@/components/commonLoading/CommonLoading';
 
 interface Props {
   locale: string;
@@ -61,9 +63,9 @@ const Akademia: NextPage = () => {
         <StandardMainContent>
           <article className={`container akademiaCh-container trainings`}>
             {isLoading ? (
-              <h1>Trwa ładowanie komunikatu.</h1>
+              <CommonLoading />
             ) : error ? (
-              <h1>Nie udało się załadować komunikatu</h1>
+              <CommonError content='Nie udało się załadować komunikatu' />
             ) : (
               <>
                 <h1>Opublikowano: {noticeData.date}</h1>

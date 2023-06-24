@@ -4,9 +4,11 @@ import {
   siteThemeState,
 } from '@/recoilMain';
 import { useRouter } from 'next/router';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 import { useQuery } from 'react-query';
+import MainLoading from '../mainLoading/MainLoading';
+import MainError from '../mainError/MainError';
 
 interface Props {
   children: JSX.Element;
@@ -52,11 +54,11 @@ const AppWrapper = ({ children }: Props) => {
   });
 
   if (!isAppLoaded) {
-    return <h1>Loading...</h1>;
+    return <MainLoading />;
   }
 
   if (error) {
-    return <h1>An error occurred during userData fetching.</h1>;
+    return <MainError />;
   }
 
   return <div>{children}</div>;

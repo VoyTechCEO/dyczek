@@ -63,6 +63,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
         );
       } catch (err) {
         console.log(err);
+        status = 500;
+        data.comment = 'Failed to post';
+        break;
       }
       status = 201;
       data.comment = 'Posted';

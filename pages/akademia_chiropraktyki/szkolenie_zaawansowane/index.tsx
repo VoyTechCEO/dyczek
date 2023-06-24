@@ -13,6 +13,8 @@ import AdminTools from '@/components/adminTools/AdminTools';
 import AkademiaNoticePanel from '@/components/akademiaNoticePanel/AkademiaNoticePanel';
 import { useRecoilState } from 'recoil';
 import { advancedNoticesListState } from '@/recoilMain';
+import CommonError from '@/components/commonError/CommonError';
+import CommonLoading from '@/components/commonLoading/CommonLoading';
 
 interface Props {
   locale: string;
@@ -41,7 +43,8 @@ const Akademia: NextPage = () => {
         },
       });
       const data = await res.json();
-      setAdvancedNoticesList(data.response);
+      const noticesList = data.response.reverse();
+      setAdvancedNoticesList(noticesList);
     } catch (err) {
       console.log(err);
     }
@@ -61,9 +64,9 @@ const Akademia: NextPage = () => {
         <StandardMainContent>
           <article className={`container akademiaCh-container trainings`}>
             {isLoading ? (
-              <h1>Trwa ładowanie komunikatu.</h1>
+              <CommonLoading />
             ) : error ? (
-              <h1>Nie udało się załadować komunikatu</h1>
+              <CommonError content='Nie udało się załadować komunikatów' />
             ) : (
               <>
                 <h1>Szkolenia zaawansowane</h1>

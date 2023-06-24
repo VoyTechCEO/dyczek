@@ -24,7 +24,6 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
       const getTraining = advancedTrainingList.find((item) => {
         return item.id === req.query.notice;
       });
-
       status = 200;
       data.comment = 'Got';
       data.response = getTraining;
@@ -47,8 +46,10 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
         );
       } catch (err) {
         console.log(err);
+        status = 500;
+        data.comment = 'Failed to delete';
+        break;
       }
-
       status = 200;
       data.comment = 'Deleted';
       break;
