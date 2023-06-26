@@ -7,10 +7,10 @@ import AkademiaHeader from '@/components/akademiaHeader/AkademiaHeader';
 import StandardMainContent from '@/components/standardMainContent/StandardMainContent';
 import AkademiaTrainings from '@/components/akademiaTrainings/AkademiaTrainings';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import AkademiaEditor from '@/components/akademiaEditor/AkademiaEditor';
 import AdminPassFrame from '@/components/adminPassFrame/AdminPassFrame';
 import { useRecoilState } from 'recoil';
 import { isUserLoggedInState } from '@/recoilMain';
+import AkademiaAdminGraduate from '@/components/akademiaAdminInsertGraduate/AkademiaAdminGraduate';
 
 interface Props {
   locale: string;
@@ -39,7 +39,7 @@ const Akademia: NextPage = () => {
         <StandardMainContent>
           <article className={`container akademiaCh-container trainings`}>
             {isUserLoggedIn ? (
-              <AkademiaEditor />
+              <AkademiaAdminGraduate />
             ) : (
               <h1>Brak dostępu do narzędzi administratora.</h1>
             )}

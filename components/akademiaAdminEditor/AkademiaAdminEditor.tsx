@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import akademiaDocumentStyles from './akademiaEditor.module.css';
+import akademiaAdminEditorStyles from './akademiaAdminEditor.module.css';
 import { Editor } from '@tinymce/tinymce-react';
 import { Editor as TinyMCEEditor } from 'tinymce';
 import ElementRef from '../elementRef/ElementRef';
@@ -57,8 +57,8 @@ const AkademiaDocument = () => {
 
   return (
     <>
-      <div className={`container ${akademiaDocumentStyles.container}`}>
-        <div className={akademiaDocumentStyles.label}>
+      <div className={`container ${akademiaAdminEditorStyles.container}`}>
+        <div className={akademiaAdminEditorStyles.label}>
           <p>Wybierz rodzaj szkolenia:</p>
           <select
             name='trainingType'
@@ -72,19 +72,19 @@ const AkademiaDocument = () => {
         </div>
         {trainingType === `advanced` && (
           <>
-            <div className={akademiaDocumentStyles.label}>
+            <div className={akademiaAdminEditorStyles.label}>
               <p>Wprowadź tytuł:</p>
               <input
-                className={akademiaDocumentStyles.advanced}
+                className={akademiaAdminEditorStyles.advanced}
                 type='text'
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
               />
             </div>
-            <div className={akademiaDocumentStyles.label}>
+            <div className={akademiaAdminEditorStyles.label}>
               <p>Wprowadź opis:</p>
               <input
-                className={akademiaDocumentStyles.advanced}
+                className={akademiaAdminEditorStyles.advanced}
                 type='text'
                 value={desc}
                 onChange={(e) => setDesc(e.target.value)}
@@ -92,7 +92,7 @@ const AkademiaDocument = () => {
             </div>
           </>
         )}
-        <div className={akademiaDocumentStyles.label}>
+        <div className={akademiaAdminEditorStyles.label}>
           <p>Wprowadź treść komunikatu:</p>
           <Editor
             id='EditorID'
@@ -130,9 +130,9 @@ const AkademiaDocument = () => {
             }}
           />
         </div>
-        <div className={akademiaDocumentStyles.buttons}>
+        <div className={akademiaAdminEditorStyles.buttons}>
           <button onClick={viewContent}>Wyświetl podgląd</button>
-          <div className={akademiaDocumentStyles.extended}>
+          <div className={akademiaAdminEditorStyles.extended}>
             <button onClick={postContent}>Zamieść komunikat</button>
             <svg
               id='Warstwa_1'
@@ -153,7 +153,7 @@ const AkademiaDocument = () => {
                 strokeMiterlimit='10'
               />
             </svg>
-            <p className={akademiaDocumentStyles.warning}>
+            <p className={akademiaAdminEditorStyles.warning}>
               Po zamieszczeniu komunikatu, będzie on widoczny w sekcji szkoleń
               dla wszystkich użytkowników strony.
             </p>
@@ -162,7 +162,7 @@ const AkademiaDocument = () => {
         <ElementRef
           element='section'
           content={content}
-          className={akademiaDocumentStyles.preview}
+          className={akademiaAdminEditorStyles.preview}
         />
       </div>
     </>

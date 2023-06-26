@@ -19,11 +19,13 @@ const AkademiaHeader = () => {
             />
           </Link>
         </div>
-        <p className={akademiaHeaderStyles.quote}>
+        <h3>
           Akademia Chiropraktyki oferuje prawdziwą niezmienną sztukę, istny
           majstersztyk w subtelnym wykonaniu.
+        </h3>
+        <p className={akademiaHeaderStyles.author}>
+          Kamil Rządkowski, {t('akademiaChMain:quoteMonth')} 2022
         </p>
-        <h3>Kamil Rządkowski, {t('akademiaChMain:quoteMonth')} 2022</h3>
         <AkademiaMotto />
       </section>
     </>

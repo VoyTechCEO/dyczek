@@ -1,13 +1,20 @@
 import Link from 'next/link';
 import React from 'react';
 import adminToolsStyles from './adminTools.module.css';
+import { useRouter } from 'next/router';
 
 const AdminTools = () => {
+  const router = useRouter();
+
   return (
     <>
       <Link
         className={`container ${adminToolsStyles.container}`}
-        href='/akademia_chiropraktyki/admin#startView'
+        href={
+          router.pathname.includes('lista_absolwentow')
+            ? '/akademia_chiropraktyki/admin/absolwenci#startView'
+            : '/akademia_chiropraktyki/admin/szkolenia#startView'
+        }
       >
         <svg
           id='Warstwa_1'

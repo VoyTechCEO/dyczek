@@ -27,13 +27,13 @@
   height: auto;
 }
 
-.container p.quote {
+.container h3 {
   font-size: 1rem;
-  font-weight: 500;
-  font-style: italic;
   margin: 1rem 0;
 }
 
-.container h3 {
-  font-size: 1rem;
+.container p.author {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: italic;
 }
