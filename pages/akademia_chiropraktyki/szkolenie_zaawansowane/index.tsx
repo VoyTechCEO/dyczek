@@ -66,7 +66,7 @@ const Akademia: NextPage = () => {
             {isLoading ? (
               <CommonLoading />
             ) : error ? (
-              <CommonError content='Nie udało się załadować komunikatów' />
+              <CommonError content='Nie udało się załadować komunikatów.' />
             ) : (
               <>
                 <h1>Szkolenia zaawansowane</h1>

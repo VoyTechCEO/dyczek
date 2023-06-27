@@ -10,6 +10,10 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import AkademiaGraduatesTable from '@/components/akademiaGraduatesTable/AkademiaGraduatesTable';
 import { useTranslation } from 'next-i18next';
 import AdminTools from '@/components/adminTools/AdminTools';
+import { useQuery } from 'react-query';
+import YearClass from '@/interfaces/yearClass';
+import CommonLoading from '@/components/commonLoading/CommonLoading';
+import CommonError from '@/components/commonError/CommonError';
 
 interface Props {
   locale: string;
@@ -29,7 +33,29 @@ export async function getStaticProps({ locale }: Props) {
 
 const Akademia: NextPage = () => {
   const [show, setShow] = useState(false);
+  const [newGraduatesList, setNewGraduatesList] = useState<YearClass[]>([]);
   const { t } = useTranslation();
+
+  const getGraduatesData = async () => {
+    try {
+      const res = await fetch(`/api/graduates`, {
+        method: `GET`,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      const data = await res.json();
+      console.log(data.response);
+      setNewGraduatesList(data.response);
+      console.log(newGraduatesList);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const { isLoading, error } = useQuery(`graduatesData`, async () => {
+    await getGraduatesData();
+  });
 
   return (
     <>
@@ -41,10 +67,14 @@ const Akademia: NextPage = () => {
         <StandardMainContent>
           <article className={`container akademiaCh-container graduates`}>
             <h1>{t('akademiaChGraduatesList:header1')}</h1>
-            {show ? (
+            {isLoading ? (
+              <CommonLoading />
+            ) : error ? (
+              <CommonError content='Nie udało się załadować absolwentów.' />
+            ) : show ? (
               <>
                 <AkademiaGraduatesTable />
-                <AkademiaGraduatesTable newGrad={true} />
+                <AkademiaGraduatesTable newGrad={newGraduatesList} />
               </>
             ) : (
               <div className='hidden'>

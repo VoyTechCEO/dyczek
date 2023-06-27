@@ -1,13 +1,12 @@
 import React from 'react';
 import akademiaGraduatesTableStyles from './akademiaGraduatesTable.module.css';
-import {
-  akademiaGraduates,
-  akademiaGraduatesNew,
-} from '@/utils/akademiaGraduates';
+import { akademiaGraduates } from '@/utils/akademiaGraduates';
 import { useTranslation } from 'next-i18next';
+import graduates from '@/data/graduates.json';
+import YearClass from '@/interfaces/yearClass';
 
 interface Props {
-  newGrad?: boolean;
+  newGrad?: YearClass[];
 }
 
 const AkademiaGraduatesTable = ({ newGrad }: Props) => {
@@ -81,7 +80,7 @@ const AkademiaGraduatesTable = ({ newGrad }: Props) => {
                   <th>{t('akademiaChGraduatesList:name')}</th>
                   <th>{t('akademiaChGraduatesList:gradNum')}</th>
                 </tr>
-                {akademiaGraduatesNew.map((item, index) => {
+                {graduates.map((item, index) => {
                   return (
                     <React.Fragment
                       key={`${item.year}akademiaChGraduatesGroupNew${index}`}

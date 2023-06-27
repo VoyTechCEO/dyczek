@@ -1,0 +1,30 @@
+.container {
+  flex-direction: column;
+  row-gap: 0.5rem;
+  width: min-content;
+}
+
+.container button {
+  all: unset;
+  cursor: pointer;
+  text-align: center;
+  width: 14rem;
+  padding: 0.5rem;
+  background-color: var(--clr-100);
+  border: solid 1px var(--clr-blue-700);
+  color: var(--clr-blue-700);
+  border-radius: 4px;
+}
+
+.container svg {
+  height: 1.25rem;
+  fill: var(--clr-blue-700);
+  stroke: var(--clr-blue-700);
+}
+
+.container p.warning {
+  width: 100%;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--clr-blue-700);
+}

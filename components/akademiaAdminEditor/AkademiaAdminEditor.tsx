@@ -4,6 +4,7 @@ import { Editor } from '@tinymce/tinymce-react';
 import { Editor as TinyMCEEditor } from 'tinymce';
 import ElementRef from '../elementRef/ElementRef';
 import { useRouter } from 'next/router';
+import AkademiaWarningBtn from '../akademiaWarningBtn/AkademiaWarningBtn';
 
 const AkademiaDocument = () => {
   const router = useRouter();
@@ -131,33 +132,17 @@ const AkademiaDocument = () => {
           />
         </div>
         <div className={akademiaAdminEditorStyles.buttons}>
-          <button onClick={viewContent}>Wyświetl podgląd</button>
-          <div className={akademiaAdminEditorStyles.extended}>
-            <button onClick={postContent}>Zamieść komunikat</button>
-            <svg
-              id='Warstwa_1'
-              data-name='Warstwa 1'
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 56 56'
-            >
-              <g>
-                <circle cx='28' cy='46' r='6' />
-                <polyline points='24.21 36 31.95 36 35 5 21 5' />
-              </g>
-              <circle
-                cx='28'
-                cy='28'
-                r='27.5'
-                fill='none'
-                stroke='#000'
-                strokeMiterlimit='10'
-              />
-            </svg>
-            <p className={akademiaAdminEditorStyles.warning}>
-              Po zamieszczeniu komunikatu, będzie on widoczny w sekcji szkoleń
-              dla wszystkich użytkowników strony.
-            </p>
-          </div>
+          <button
+            className={akademiaAdminEditorStyles.normal}
+            onClick={viewContent}
+          >
+            Wyświetl podgląd
+          </button>
+          <AkademiaWarningBtn
+            btnContent='Zamieść komunikat'
+            func={postContent}
+            warning='Po zamieszczeniu komunikatu, będzie on widoczny w sekcji szkoleń dla wszystkich użytkowników strony.'
+          />
         </div>
         <ElementRef
           element='section'

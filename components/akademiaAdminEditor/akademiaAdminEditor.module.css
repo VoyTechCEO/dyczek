@@ -29,7 +29,7 @@
   column-gap: 1rem;
 }
 
-.container .buttons button {
+.container .buttons button.normal {
   all: unset;
   cursor: pointer;
   width: 14rem;
@@ -40,32 +40,6 @@
   background-color: var(--clr-blue-700);
   border: solid 1px var(--clr-blue-700);
   border-radius: 4px;
-}
-
-.container .buttons .extended button {
-  color: var(--clr-blue-700);
-  background-color: var(--clr-100);
-  border-radius: 4px;
-}
-
-.container .buttons .extended {
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.5rem;
-  width: min-content;
-}
-
-.container .buttons .extended svg {
-  height: 1.25rem;
-  fill: var(--clr-blue-700);
-  stroke: var(--clr-blue-700);
-}
-
-.container .buttons .extended p.warning {
-  width: 100%;
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--clr-blue-700);
 }
 
 .container .label {
