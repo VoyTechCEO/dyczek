@@ -26,6 +26,9 @@ const pageSpecsList = (
   const szlaZdSpecs: Specs = t('main:szlaZdSpecs', {
     returnObjects: true,
   });
+  const akuKosSpecs: Specs = t('main:akuKosSpecs', {
+    returnObjects: true,
+  });
 
   const pageSpecsList: PageSpecs[] = [
     {
@@ -79,6 +82,15 @@ const pageSpecsList = (
       description: szlaZdSpecs.description,
       favicon: `/svg/szlachetne_zdrowie_favicon.svg`,
       sinceYear: 2009,
+    },
+    {
+      name: `akuKos`,
+      subNavContent: akuKosSpecs.nav,
+      title: akuKosSpecs.title,
+      keywords: `henryk dyczek, akupunktura, akupunktura kosmetyczna, kosmetologia`,
+      description: akuKosSpecs.description,
+      favicon: `/svg/akupunktura_kosmetyczna_logo.svg`,
+      sinceYear: 2008,
     },
   ];
 

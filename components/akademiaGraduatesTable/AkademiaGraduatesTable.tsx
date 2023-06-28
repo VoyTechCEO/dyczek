@@ -9,6 +9,49 @@ interface Props {
   newGrad?: YearClass[];
 }
 
+interface BtnProps {
+  year: string;
+  name: string;
+}
+
+const DeleteBtn = ({ year, name }: BtnProps) => {
+  const deleteGraduate = async () => {
+    try {
+      await fetch(`/api/graduates/`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          year: year,
+          name: name,
+        }),
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  return (
+    <button
+      className={akademiaGraduatesTableStyles.delete}
+      onClick={deleteGraduate}
+    >
+      <svg
+        width='15'
+        version='1.1'
+        viewBox='0 0 52.917 52.917'
+        xmlns='http://www.w3.org/2000/svg'
+      >
+        <path
+          d='m16.734 43.194-9.7247 9.7221-7.0088-7.0088 19.444-19.449-19.444-19.449 7.0088-7.0088 19.449 19.444 19.449-19.444 7.0088 7.0088-19.444 19.449 19.444 19.449-7.0088 7.0088-19.449-19.444z'
+          strokeWidth='.26458'
+        />
+      </svg>
+    </button>
+  );
+};
+
 const AkademiaGraduatesTable = ({ newGrad }: Props) => {
   const { t } = useTranslation();
 
@@ -99,7 +142,13 @@ const AkademiaGraduatesTable = ({ newGrad }: Props) => {
                               </td>
                               <td>{ckNum}</td>
                               <td>{graduateItem}</td>
-                              <td>{graduateNumber}</td>
+                              <td>
+                                {graduateNumber}
+                                <DeleteBtn
+                                  year={item.year.toString()}
+                                  name={graduateItem}
+                                />
+                              </td>
                             </tr>
                           );
                         }
@@ -110,7 +159,13 @@ const AkademiaGraduatesTable = ({ newGrad }: Props) => {
                           >
                             <td>{ckNum}</td>
                             <td>{graduateItem}</td>
-                            <td>{graduateNumber}</td>
+                            <td>
+                              {graduateNumber}
+                              <DeleteBtn
+                                year={item.year.toString()}
+                                name={graduateItem}
+                              />
+                            </td>
                           </tr>
                         );
                       })}

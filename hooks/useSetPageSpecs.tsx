@@ -19,6 +19,8 @@ const useSetPageSpecs = () => {
     pageSpecs = pageSpecsList(t)!.find((item) => item.name === `imo`)!;
   } else if (router.pathname.includes(`/szlachetne_zdrowie`)) {
     pageSpecs = pageSpecsList(t)!.find((item) => item.name === `szlaZd`)!;
+  } else if (router.pathname.includes(`/akupunktura_kosmetyczna`)) {
+    pageSpecs = pageSpecsList(t)!.find((item) => item.name === `akuKos`)!;
   }
 
   return pageSpecs;

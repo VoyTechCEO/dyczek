@@ -45,9 +45,7 @@ const Akademia: NextPage = () => {
         },
       });
       const data = await res.json();
-      console.log(data.response);
       setNewGraduatesList(data.response);
-      console.log(newGraduatesList);
     } catch (err) {
       console.log(err);
     }

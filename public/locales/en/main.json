@@ -19,6 +19,10 @@
     {
       "name": "Szlachetne zdrowie",
       "link": "/szlachetne_zdrowie"
+    },
+    {
+      "name": "Cosmetic Acupuncture",
+      "link": "/akupunktura_kosmetyczna"
     }
   ],
   "homeDyczekSpecs": {
@@ -163,6 +167,36 @@
     ],
     "title": "Robust health",
     "description": "Health is a serious matter, so I share my over thirty years of clinical experience, how to live healthily and grow old without being a burden to others."
+  },
+  "akuKosSpecs": {
+    "nav": [
+      {
+        "name": "About",
+        "link": "/akupunktura_kosmetyczna"
+      },
+      {
+        "name": "History",
+        "link": "/akupunktura_kosmetyczna/historia"
+      },
+      {
+        "name": "Results",
+        "link": "/akupunktura_kosmetyczna/rezultaty"
+      },
+      {
+        "name": "Q&A",
+        "link": "/akupunktura_kosmetyczna/pytania_i_odpowiedzi"
+      },
+      {
+        "name": "Publications",
+        "link": "/akupunktura_kosmetyczna/publikacje"
+      },
+      {
+        "name": "Contact",
+        "link": "/akupunktura_kosmetyczna/kontakt"
+      }
+    ],
+    "title": "Cosmetic Acupuncture",
+    "description": "Cosmetic Acupuncture is a great way to rejuvenate the face and firm the body. Learn how it is applied and its positive effects on the body."
   },
   "footerRights": "Henryk Dyczek. All right reserved.",
   "footerCredits": "Website made by",
