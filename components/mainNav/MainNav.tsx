@@ -37,6 +37,8 @@ const MainNav = () => {
                   ? mainNavStyles.imo
                   : siteTheme === `szlaZd`
                   ? mainNavStyles.szla_zd
+                  : siteTheme === `akuKos`
+                  ? mainNavStyles.aku_kos
                   : ``
               }
             >

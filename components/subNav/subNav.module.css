@@ -80,3 +80,13 @@
   color: var(--clr-gre);
   border-left: 2px solid var(--clr-gre);
 }
+
+.container.aku_kos {
+  border-right: 2px solid var(--clr-tur-800);
+}
+
+.container.aku_kos li a.active,
+.container.aku_kos li .dropdown.active p {
+  color: var(--clr-tur-800);
+  border-left: 2px solid var(--clr-tur-800);
+}

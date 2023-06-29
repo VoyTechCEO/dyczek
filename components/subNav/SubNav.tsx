@@ -20,6 +20,8 @@ const SubNav = () => {
             ? subNavStyles.imo
             : siteTheme === `szlaZd`
             ? subNavStyles.szla_zd
+            : siteTheme === `akuKos`
+            ? subNavStyles.aku_kos
             : ``
         }`}
       >

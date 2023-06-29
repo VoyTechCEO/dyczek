@@ -1,0 +1,44 @@
+.container {
+  background-image: url('../../public/img/akupunktura_kosmetyczna_header.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(0.9);
+  position: relative;
+  height: 100vh;
+  max-height: 45rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.container .signature {
+  width: 42rem;
+  height: 16.5rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0 1rem 1rem 0;
+  position: relative;
+  padding: 1.5rem 4rem;
+}
+
+.container .signature img {
+  position: absolute;
+  width: 45%;
+  height: auto;
+  filter: brightness(0.9);
+}
+
+.container .signature h1 {
+  position: absolute;
+  right: 4rem;
+  bottom: 1.5rem;
+  font-family: var(--sub-font-2);
+  font-size: 3rem;
+  font-weight: 700;
+  width: min-content;
+  color: var(--clr-pink);
+  text-align: center;
+  line-height: 4rem;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--clr-100);
+}

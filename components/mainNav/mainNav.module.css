@@ -1,7 +1,7 @@
 .container {
   list-style-type: none;
   justify-content: center;
-  column-gap: 4rem;
+  column-gap: 2rem;
   margin-bottom: 5rem;
   z-index: 9;
 }
@@ -9,7 +9,7 @@
 .container li a.link {
   text-decoration: none;
   color: var(--clr-900);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 700;
   padding: 0.5rem 1rem;
   display: flex;
@@ -50,4 +50,12 @@
 
 .container li.szla_zd .underline {
   background-color: var(--clr-gre);
+}
+
+.container li.aku_kos a.active {
+  color: var(--clr-tur-800);
+}
+
+.container li.aku_kos .underline {
+  background-color: var(--clr-tur-800);
 }

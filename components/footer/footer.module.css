@@ -38,3 +38,7 @@
 .container.szla_zd p a {
   color: var(--clr-gre);
 }
+
+.container.aku_kos p a {
+  color: var(--clr-tur-800);
+}

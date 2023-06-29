@@ -28,6 +28,11 @@
   background-color: rgba(68, 169, 108, 0.8);
 }
 
+.container.aku_kos,
+.container.aku_kos button.close {
+  background-color: rgba(10, 168, 161, 0.8);
+}
+
 .container button.close {
   all: unset;
   cursor: pointer;

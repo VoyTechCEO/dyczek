@@ -19,6 +19,8 @@ const Footer = () => {
             ? footerStyles.imo
             : siteTheme === `szlaZd`
             ? footerStyles.szla_zd
+            : siteTheme === `akuKos`
+            ? footerStyles.aku_kos
             : ``
         }`}
       >

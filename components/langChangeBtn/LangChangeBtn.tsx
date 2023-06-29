@@ -21,6 +21,8 @@ const LangChangeBtn = () => {
     pageClass = langChangeBtnStyles.imo;
   } else if (router.pathname.includes(`/szlachetne_zdrowie`)) {
     pageClass = langChangeBtnStyles.szla_zd;
+  } else if (router.pathname.includes(`/akupunktura_kosmetyczna`)) {
+    pageClass = langChangeBtnStyles.aku_kos;
   }
 
   return (

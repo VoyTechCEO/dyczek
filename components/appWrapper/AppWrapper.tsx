@@ -28,6 +28,8 @@ const AppWrapper = ({ children }: Props) => {
       setSiteTheme(`akuChi`);
     } else if (router.pathname.includes(`/szlachetne_zdrowie`)) {
       setSiteTheme(`szlaZd`);
+    } else if (router.pathname.includes(`/akupunktura_kosmetyczna`)) {
+      setSiteTheme(`akuKos`);
     } else {
       setSiteTheme(``);
     }
