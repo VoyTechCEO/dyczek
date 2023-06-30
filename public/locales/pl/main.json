@@ -171,8 +171,12 @@
   "akuKosSpecs": {
     "nav": [
       {
-        "name": "O nas",
+        "name": "Główna",
         "link": "/akupunktura_kosmetyczna"
+      },
+      {
+        "name": "O nas",
+        "link": "/akupunktura_kosmetyczna/o_nas"
       },
       {
         "name": "Historia",

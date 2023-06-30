@@ -1,0 +1,153 @@
+.akuKos-container {
+  flex-direction: column;
+  padding: 1.5rem 3rem;
+  width: 55rem;
+  row-gap: 1rem;
+}
+
+.akuKos-container h1 {
+  font-size: 1.2rem;
+  color: var(--clr-tur-800);
+  width: 100%;
+}
+
+/* ----------- ---- ----------- */
+/* ----------- HOME ----------- */
+/* ----------- ---- ----------- */
+
+.akuKos-container.home p {
+  text-indent: 1rem;
+}
+
+.akuKos-container.home ul {
+  margin-left: 1.2rem;
+}
+
+/* ----------- ----- ----------- */
+/* ----------- ABOUT ----------- */
+/* ----------- ----- ----------- */
+
+.akuKos-container.about ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.akuKos-container.about ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.akuKos-container.about ul li p {
+  text-indent: 1rem;
+  width: 100%;
+}
+
+.akuKos-container.about ul li a {
+  color: var(--clr-tur-800);
+  width: min-content;
+  padding: 0.5rem;
+}
+
+/* ----------- ------- ----------- */
+/* ----------- HISTORY ----------- */
+/* ----------- ------- ----------- */
+
+.akuKos-container.history p {
+  text-indent: 1rem;
+}
+
+/* ----------- ------- ----------- */
+/* ----------- RESULTS ----------- */
+/* ----------- ------- ----------- */
+
+.akuKos-container.results p.standard,
+.akuKos-container.results ul.comments li {
+  text-indent: 1rem;
+}
+
+.akuKos-container.results ul.images {
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+.akuKos-container.results ul.images li {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.akuKos-container.results ul.images li .preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.5rem;
+}
+
+.akuKos-container.results ul.images li .preview img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.akuKos-container.results ul.comments {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.akuKos-container.results p.source {
+  color: var(--clr-700);
+  font-size: 0.8rem;
+}
+
+.akuKos-container.results p.source a {
+  color: var(--clr-700);
+}
+
+/* ----------- --------- ----------- */
+/* ----------- QUESTIONS ----------- */
+/* ----------- --------- ----------- */
+
+.akuKos-container.questions ul.threads {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.akuKos-container.questions ul.threads li.thread {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.akuKos-container.questions ul.threads li.thread ul.answers {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.akuKos-container.questions ul.threads li.thread ul.answers li p {
+  text-indent: 1rem;
+}
+
+.akuKos-container.questions ul.threads li.thread ul.answers li p a {
+  color: var(--clr-tur-800);
+}
+
+.akuKos-container.questions ul.threads li ul.benefits {
+  list-style-type: disc;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  margin-left: 1.2rem;
+}

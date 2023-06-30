@@ -39,6 +39,6 @@
   color: var(--clr-pink);
   text-align: center;
   line-height: 4rem;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--clr-100);
+  text-shadow: -3px -2px 0 var(--clr-100), 3px -2px 0 var(--clr-100),
+    -3px 2px 0 var(--clr-100), 3px 2px 0 var(--clr-100);
 }
