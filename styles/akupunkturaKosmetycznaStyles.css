@@ -151,3 +151,34 @@
   row-gap: 0.5rem;
   margin-left: 1.2rem;
 }
+
+/* ----------- ------- ----------- */
+/* ----------- PUBLICS ----------- */
+/* ----------- ------- ----------- */
+
+.akuKos-container.publics ul {
+  margin-left: 1.2rem;
+}
+
+.akuKos-container.publics ul li a {
+  color: var(--clr-tur-800);
+}
+
+/* ----------- ------- ----------- */
+/* ----------- CONTACT ----------- */
+/* ----------- ------- ----------- */
+
+.akuKos-container.contact section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 3rem;
+}
+
+.akuKos-container.contact section a {
+  color: var(--clr-tur-800);
+}
+
+.akuKos-container.contact section img {
+  border-radius: 4px;
+}
