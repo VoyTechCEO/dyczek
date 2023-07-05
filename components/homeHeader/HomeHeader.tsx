@@ -4,6 +4,7 @@ import HomeIntroduction from '../homeIntroduction/HomeIntroduction';
 import IconNav from '../iconNav/IconNav';
 import ImoLogo from '../imoLogo/ImoLogo';
 import IconNavItem from '../../interfaces/iconNavItem';
+import AkuKosLogo from '../akuKosLogo/AkuKosLogo';
 
 const HomeHeader = () => {
   const navItems: IconNavItem[] = [
