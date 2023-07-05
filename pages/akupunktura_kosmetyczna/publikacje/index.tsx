@@ -49,7 +49,9 @@ const AkuKos: NextPage = () => {
               {articlesList.map((item, index) => {
                 return (
                   <li key={`${item.name}akuKosArticle${index}`}>
-                    <Link href={item.link}>{item.name}</Link>
+                    <Link href={item.link} target='_blank' rel='noreferrer'>
+                      {item.name}
+                    </Link>
                   </li>
                 );
               })}
