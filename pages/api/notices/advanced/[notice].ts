@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import AkademiaTraining from '@/interfaces/akademiaTraining';
-import advancedTrainingList from '../../../../data/advancedTraining.json';
+import advancedTrainingList from '../../../../data/tmp/advancedTraining.json';
 import path from 'path';
 import fsPromises from 'fs/promises';
 import { withIronSessionApiRoute } from 'iron-session/next';
@@ -13,7 +13,7 @@ interface Data {
 
 const advancedTrainingListPath = path.join(
   process.cwd(),
-  'data/advancedTraining.json'
+  'data/tmp/advancedTraining.json'
 );
 
 async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {

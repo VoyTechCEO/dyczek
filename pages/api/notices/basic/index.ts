@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import AkademiaTraining from '@/interfaces/akademiaTraining';
-import basicTraining from '../../../../data/basicTraining.json';
+import basicTraining from '../../../../data/tmp/basicTraining.json';
 import fsPromises from 'fs/promises';
 import path from 'path';
 import { withIronSessionApiRoute } from 'iron-session/next';
@@ -11,7 +11,10 @@ interface Data {
   response?: AkademiaTraining;
 }
 
-const basicTrainingPath = path.join(process.cwd(), 'data/basicTraining.json');
+const basicTrainingPath = path.join(
+  process.cwd(),
+  'data/tmp/basicTraining.json'
+);
 
 async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   let status;

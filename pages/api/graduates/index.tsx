@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import graduates from '../../../data/graduates.json';
+import graduates from '../../../data/tmp/graduates.json';
 import fsPromises from 'fs/promises';
 import path from 'path';
 import { withIronSessionApiRoute } from 'iron-session/next';
@@ -11,7 +11,7 @@ interface Data {
   response?: YearClass[];
 }
 
-const graduatesPath = path.join(process.cwd(), 'data/graduates.json');
+const graduatesPath = path.join(process.cwd(), 'data/tmp/graduates.json');
 
 async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   let status;
