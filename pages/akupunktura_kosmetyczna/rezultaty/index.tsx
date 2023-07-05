@@ -123,6 +123,7 @@ const AkuKos: NextPage = () => {
               <a
                 href='http://zdrowie.onet.pl/1470227,2039,,,,po_co_leki_dajcie_igly_,profilaktyka.html'
                 target='_blank'
+                rel='noreferrer'
               >
                 http://zdrowie.onet.pl/1470227,2039,,,,po_co_leki_dajcie_igly_,profilaktyka.html
               </a>{' '}
