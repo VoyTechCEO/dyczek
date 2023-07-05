@@ -24,7 +24,7 @@ const AkademiaDocument = () => {
     if (editorRef.current) {
       try {
         if (trainingType === `basic`) {
-          await fetch(`/api/notices/basic`, {
+          const res = await fetch(`/api/notices/basic`, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json',
@@ -33,6 +33,8 @@ const AkademiaDocument = () => {
               content: editorRef.current.getContent(),
             }),
           });
+          const data = await res.json();
+          console.log(data);
           router.push('/akademia_chiropraktyki/szkolenie_podstawowe#startView');
         } else {
           await fetch(`/api/notices/advanced`, {
