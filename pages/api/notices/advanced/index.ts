@@ -5,7 +5,8 @@ import fsPromises from 'fs/promises';
 import path from 'path';
 import { withIronSessionApiRoute } from 'iron-session/next';
 import sessionOptions from '@/lib/session';
-import { v4 as uuidv4 } from 'uuid';
+// import { v4 as uuidv4 } from 'uuid';
+const { v4 } = require('uuid');
 
 interface Data {
   comment: string;
@@ -33,7 +34,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
           'User does not have access to this method without admin permissions.';
         break;
       }
-      const noticeId = uuidv4();
+      const noticeId = v4();
       const getDate = new Date();
       const currentDate = `${getDate.getFullYear()}-${
         getDate.getMonth() + 1 < 10
