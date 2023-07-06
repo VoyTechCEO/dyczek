@@ -4,6 +4,8 @@ import { akademiaGraduates } from '@/utils/akademiaGraduates';
 import { useTranslation } from 'next-i18next';
 import graduates from '@/data/graduates.json';
 import YearClass from '@/interfaces/yearClass';
+import { useRecoilState } from 'recoil';
+import { isUserLoggedInState } from '@/recoilMain';
 
 interface Props {
   newGrad?: YearClass[];
@@ -54,6 +56,9 @@ const DeleteBtn = ({ year, name }: BtnProps) => {
 
 const AkademiaGraduatesTable = ({ newGrad }: Props) => {
   const { t } = useTranslation();
+
+  const [isUserLoggedIn, setIsUserLoggedIn] =
+    useRecoilState(isUserLoggedInState);
 
   let graduateNumber = 0;
   let ckNum = 0;
@@ -144,10 +149,12 @@ const AkademiaGraduatesTable = ({ newGrad }: Props) => {
                               <td>{graduateItem}</td>
                               <td>
                                 {graduateNumber}
-                                <DeleteBtn
-                                  year={item.year.toString()}
-                                  name={graduateItem}
-                                />
+                                {isUserLoggedIn && (
+                                  <DeleteBtn
+                                    year={item.year.toString()}
+                                    name={graduateItem}
+                                  />
+                                )}
                               </td>
                             </tr>
                           );
@@ -161,10 +168,12 @@ const AkademiaGraduatesTable = ({ newGrad }: Props) => {
                             <td>{graduateItem}</td>
                             <td>
                               {graduateNumber}
-                              <DeleteBtn
-                                year={item.year.toString()}
-                                name={graduateItem}
-                              />
+                              {isUserLoggedIn && (
+                                <DeleteBtn
+                                  year={item.year.toString()}
+                                  name={graduateItem}
+                                />
+                              )}
                             </td>
                           </tr>
                         );
