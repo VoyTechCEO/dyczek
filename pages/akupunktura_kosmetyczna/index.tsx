@@ -15,7 +15,11 @@ interface Props {
 export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['main', 'akuKosMain'])),
+      ...(await serverSideTranslations(locale, [
+        'main',
+        'akuKosMain',
+        'akuKosHome',
+      ])),
     },
   };
 }
@@ -23,15 +27,9 @@ export async function getStaticProps({ locale }: Props) {
 const AkuKos: NextPage = () => {
   const { t } = useTranslation();
 
-  const benefitsList = [
-    'redukuje zmarszczki',
-    'usuwa worki pod oczami',
-    'podnowi opadające powieki',
-    'poprawia owal twarzy',
-    'ujędrnia i nawilża skórę twarzy',
-    'ożywia blask oczu',
-    'poprawia samopoczucie',
-  ];
+  const benefitsList: string[] = t('akuKosHome:benefitsList', {
+    returnObjects: true,
+  });
 
   return (
     <>
@@ -41,45 +39,20 @@ const AkuKos: NextPage = () => {
         <MainNav />
         <StandardMainContent>
           <article className='container akuKos-container home'>
-            <h1>Akupunktura kosmetyczna</h1>
-            <p>
-              <b>Akupunktura kosmetyczna</b> to świetny sposób na odmłodzenie
-              twarzy i ujędrnienie ciała.
-            </p>
-            <p>
-              Polega na nakłuwaniu odpowiednich punktów mięśni twarzy, co
-              poprawia ich elastyczność i wyraźnie odmładza twarz. Stosuje się
-              ją również na nogach, ramoinach i tułowiu w celu zrównoważenia
-              energii życia.
-            </p>
-            <p>
-              Akupunktura jest metodą w pełni naturalną. Wywodzi się z Chin i
-              obecnie przeżywa swój renesans. Jest zdrową alternatywą operacji
-              plastycznych oraz stosowania Botoxu (toksyny botulinowej).
-            </p>
-            <b>Akupunktura kosmetyczna:</b>
+            <h1>{t('akuKosHome:header1')}</h1>
+            <p>{t('akuKosHome:paragraph1')}</p>
+            <p>{t('akuKosHome:paragraph2')}</p>
+            <p>{t('akuKosHome:paragraph3')}</p>
+            <b>{t('akuKosHome:bold1')}</b>
             <ul>
               {benefitsList.map((item, index) => {
                 return <li key={`${item}akuKosBenefit${index}`}>{item}</li>;
               })}
             </ul>
-            <h1>Efekty akupunktury kosmetycznej</h1>
-            <p>
-              Badania opublikowane w Journal of Clinical Acupuncture pokazują,
-              że aż 90% osób poddanych zabiegom akupunktury kosmetycznej,
-              zauważyło poprawę w wyglądzie skóry twarzy już po pierwszym
-              zabiegu.
-            </p>
-            <p>
-              Efektem kuracji akupunkturą kosmetyczną jest nie tylko świeższa i
-              gładsza twarz, ale także poczucie wewnętrznej harmonii i radości
-              życia.
-            </p>
-            <p>
-              Gazeta "The Irish Times" uznała akupunkturę kosmetyczną za:
-              "opłacalną alternatywę chirurgii kosmetycznej, której efekty nie
-              ograniczają się jedynie do poprawienia wyglądu twarzy."
-            </p>
+            <h1>{t('akuKosHome:header2')}</h1>
+            <p>{t('akuKosHome:paragraph4')}</p>
+            <p>{t('akuKosHome:paragraph5')}</p>
+            <p>{t('akuKosHome:paragraph6')}</p>
           </article>
         </StandardMainContent>
         <Footer />

@@ -17,7 +17,11 @@ interface Props {
 export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['main', 'akuKosMain'])),
+      ...(await serverSideTranslations(locale, [
+        'main',
+        'akuKosMain',
+        'akuKosContact',
+      ])),
     },
   };
 }
@@ -33,7 +37,7 @@ const AkuKos: NextPage = () => {
         <MainNav />
         <StandardMainContent>
           <article className='container akuKos-container contact'>
-            <h1>Kontakt</h1>
+            <h1>{t('akuKosContact:header1')}</h1>
             <section>
               <ContactInfo />
               <img src='/img/mapka.gif' alt='mapa dojazdu' />

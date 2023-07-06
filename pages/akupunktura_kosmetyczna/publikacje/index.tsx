@@ -21,7 +21,11 @@ interface Article {
 export async function getStaticProps({ locale }: Props) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['main', 'akuKosMain'])),
+      ...(await serverSideTranslations(locale, [
+        'main',
+        'akuKosMain',
+        'akuKosPublications',
+      ])),
     },
   };
 }
@@ -29,12 +33,9 @@ export async function getStaticProps({ locale }: Props) {
 const AkuKos: NextPage = () => {
   const { t } = useTranslation();
 
-  const articlesList: Article[] = [
-    {
-      name: `alternatywa do Botoxu`,
-      link: `http://www.nytimes.com/2007/12/13/fashion/13SKIN.html`,
-    },
-  ];
+  const articlesList: Article[] = t('akuKosPublications:articlesList', {
+    returnObjects: true,
+  });
 
   return (
     <>
@@ -44,7 +45,7 @@ const AkuKos: NextPage = () => {
         <MainNav />
         <StandardMainContent>
           <article className='container akuKos-container publics'>
-            <h1>Publikacje</h1>
+            <h1>{t('akuKosPublications:header1')}</h1>
             <ul>
               {articlesList.map((item, index) => {
                 return (
