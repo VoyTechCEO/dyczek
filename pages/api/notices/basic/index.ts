@@ -1,29 +1,29 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import AkademiaTraining from '@/interfaces/akademiaTraining';
-import basicTraining from '../../../../data/tmp/basicTraining.json';
-import fsPromises from 'fs/promises';
-import path from 'path';
 import { withIronSessionApiRoute } from 'iron-session/next';
 import sessionOptions from '@/lib/session';
+import { prisma } from '@/lib/prismaClient';
 
 interface Data {
   comment: string;
   response?: AkademiaTraining;
 }
 
-const basicTrainingPath = path.join(
-  process.cwd(),
-  'data/tmp/basicTraining.json'
-);
-
 async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   let status;
   let data: Data = { comment: 'unsupported method' };
   switch (req.method) {
     case 'GET':
-      status = 200;
-      data.comment = 'Got';
-      data.response = basicTraining;
+      try {
+        const basicTraining = await prisma.noticeBasic.findMany();
+        status = 200;
+        data.comment = 'Got';
+        data.response = basicTraining[0];
+      } catch (err) {
+        console.log(err);
+        data.comment = `Error: ${err}`;
+        status = 500;
+      }
       break;
     case 'PUT':
       if (!req.session.user) {
@@ -40,17 +40,21 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
       }-${
         getDate.getDate() < 10 ? '0' + getDate.getDate() : getDate.getDate()
       }`;
-      const newTraining: AkademiaTraining = {
-        date: currentDate,
-        content: req.body.content,
-      };
-      const parsedTraining = JSON.stringify(newTraining);
       try {
-        await fsPromises.writeFile(basicTrainingPath, parsedTraining);
+        const basicTraining = await prisma.noticeBasic.findMany();
+        await prisma.noticeBasic.update({
+          where: {
+            id: basicTraining[0].id,
+          },
+          data: {
+            date: currentDate,
+            content: req.body.content,
+          },
+        });
       } catch (err) {
         console.log(err);
         status = 500;
-        data.comment = `Failed to post ${err}`;
+        data.comment = `Failed to post: ${err}`;
         break;
       }
       status = 201;

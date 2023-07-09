@@ -1,31 +1,30 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import AkademiaTraining from '@/interfaces/akademiaTraining';
-import advancedTrainingList from '../../../../data/tmp/advancedTraining.json';
-import fsPromises from 'fs/promises';
-import path from 'path';
 import { withIronSessionApiRoute } from 'iron-session/next';
 import sessionOptions from '@/lib/session';
-// import { v4 as uuidv4 } from 'uuid';
-const { v4 } = require('uuid');
+import { prisma } from '@/lib/prismaClient';
 
 interface Data {
   comment: string;
   response?: AkademiaTraining[];
 }
 
-const advancedTrainingListPath = path.join(
-  process.cwd(),
-  'data/tmp/advancedTraining.json'
-);
-
 async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   let status;
   let data: Data = { comment: 'unsupported method' };
   switch (req.method) {
     case 'GET':
-      status = 200;
-      data.comment = 'Got';
-      data.response = advancedTrainingList;
+      try {
+        const advancedTraining: AkademiaTraining[] =
+          await prisma.noticeAdvanced.findMany();
+        status = 200;
+        data.comment = 'Got';
+        data.response = advancedTraining;
+      } catch (err) {
+        console.log(err);
+        data.comment = `Error: ${err}`;
+        status = 500;
+      }
       break;
     case 'POST':
       if (!req.session.user) {
@@ -34,7 +33,6 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
           'User does not have access to this method without admin permissions.';
         break;
       }
-      const noticeId = v4();
       const getDate = new Date();
       const currentDate = `${getDate.getFullYear()}-${
         getDate.getMonth() + 1 < 10
@@ -43,25 +41,15 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
       }-${
         getDate.getDate() < 10 ? '0' + getDate.getDate() : getDate.getDate()
       }`;
-      const newTraining: AkademiaTraining = {
-        id: noticeId,
-        date: currentDate,
-        title: req.body.title,
-        desc: req.body.desc,
-        content: req.body.content,
-      };
-      const updatedAdvancedTrainingList = [
-        ...advancedTrainingList,
-        newTraining,
-      ];
-      const parsedAdvancedTrainingList = JSON.stringify(
-        updatedAdvancedTrainingList
-      );
       try {
-        await fsPromises.writeFile(
-          advancedTrainingListPath,
-          parsedAdvancedTrainingList
-        );
+        await prisma.noticeAdvanced.create({
+          data: {
+            date: currentDate,
+            title: req.body.title,
+            desc: req.body.desc,
+            content: req.body.content,
+          },
+        });
       } catch (err) {
         console.log(err);
         status = 500;

@@ -1,32 +1,35 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import AkademiaTraining from '@/interfaces/akademiaTraining';
-import advancedTrainingList from '../../../../data/tmp/advancedTraining.json';
-import path from 'path';
-import fsPromises from 'fs/promises';
 import { withIronSessionApiRoute } from 'iron-session/next';
 import sessionOptions from '@/lib/session';
+import { prisma } from '@/lib/prismaClient';
 
 interface Data {
   comment: string;
-  response?: AkademiaTraining;
+  response?: AkademiaTraining | null;
 }
-
-const advancedTrainingListPath = path.join(
-  process.cwd(),
-  'data/tmp/advancedTraining.json'
-);
 
 async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   let status;
   let data: Data = { comment: 'unsupported method' };
+  let noticeId: string | string[] = req.query.notice!;
   switch (req.method) {
     case 'GET':
-      const getTraining = advancedTrainingList.find((item) => {
-        return item.id === req.query.notice;
-      });
-      status = 200;
-      data.comment = 'Got';
-      data.response = getTraining;
+      try {
+        const advancedTraining: AkademiaTraining | null =
+          await prisma.noticeAdvanced.findUnique({
+            where: {
+              id: typeof noticeId === `string` ? noticeId : noticeId[0],
+            },
+          });
+        status = 200;
+        data.comment = 'Got';
+        data.response = advancedTraining;
+      } catch (err) {
+        console.log(err);
+        data.comment = `Error: ${err}`;
+        status = 500;
+      }
       break;
     case 'DELETE':
       if (!req.session.user) {
@@ -35,15 +38,12 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
           'User does not have access to this method without admin permissions.';
         break;
       }
-      const newTraining = advancedTrainingList.filter((item) => {
-        return item.id !== req.query.notice;
-      });
-      const parsedAdvancedTrainingList = JSON.stringify(newTraining);
       try {
-        await fsPromises.writeFile(
-          advancedTrainingListPath,
-          parsedAdvancedTrainingList
-        );
+        await prisma.noticeAdvanced.delete({
+          where: {
+            id: typeof noticeId === `string` ? noticeId : noticeId[0],
+          },
+        });
       } catch (err) {
         console.log(err);
         status = 500;

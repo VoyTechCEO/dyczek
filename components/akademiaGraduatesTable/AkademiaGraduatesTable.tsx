@@ -2,10 +2,10 @@ import React from 'react';
 import akademiaGraduatesTableStyles from './akademiaGraduatesTable.module.css';
 import { akademiaGraduates } from '@/utils/akademiaGraduates';
 import { useTranslation } from 'next-i18next';
-import graduates from '@/data/graduates.json';
 import YearClass from '@/interfaces/yearClass';
 import { useRecoilState } from 'recoil';
 import { isUserLoggedInState } from '@/recoilMain';
+import { useRouter } from 'next/router';
 
 interface Props {
   newGrad?: YearClass[];
@@ -17,6 +17,7 @@ interface BtnProps {
 }
 
 const DeleteBtn = ({ year, name }: BtnProps) => {
+  const router = useRouter();
   const deleteGraduate = async () => {
     try {
       await fetch(`/api/graduates/`, {
@@ -29,6 +30,7 @@ const DeleteBtn = ({ year, name }: BtnProps) => {
           name: name,
         }),
       });
+      router.reload();
     } catch (err) {
       console.log(err);
     }
@@ -128,7 +130,7 @@ const AkademiaGraduatesTable = ({ newGrad }: Props) => {
                   <th>{t('akademiaChGraduatesList:name')}</th>
                   <th>{t('akademiaChGraduatesList:gradNum')}</th>
                 </tr>
-                {graduates.map((item, index) => {
+                {newGrad.map((item, index) => {
                   return (
                     <React.Fragment
                       key={`${item.year}akademiaChGraduatesGroupNew${index}`}
