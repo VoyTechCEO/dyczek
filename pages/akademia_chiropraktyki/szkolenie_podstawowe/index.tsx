@@ -44,6 +44,7 @@ const Akademia: NextPage = () => {
       });
       const data = await res.json();
       setNoticeData(data.response);
+      console.log(data.comment);
     } catch (err) {
       console.log(err);
     }
