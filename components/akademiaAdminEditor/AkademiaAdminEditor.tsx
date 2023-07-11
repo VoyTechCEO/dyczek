@@ -34,7 +34,6 @@ const AkademiaDocument = () => {
             }),
           });
           const data = await res.json();
-          console.log(data);
           router.push('/akademia_chiropraktyki/szkolenie_podstawowe#startView');
         } else {
           await fetch(`/api/notices/advanced`, {
