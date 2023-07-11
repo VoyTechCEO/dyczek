@@ -13,6 +13,7 @@
 .container.home_main,
 .container.akademia_ch,
 .container.aku_chiro,
+.container.home_main button.close,
 .container.aku_chiro button.close,
 .container.akademia_ch button.close {
   background-color: rgba(44, 43, 135, 0.8);
@@ -63,4 +64,10 @@
 .container a svg {
   width: auto;
   height: 1.2rem;
+}
+
+@media (max-width: 600px) {
+  .container span {
+    display: none;
+  }
 }
