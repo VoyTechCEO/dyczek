@@ -1,10 +1,4 @@
-import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
-} from 'recoil';
+import { atom } from 'recoil';
 import AkademiaTraining from '@/interfaces/akademiaTraining';
 
 const siteThemeState = atom({

@@ -38,3 +38,13 @@
   font-size: 1rem;
   font-weight: 500;
 }
+
+@media (max-width: 400px) {
+  .container h1.title {
+    font-size: 1.9rem;
+  }
+
+  .container ul li {
+    font-size: 0.9rem;
+  }
+}

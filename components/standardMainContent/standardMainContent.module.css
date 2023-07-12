@@ -10,3 +10,6 @@
   background-repeat: repeat-y;
   background-position: 0 -2px, 0 2px, 0, 100%;
 }
+
+@media (max-width: 400px) {
+}

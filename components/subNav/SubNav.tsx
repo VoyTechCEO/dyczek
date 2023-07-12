@@ -25,6 +25,7 @@ const SubNav = () => {
             : ``
         }`}
       >
+        <button className={subNavStyles.switch}></button>
         {subNavContent.map((item, index) => {
           return (
             <li key={`${item.name}${index}subNav`}>
