@@ -220,7 +220,9 @@ const AkuChi: NextPage = () => {
         <AkuChiHeader />
         <MainNav />
         <StandardMainContent>
-          <article className={`container akuChiro-container publics`}>
+          <article
+            className={`container main-container akuChiro-container publics`}
+          >
             <h1>{t('akuChiArticles:header1')}</h1>
             <ul className='publications'>
               {publicationsList.map((item, index) => {

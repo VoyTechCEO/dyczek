@@ -37,7 +37,9 @@ const Akademia: NextPage = () => {
         <AkademiaTrainings />
         {!isUserLoggedIn && <AdminPassFrame />}
         <StandardMainContent>
-          <article className={`container akademiaCh-container trainings`}>
+          <article
+            className={`container main-container akademiaCh-container trainings`}
+          >
             {isUserLoggedIn ? (
               <AkademiaAdminEditor />
             ) : (

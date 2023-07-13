@@ -32,7 +32,7 @@ const IMO: NextPage = () => {
         <ImoHeader />
         <MainNav />
         <StandardMainContent>
-          <article className='container imo-container'>
+          <article className='container main-container imo-container'>
             <h1>KURS TRADYCYJNEJ MEDYCYNY CHIŃSKIEJ</h1>
             <p className='align-left'>Szanowni Państwo!</p>
             <p className='align-left'>

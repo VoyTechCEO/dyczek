@@ -45,7 +45,7 @@ const AkuKos: NextPage = () => {
         <AkuKosHeader />
         <MainNav />
         <StandardMainContent>
-          <article className='container akuKos-container questions'>
+          <article className='container main-container akuKos-container questions'>
             <ul className='threads'>
               {threadsList.map((item, index) => {
                 return (

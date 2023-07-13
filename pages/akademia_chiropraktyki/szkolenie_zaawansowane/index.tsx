@@ -62,7 +62,9 @@ const Akademia: NextPage = () => {
         <MainNav />
         <AkademiaTrainings />
         <StandardMainContent>
-          <article className={`container akademiaCh-container trainings`}>
+          <article
+            className={`container main-container akademiaCh-container trainings`}
+          >
             {isLoading ? (
               <CommonLoading />
             ) : error ? (

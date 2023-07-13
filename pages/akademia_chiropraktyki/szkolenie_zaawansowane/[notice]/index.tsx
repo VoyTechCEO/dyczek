@@ -27,7 +27,9 @@ const Akademia = ({ noticeData }: Props) => {
         <MainNav />
         <AkademiaTrainings />
         <StandardMainContent>
-          <article className={`container akademiaCh-container trainings`}>
+          <article
+            className={`container main-container akademiaCh-container trainings`}
+          >
             <h1>Opublikowano: {noticeData.date}</h1>
             <ElementRef
               element='section'

@@ -36,7 +36,7 @@ const SzlaZd: NextPage = () => {
         <SzlaZdHeader />
         <MainNav />
         <StandardMainContent>
-          <article className='container szlaZd-container contact'>
+          <article className='container main-container szlaZd-container contact'>
             <h1>{t('szlaZdContact:headerMain')}</h1>
             <section>
               <ContactInfo />

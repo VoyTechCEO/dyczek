@@ -33,7 +33,7 @@ const IMO: NextPage<Props> = () => {
         <ImoHeader />
         <MainNav />
         <StandardMainContent>
-          <article className='container imo-container'>
+          <article className='container main-container imo-container'>
             <h1>{t('imoHome:targetTitle')}</h1>
             <ul className='dashed'>
               {targetList.map((item, index) => {

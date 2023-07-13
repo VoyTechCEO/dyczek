@@ -99,32 +99,104 @@
   .container {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -13.1rem;
     justify-content: center;
     background-color: var(--clr-100);
     height: 100vh;
     z-index: 999;
   }
 
+  .container.aku_chi {
+    background-color: var(--clr-blue-100);
+  }
+  .container.imo {
+    background-color: var(--clr-yel);
+  }
+  .container.aku_kos {
+    background-color: var(--clr-pink-200);
+  }
+
   .container.shown {
-    animation: show;
+    animation: showNav;
     animation-duration: 500ms;
+    animation-fill-mode: forwards;
   }
 
   .container.hidden {
-    animation: hide;
+    animation: hideNav;
     animation-duration: 500ms;
+    animation-fill-mode: forwards;
   }
 
-  @keyframes show {
+  .container button.switch {
+    all: unset;
+    cursor: pointer;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 2.8rem;
+    height: 2.8rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+  }
+
+  .container button.switch .line {
+    width: 100%;
+    background-color: var(--clr-100);
+    height: 0.4rem;
+    border-radius: 4px;
+  }
+
+  .container.hidden button.switch {
+    animation: switchOn;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+  }
+
+  .container.shown button.switch {
+    animation: switchOff;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes showNav {
+    from {
+      left: -13.1rem;
+    }
     to {
       left: 0;
     }
   }
 
-  @keyframes hide {
+  @keyframes hideNav {
+    from {
+      left: 0;
+    }
     to {
       left: -13.1rem;
+    }
+  }
+
+  @keyframes switchOn {
+    from {
+      left: 14rem;
+    }
+    to {
+      left: 1rem;
+    }
+  }
+
+  @keyframes switchOff {
+    from {
+      left: 1rem;
+    }
+    to {
+      left: 14rem;
     }
   }
 }

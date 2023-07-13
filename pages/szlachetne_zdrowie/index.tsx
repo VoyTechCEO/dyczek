@@ -42,7 +42,7 @@ const SzlaZd: NextPage = () => {
         <SzlaZdHeader />
         <MainNav />
         <StandardMainContent>
-          <article className='container szlaZd-container about'>
+          <article className='container main-container szlaZd-container about'>
             <div className='quotes'>
               <div className='quote'>
                 <p>

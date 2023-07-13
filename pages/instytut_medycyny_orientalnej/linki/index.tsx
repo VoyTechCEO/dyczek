@@ -46,7 +46,7 @@ const IMO: NextPage = () => {
         <ImoHeader />
         <MainNav />
         <StandardMainContent>
-          <article className='container imo-container'>
+          <article className='container main-container imo-container'>
             <h1>{t('imoLinks:headRecommended')}</h1>
             <ul className='dashed'>
               {recommendedLinksList.map((item) => {

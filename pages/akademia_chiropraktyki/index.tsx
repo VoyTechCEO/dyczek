@@ -62,7 +62,9 @@ const Akademia: NextPage = () => {
         <MainNav />
         <AkademiaTrainings />
         <StandardMainContent>
-          <article className={`container akademiaCh-container home`}>
+          <article
+            className={`container main-container akademiaCh-container home`}
+          >
             <h1>{t('akademiaChHome:header1')}</h1>
             <div className='videos'>
               <video controls>

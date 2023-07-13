@@ -44,7 +44,7 @@ const AkuKos: NextPage = () => {
         <AkuKosHeader />
         <MainNav />
         <StandardMainContent>
-          <article className='container akuKos-container publics'>
+          <article className='container main-container akuKos-container publics'>
             <h1>{t('akuKosPublications:header1')}</h1>
             <ul>
               {articlesList.map((item, index) => {

@@ -40,7 +40,7 @@ const SzlaZd: NextPage = () => {
         <SzlaZdHeader />
         <MainNav />
         <StandardMainContent>
-          <article className='container szlaZd-container faq'>
+          <article className='container main-container szlaZd-container faq'>
             <h1>{t('szlaZdQuestions:header1')}</h1>
             <ul className='faq'>
               {faqList(t).map((item, index) => {

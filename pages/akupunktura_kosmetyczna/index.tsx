@@ -38,7 +38,7 @@ const AkuKos: NextPage = () => {
         <AkuKosHeader />
         <MainNav />
         <StandardMainContent>
-          <article className='container akuKos-container home'>
+          <article className='container main-container akuKos-container home'>
             <h1>{t('akuKosHome:header1')}</h1>
             <p>{t('akuKosHome:paragraph1')}</p>
             <p>{t('akuKosHome:paragraph2')}</p>

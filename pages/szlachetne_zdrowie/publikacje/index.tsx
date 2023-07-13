@@ -67,7 +67,7 @@ const SzlaZd: NextPage = () => {
         <SzlaZdHeader />
         <MainNav />
         <StandardMainContent>
-          <article className='container szlaZd-container publics'>
+          <article className='container main-container szlaZd-container publics'>
             <h1>{t('szlaZdPublications:headerMain')}</h1>
             <p>{t('szlaZdPublications:header1')}</p>
             <ul>

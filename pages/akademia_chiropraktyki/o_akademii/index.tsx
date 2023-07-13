@@ -50,7 +50,9 @@ const Akademia: NextPage = () => {
         <MainNav />
         <AkademiaTrainings />
         <StandardMainContent>
-          <article className={`container akademiaCh-container about`}>
+          <article
+            className={`container main-container akademiaCh-container about`}
+          >
             <h1>{t('akademiaChAbout:header1')}</h1>
             <ul>
               {scientistsList.map((item, index) => {

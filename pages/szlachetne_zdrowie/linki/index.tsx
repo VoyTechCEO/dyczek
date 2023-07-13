@@ -44,7 +44,7 @@ const SzlaZd: NextPage = () => {
         <SzlaZdHeader />
         <MainNav />
         <StandardMainContent>
-          <article className='container szlaZd-container links'>
+          <article className='container main-container szlaZd-container links'>
             <h1>{t('szlaZdLinks:header1')}</h1>
             <ul>
               {linksList.map((item, index) => {

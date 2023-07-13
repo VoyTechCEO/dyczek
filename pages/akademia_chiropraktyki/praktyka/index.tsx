@@ -54,7 +54,9 @@ const Akademia: NextPage = () => {
         <MainNav />
         <AkademiaTrainings />
         <StandardMainContent>
-          <article className={`container akademiaCh-container practice`}>
+          <article
+            className={`container main-container akademiaCh-container practice`}
+          >
             <img
               src='/img/chiropraktyka6.png'
               alt='Nauka w Akademii'

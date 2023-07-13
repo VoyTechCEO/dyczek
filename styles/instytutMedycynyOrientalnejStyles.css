@@ -1,8 +1,5 @@
 .imo-container {
-  flex-direction: column;
   align-items: center;
-  padding: 1.5rem 3rem;
-  width: 55rem;
   color: var(--clr-bro);
 }
 

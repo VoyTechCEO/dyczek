@@ -37,7 +37,9 @@ const Akademia: NextPage = () => {
         <MainNav />
         <AkademiaTrainings />
         <StandardMainContent>
-          <article className={`container akademiaCh-container contact`}>
+          <article
+            className={`container main-container akademiaCh-container contact`}
+          >
             <h1>{t('akademiaChContact:header1')}</h1>
             <section>
               <ContactInfo />

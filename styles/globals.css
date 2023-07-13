@@ -5,8 +5,8 @@
   --clr-blue-700: #2c2b87;
   --clr-red-100: #ff0000;
   --clr-red-200: #da4822;
-  --clr-pink-200: #f6dbf5;
   --clr-pink: #cd569c;
+  --clr-pink-200: #f6dbf5;
   --clr-yel: #f1d880;
   --clr-bro: #663300;
   --clr-gre: #44a96c;
@@ -68,6 +68,12 @@ body {
 
 .container {
   display: flex;
+}
+
+.main-container {
+  flex-direction: column;
+  width: 55rem;
+  padding: 1.5rem 3rem;
 }
 
 @keyframes spinner {

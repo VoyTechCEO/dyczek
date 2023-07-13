@@ -36,7 +36,7 @@ const AkuKos: NextPage = () => {
         <AkuKosHeader />
         <MainNav />
         <StandardMainContent>
-          <article className='container akuKos-container contact'>
+          <article className='container main-container akuKos-container contact'>
             <h1>{t('akuKosContact:header1')}</h1>
             <section>
               <ContactInfo />

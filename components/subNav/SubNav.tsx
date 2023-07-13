@@ -1,7 +1,7 @@
 import { siteThemeState } from '@/recoilMain';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React from 'react';
+import React, { useState } from 'react';
 import { useRecoilState } from 'recoil';
 import subNavStyles from './subNav.module.css';
 import useSetPageSpecs from '@/hooks/useSetPageSpecs';
@@ -10,14 +10,26 @@ const SubNav = () => {
   const router = useRouter();
   const { subNavContent } = useSetPageSpecs();
 
+  const [isSubNavShown, setIsSubNavShown] = useState('');
+
   const [siteTheme, setSiteTheme] = useRecoilState(siteThemeState);
 
   return (
     <>
       <ul
-        className={`container ${subNavStyles.container} ${
+        className={`container ${subNavStyles.container}
+        ${
+          isSubNavShown === 'shown'
+            ? subNavStyles.shown
+            : isSubNavShown === 'hidden'
+            ? subNavStyles.hidden
+            : ''
+        }
+        ${
           siteTheme === `imo`
             ? subNavStyles.imo
+            : siteTheme === `akuChi`
+            ? subNavStyles.aku_chi
             : siteTheme === `szlaZd`
             ? subNavStyles.szla_zd
             : siteTheme === `akuKos`
@@ -25,7 +37,20 @@ const SubNav = () => {
             : ``
         }`}
       >
-        <button className={subNavStyles.switch}></button>
+        <button
+          className={subNavStyles.switch}
+          onClick={() => {
+            if (isSubNavShown === '' || isSubNavShown === 'hidden') {
+              setIsSubNavShown('shown');
+            } else {
+              setIsSubNavShown('hidden');
+            }
+          }}
+        >
+          <div className={subNavStyles.line} />
+          <div className={subNavStyles.line} />
+          <div className={subNavStyles.line} />
+        </button>
         {subNavContent.map((item, index) => {
           return (
             <li key={`${item.name}${index}subNav`}>

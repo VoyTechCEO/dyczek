@@ -32,7 +32,9 @@ const AkuChi: NextPage = () => {
         <AkuChiHeader />
         <MainNav />
         <StandardMainContent>
-          <article className={`container akuChiro-container contact`}>
+          <article
+            className={`container main-container akuChiro-container contact`}
+          >
             <h1>{t('akuChiContact:header1')}</h1>
             <section>
               <ContactInfo />

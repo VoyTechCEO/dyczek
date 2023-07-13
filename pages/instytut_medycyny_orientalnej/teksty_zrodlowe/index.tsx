@@ -35,7 +35,7 @@ const IMO: NextPage = () => {
         <ImoHeader />
         <MainNav />
         <StandardMainContent>
-          <article className='container imo-container'>
+          <article className='container main-container imo-container'>
             <h1>{t(`imoSourceTexts:head`)}</h1>
           </article>
         </StandardMainContent>
