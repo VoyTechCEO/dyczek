@@ -11,5 +11,10 @@
   background-position: 0 -2px, 0 2px, 0, 100%;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 550px) {
+  .container.akademia_ch {
+    background-image: linear-gradient(#fff, rgba(255, 255, 255, 0.75) 10%),
+      linear-gradient(rgba(255, 255, 255, 0) 90%, #fff),
+      url('/img/liscie_lewe.png'), url('/img/liscie_prawe.png');
+  }
 }

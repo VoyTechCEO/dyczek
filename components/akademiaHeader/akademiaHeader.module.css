@@ -18,7 +18,11 @@
 
 .container .overlay {
   background-color: rgba(255, 255, 255, 0.56);
-  padding: 1rem 15rem;
+  width: 100%;
+  max-width: 62rem;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
   margin-top: 10rem;
 }
 
@@ -30,10 +34,19 @@
 .container h3 {
   font-size: 1rem;
   margin: 1rem 0;
+  padding: 0 2rem;
+  text-align: center;
 }
 
 .container p.author {
   font-size: 0.9rem;
   font-weight: 500;
   font-style: italic;
+}
+
+@media (max-width: 550px) {
+  .container .overlay img {
+    width: 100%;
+    padding: 0 1rem;
+  }
 }

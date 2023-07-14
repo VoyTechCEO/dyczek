@@ -81,3 +81,16 @@ body {
     transform: rotate(360deg);
   }
 }
+
+/* ------ ---------- ------  */
+/* ------ Global RWD ------  */
+/* ------ ---------- ------  */
+
+@media (max-width: 900px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem 0;
+  }
+}

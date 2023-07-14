@@ -3,6 +3,8 @@
   align-items: center;
   position: relative;
   margin: 8rem 0;
+  width: 95%;
+  max-width: 36rem;
 }
 
 .container .edge {
@@ -30,7 +32,8 @@
   font-size: 1.5rem;
   color: var(--clr-blue-700);
   font-weight: 500;
-  padding: 3rem 6rem;
+  padding: 3rem 0;
+  text-align: center;
 }
 
 .container h1 span {
@@ -39,4 +42,22 @@
   text-decoration: underline;
   font-weight: 600;
   margin-top: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .container h1 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    margin: 5rem 0;
+  }
+
+  .container h1 {
+    font-size: 1rem;
+    padding: 2rem 0;
+  }
 }

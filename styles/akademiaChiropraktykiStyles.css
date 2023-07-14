@@ -26,11 +26,30 @@
   margin: 1rem 0;
 }
 
-/* --- --- --- /*
-/* --- RWD --- /*
-/* --- --- --- /*
+/* --- --- --- */
+/* --- RWD --- */
+/* --- --- --- */
 
+@media (max-width: 900px) {
+  .akademiaCh-container h1,
+  .akademiaCh-container p {
+    text-align: center;
+    padding: 0 3rem;
+  }
+}
 
+@media (max-width: 550px) {
+  .akademiaCh-container img.view {
+    width: 80%;
+  }
+}
+
+@media (max-width: 400px) {
+  .akademiaCh-container h1,
+  .akademiaCh-container p {
+    padding: 0 1rem;
+  }
+}
 
 /* ----------- ---- ----------- */
 /* ----------- ---- ----------- */
@@ -71,6 +90,44 @@
 .akademiaCh-container.home ul.logos li a img {
   height: 100%;
   width: auto;
+}
+
+/* --- --- --- */
+/* --- RWD --- */
+/* --- --- --- */
+
+@media (max-width: 900px) {
+  .akademiaCh-container.home .videos {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .akademiaCh-container.home ul.logos {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .akademiaCh-container.home .videos {
+    align-items: center;
+    width: 100%;
+  }
+
+  .akademiaCh-container.home .videos video {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 400px) {
+  .akademiaCh-container.home ul.logos li a {
+    height: 4.5rem;
+  }
 }
 
 /* ----------- ----- ----------- */
