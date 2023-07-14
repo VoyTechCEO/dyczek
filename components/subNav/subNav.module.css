@@ -200,3 +200,13 @@
     }
   }
 }
+
+@media (max-width: 400px) {
+  .container.hidden button.switch {
+    animation: none;
+  }
+
+  .container.shown button.switch {
+    animation: none;
+  }
+}
