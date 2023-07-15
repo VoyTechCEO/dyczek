@@ -151,6 +151,22 @@
   font-weight: 600;
 }
 
+/* --- --- --- */
+/* --- RWD --- */
+/* --- --- --- */
+
+@media (max-width: 900px) {
+  .akademiaCh-container.about ul {
+    width: 75%;
+  }
+}
+
+@media (max-width: 450px) {
+  .akademiaCh-container.about ul {
+    width: 85%;
+  }
+}
+
 /* ----------- ----- ----------- */
 /* ----------- ----- ----------- */
 /* ----------- TERMS ----------- */
@@ -178,6 +194,22 @@
   margin-left: 1.1rem;
 }
 
+/* --- --- --- */
+/* --- RWD --- */
+/* --- --- --- */
+
+@media (max-width: 900px) {
+  .akademiaCh-container.terms ul.explanation {
+    width: 75%;
+  }
+}
+
+@media (max-width: 450px) {
+  .akademiaCh-container.terms ul.explanation {
+    width: 85%;
+  }
+}
+
 /* ----------- ----- ----------- */
 /* ----------- ----- ----------- */
 /* ----------- FACTS ----------- */
@@ -193,6 +225,22 @@
 
 .akademiaCh-container.facts ul li {
   margin-left: 1.1rem;
+}
+
+/* --- --- --- */
+/* --- RWD --- */
+/* --- --- --- */
+
+@media (max-width: 900px) {
+  .akademiaCh-container.facts ul {
+    width: 75%;
+  }
+}
+
+@media (max-width: 450px) {
+  .akademiaCh-container.facts ul {
+    width: 85%;
+  }
 }
 
 /* ----------- -------- ----------- */
@@ -218,6 +266,26 @@
   flex-direction: column;
 }
 
+/* --- --- --- */
+/* --- RWD --- */
+/* --- --- --- */
+
+@media (max-width: 900px) {
+  .akademiaCh-container.practice ol {
+    width: 75%;
+  }
+
+  .akademiaCh-container.practice ol ul {
+    align-items: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .akademiaCh-container.practice ol {
+    width: 85%;
+  }
+}
+
 /* ----------- ------ ----------- */
 /* ----------- ------ ----------- */
 /* ----------- COURSE ----------- */
@@ -237,6 +305,22 @@
 
 .akademiaCh-container.course ul li a {
   color: var(--clr-blue-700);
+}
+
+/* --- --- --- */
+/* --- RWD --- */
+/* --- --- --- */
+
+@media (max-width: 700px) {
+  .akademiaCh-container.course ul {
+    width: 75%;
+  }
+}
+
+@media (max-width: 450px) {
+  .akademiaCh-container.course ul {
+    width: 85%;
+  }
 }
 
 /* ----------- --------- ----------- */
@@ -299,6 +383,16 @@
 .akademiaCh-container.contact section a img {
   width: 15rem;
   height: auto;
+}
+
+/* --- --- --- */
+/* --- RWD --- */
+/* --- --- --- */
+
+@media (max-width: 450px) {
+  .akademiaCh-container.contact section a img {
+    width: 11rem;
+  }
 }
 
 /* ----------- --------- ----------- */

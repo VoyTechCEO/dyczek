@@ -6,6 +6,7 @@ import YearClass from '@/interfaces/yearClass';
 import { useRecoilState } from 'recoil';
 import { isUserLoggedInState } from '@/recoilMain';
 import { useRouter } from 'next/router';
+import { useMediaQuery } from 'react-responsive';
 
 interface Props {
   newGrad?: YearClass[];
@@ -71,6 +72,10 @@ const AkademiaGraduatesTable = ({ newGrad }: Props) => {
     });
   }
 
+  // --- responsive design START --- //
+  const isSmallerScreen = useMediaQuery({ maxWidth: 750 });
+  // --- responsive design END --- //
+
   return (
     <>
       <div className={`container ${akademiaGraduatesTableStyles.container}`}>
@@ -78,11 +83,19 @@ const AkademiaGraduatesTable = ({ newGrad }: Props) => {
           <>
             <table>
               <tbody>
-                <tr>
-                  <th>{t('akademiaChGraduatesList:year')}</th>
-                  <th>{t('akademiaChGraduatesList:dcNum')}</th>
-                  <th>{t('akademiaChGraduatesList:name')}</th>
-                </tr>
+                {isSmallerScreen ? (
+                  <tr>
+                    <th>{t('akademiaChGraduatesList:yearRWD')}</th>
+                    <th>{t('akademiaChGraduatesList:dcNumRWD')}</th>
+                    <th>{t('akademiaChGraduatesList:name')}</th>
+                  </tr>
+                ) : (
+                  <tr>
+                    <th>{t('akademiaChGraduatesList:year')}</th>
+                    <th>{t('akademiaChGraduatesList:dcNum')}</th>
+                    <th>{t('akademiaChGraduatesList:name')}</th>
+                  </tr>
+                )}
                 {akademiaGraduates.map((item, index) => {
                   return (
                     <React.Fragment
@@ -124,12 +137,20 @@ const AkademiaGraduatesTable = ({ newGrad }: Props) => {
           <>
             <table>
               <tbody>
-                <tr>
-                  <th>{t('akademiaChGraduatesList:year')}</th>
-                  <th>{t('akademiaChGraduatesList:ckNum')}</th>
-                  <th>{t('akademiaChGraduatesList:name')}</th>
-                  <th>{t('akademiaChGraduatesList:gradNum')}</th>
-                </tr>
+                {isSmallerScreen ? (
+                  <tr>
+                    <th>{t('akademiaChGraduatesList:yearRWD')}</th>
+                    <th>{t('akademiaChGraduatesList:ckNumRWD')}</th>
+                    <th>{t('akademiaChGraduatesList:name')}</th>
+                  </tr>
+                ) : (
+                  <tr>
+                    <th>{t('akademiaChGraduatesList:year')}</th>
+                    <th>{t('akademiaChGraduatesList:ckNum')}</th>
+                    <th>{t('akademiaChGraduatesList:name')}</th>
+                    <th>{t('akademiaChGraduatesList:gradNum')}</th>
+                  </tr>
+                )}
                 {newGrad.map((item, index) => {
                   return (
                     <React.Fragment
@@ -148,16 +169,16 @@ const AkademiaGraduatesTable = ({ newGrad }: Props) => {
                                 {item.year}
                               </td>
                               <td>{ckNum}</td>
-                              <td>{graduateItem}</td>
                               <td>
-                                {graduateNumber}
-                                {isUserLoggedIn && (
+                                {graduateItem}
+                                {isUserLoggedIn && !isSmallerScreen && (
                                   <DeleteBtn
                                     year={item.year.toString()}
                                     name={graduateItem}
                                   />
                                 )}
                               </td>
+                              {!isSmallerScreen && <td>{graduateNumber}</td>}
                             </tr>
                           );
                         }
@@ -167,16 +188,16 @@ const AkademiaGraduatesTable = ({ newGrad }: Props) => {
                             key={`${graduateItem}akademiaChGraduateNew${graduateIndex}`}
                           >
                             <td>{ckNum}</td>
-                            <td>{graduateItem}</td>
                             <td>
-                              {graduateNumber}
-                              {isUserLoggedIn && (
+                              {graduateItem}
+                              {isUserLoggedIn && !isSmallerScreen && (
                                 <DeleteBtn
                                   year={item.year.toString()}
                                   name={graduateItem}
                                 />
                               )}
                             </td>
+                            {!isSmallerScreen && <td>{graduateNumber}</td>}
                           </tr>
                         );
                       })}

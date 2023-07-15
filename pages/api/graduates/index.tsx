@@ -28,6 +28,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
 
     switch (req.method) {
       case 'GET':
+        convertedGraduates.sort((a, b) => a.year - b.year);
         status = 200;
         data.comment = 'Got';
         data.response = convertedGraduates;

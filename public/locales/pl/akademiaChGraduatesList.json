@@ -1,8 +1,11 @@
 {
   "header1": "Absolwenci Akademii Chiropraktyki",
   "year": "Rok akademicki",
+  "yearRWD": "Rok",
   "dcNum": "Numer DC",
+  "dcNumRWD": "DC",
   "name": "Imię i nazwisko",
   "ckNum": "Numer CK",
+  "ckNumRWD": "CK",
   "gradNum": "Numer absolwenta"
 }

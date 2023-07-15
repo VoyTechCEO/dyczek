@@ -1,8 +1,11 @@
 {
   "header1": "Graduates of Academy of Chiropractic",
   "year": "Academic year",
+  "yearRWD": "Year",
   "dcNum": "DC number",
+  "dcNumRWD": "DC",
   "name": "First name and last name",
   "ckNum": "CK number",
+  "ckNumRWD": "CK",
   "gradNum": "Graduate number"
 }

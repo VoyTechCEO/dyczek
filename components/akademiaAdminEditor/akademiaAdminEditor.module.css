@@ -61,3 +61,23 @@
   border: 1px solid var(--clr-700);
   border-radius: 4px;
 }
+
+@media (max-width: 900px) {
+  .container {
+    width: 75%;
+  }
+}
+
+@media (max-width: 650px) {
+  .container .buttons {
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .container .label select {
+    width: 100%;
+  }
+}

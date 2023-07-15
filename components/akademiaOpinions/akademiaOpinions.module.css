@@ -63,3 +63,23 @@
   display: list-item;
   margin-left: 1.2rem;
 }
+
+@media (max-width: 900px) {
+  .container h4 {
+    text-align: center;
+  }
+
+  .container h4.year {
+    text-indent: 0;
+  }
+
+  .container ul.texts ul {
+    width: 75%;
+  }
+}
+
+@media (max-width: 450px) {
+  .container ul.texts ul {
+    width: 85%;
+  }
+}
