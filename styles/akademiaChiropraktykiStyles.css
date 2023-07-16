@@ -428,3 +428,19 @@
   list-style-type: none;
   flex-wrap: wrap;
 }
+
+/* --- --- --- */
+/* --- RWD --- */
+/* --- --- --- */
+
+@media (max-width: 900px) {
+  .akademiaCh-container.trainings ul.notices {
+    width: 75%;
+  }
+}
+
+@media (max-width: 450px) {
+  .akademiaCh-container.trainings ul.notices {
+    width: 85%;
+  }
+}

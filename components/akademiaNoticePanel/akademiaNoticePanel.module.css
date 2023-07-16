@@ -39,3 +39,21 @@
   fill: var(--clr-700);
   z-index: 999;
 }
+
+@media (max-width: 900px) {
+  .container p {
+    text-align: left;
+    padding: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    width: 100%;
+    background-color: var(--clr-100);
+  }
+
+  .container a {
+    width: 100%;
+  }
+}

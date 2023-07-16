@@ -13,3 +13,9 @@
 .container p.imo {
   color: var(--clr-bro);
 }
+
+@media (max-width: 700px) {
+  .container p {
+    width: 85%;
+  }
+}

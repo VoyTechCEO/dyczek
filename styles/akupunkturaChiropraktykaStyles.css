@@ -8,6 +8,25 @@
   margin-bottom: 1rem;
 }
 
+/* --- --- --- */
+/* --- RWD --- */
+/* --- --- --- */
+
+@media (max-width: 900px) {
+  .akuChiro-container h1,
+  .akuChiro-container p {
+    text-align: center;
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .akuChiro-container h1,
+  .akuChiro-container p {
+    padding: 0 1rem;
+  }
+}
+
 /* ----------- ---- ----------- */
 /* ----------- HOME ----------- */
 /* ----------- ---- ----------- */
@@ -18,6 +37,22 @@
 
 .akuChiro-container.home ul {
   margin: 0 0 1rem 1rem;
+}
+
+/* --- --- --- */
+/* --- RWD --- */
+/* --- --- --- */
+
+@media (max-width: 900px) {
+  .akuChiro-container.home ul {
+    width: 75%;
+  }
+}
+
+@media (max-width: 450px) {
+  .akuChiro-container.home ul {
+    width: 85%;
+  }
 }
 
 /* ----------- -------------- ----------- */
@@ -54,6 +89,42 @@
   font-weight: 600;
 }
 
+/* --- --- --- */
+/* --- RWD --- */
+/* --- --- --- */
+
+@media (max-width: 900px) {
+  .akuChiro-container.qualifications h4 {
+    padding: 0 3rem;
+  }
+
+  .akuChiro-container.qualifications p {
+    text-align: left;
+  }
+
+  .akuChiro-container.qualifications section img {
+    padding-right: 3rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .akuChiro-container.qualifications section {
+    flex-direction: column;
+  }
+
+  .akuChiro-container.qualifications section img {
+    padding-right: 0;
+    margin: 2rem 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .akuChiro-container.qualifications p,
+  .akuChiro-container.qualifications h4 {
+    text-align: center;
+  }
+}
+
 /* ----------- ------- ----------- */
 /* ----------- CONTACT ----------- */
 /* ----------- ------- ----------- */
@@ -83,6 +154,24 @@
   margin-top: 1rem;
 }
 
+/* --- --- --- */
+/* --- RWD --- */
+/* --- --- --- */
+
+@media (max-width: 900px) {
+  .akuChiro-container.contact section {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .akuChiro-container.contact section img {
+    height: auto;
+    width: 90%;
+  }
+}
+
 /* ----------- ------- ----------- */
 /* ----------- PUBLICS ----------- */
 /* ----------- ------- ----------- */
@@ -105,4 +194,33 @@
   flex-direction: column;
   row-gap: 0.5rem;
   margin-left: 1rem;
+}
+
+/* --- --- --- */
+/* --- RWD --- */
+/* --- --- --- */
+
+@media (max-width: 900px) {
+  .akuChiro-container.publics ul.publications li {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .akuChiro-container.publics ul.dev {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .akuChiro-container.publics ul.dev {
+    row-gap: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .akuChiro-container.publics ul.dev {
+    list-style-type: none;
+    margin-left: 0;
+    padding: 0 1rem;
+  }
 }
