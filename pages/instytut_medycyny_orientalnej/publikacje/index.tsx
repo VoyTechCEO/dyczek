@@ -10,6 +10,7 @@ import Link from 'next/link';
 import imoPublicsList from '../../../utils/imoPublicsList';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import { useMediaQuery } from 'react-responsive';
 
 interface Props {
   locale: string;
@@ -29,6 +30,10 @@ export async function getStaticProps({ locale }: Props) {
 
 const IMO: NextPage = () => {
   const { t } = useTranslation();
+
+  // --- responsive design START --- //
+  const isSmallerScreen = useMediaQuery({ maxWidth: 900 });
+  // --- responsive design END --- //
 
   return (
     <>
@@ -58,12 +63,18 @@ const IMO: NextPage = () => {
                             <p className='align-left'>{item.author}</p>
                             <h4>{t('imoPublikacje:summaryHead')}:</h4>
                             <>{item.short && item.short}</>
-                            <Link href={`/docs/imo/${item.doc}`}>
-                              {t('imoPublikacje:download')} ({item.doc})
-                              {item.english
-                                ? ` - ${t('imoPublikacje:enVersion')}`
-                                : ` - ${t('imoPublikacje:plVersion')}`}
-                            </Link>
+                            {!isSmallerScreen ? (
+                              <Link href={`/docs/imo/${item.doc}`}>
+                                {t('imoPublikacje:download')} ({item.doc})
+                                {item.english
+                                  ? ` - ${t('imoPublikacje:enVersion')}`
+                                  : ` - ${t('imoPublikacje:plVersion')}`}
+                              </Link>
+                            ) : (
+                              <Link href={`/docs/imo/${item.doc}`}>
+                                {t('imoPublikacje:download')}
+                              </Link>
+                            )}
                             <div className='line' />
                           </li>
                         );

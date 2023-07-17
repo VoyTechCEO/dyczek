@@ -125,6 +125,7 @@
 
 @media (max-width: 900px) {
   .imo-container h1,
+  .imo-container h2,
   .imo-container p {
     padding: 0 3rem;
     text-align: center;
@@ -155,6 +156,37 @@
     padding: 0 3rem;
     text-align: center;
   }
+
+  .imo-container ul li.public-sector ul {
+    width: 100%;
+  }
+
+  .imo-container ul li.public-sector ul li {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* I'm sorry for what I am about to do... */
+  .imo-container .align-left {
+    text-align: center;
+  }
+
+  .imo-container ul li.public-sector ul li a {
+    text-align: center;
+  }
+
+  .imo-container ul li.public-sector ul li ul.dashed {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .imo-container ul li.public-sector ul li ul.dashed li::before {
+    left: 0;
+  }
 }
 
 @media (max-width: 450px) {
@@ -179,5 +211,15 @@
   .imo-container ul li.sector {
     padding: 1rem 0;
     border-left: none;
+  }
+
+  .imo-container ul li.public-sector ul li ul.dashed {
+    align-items: center;
+  }
+}
+
+@media (max-width: 350px) {
+  .imo-container img {
+    width: 90%;
   }
 }
