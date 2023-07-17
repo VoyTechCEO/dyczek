@@ -3,6 +3,13 @@
   margin: 1rem 0;
 }
 
+@media (max-width: 750px) {
+  .szlaZd-container h1 {
+    text-align: center;
+    padding: 0 2rem;
+  }
+}
+
 /* ----------- ----- ----------- */
 /* ----------- ABOUT ----------- */
 /* ----------- ----- ----------- */
@@ -115,11 +122,71 @@
 
 .szlaZd-container.about .descriptions .letter .content img {
   width: 11rem;
-  height: auto;
+  height: 16.9rem;
 }
 
 .szlaZd-container.about .descriptions .letter p {
   text-align: right;
+}
+
+/* --- --- --- */
+/* --- RWD --- */
+/* --- --- --- */
+
+@media (max-width: 900px) {
+  .szlaZd-container.about .descriptions .letter {
+    width: 90%;
+  }
+}
+
+@media (max-width: 750px) {
+  .szlaZd-container.about .quotes {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .szlaZd-container.about .descriptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    row-gap: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .szlaZd-container.about .descriptions .letter .content {
+    row-gap: 3rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .szlaZd-container.about .descriptions .letter .content img {
+    order: 1;
+  }
+
+  .szlaZd-container.about .descriptions .letter .content section {
+    order: 2;
+  }
+}
+
+@media (max-width: 400px) {
+  .szlaZd-container.about .quotes .quote {
+    width: 85%;
+    background-position: 90% 3rem;
+  }
+
+  .szlaZd-container.about .quotes .quote:first-of-type {
+    width: 100%;
+  }
+
+  .szlaZd-container.about .quotes .quote p {
+    font-size: 0.9rem;
+  }
+
+  .szlaZd-container.about .descriptions ul.description {
+    width: 85%;
+  }
 }
 
 /* ----------- --- ----------- */
@@ -234,6 +301,51 @@
 
 .szlaZd-container.faq ul.bio li a {
   color: var(--clr-gre);
+}
+
+/* --- --- --- */
+/* --- RWD --- */
+/* --- --- --- */
+
+@media (max-width: 900px) {
+  .szlaZd-container.faq ul.faq {
+    width: 90%;
+  }
+}
+
+@media (max-width: 700px) {
+  .szlaZd-container.faq ul.faq li.faq_element section table tr th,
+  .szlaZd-container.faq ul.faq li.faq_element section table tr td {
+    padding: 0.5rem 0.5rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .szlaZd-container.faq ul.faq li.faq_element section table tr th,
+  .szlaZd-container.faq ul.faq li.faq_element section table tr td {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .szlaZd-container.faq ul.faq li.faq_element section table tr th,
+  .szlaZd-container.faq ul.faq li.faq_element section table tr td {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .szlaZd-container.faq ul.faq li.faq_element section table tr th:last-of-type,
+  .szlaZd-container.faq ul.faq li.faq_element section table tr td:last-of-type {
+    display: none;
+  }
+
+  .szlaZd-container.faq ul.faq li.faq_element section ul {
+    padding: 0 1rem;
+    row-gap: 2rem;
+    text-align: center;
+    list-style-type: none;
+  }
 }
 
 /* ----------- ------- ----------- */
