@@ -8,6 +8,20 @@
   width: 100%;
 }
 
+/* --- --- --- */
+/* --- RWD --- */
+/* --- --- --- */
+
+@media (max-width: 900px) {
+  .akuKos-container h1 {
+    text-align: center;
+  }
+
+  .akuKos-container {
+    padding: 0 2rem;
+  }
+}
+
 /* ----------- ---- ----------- */
 /* ----------- HOME ----------- */
 /* ----------- ---- ----------- */
@@ -18,6 +32,16 @@
 
 .akuKos-container.home ul {
   margin-left: 1.2rem;
+}
+
+/* --- --- --- */
+/* --- RWD --- */
+/* --- --- --- */
+
+@media (max-width: 900px) {
+  .akuKos-container.home ul {
+    margin-left: 0;
+  }
 }
 
 /* ----------- ----- ----------- */
@@ -109,6 +133,25 @@
   color: var(--clr-700);
 }
 
+/* --- --- --- */
+/* --- RWD --- */
+/* --- --- --- */
+
+@media (max-width: 600px) {
+  .akuKos-container.results ul.images {
+    row-gap: 3rem;
+  }
+
+  .akuKos-container.results ul.images li {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .akuKos-container.results p.source a {
+    word-break: break-all;
+  }
+}
+
 /* ----------- --------- ----------- */
 /* ----------- QUESTIONS ----------- */
 /* ----------- --------- ----------- */
@@ -178,4 +221,21 @@
 
 .akuKos-container.contact section img {
   border-radius: 4px;
+}
+
+/* --- --- --- */
+/* --- RWD --- */
+/* --- --- --- */
+
+@media (max-width: 700px) {
+  .akuKos-container.contact section {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .akuKos-container.contact section img {
+    width: 90%;
+  }
 }
