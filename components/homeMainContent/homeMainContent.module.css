@@ -57,6 +57,11 @@
 
 .container article.frame ul li a {
   color: var(--clr-blue-700);
+  transition: 0.2s;
+}
+
+.container article.frame ul li a:hover {
+  color: var(--clr-red-100);
 }
 
 .container article.frame p a {
@@ -73,7 +78,12 @@
 .container article.frame h3 a {
   color: var(--clr-blue-700);
   text-decoration: none;
-  padding: 0.5rem;
+  padding: 1rem;
+  transition: 0.2s;
+}
+
+.container article.frame h3 a:hover {
+  color: var(--clr-red-200);
 }
 
 @media (max-width: 800px) {

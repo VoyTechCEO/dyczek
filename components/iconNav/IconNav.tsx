@@ -33,6 +33,9 @@ const IconNav = ({ navItems }: Props) => {
                   />
                 </Link>
               )}
+              <div className={iconNavStyles.painter}>
+                <div className={iconNavStyles.line} />
+              </div>
             </li>
           );
         })}

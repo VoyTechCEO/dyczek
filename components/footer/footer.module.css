@@ -26,6 +26,11 @@
 .container p a {
   text-decoration: underline;
   color: var(--clr-blue-700);
+  transition: 0.2s;
+}
+
+.container p a:hover {
+  color: var(--clr-red-100);
 }
 
 .container.imo p {
@@ -36,12 +41,24 @@
   color: var(--clr-red-200);
 }
 
+.container.imo p a:hover {
+  color: var(--clr-blue-700);
+}
+
 .container.szla_zd p a {
   color: var(--clr-gre);
 }
 
+.container.szla_zd p a:hover {
+  color: var(--clr-red-200);
+}
+
 .container.aku_kos p a {
   color: var(--clr-tur-800);
+}
+
+.container.aku_kos p a:hover {
+  color: var(--clr-red-200);
 }
 
 @media (max-width: 600px) {

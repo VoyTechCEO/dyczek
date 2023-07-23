@@ -34,6 +34,12 @@
   padding: 0.5rem 0;
   display: flex;
   justify-content: center;
+  transition: 0.2s;
+}
+
+.container li a:hover,
+.container li .dropdown p:hover {
+  color: var(--clr-blue-700);
 }
 
 .container li .dropdown ul {
@@ -69,6 +75,11 @@
   color: var(--clr-bro);
 }
 
+.container.imo li a:hover,
+.container.imo li .dropdown p:hover {
+  color: var(--clr-red-200);
+}
+
 .container.imo li a.active,
 .container.imo li .dropdown.active p {
   color: var(--clr-red-200);
@@ -79,6 +90,11 @@
   border-right: 2px solid var(--clr-gre);
 }
 
+.container.szla_zd li a:hover,
+.container.szla_zd li .dropdown p:hover {
+  color: var(--clr-gre);
+}
+
 .container.szla_zd li a.active,
 .container.szla_zd li .dropdown.active p {
   color: var(--clr-gre);
@@ -87,6 +103,11 @@
 
 .container.aku_kos {
   border-right: 2px solid var(--clr-tur-800);
+}
+
+.container.aku_kos li a:hover,
+.container.aku_kos li .dropdown p:hover {
+  color: var(--clr-tur-800);
 }
 
 .container.aku_kos li a.active,

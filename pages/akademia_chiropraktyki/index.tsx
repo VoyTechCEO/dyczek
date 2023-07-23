@@ -90,6 +90,7 @@ const Akademia: NextPage = () => {
                     <Link href={item.link} target='_blank'>
                       <img src={item.src} alt={item.alt} />
                     </Link>
+                    <div className='line' />
                   </li>
                 );
               })}

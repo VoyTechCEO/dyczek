@@ -17,6 +17,7 @@
 
 .container li {
   width: 250px;
+  position: relative;
 }
 
 .container li a {
@@ -25,12 +26,53 @@
   flex-direction: column;
   align-items: center;
   text-decoration: none;
+  z-index: 9;
+}
+
+.container li .painter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  top: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  height: 115%;
+  width: 0;
+  border-radius: 4px;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0) 50%,
+    rgba(44, 43, 135, 0.1)
+  );
+  z-index: -9;
+  transition: 0.2s;
+}
+
+.container li .painter .line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--clr-blue-700);
+  width: 100%;
+  height: 1px;
+}
+
+.container li:hover .painter {
+  width: 110%;
 }
 
 .container li a img.icon {
   width: 100%;
   height: auto;
 }
+
+/* @keyframes test {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
 
 @media (max-width: 1400px) {
   .container {

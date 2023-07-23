@@ -14,6 +14,8 @@ import { useQuery } from 'react-query';
 import YearClass from '@/interfaces/yearClass';
 import CommonLoading from '@/components/commonLoading/CommonLoading';
 import CommonError from '@/components/commonError/CommonError';
+import { useSpring } from '@react-spring/web';
+import { animated } from '@react-spring/web';
 
 interface Props {
   locale: string;
@@ -55,6 +57,15 @@ const Akademia: NextPage = () => {
     await getGraduatesData();
   });
 
+  // animations
+  const [hoverArrow, animateHoverArrow] = useSpring(() => ({
+    from: { bottom: `-0.5rem` },
+  }));
+
+  const [clickArrow, animateClickArrow] = useSpring(() => ({
+    from: { rotateZ: 90 },
+  }));
+
   return (
     <>
       <HeadSet />
@@ -82,9 +93,34 @@ const Akademia: NextPage = () => {
                 <AkademiaGraduatesTable />
               </div>
             )}
-            <button className='show' onClick={() => setShow(!show)}>
+            <button
+              className='show'
+              onClick={() => {
+                setShow(!show);
+                if (!show) {
+                  animateClickArrow.start({
+                    rotateZ: -90,
+                  });
+                } else {
+                  animateClickArrow.start({
+                    rotateZ: 90,
+                  });
+                }
+              }}
+              onMouseOver={() => {
+                animateHoverArrow.start({
+                  bottom: `-1rem`,
+                });
+              }}
+              onMouseOut={() => {
+                animateHoverArrow.start({
+                  bottom: `-0.5rem`,
+                });
+              }}
+            >
               {show ? 'Zwiń listę absolwentów' : 'Rozwiń listę absolwentów'}
-              <svg
+              <animated.svg
+                style={{ ...hoverArrow, ...clickArrow }}
                 height='0.5rem'
                 version='1.1'
                 viewBox='0 0 60 50'
@@ -94,7 +130,7 @@ const Akademia: NextPage = () => {
                   transform='matrix(.37382 0 0 .26978 -8.7481 -1.207)'
                   d='m183.91 97.141-160.5 92.667v-92.667-92.667l80.252 46.334z'
                 />
-              </svg>
+              </animated.svg>
             </button>
             <AdminTools />
           </article>
