@@ -82,15 +82,11 @@ const Akademia: NextPage = () => {
               <CommonLoading />
             ) : error ? (
               <CommonError content='Nie udało się załadować absolwentów.' />
-            ) : show ? (
-              <>
+            ) : (
+              <div className={`tables ${show && 'shown'}`}>
                 <AkademiaGraduatesTable />
                 <AkademiaGraduatesTable newGrad={newGraduatesList} />
-              </>
-            ) : (
-              <div className='hidden'>
-                <div className='gradient' />
-                <AkademiaGraduatesTable />
+                {!show && <div className='gradient' />}
               </div>
             )}
             <button

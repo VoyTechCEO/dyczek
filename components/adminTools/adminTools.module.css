@@ -5,10 +5,20 @@
   display: flex;
   align-items: center;
   column-gap: 0.5rem;
+  transition: 0.2s;
 }
 
 .container svg {
   fill: var(--clr-blue-700);
   height: 1.6rem;
   width: auto;
+  transition: 0.2s;
+}
+
+.container:hover {
+  color: var(--clr-red-100);
+}
+
+.container:hover svg {
+  fill: var(--clr-red-100);
 }

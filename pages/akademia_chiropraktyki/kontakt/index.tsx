@@ -49,6 +49,7 @@ const Akademia: NextPage = () => {
                   src='/img/chiropraktycy_polscy_logo.png'
                   alt='Chiropraktycy Polscy'
                 />
+                <div className='line' />
               </a>
             </section>
           </article>
