@@ -44,13 +44,17 @@
 .imo-container ul li.sector button {
   color: var(--clr-red-200);
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 0.5rem;
   align-items: center;
+  padding: 0.5rem;
 }
 
 .imo-container ul li.sector button svg {
   fill: var(--clr-red-200);
   transform: rotate(90deg);
-  margin-left: 0.5rem;
+  position: relative;
 }
 
 .imo-container ul li.post .line {
@@ -70,6 +74,10 @@
   font-weight: 500;
 }
 
+.imo-container ul li a:hover {
+  text-decoration: underline;
+}
+
 .imo-container ul.dashed li::before {
   content: '\2014';
   position: absolute;
@@ -80,6 +88,7 @@
 
 .imo-container .modules {
   width: 100%;
+  overflow: hidden;
 }
 
 .imo-container p {
@@ -94,6 +103,10 @@
 .imo-container p a {
   text-decoration: none;
   color: var(--clr-red-200);
+}
+
+.imo-container p a:hover {
+  text-decoration: underline;
 }
 
 .imo-container p.description {

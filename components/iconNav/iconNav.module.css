@@ -3,7 +3,6 @@
   list-style-type: none;
   column-gap: 4rem;
   justify-content: center;
-  align-items: center;
   margin: 3rem 0;
   z-index: 9;
 }
@@ -22,9 +21,11 @@
 
 .container li a {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
   z-index: 9;
 }

@@ -3,6 +3,8 @@ import akademiaNoticePanelStyles from './akademiaNoticePanel.module.css';
 import Link from 'next/link';
 import { useRecoilState } from 'recoil';
 import { advancedNoticesListState, isUserLoggedInState } from '@/recoilMain';
+import { useSpring } from '@react-spring/web';
+import { animated } from '@react-spring/web';
 
 interface Props {
   id: string;
@@ -32,9 +34,27 @@ const AkademiaNoticePanel = ({ id, title, desc, date }: Props) => {
     }
   };
 
+  // animations
+  const [hoverPanel, animateHoverPanel] = useSpring(() => ({
+    from: { top: `0` },
+  }));
+
   return (
     <>
-      <li className={`container ${akademiaNoticePanelStyles.container}`}>
+      <animated.li
+        className={`container ${akademiaNoticePanelStyles.container}`}
+        style={hoverPanel}
+        onMouseOver={() =>
+          animateHoverPanel.start({
+            top: `-1rem`,
+          })
+        }
+        onMouseOutCapture={() =>
+          animateHoverPanel.start({
+            top: `0`,
+          })
+        }
+      >
         <Link
           className={`container ${akademiaNoticePanelStyles.container}`}
           href={`/akademia_chiropraktyki/szkolenie_zaawansowane/${id}#startView`}
@@ -61,7 +81,7 @@ const AkademiaNoticePanel = ({ id, title, desc, date }: Props) => {
             </svg>
           </button>
         )}
-      </li>
+      </animated.li>
     </>
   );
 };

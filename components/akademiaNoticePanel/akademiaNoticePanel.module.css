@@ -38,6 +38,11 @@
   top: 0.5rem;
   fill: var(--clr-700);
   z-index: 999;
+  transition: 0.2s;
+}
+
+.container button.delete:hover {
+  fill: var(--clr-red-100);
 }
 
 @media (max-width: 900px) {

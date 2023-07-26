@@ -12,8 +12,8 @@ const ImoTrainingModules = ({ contentList, number, amount }: Props) => {
       <li>
         <h4>Moduł {amount ? `${number} - ${number + amount}` : number}</h4>
         <ul>
-          {contentList.map((item) => {
-            return <li key={`${item}trainingmodules`}>{item}</li>;
+          {contentList.map((item, index) => {
+            return <li key={`${item}trainingmodules${index}`}>{item}</li>;
           })}
         </ul>
       </li>

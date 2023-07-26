@@ -154,6 +154,10 @@
   margin-top: 1rem;
 }
 
+.akuChiro-container.contact .visit .icon {
+  position: relative;
+}
+
 /* --- --- --- */
 /* --- RWD --- */
 /* --- --- --- */

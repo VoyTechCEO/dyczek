@@ -47,8 +47,17 @@ const IMO: NextPage = () => {
             <ul>
               {trainingModulesList.map((sector, sectorIdx) => {
                 if (trainingModulesList[sectorIdx - 1]) {
+                  let allAmounts = 0;
+                  trainingModulesList[sectorIdx - 1].modules.forEach(
+                    (singleModule) => {
+                      if (singleModule.amount) {
+                        allAmounts += singleModule.amount;
+                      }
+                    }
+                  );
                   totalModulesListLength +=
-                    trainingModulesList[sectorIdx - 1].modules.length;
+                    trainingModulesList[sectorIdx - 1].modules.length +
+                    allAmounts;
                 }
 
                 return (

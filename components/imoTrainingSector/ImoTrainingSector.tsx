@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import ImoTrainingModules from '../../components/imoTrainingModules/ImoTrainingModules';
 import trainingModulesList from '../../utils/trainingModulesList';
 import TrainingModules from '../../interfaces/trainingModules';
+import { useSpring } from '@react-spring/web';
+import { animated } from '@react-spring/web';
 
 interface Props {
   sector: TrainingModules;
@@ -19,14 +21,57 @@ const ImoTrainingSector = ({
   let prevAmount = 0;
   let totalAmount = 0;
 
+  // animations
+  const [hoverArrow, animateHoverArrow] = useSpring(() => ({
+    from: { bottom: `0` },
+  }));
+
+  const [clickArrow, animateClickArrow] = useSpring(() => ({
+    from: { rotateZ: 90 },
+  }));
+
+  const [showList, animateShowList] = useSpring(() => ({
+    from: { maxHeight: `0` },
+  }));
+
   return (
     <>
       <li key={`${sector.part}sectorlist`} className='sector'>
         <h4>Część {sector.part}</h4>
         <p className='description'>{sector.desc}</p>
-        <button onClick={() => setShow(!show)}>
+        <button
+          onClick={() => {
+            setShow(!show);
+            if (!show) {
+              animateClickArrow.start({
+                rotateZ: -90,
+              });
+              animateShowList.start({
+                maxHeight: `1000rem`,
+              });
+            } else {
+              animateClickArrow.start({
+                rotateZ: 90,
+              });
+              animateShowList.start({
+                maxHeight: `0`,
+              });
+            }
+          }}
+          onMouseOver={() => {
+            animateHoverArrow.start({
+              bottom: `-0.5rem`,
+            });
+          }}
+          onMouseOut={() => {
+            animateHoverArrow.start({
+              bottom: `0`,
+            });
+          }}
+        >
           {show ? `Zwiń` : `Rozwiń`}
-          <svg
+          <animated.svg
+            style={{ ...hoverArrow, ...clickArrow }}
             height='0.5rem'
             version='1.1'
             viewBox='0 0 60 50'
@@ -36,33 +81,31 @@ const ImoTrainingSector = ({
               transform='matrix(.37382 0 0 .26978 -8.7481 -1.207)'
               d='m183.91 97.141-160.5 92.667v-92.667-92.667l80.252 46.334z'
             />
-          </svg>
+          </animated.svg>
         </button>
-        {show && (
-          <div className='modules'>
-            <ul>
-              {sector.modules.map((module, moduleIdx) => {
-                let modNum = moduleIdx + 1;
-                totalAmount += prevAmount;
-                if (trainingModulesList[sectorIdx - 1]) {
-                  modNum = totalModulesListLength + moduleIdx + totalAmount + 1;
-                }
-                prevAmount = 0;
-                if (module.amount) {
-                  prevAmount = module.amount;
-                }
-                return (
-                  <ImoTrainingModules
-                    key={`${module}modulelists${moduleIdx}`}
-                    contentList={sector.modules[moduleIdx].list}
-                    number={modNum}
-                    amount={module.amount}
-                  />
-                );
-              })}
-            </ul>
-          </div>
-        )}
+        <animated.div className='modules' style={showList}>
+          <ul>
+            {sector.modules.map((module, moduleIdx) => {
+              let modNum = moduleIdx + 1;
+              totalAmount += prevAmount;
+              if (trainingModulesList[sectorIdx - 1]) {
+                modNum = totalModulesListLength + moduleIdx + totalAmount + 1;
+              }
+              prevAmount = 0;
+              if (module.amount) {
+                prevAmount = module.amount;
+              }
+              return (
+                <ImoTrainingModules
+                  key={`${module}modulelists${moduleIdx}`}
+                  contentList={sector.modules[moduleIdx].list}
+                  number={modNum}
+                  amount={module.amount}
+                />
+              );
+            })}
+          </ul>
+        </animated.div>
       </li>
     </>
   );
