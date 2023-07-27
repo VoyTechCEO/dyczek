@@ -100,6 +100,10 @@
   color: var(--clr-gre);
 }
 
+.szlaZd-container.about .descriptions .letter a:hover {
+  text-decoration: none;
+}
+
 .szlaZd-container.about .descriptions .letter .content {
   display: flex;
   column-gap: 3rem;
@@ -205,7 +209,7 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  row-gap: 4rem;
+  row-gap: 4.5rem;
   margin-bottom: 3.5rem;
 }
 
@@ -247,15 +251,20 @@
 
 .szlaZd-container.faq ul.faq li.faq_element button.head .more svg {
   fill: var(--clr-gre);
+  position: relative;
 }
 
 .szlaZd-container.faq ul.faq li.faq_element section {
   width: 100%;
-  padding: 1.5rem;
+  padding: 4rem 1.5rem 1.5rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 1rem;
+}
+
+.szlaZd-container.faq ul.faq li.faq_element p {
+  overflow: hidden;
 }
 
 .szlaZd-container.faq ul.faq li.faq_element section p {
@@ -265,6 +274,10 @@
 
 .szlaZd-container.faq ul.faq li.faq_element section p a {
   color: var(--clr-gre);
+}
+
+.szlaZd-container.faq ul.faq li.faq_element section p a:hover {
+  text-decoration: none;
 }
 
 .szlaZd-container.faq ul.faq li.faq_element section p b {
@@ -376,6 +389,10 @@
   color: var(--clr-gre);
 }
 
+.szlaZd-container.publics ul li a:hover {
+  text-decoration: none;
+}
+
 /* --- --- --- */
 /* --- RWD --- */
 /* --- --- --- */
@@ -420,6 +437,10 @@
   display: flex;
 }
 
+.szlaZd-container.links ul li a:hover {
+  text-decoration: none;
+}
+
 /* --- --- --- */
 /* --- RWD --- */
 /* --- --- --- */
@@ -458,6 +479,10 @@
 
 .szlaZd-container.contact section p a {
   color: var(--clr-gre);
+}
+
+.szlaZd-container.contact section p a:hover {
+  text-decoration: none;
 }
 
 .szlaZd-container.contact section img {

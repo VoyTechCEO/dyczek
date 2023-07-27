@@ -10,7 +10,6 @@ import SzlaZdFAQElement from '../../../components/szlaZdFAQElement/SzlaZdFAQElem
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import faqList from '@/utils/szlaZdFAQList';
-import { useMediaQuery } from 'react-responsive';
 
 interface Props {
   locale: string;
