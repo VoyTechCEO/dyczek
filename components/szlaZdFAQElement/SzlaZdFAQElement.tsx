@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'next-i18next';
-import { useSpring } from '@react-spring/web';
-import { animated } from '@react-spring/web';
+import { useSpring, animated } from '@react-spring/web';
 
 interface Props {
   number: number;
