@@ -12,6 +12,13 @@ const AkademiaMotto = () => {
   // animations
   const { scrollYProgress } = useScroll({
     onChange: ({ value: { scrollYProgress } }) => {
+      // if (
+      //   ref.current.getBoundingClientRect().top < 600 &&
+      //   ref.current.getBoundingClientRect().top > 350
+      // ) {
+      //   setProgress(scrollYProgress * 5);
+      // }
+      // console.log(`top: ${ref.current.getBoundingClientRect().top}`);
       if (document.body.scrollHeight > 3800) {
         setProgress(scrollYProgress * 20);
       } else if (document.body.scrollHeight > 3300) {
@@ -21,6 +28,7 @@ const AkademiaMotto = () => {
       } else {
         setProgress(scrollYProgress * 8);
       }
+      console.log(document.body.scrollHeight);
     },
   });
 

@@ -39,18 +39,6 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  animation: displayPage;
-  animation-duration: 500ms;
-  animation-fill-mode: forwards;
-}
-
-@keyframes displayPage {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .main-blue {
