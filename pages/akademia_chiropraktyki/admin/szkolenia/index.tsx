@@ -31,7 +31,7 @@ const Akademia: NextPage = () => {
   return (
     <>
       <HeadSet />
-      <main id='main'>
+      <main id='main' className='main-blur'>
         <AkademiaHeader />
         <MainNav />
         <AkademiaTrainings />

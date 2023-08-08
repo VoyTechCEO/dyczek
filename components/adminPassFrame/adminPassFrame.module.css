@@ -2,9 +2,8 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: 999;
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(2px) brightness(50%);
+  z-index: 99999;
+  background-color: rgba(255, 255, 255, 0.7);
   justify-content: center;
   align-items: center;
 }
@@ -19,6 +18,7 @@
   padding: 1rem;
   border-radius: 4px;
   position: relative;
+  box-shadow: 2px 8px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 .container .frame button.back {
