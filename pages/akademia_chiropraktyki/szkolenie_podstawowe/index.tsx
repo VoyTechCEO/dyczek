@@ -35,24 +35,17 @@ const Akademia: NextPage = () => {
   const { t } = useTranslation();
 
   const getNoticeData = async () => {
-    console.log('1');
     try {
-      console.log('2');
       const res = await fetch(`/api/notices/basic`, {
         method: `GET`,
         headers: {
           'Content-Type': 'application/json',
         },
       });
-      console.log('3');
       const data = await res.json();
-      console.log('4');
       setNoticeData(data.response);
-      console.log('5');
     } catch (err) {
-      console.log('6');
       console.log(err);
-      console.log('1');
     }
   };
 
