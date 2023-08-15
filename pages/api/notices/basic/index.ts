@@ -18,6 +18,8 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
         const basicTraining = await prisma.noticeBasic.findMany();
         status = 200;
         data.comment = 'Got';
+        console.log(basicTraining);
+
         data.response = basicTraining[0];
       } catch (err) {
         console.log(err);
@@ -40,6 +42,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
       }-${
         getDate.getDate() < 10 ? '0' + getDate.getDate() : getDate.getDate()
       }`;
+
       try {
         const basicTraining = await prisma.noticeBasic.findMany();
         await prisma.noticeBasic.update({
