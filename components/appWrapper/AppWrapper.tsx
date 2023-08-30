@@ -36,14 +36,18 @@ const AppWrapper = ({ children }: Props) => {
   });
 
   const getUserData = async () => {
+    console.log(`user1`);
     try {
+      console.log(`user2`);
       const res = await fetch(`/api/user`, {
         method: `GET`,
         headers: {
           'Content-Type': 'application/json',
         },
       });
+      console.log(`user3`);
       const data = await res.json();
+      console.log(`user4`);
       setIsUserLoggedIn(data.response.isLoggedIn);
       setIsAppLoaded(true);
     } catch (err) {
