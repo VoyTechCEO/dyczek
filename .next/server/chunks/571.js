@@ -29,7 +29,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 9327:
+/***/ 5297:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -55,7 +55,7 @@ const AdminPassFrame = ()=>{
     const onSubmit = async (e)=>{
         e.preventDefault();
         try {
-            const res = await fetch(`/api/user`, {
+            const res = await fetch(`https://dyczek.netlify.app/api/user`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

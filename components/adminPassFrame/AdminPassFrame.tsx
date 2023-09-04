@@ -10,7 +10,7 @@ const AdminPassFrame = () => {
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const res = await fetch(`/api/user`, {
+      const res = await fetch(`https://dyczek.netlify.app/api/user`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

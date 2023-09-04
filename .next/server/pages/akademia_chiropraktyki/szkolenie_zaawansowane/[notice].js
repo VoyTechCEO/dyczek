@@ -82,8 +82,7 @@ const Akademia = ({ noticeData  })=>{
 };
 const getServerSideProps = async (context)=>{
     try {
-        var _context_params;
-        const res = await fetch(`${"http://localhost:3000"}/api/notices/advanced/${(_context_params = context.params) === null || _context_params === void 0 ? void 0 : _context_params.notice}`, {
+        const res = await fetch(`https://dyczek.netlify.app/api/notices/advanced/${context.params?.notice}`, {
             method: `GET`,
             headers: {
                 "Content-Type": "application/json"

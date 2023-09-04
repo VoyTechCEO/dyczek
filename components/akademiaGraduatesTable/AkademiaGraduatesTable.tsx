@@ -21,7 +21,7 @@ const DeleteBtn = ({ year, name }: BtnProps) => {
   const router = useRouter();
   const deleteGraduate = async () => {
     try {
-      await fetch(`/api/graduates/`, {
+      await fetch(`https://dyczek.netlify.app/api/graduates/`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

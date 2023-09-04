@@ -51,7 +51,7 @@ const AkademiaNoticePanel = ({ id , title , desc , date  })=>{
     const [advancedNoticesList, setAdvancedNoticesList] = (0,recoil__WEBPACK_IMPORTED_MODULE_3__.useRecoilState)(_recoilMain__WEBPACK_IMPORTED_MODULE_4__/* .advancedNoticesListState */ .IP);
     const deleteNotice = async ()=>{
         try {
-            await fetch(`/api/notices/advanced/${id}`, {
+            await fetch(`https://dyczek.netlify.app/api/notices/advanced/${id}`, {
                 method: `DELETE`
             });
             const newList = advancedNoticesList.filter((item)=>{
@@ -186,7 +186,7 @@ const Akademia = ()=>{
     const [advancedNoticesList, setAdvancedNoticesList] = (0,recoil__WEBPACK_IMPORTED_MODULE_13__.useRecoilState)(_recoilMain__WEBPACK_IMPORTED_MODULE_14__/* .advancedNoticesListState */ .IP);
     const getNoticesData = async ()=>{
         try {
-            const res = await fetch(`/api/notices/advanced`, {
+            const res = await fetch(`https://dyczek.netlify.app/api/notices/advanced`, {
                 method: `GET`,
                 headers: {
                     "Content-Type": "application/json"

@@ -6,7 +6,7 @@ const LogoutBtn = () => {
   const router = useRouter();
 
   const logOut = async () => {
-    await fetch(`/api/user`, {
+    await fetch(`https://dyczek.netlify.app/api/user`, {
       method: `DELETE`,
     });
     router.reload();

@@ -8,7 +8,7 @@ const AkademiaAdminGraduate = () => {
   const [isSuccess, setIsSuccess] = useState(false);
 
   const postGraduate = async () => {
-    const res = await fetch(`/api/graduates`, {
+    const res = await fetch(`https://dyczek.netlify.app/api/graduates`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -1,4 +1,6 @@
-## [dyczek.pl](dyczekpl.cfolks.pl)
+## [dyczek.pl](https://dyczek.netlify.app/)
+
+Link: [https://dyczek.netlify.app/](https://dyczek.netlify.app/)
 
 Application made for an advanced chiropractor - Henryk Dyczek.
 
