@@ -2,11 +2,7 @@ import { NextResponse } from 'next/server';
 
 const allowedOrigins =
   process.env.NODE_ENV === 'production'
-    ? [
-        'https://dyczek.netlify.app',
-        'https://dyczekpl.cfolks.pl',
-        'http://localhost:3000',
-      ]
+    ? ['https://dyczek.netlify.app', 'https://dyczekpl.cfolks.pl']
     : ['http://localhost:3000'];
 
 export function middleware(request: Request) {
