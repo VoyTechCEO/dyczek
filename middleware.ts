@@ -2,7 +2,11 @@ import { NextResponse } from 'next/server';
 
 const allowedOrigins =
   process.env.NODE_ENV === 'production'
-    ? ['https://dyczek.netlify.app', 'https://dyczekpl.cfolks.pl']
+    ? [
+        'https://dyczek.netlify.app',
+        'https://dyczekpl.cfolks.pl',
+        'http://localhost:3000',
+      ]
     : ['http://localhost:3000'];
 
 export function middleware(request: Request) {
@@ -19,7 +23,7 @@ export function middleware(request: Request) {
   }
   const res = NextResponse.next();
   res.headers.append('Access-Control-Allow-Credentials', 'true');
-  res.headers.append('Access-Control-Allow-Origin', origin!);
+  res.headers.append('Access-Control-Allow-Origin', '*');
   res.headers.append(
     'Access-Control-Allow-Methods',
     'GET,DELETE,PATCH,POST,PUT'
