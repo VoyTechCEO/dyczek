@@ -39,6 +39,7 @@ const AppWrapper = ({ children }: Props) => {
     try {
       const res = await fetch(`https://dyczek.netlify.app/api/user`, {
         method: `GET`,
+        mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
         },
