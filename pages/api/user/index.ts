@@ -64,7 +64,8 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
       break;
     case 'OPTIONS':
       status = 200;
-      data.comment = 'CORS approved';
+      data.comment = 'CORS policy passed';
+      break;
     default:
       status = 405;
       break;

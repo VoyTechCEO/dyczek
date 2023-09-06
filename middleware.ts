@@ -25,6 +25,7 @@ export function middleware(request: Request) {
     'GET,DELETE,PATCH,POST,PUT,OPTIONS'
   );
   res.headers.append('Access-Control-Allow-Headers', '*');
+
   return res;
 }
 
