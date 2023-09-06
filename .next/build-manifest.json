@@ -29,6 +29,16 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
+    ],
+    "/akademia_chiropraktyki": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/akademia_chiropraktyki.js"
+    ],
+    "/akademia_chiropraktyki/szkolenie_podstawowe": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/akademia_chiropraktyki/szkolenie_podstawowe.js"
     ]
   },
   "ampFirstPages": []
