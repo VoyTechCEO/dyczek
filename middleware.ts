@@ -19,7 +19,10 @@ export function middleware(request: Request) {
   // }
   const res = NextResponse.next();
   res.headers.append('Access-Control-Allow-Credentials', 'true');
-  res.headers.append('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.headers.append(
+    'Access-Control-Allow-Origin',
+    'https://dyczekpl.cfolks.pl'
+  );
   res.headers.append(
     'Access-Control-Allow-Methods',
     'GET,DELETE,PATCH,POST,PUT,OPTIONS'
