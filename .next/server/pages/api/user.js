@@ -1,65 +1,127 @@
 "use strict";
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
-exports.id = "pages/api/user";
-exports.ids = ["pages/api/user"];
+exports.id = 5541;
+exports.ids = [5541];
 exports.modules = {
 
-/***/ "argon2":
-/*!*************************!*\
-  !*** external "argon2" ***!
-  \*************************/
+/***/ 38:
 /***/ ((module) => {
 
 module.exports = require("argon2");
 
 /***/ }),
 
-/***/ "iron-session":
-/*!*******************************!*\
-  !*** external "iron-session" ***!
-  \*******************************/
+/***/ 1454:
 /***/ ((module) => {
 
 module.exports = import("iron-session");;
 
 /***/ }),
 
-/***/ "(api)/./lib/session.ts":
-/*!************************!*\
-  !*** ./lib/session.ts ***!
-  \************************/
+/***/ 6167:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst sessionOptions = {\n    password: process.env.SECRET_COOKIE_PASSWORD,\n    cookieName: \"loginCookie\",\n    cookieOptions: {\n        secure: \"development\" === \"production\",\n        maxAge: 21600\n    }\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sessionOptions);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9saWIvc2Vzc2lvbi50cy5qcyIsIm1hcHBpbmdzIjoiOzs7O0FBR0EsTUFBTUEsaUJBQXFDO0lBQ3pDQyxVQUFVQyxRQUFRQyxHQUFHLENBQUNDLHNCQUFzQjtJQUM1Q0MsWUFBWTtJQUNaQyxlQUFlO1FBQ2JDLFFBQVFMLGtCQUF5QjtRQUNqQ00sUUFBUTtJQUNWO0FBQ0Y7QUFRQSxpRUFBZVIsY0FBY0EsRUFBQyIsInNvdXJjZXMiOlsid2VicGFjazovL2R5Y3play8uL2xpYi9zZXNzaW9uLnRzPzFkZTEiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHR5cGUgeyBJcm9uU2Vzc2lvbk9wdGlvbnMgfSBmcm9tICdpcm9uLXNlc3Npb24nO1xuaW1wb3J0IFVzZXJSZXMgZnJvbSAnQC9pbnRlcmZhY2VzL3VzZXJSZXMnO1xuXG5jb25zdCBzZXNzaW9uT3B0aW9uczogSXJvblNlc3Npb25PcHRpb25zID0ge1xuICBwYXNzd29yZDogcHJvY2Vzcy5lbnYuU0VDUkVUX0NPT0tJRV9QQVNTV09SRCBhcyBzdHJpbmcsXG4gIGNvb2tpZU5hbWU6ICdsb2dpbkNvb2tpZScsXG4gIGNvb2tpZU9wdGlvbnM6IHtcbiAgICBzZWN1cmU6IHByb2Nlc3MuZW52Lk5PREVfRU5WID09PSAncHJvZHVjdGlvbicsXG4gICAgbWF4QWdlOiAyMTYwMCxcbiAgfSxcbn07XG5cbmRlY2xhcmUgbW9kdWxlICdpcm9uLXNlc3Npb24nIHtcbiAgaW50ZXJmYWNlIElyb25TZXNzaW9uRGF0YSB7XG4gICAgdXNlcj86IFVzZXJSZXM7XG4gIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgc2Vzc2lvbk9wdGlvbnM7XG4iXSwibmFtZXMiOlsic2Vzc2lvbk9wdGlvbnMiLCJwYXNzd29yZCIsInByb2Nlc3MiLCJlbnYiLCJTRUNSRVRfQ09PS0lFX1BBU1NXT1JEIiwiY29va2llTmFtZSIsImNvb2tpZU9wdGlvbnMiLCJzZWN1cmUiLCJtYXhBZ2UiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./lib/session.ts\n");
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const sessionOptions = {
+    password: process.env.SECRET_COOKIE_PASSWORD,
+    cookieName: "loginCookie",
+    cookieOptions: {
+        secure: "production" === "production",
+        maxAge: 21600
+    }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sessionOptions);
+
 
 /***/ }),
 
-/***/ "(api)/./pages/api/user/index.ts":
-/*!*********************************!*\
-  !*** ./pages/api/user/index.ts ***!
-  \*********************************/
+/***/ 5042:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var argon2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! argon2 */ \"argon2\");\n/* harmony import */ var argon2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(argon2__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var iron_session_next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! iron-session/next */ \"(api)/./node_modules/iron-session/next/dist/index.mjs\");\n/* harmony import */ var _lib_session__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/lib/session */ \"(api)/./lib/session.ts\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([iron_session_next__WEBPACK_IMPORTED_MODULE_1__]);\niron_session_next__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\n\n\n\nasync function handler(req, res) {\n    let status;\n    let data = {\n        comment: \"unsupported method\"\n    };\n    switch(req.method){\n        case \"GET\":\n            if (req.session.user) {\n                data.response = {\n                    isLoggedIn: true\n                };\n                data.comment = \"Logged in\";\n            } else {\n                data.response = {\n                    isLoggedIn: false\n                };\n                data.comment = \"Not logged in\";\n            }\n            status = 200;\n            break;\n        case \"POST\":\n            try {\n                if (await argon2__WEBPACK_IMPORTED_MODULE_0___default().verify(process.env.ADMIN_PASSWORD, req.body.password)) {\n                    req.session.user = {\n                        isLoggedIn: true\n                    };\n                    await req.session.save();\n                    data.response = {\n                        isPasswordCorrect: true\n                    };\n                    data.comment = \"Correct password\";\n                    status = 200;\n                } else {\n                    data.response = {\n                        isPasswordCorrect: false\n                    };\n                    data.comment = \"Incorrect password\";\n                    status = 401;\n                }\n            } catch (err) {\n                console.log(err);\n                status = 500;\n                data.comment = `Failed to post: ${err}`;\n            }\n            break;\n        case \"DELETE\":\n            req.session.destroy();\n            data.response = {\n                isLoggedIn: false\n            };\n            status = 200;\n            data.comment = \"Logged out\";\n            break;\n        case \"OPTIONS\":\n            status = 200;\n            data.comment = \"CORS policy passed\";\n            break;\n        default:\n            status = 405;\n            break;\n    }\n    res.status(status).json(data);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,iron_session_next__WEBPACK_IMPORTED_MODULE_1__.withIronSessionApiRoute)(handler, _lib_session__WEBPACK_IMPORTED_MODULE_2__[\"default\"]));\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvdXNlci9pbmRleC50cy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7OztBQUM0QjtBQUNnQztBQUVqQjtBQU8zQyxlQUFlRyxRQUFRQyxHQUFtQixFQUFFQyxHQUEwQixFQUFFO0lBQ3RFLElBQUlDO0lBQ0osSUFBSUMsT0FBYTtRQUFFQyxTQUFTO0lBQXFCO0lBQ2pELE9BQVFKLElBQUlLLE1BQU07UUFDaEIsS0FBSztZQUNILElBQUlMLElBQUlNLE9BQU8sQ0FBQ0MsSUFBSSxFQUFFO2dCQUNwQkosS0FBS0ssUUFBUSxHQUFHO29CQUNkQyxZQUFZLElBQUk7Z0JBQ2xCO2dCQUNBTixLQUFLQyxPQUFPLEdBQUc7WUFDakIsT0FBTztnQkFDTEQsS0FBS0ssUUFBUSxHQUFHO29CQUNkQyxZQUFZLEtBQUs7Z0JBQ25CO2dCQUNBTixLQUFLQyxPQUFPLEdBQUc7WUFDakIsQ0FBQztZQUNERixTQUFTO1lBQ1QsS0FBTTtRQUNSLEtBQUs7WUFDSCxJQUFJO2dCQUNGLElBQ0UsTUFBTU4sb0RBQWEsQ0FBQ2UsUUFBUUMsR0FBRyxDQUFDQyxjQUFjLEVBQUdiLElBQUljLElBQUksQ0FBQ0MsUUFBUSxHQUNsRTtvQkFDQWYsSUFBSU0sT0FBTyxDQUFDQyxJQUFJLEdBQUc7d0JBQ2pCRSxZQUFZLElBQUk7b0JBQ2xCO29CQUNBLE1BQU1ULElBQUlNLE9BQU8sQ0FBQ1UsSUFBSTtvQkFDdEJiLEtBQUtLLFFBQVEsR0FBRzt3QkFDZFMsbUJBQW1CLElBQUk7b0JBQ3pCO29CQUNBZCxLQUFLQyxPQUFPLEdBQUc7b0JBQ2ZGLFNBQVM7Z0JBQ1gsT0FBTztvQkFDTEMsS0FBS0ssUUFBUSxHQUFHO3dCQUNkUyxtQkFBbUIsS0FBSztvQkFDMUI7b0JBQ0FkLEtBQUtDLE9BQU8sR0FBRztvQkFDZkYsU0FBUztnQkFDWCxDQUFDO1lBQ0gsRUFBRSxPQUFPZ0IsS0FBSztnQkFDWkMsUUFBUUMsR0FBRyxDQUFDRjtnQkFDWmhCLFNBQVM7Z0JBQ1RDLEtBQUtDLE9BQU8sR0FBRyxDQUFDLGdCQUFnQixFQUFFYyxJQUFJLENBQUM7WUFDekM7WUFDQSxLQUFNO1FBQ1IsS0FBSztZQUNIbEIsSUFBSU0sT0FBTyxDQUFDZSxPQUFPO1lBQ25CbEIsS0FBS0ssUUFBUSxHQUFHO2dCQUNkQyxZQUFZLEtBQUs7WUFDbkI7WUFDQVAsU0FBUztZQUNUQyxLQUFLQyxPQUFPLEdBQUc7WUFDZixLQUFNO1FBQ1IsS0FBSztZQUNIRixTQUFTO1lBQ1RDLEtBQUtDLE9BQU8sR0FBRztZQUNmLEtBQU07UUFDUjtZQUNFRixTQUFTO1lBQ1QsS0FBTTtJQUNWO0lBQ0FELElBQUlDLE1BQU0sQ0FBQ0EsUUFBU29CLElBQUksQ0FBQ25CO0FBQzNCO0FBRUEsaUVBQWVOLDBFQUF1QkEsQ0FBQ0UsU0FBU0Qsb0RBQWNBLENBQUNBLEVBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9keWN6ZWsvLi9wYWdlcy9hcGkvdXNlci9pbmRleC50cz9lMTgyIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB0eXBlIHsgTmV4dEFwaVJlcXVlc3QsIE5leHRBcGlSZXNwb25zZSB9IGZyb20gJ25leHQnO1xuaW1wb3J0IGFyZ29uMiBmcm9tICdhcmdvbjInO1xuaW1wb3J0IHsgd2l0aElyb25TZXNzaW9uQXBpUm91dGUgfSBmcm9tICdpcm9uLXNlc3Npb24vbmV4dCc7XG5pbXBvcnQgVXNlclJlcyBmcm9tICdAL2ludGVyZmFjZXMvdXNlclJlcyc7XG5pbXBvcnQgc2Vzc2lvbk9wdGlvbnMgZnJvbSAnQC9saWIvc2Vzc2lvbic7XG5cbmludGVyZmFjZSBEYXRhIHtcbiAgY29tbWVudDogc3RyaW5nO1xuICByZXNwb25zZT86IFVzZXJSZXMgfCB7IGlzUGFzc3dvcmRDb3JyZWN0OiBib29sZWFuIH07XG59XG5cbmFzeW5jIGZ1bmN0aW9uIGhhbmRsZXIocmVxOiBOZXh0QXBpUmVxdWVzdCwgcmVzOiBOZXh0QXBpUmVzcG9uc2U8RGF0YT4pIHtcbiAgbGV0IHN0YXR1cztcbiAgbGV0IGRhdGE6IERhdGEgPSB7IGNvbW1lbnQ6ICd1bnN1cHBvcnRlZCBtZXRob2QnIH07XG4gIHN3aXRjaCAocmVxLm1ldGhvZCkge1xuICAgIGNhc2UgJ0dFVCc6XG4gICAgICBpZiAocmVxLnNlc3Npb24udXNlcikge1xuICAgICAgICBkYXRhLnJlc3BvbnNlID0ge1xuICAgICAgICAgIGlzTG9nZ2VkSW46IHRydWUsXG4gICAgICAgIH07XG4gICAgICAgIGRhdGEuY29tbWVudCA9ICdMb2dnZWQgaW4nO1xuICAgICAgfSBlbHNlIHtcbiAgICAgICAgZGF0YS5yZXNwb25zZSA9IHtcbiAgICAgICAgICBpc0xvZ2dlZEluOiBmYWxzZSxcbiAgICAgICAgfTtcbiAgICAgICAgZGF0YS5jb21tZW50ID0gJ05vdCBsb2dnZWQgaW4nO1xuICAgICAgfVxuICAgICAgc3RhdHVzID0gMjAwO1xuICAgICAgYnJlYWs7XG4gICAgY2FzZSAnUE9TVCc6XG4gICAgICB0cnkge1xuICAgICAgICBpZiAoXG4gICAgICAgICAgYXdhaXQgYXJnb24yLnZlcmlmeShwcm9jZXNzLmVudi5BRE1JTl9QQVNTV09SRCEsIHJlcS5ib2R5LnBhc3N3b3JkKVxuICAgICAgICApIHtcbiAgICAgICAgICByZXEuc2Vzc2lvbi51c2VyID0ge1xuICAgICAgICAgICAgaXNMb2dnZWRJbjogdHJ1ZSxcbiAgICAgICAgICB9O1xuICAgICAgICAgIGF3YWl0IHJlcS5zZXNzaW9uLnNhdmUoKTtcbiAgICAgICAgICBkYXRhLnJlc3BvbnNlID0ge1xuICAgICAgICAgICAgaXNQYXNzd29yZENvcnJlY3Q6IHRydWUsXG4gICAgICAgICAgfTtcbiAgICAgICAgICBkYXRhLmNvbW1lbnQgPSAnQ29ycmVjdCBwYXNzd29yZCc7XG4gICAgICAgICAgc3RhdHVzID0gMjAwO1xuICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgIGRhdGEucmVzcG9uc2UgPSB7XG4gICAgICAgICAgICBpc1Bhc3N3b3JkQ29ycmVjdDogZmFsc2UsXG4gICAgICAgICAgfTtcbiAgICAgICAgICBkYXRhLmNvbW1lbnQgPSAnSW5jb3JyZWN0IHBhc3N3b3JkJztcbiAgICAgICAgICBzdGF0dXMgPSA0MDE7XG4gICAgICAgIH1cbiAgICAgIH0gY2F0Y2ggKGVycikge1xuICAgICAgICBjb25zb2xlLmxvZyhlcnIpO1xuICAgICAgICBzdGF0dXMgPSA1MDA7XG4gICAgICAgIGRhdGEuY29tbWVudCA9IGBGYWlsZWQgdG8gcG9zdDogJHtlcnJ9YDtcbiAgICAgIH1cbiAgICAgIGJyZWFrO1xuICAgIGNhc2UgJ0RFTEVURSc6XG4gICAgICByZXEuc2Vzc2lvbi5kZXN0cm95KCk7XG4gICAgICBkYXRhLnJlc3BvbnNlID0ge1xuICAgICAgICBpc0xvZ2dlZEluOiBmYWxzZSxcbiAgICAgIH07XG4gICAgICBzdGF0dXMgPSAyMDA7XG4gICAgICBkYXRhLmNvbW1lbnQgPSAnTG9nZ2VkIG91dCc7XG4gICAgICBicmVhaztcbiAgICBjYXNlICdPUFRJT05TJzpcbiAgICAgIHN0YXR1cyA9IDIwMDtcbiAgICAgIGRhdGEuY29tbWVudCA9ICdDT1JTIHBvbGljeSBwYXNzZWQnO1xuICAgICAgYnJlYWs7XG4gICAgZGVmYXVsdDpcbiAgICAgIHN0YXR1cyA9IDQwNTtcbiAgICAgIGJyZWFrO1xuICB9XG4gIHJlcy5zdGF0dXMoc3RhdHVzISkuanNvbihkYXRhKTtcbn1cblxuZXhwb3J0IGRlZmF1bHQgd2l0aElyb25TZXNzaW9uQXBpUm91dGUoaGFuZGxlciwgc2Vzc2lvbk9wdGlvbnMpO1xuIl0sIm5hbWVzIjpbImFyZ29uMiIsIndpdGhJcm9uU2Vzc2lvbkFwaVJvdXRlIiwic2Vzc2lvbk9wdGlvbnMiLCJoYW5kbGVyIiwicmVxIiwicmVzIiwic3RhdHVzIiwiZGF0YSIsImNvbW1lbnQiLCJtZXRob2QiLCJzZXNzaW9uIiwidXNlciIsInJlc3BvbnNlIiwiaXNMb2dnZWRJbiIsInZlcmlmeSIsInByb2Nlc3MiLCJlbnYiLCJBRE1JTl9QQVNTV09SRCIsImJvZHkiLCJwYXNzd29yZCIsInNhdmUiLCJpc1Bhc3N3b3JkQ29ycmVjdCIsImVyciIsImNvbnNvbGUiLCJsb2ciLCJkZXN0cm95IiwianNvbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(api)/./pages/api/user/index.ts\n");
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var argon2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(38);
+/* harmony import */ var argon2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(argon2__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var iron_session_next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8534);
+/* harmony import */ var _lib_session__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6167);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([iron_session_next__WEBPACK_IMPORTED_MODULE_1__]);
+iron_session_next__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
-/***/ }),
 
-/***/ "(api)/./node_modules/iron-session/next/dist/index.mjs":
-/*!*******************************************************!*\
-  !*** ./node_modules/iron-session/next/dist/index.mjs ***!
-  \*******************************************************/
-/***/ ((__webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.a(__webpack_module__, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"withIronSessionApiRoute\": () => (/* binding */ withIronSessionApiRoute),\n/* harmony export */   \"withIronSessionSsr\": () => (/* binding */ withIronSessionSsr)\n/* harmony export */ });\n/* harmony import */ var iron_session__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! iron-session */ \"iron-session\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([iron_session__WEBPACK_IMPORTED_MODULE_0__]);\niron_session__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\n// next/index.ts\n\n\n// src/getPropertyDescriptorForReqSession.ts\nfunction getPropertyDescriptorForReqSession(session) {\n  return {\n    enumerable: true,\n    get() {\n      return session;\n    },\n    set(value) {\n      const keys = Object.keys(value);\n      const currentKeys = Object.keys(session);\n      currentKeys.forEach((key) => {\n        if (!keys.includes(key)) {\n          delete session[key];\n        }\n      });\n      keys.forEach((key) => {\n        session[key] = value[key];\n      });\n    }\n  };\n}\n\n// next/index.ts\nfunction withIronSessionApiRoute(handler, options) {\n  return async function nextApiHandlerWrappedWithIronSession(req, res) {\n    let sessionOptions;\n    if (options instanceof Function) {\n      sessionOptions = await options(req, res);\n    } else {\n      sessionOptions = options;\n    }\n    const session = await (0,iron_session__WEBPACK_IMPORTED_MODULE_0__.getIronSession)(req, res, sessionOptions);\n    Object.defineProperty(\n      req,\n      \"session\",\n      getPropertyDescriptorForReqSession(session)\n    );\n    return handler(req, res);\n  };\n}\nfunction withIronSessionSsr(handler, options) {\n  return async function nextGetServerSidePropsHandlerWrappedWithIronSession(context) {\n    let sessionOptions;\n    if (options instanceof Function) {\n      sessionOptions = await options(context.req, context.res);\n    } else {\n      sessionOptions = options;\n    }\n    const session = await (0,iron_session__WEBPACK_IMPORTED_MODULE_0__.getIronSession)(\n      context.req,\n      context.res,\n      sessionOptions\n    );\n    Object.defineProperty(\n      context.req,\n      \"session\",\n      getPropertyDescriptorForReqSession(session)\n    );\n    return handler(context);\n  };\n}\n\n//# sourceMappingURL=index.mjs.map\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9ub2RlX21vZHVsZXMvaXJvbi1zZXNzaW9uL25leHQvZGlzdC9pbmRleC5tanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7O0FBQUE7QUFDOEM7O0FBRTlDO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLEtBQUs7QUFDTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLE9BQU87QUFDUDtBQUNBO0FBQ0EsT0FBTztBQUNQO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxNQUFNO0FBQ047QUFDQTtBQUNBLDBCQUEwQiw0REFBYztBQUN4QztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLE1BQU07QUFDTjtBQUNBO0FBQ0EsMEJBQTBCLDREQUFjO0FBQ3hDO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUlFO0FBQ0Ysa0MiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9keWN6ZWsvLi9ub2RlX21vZHVsZXMvaXJvbi1zZXNzaW9uL25leHQvZGlzdC9pbmRleC5tanM/ZWIyZiJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBuZXh0L2luZGV4LnRzXG5pbXBvcnQgeyBnZXRJcm9uU2Vzc2lvbiB9IGZyb20gXCJpcm9uLXNlc3Npb25cIjtcblxuLy8gc3JjL2dldFByb3BlcnR5RGVzY3JpcHRvckZvclJlcVNlc3Npb24udHNcbmZ1bmN0aW9uIGdldFByb3BlcnR5RGVzY3JpcHRvckZvclJlcVNlc3Npb24oc2Vzc2lvbikge1xuICByZXR1cm4ge1xuICAgIGVudW1lcmFibGU6IHRydWUsXG4gICAgZ2V0KCkge1xuICAgICAgcmV0dXJuIHNlc3Npb247XG4gICAgfSxcbiAgICBzZXQodmFsdWUpIHtcbiAgICAgIGNvbnN0IGtleXMgPSBPYmplY3Qua2V5cyh2YWx1ZSk7XG4gICAgICBjb25zdCBjdXJyZW50S2V5cyA9IE9iamVjdC5rZXlzKHNlc3Npb24pO1xuICAgICAgY3VycmVudEtleXMuZm9yRWFjaCgoa2V5KSA9PiB7XG4gICAgICAgIGlmICgha2V5cy5pbmNsdWRlcyhrZXkpKSB7XG4gICAgICAgICAgZGVsZXRlIHNlc3Npb25ba2V5XTtcbiAgICAgICAgfVxuICAgICAgfSk7XG4gICAgICBrZXlzLmZvckVhY2goKGtleSkgPT4ge1xuICAgICAgICBzZXNzaW9uW2tleV0gPSB2YWx1ZVtrZXldO1xuICAgICAgfSk7XG4gICAgfVxuICB9O1xufVxuXG4vLyBuZXh0L2luZGV4LnRzXG5mdW5jdGlvbiB3aXRoSXJvblNlc3Npb25BcGlSb3V0ZShoYW5kbGVyLCBvcHRpb25zKSB7XG4gIHJldHVybiBhc3luYyBmdW5jdGlvbiBuZXh0QXBpSGFuZGxlcldyYXBwZWRXaXRoSXJvblNlc3Npb24ocmVxLCByZXMpIHtcbiAgICBsZXQgc2Vzc2lvbk9wdGlvbnM7XG4gICAgaWYgKG9wdGlvbnMgaW5zdGFuY2VvZiBGdW5jdGlvbikge1xuICAgICAgc2Vzc2lvbk9wdGlvbnMgPSBhd2FpdCBvcHRpb25zKHJlcSwgcmVzKTtcbiAgICB9IGVsc2Uge1xuICAgICAgc2Vzc2lvbk9wdGlvbnMgPSBvcHRpb25zO1xuICAgIH1cbiAgICBjb25zdCBzZXNzaW9uID0gYXdhaXQgZ2V0SXJvblNlc3Npb24ocmVxLCByZXMsIHNlc3Npb25PcHRpb25zKTtcbiAgICBPYmplY3QuZGVmaW5lUHJvcGVydHkoXG4gICAgICByZXEsXG4gICAgICBcInNlc3Npb25cIixcbiAgICAgIGdldFByb3BlcnR5RGVzY3JpcHRvckZvclJlcVNlc3Npb24oc2Vzc2lvbilcbiAgICApO1xuICAgIHJldHVybiBoYW5kbGVyKHJlcSwgcmVzKTtcbiAgfTtcbn1cbmZ1bmN0aW9uIHdpdGhJcm9uU2Vzc2lvblNzcihoYW5kbGVyLCBvcHRpb25zKSB7XG4gIHJldHVybiBhc3luYyBmdW5jdGlvbiBuZXh0R2V0U2VydmVyU2lkZVByb3BzSGFuZGxlcldyYXBwZWRXaXRoSXJvblNlc3Npb24oY29udGV4dCkge1xuICAgIGxldCBzZXNzaW9uT3B0aW9ucztcbiAgICBpZiAob3B0aW9ucyBpbnN0YW5jZW9mIEZ1bmN0aW9uKSB7XG4gICAgICBzZXNzaW9uT3B0aW9ucyA9IGF3YWl0IG9wdGlvbnMoY29udGV4dC5yZXEsIGNvbnRleHQucmVzKTtcbiAgICB9IGVsc2Uge1xuICAgICAgc2Vzc2lvbk9wdGlvbnMgPSBvcHRpb25zO1xuICAgIH1cbiAgICBjb25zdCBzZXNzaW9uID0gYXdhaXQgZ2V0SXJvblNlc3Npb24oXG4gICAgICBjb250ZXh0LnJlcSxcbiAgICAgIGNvbnRleHQucmVzLFxuICAgICAgc2Vzc2lvbk9wdGlvbnNcbiAgICApO1xuICAgIE9iamVjdC5kZWZpbmVQcm9wZXJ0eShcbiAgICAgIGNvbnRleHQucmVxLFxuICAgICAgXCJzZXNzaW9uXCIsXG4gICAgICBnZXRQcm9wZXJ0eURlc2NyaXB0b3JGb3JSZXFTZXNzaW9uKHNlc3Npb24pXG4gICAgKTtcbiAgICByZXR1cm4gaGFuZGxlcihjb250ZXh0KTtcbiAgfTtcbn1cbmV4cG9ydCB7XG4gIHdpdGhJcm9uU2Vzc2lvbkFwaVJvdXRlLFxuICB3aXRoSXJvblNlc3Npb25Tc3Jcbn07XG4vLyMgc291cmNlTWFwcGluZ1VSTD1pbmRleC5tanMubWFwIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./node_modules/iron-session/next/dist/index.mjs\n");
+async function handler(req, res) {
+    let status;
+    let data = {
+        comment: "unsupported method"
+    };
+    switch(req.method){
+        case "GET":
+            if (req.session.user) {
+                data.response = {
+                    isLoggedIn: true
+                };
+                data.comment = "Logged in";
+            } else {
+                data.response = {
+                    isLoggedIn: false
+                };
+                data.comment = "Not logged in";
+            }
+            status = 200;
+            break;
+        case "POST":
+            try {
+                if (await argon2__WEBPACK_IMPORTED_MODULE_0___default().verify(process.env.ADMIN_PASSWORD, req.body.password)) {
+                    req.session.user = {
+                        isLoggedIn: true
+                    };
+                    await req.session.save();
+                    data.response = {
+                        isPasswordCorrect: true
+                    };
+                    data.comment = "Correct password";
+                    status = 200;
+                } else {
+                    data.response = {
+                        isPasswordCorrect: false
+                    };
+                    data.comment = "Incorrect password";
+                    status = 401;
+                }
+            } catch (err) {
+                console.log(err);
+                status = 500;
+                data.comment = `Failed to post: ${err}`;
+            }
+            break;
+        case "DELETE":
+            req.session.destroy();
+            data.response = {
+                isLoggedIn: false
+            };
+            status = 200;
+            data.comment = "Logged out";
+            break;
+        case "OPTIONS":
+            status = 200;
+            data.comment = "CORS policy passed";
+            break;
+        default:
+            status = 405;
+            break;
+    }
+    res.status(status).json(data);
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,iron_session_next__WEBPACK_IMPORTED_MODULE_1__/* .withIronSessionApiRoute */ .n)(handler, _lib_session__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z));
+
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
 
 /***/ })
 
@@ -70,7 +132,7 @@ eval("__webpack_require__.a(__webpack_module__, async (__webpack_handle_async_de
 var __webpack_require__ = require("../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/user/index.ts"));
+var __webpack_exports__ = __webpack_require__.X(0, [8534], () => (__webpack_exec__(5042)));
 module.exports = __webpack_exports__;
 
 })();
