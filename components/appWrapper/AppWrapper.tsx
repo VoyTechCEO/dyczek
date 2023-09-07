@@ -39,13 +39,13 @@ const AppWrapper = ({ children }: Props) => {
     try {
       const res = await fetch(`https://dyczek.netlify.app/api/user`, {
         method: `GET`,
-        mode: 'cors',
-        credentials: 'omit',
         headers: {
           'Content-Type': 'application/json',
         },
       });
       const data = await res.json();
+      console.log(data);
+
       setIsUserLoggedIn(data.response.isLoggedIn);
       setIsAppLoaded(true);
     } catch (err) {

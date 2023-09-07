@@ -2,7 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/akademia_chiropraktyki": "pages/akademia_chiropraktyki.js",
-  "/akademia_chiropraktyki/szkolenie_podstawowe": "pages/akademia_chiropraktyki/szkolenie_podstawowe.js"
+  "/akademia_chiropraktyki/admin/szkolenia": "pages/akademia_chiropraktyki/admin/szkolenia.js"
 }

@@ -62,6 +62,10 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
       status = 200;
       data.comment = 'Logged out';
       break;
+    case 'OPTIONS':
+      status = 200;
+      data.comment = 'CORS policy passed';
+      break;
     default:
       status = 405;
       break;
