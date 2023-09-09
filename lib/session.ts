@@ -6,7 +6,7 @@ const sessionOptions: IronSessionOptions = {
   cookieName: 'loginCookie',
   cookieOptions: {
     domain: 'https://dyczekpl.cfolks.pl',
-    sameSite: 'lax',
+    sameSite: 'none',
     secure: process.env.NODE_ENV === 'production',
     maxAge: 21600,
   },
