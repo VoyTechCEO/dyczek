@@ -1,6 +1,6 @@
 (self["webpackChunk_N_E"] = self["webpackChunk_N_E"] || []).push([[826],{
 
-/***/ 267:
+/***/ 239:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -9,7 +9,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ next_middleware_loaderabsolutePagePath_private_next_root_dir_2Fmiddleware_ts_page_2Fmiddleware_rootDir_C_3A_5Cprogramowansko_5Cpraca_5ChenrykDyczek_5Cdyczek_matchers_W3sicmVnZXhwIjoiXig_2FOlxcLyhfbmV4dFxcL2RhdGFcXC9bXi9dezEsfSkpPyg_2FOlxcLyhbXi8uXXsxLH0pKVxcL2FwaSg_2FOlxcLygoPzpbXlxcLyNcXD9dKz8pKD86XFwvKD86W15cXC8jXFw_2FXSs_2FKSkqKSk_2FKC5qc29uKT9bXFwvI1xcP10_2FJCJ9XQ_3D_3D_)
+  "default": () => (/* binding */ next_middleware_loaderabsolutePagePath_private_next_root_dir_2Fmiddleware_ts_page_2Fmiddleware_rootDir_C_3A_5Cprogramowansko_5Cpraca_5ChenrykDyczek_5Cdyczek_matchers_)
 });
 
 ;// CONCATENATED MODULE: ./node_modules/next/dist/esm/server/web/error.js
@@ -1296,7 +1296,7 @@ function enhanceGlobals() {
 }
 
 //# sourceMappingURL=adapter.js.map
-;// CONCATENATED MODULE: ./node_modules/next/dist/build/webpack/loaders/next-middleware-loader.js?absolutePagePath=private-next-root-dir%2Fmiddleware.ts&page=%2Fmiddleware&rootDir=C%3A%5Cprogramowansko%5Cpraca%5ChenrykDyczek%5Cdyczek&matchers=W3sicmVnZXhwIjoiXig%2FOlxcLyhfbmV4dFxcL2RhdGFcXC9bXi9dezEsfSkpPyg%2FOlxcLyhbXi8uXXsxLH0pKVxcL2FwaSg%2FOlxcLygoPzpbXlxcLyNcXD9dKz8pKD86XFwvKD86W15cXC8jXFw%2FXSs%2FKSkqKSk%2FKC5qc29uKT9bXFwvI1xcP10%2FJCJ9XQ%3D%3D!
+;// CONCATENATED MODULE: ./node_modules/next/dist/build/webpack/loaders/next-middleware-loader.js?absolutePagePath=private-next-root-dir%2Fmiddleware.ts&page=%2Fmiddleware&rootDir=C%3A%5Cprogramowansko%5Cpraca%5ChenrykDyczek%5Cdyczek&matchers=!
 
         
 
@@ -1309,7 +1309,7 @@ function enhanceGlobals() {
           throw new Error('The Middleware "pages/middleware" must export a `middleware` or a `default` function');
         }
 
-        /* harmony default export */ function next_middleware_loaderabsolutePagePath_private_next_root_dir_2Fmiddleware_ts_page_2Fmiddleware_rootDir_C_3A_5Cprogramowansko_5Cpraca_5ChenrykDyczek_5Cdyczek_matchers_W3sicmVnZXhwIjoiXig_2FOlxcLyhfbmV4dFxcL2RhdGFcXC9bXi9dezEsfSkpPyg_2FOlxcLyhbXi8uXXsxLH0pKVxcL2FwaSg_2FOlxcLygoPzpbXlxcLyNcXD9dKz8pKD86XFwvKD86W15cXC8jXFw_2FXSs_2FKSkqKSk_2FKC5qc29uKT9bXFwvI1xcP10_2FJCJ9XQ_3D_3D_(opts) {
+        /* harmony default export */ function next_middleware_loaderabsolutePagePath_private_next_root_dir_2Fmiddleware_ts_page_2Fmiddleware_rootDir_C_3A_5Cprogramowansko_5Cpraca_5ChenrykDyczek_5Cdyczek_matchers_(opts) {
           return adapter({
               ...opts,
               page: "/middleware",
@@ -1326,7 +1326,6 @@ function enhanceGlobals() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "config": () => (/* binding */ config),
 /* harmony export */   "middleware": () => (/* binding */ middleware)
 /* harmony export */ });
 /* harmony import */ var next_server__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(301);
@@ -1348,15 +1347,20 @@ function middleware(request) {
     //   });
     // }
     const res = next_server__WEBPACK_IMPORTED_MODULE_0__.NextResponse.next();
-    res.headers.append("Access-Control-Allow-Credentials", "true");
-    res.headers.append("Access-Control-Allow-Origin", "http://localhost:3000");
-    res.headers.append("Access-Control-Allow-Methods", "GET,DELETE,PATCH,POST,PUT,OPTIONS");
-    res.headers.append("Access-Control-Allow-Headers", "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version");
+    // res.headers.append('Access-Control-Allow-Credentials', 'true');
+    // res.headers.append('Access-Control-Allow-Origin', 'http://localhost:3000');
+    // res.headers.append(
+    //   'Access-Control-Allow-Methods',
+    //   'GET,DELETE,PATCH,POST,PUT,OPTIONS'
+    // );
+    // res.headers.append(
+    //   'Access-Control-Allow-Headers',
+    //   'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+    // );
     return res;
-}
-const config = {
-    matcher: "/api/:path*"
-};
+} // export const config = {
+ //   matcher: '/api/:path*',
+ // };
 
 
 /***/ }),
@@ -2579,7 +2583,7 @@ exports.URLPattern = serverExports.URLPattern
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ var __webpack_exports__ = (__webpack_exec__(267));
+/******/ var __webpack_exports__ = (__webpack_exec__(239));
 /******/ (_ENTRIES = typeof _ENTRIES === "undefined" ? {} : _ENTRIES).middleware_middleware = __webpack_exports__;
 /******/ }
 ]);

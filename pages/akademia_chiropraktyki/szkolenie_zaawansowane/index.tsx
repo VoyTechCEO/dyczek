@@ -36,15 +36,12 @@ const Akademia: NextPage = () => {
 
   const getNoticesData = async () => {
     try {
-      const res = await fetch(
-        `https://dyczek.netlify.app/api/notices/advanced`,
-        {
-          method: `GET`,
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        }
-      );
+      const res = await fetch(`/api/notices/advanced`, {
+        method: `GET`,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
       const data = await res.json();
       const noticesList = data.response.reverse();
       setAdvancedNoticesList(noticesList);

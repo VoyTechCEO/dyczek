@@ -24,22 +24,19 @@ const AkademiaDocument = () => {
     if (editorRef.current) {
       try {
         if (trainingType === `basic`) {
-          const res = await fetch(
-            `https://dyczek.netlify.app/api/notices/basic`,
-            {
-              method: 'PUT',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                content: editorRef.current.getContent(),
-              }),
-            }
-          );
+          const res = await fetch(`/api/notices/basic`, {
+            method: 'PUT',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              content: editorRef.current.getContent(),
+            }),
+          });
           const data = await res.json();
           router.push('/akademia_chiropraktyki/szkolenie_podstawowe#startView');
         } else {
-          await fetch(`https://dyczek.netlify.app/api/notices/advanced`, {
+          await fetch(`/api/notices/advanced`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

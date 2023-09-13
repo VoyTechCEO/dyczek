@@ -22,7 +22,7 @@ const AkademiaNoticePanel = ({ id, title, desc, date }: Props) => {
 
   const deleteNotice = async () => {
     try {
-      await fetch(`https://dyczek.netlify.app/api/notices/advanced/${id}`, {
+      await fetch(`/api/notices/advanced/${id}`, {
         method: `DELETE`,
       });
       const newList = advancedNoticesList.filter((item) => {

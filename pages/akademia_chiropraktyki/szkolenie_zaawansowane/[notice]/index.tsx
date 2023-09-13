@@ -50,7 +50,7 @@ export const getServerSideProps = async (
 ) => {
   try {
     const res = await fetch(
-      `https://dyczek.netlify.app/api/notices/advanced/${context.params?.notice}`,
+      `${process.env.NEXT_PUBLIC_PUBLIC_URL}/api/notices/advanced/${context.params?.notice}`,
       {
         method: `GET`,
         headers: {

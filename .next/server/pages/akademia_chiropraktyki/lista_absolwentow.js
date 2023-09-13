@@ -258,7 +258,7 @@ const DeleteBtn = ({ year , name  })=>{
     const router = (0,router_.useRouter)();
     const deleteGraduate = async ()=>{
         try {
-            await fetch(`https://dyczek.netlify.app/api/graduates/`, {
+            await fetch(`/api/graduates/`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json"
@@ -534,7 +534,7 @@ const Akademia = ()=>{
     const { t  } = (0,next_i18next__WEBPACK_IMPORTED_MODULE_10__.useTranslation)();
     const getGraduatesData = async ()=>{
         try {
-            const res = await fetch(`https://dyczek.netlify.app/api/graduates`, {
+            const res = await fetch(`/api/graduates`, {
                 method: `GET`,
                 headers: {
                     "Content-Type": "application/json"

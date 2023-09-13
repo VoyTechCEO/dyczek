@@ -37,7 +37,7 @@ const AppWrapper = ({ children }: Props) => {
 
   const getUserData = async () => {
     try {
-      const res = await fetch(`https://dyczek.netlify.app/api/user`, {
+      const res = await fetch(`/api/user`, {
         method: `GET`,
         headers: {
           'Content-Type': 'application/json',

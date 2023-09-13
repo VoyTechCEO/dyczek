@@ -40,7 +40,7 @@ const Akademia: NextPage = () => {
 
   const getGraduatesData = async () => {
     try {
-      const res = await fetch(`https://dyczek.netlify.app/api/graduates`, {
+      const res = await fetch(`/api/graduates`, {
         method: `GET`,
         headers: {
           'Content-Type': 'application/json',

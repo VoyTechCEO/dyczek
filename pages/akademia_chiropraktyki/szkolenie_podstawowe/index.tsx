@@ -38,7 +38,7 @@ const Akademia: NextPage = () => {
     console.log(1);
     try {
       console.log(2);
-      const res = await fetch(`https://dyczek.netlify.app/api/notices/basic`, {
+      const res = await fetch(`/api/notices/basic`, {
         method: `GET`,
         headers: {
           'Content-Type': 'application/json',

@@ -40,7 +40,7 @@ const AkademiaAdminGraduate = ()=>{
     const [name, setName] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)("");
     const [isSuccess, setIsSuccess] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
     const postGraduate = async ()=>{
-        const res = await fetch(`https://dyczek.netlify.app/api/graduates`, {
+        const res = await fetch(`/api/graduates`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -134,7 +134,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_akademiaTrainings_AkademiaTrainings__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9095);
 /* harmony import */ var next_i18next_serverSideTranslations__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(5460);
 /* harmony import */ var next_i18next_serverSideTranslations__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_i18next_serverSideTranslations__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _components_adminPassFrame_AdminPassFrame__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(5297);
+/* harmony import */ var _components_adminPassFrame_AdminPassFrame__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(9327);
 /* harmony import */ var recoil__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(9755);
 /* harmony import */ var recoil__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(recoil__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var _recoilMain__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(4729);

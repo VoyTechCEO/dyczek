@@ -361,7 +361,7 @@ const LangChangeBtn = ()=>{
 const LogoutBtn = ()=>{
     const router = (0,next_router__WEBPACK_IMPORTED_MODULE_2__.useRouter)();
     const logOut = async ()=>{
-        await fetch(`https://dyczek.netlify.app/api/user`, {
+        await fetch(`/api/user`, {
             method: `DELETE`
         });
         router.reload();
