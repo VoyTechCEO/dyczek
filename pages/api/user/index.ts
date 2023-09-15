@@ -31,11 +31,11 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
       console.log('s1');
       try {
         console.log('s2');
+        console.log(process.env.ADMIN_PASSWORD!);
         if (
           await argon2.verify(process.env.ADMIN_PASSWORD!, req.body.password)
         ) {
           console.log('s3');
-          console.log(process.env.ADMIN_PASSWORD!);
           req.session.user = {
             isLoggedIn: true,
           };
