@@ -79,9 +79,9 @@ async function handler(req, res) {
             console.log("s1");
             try {
                 console.log("s2");
+                console.log(process.env.ADMIN_PASSWORD);
                 if (await argon2__WEBPACK_IMPORTED_MODULE_0___default().verify(process.env.ADMIN_PASSWORD, req.body.password)) {
                     console.log("s3");
-                    console.log(process.env.ADMIN_PASSWORD);
                     req.session.user = {
                         isLoggedIn: true
                     };
