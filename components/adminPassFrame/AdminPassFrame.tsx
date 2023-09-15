@@ -20,6 +20,7 @@ const AdminPassFrame = () => {
         }),
       });
       const data = await res.json();
+      console.log(data);
       setLoginStatus(data.response.isPasswordCorrect);
       if (data.response.isPasswordCorrect) {
         router.reload();

@@ -12,21 +12,16 @@ interface Data {
 async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   let status;
   let data: Data = { comment: 'unsupported method' };
-  console.log(`s1`);
   switch (req.method) {
     case 'GET':
-      console.log(`s2`);
       try {
-        console.log(`s3`);
         const basicTraining = await prisma.noticeBasic.findMany();
-        console.log(`s4`);
         console.log(basicTraining);
         status = 200;
         data.comment = 'Got';
         data.response = basicTraining[0];
       } catch (err) {
         console.log(err);
-        console.log(`s5`);
         data.comment = `Error: ${err}`;
         status = 500;
       }
@@ -75,7 +70,6 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
       status = 405;
       break;
   }
-  console.log(`s6`);
   console.log(data);
   res.status(status).json(data);
 }

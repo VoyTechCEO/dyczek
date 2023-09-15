@@ -71,21 +71,16 @@ async function handler(req, res) {
     let data = {
         comment: "unsupported method"
     };
-    console.log(`s1`);
     switch(req.method){
         case "GET":
-            console.log(`s2`);
             try {
-                console.log(`s3`);
                 const basicTraining = await _lib_prismaClient__WEBPACK_IMPORTED_MODULE_2__/* .prisma.noticeBasic.findMany */ ._.noticeBasic.findMany();
-                console.log(`s4`);
                 console.log(basicTraining);
                 status = 200;
                 data.comment = "Got";
                 data.response = basicTraining[0];
             } catch (err) {
                 console.log(err);
-                console.log(`s5`);
                 data.comment = `Error: ${err}`;
                 status = 500;
             }
@@ -126,7 +121,6 @@ async function handler(req, res) {
             status = 405;
             break;
     }
-    console.log(`s6`);
     console.log(data);
     res.status(status).json(data);
 }

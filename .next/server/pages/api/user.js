@@ -76,18 +76,28 @@ async function handler(req, res) {
             status = 200;
             break;
         case "POST":
+            console.log("s1");
             try {
+                console.log("s2");
                 if (await argon2__WEBPACK_IMPORTED_MODULE_0___default().verify(process.env.ADMIN_PASSWORD, req.body.password)) {
+                    console.log("s3");
+                    console.log(process.env.ADMIN_PASSWORD);
                     req.session.user = {
                         isLoggedIn: true
                     };
+                    console.log("s4");
                     await req.session.save();
+                    console.log("s5");
                     data.response = {
                         isPasswordCorrect: true
                     };
+                    console.log("s6");
                     data.comment = "Correct password";
+                    console.log("s7");
                     status = 200;
+                    console.log("s8");
                 } else {
+                    console.log("s9");
                     data.response = {
                         isPasswordCorrect: false
                     };
@@ -95,13 +105,16 @@ async function handler(req, res) {
                     status = 401;
                 }
             } catch (err) {
+                console.log("s11");
                 console.log(err);
                 status = 500;
                 data.comment = `Failed to post: ${err}`;
             }
             break;
         case "DELETE":
+            console.log("s12");
             req.session.destroy();
+            console.log("s13");
             data.response = {
                 isLoggedIn: false
             };
@@ -116,6 +129,7 @@ async function handler(req, res) {
             status = 405;
             break;
     }
+    console.log("s14");
     res.status(status).json(data);
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,iron_session_next__WEBPACK_IMPORTED_MODULE_1__/* .withIronSessionApiRoute */ .n)(handler, _lib_session__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z));

@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/lBGwBQboIqf8ctLY-WKH0/_buildManifest.js",
-    "static/lBGwBQboIqf8ctLY-WKH0/_ssgManifest.js"
+    "static/wL-8YGKUkFkVe1_ee7iTK/_buildManifest.js",
+    "static/wL-8YGKUkFkVe1_ee7iTK/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -50,7 +50,7 @@
       "static/chunks/5-b54f7bae86bc64c0.js",
       "static/chunks/183-d4ea052c36ed824c.js",
       "static/css/d3eb62154e740b8a.css",
-      "static/chunks/pages/akademia_chiropraktyki/admin/absolwenci-6afb46cbe726807a.js"
+      "static/chunks/pages/akademia_chiropraktyki/admin/absolwenci-fa8c19538fb28b94.js"
     ],
     "/akademia_chiropraktyki/admin/szkolenia": [
       "static/chunks/webpack-59c5c889f52620d6.js",
@@ -61,7 +61,7 @@
       "static/chunks/918-b8a60561b56d2e89.js",
       "static/chunks/183-d4ea052c36ed824c.js",
       "static/css/f26006f2c08ac671.css",
-      "static/chunks/pages/akademia_chiropraktyki/admin/szkolenia-da6b91086935cade.js"
+      "static/chunks/pages/akademia_chiropraktyki/admin/szkolenia-8c31dcab18d0730f.js"
     ],
     "/akademia_chiropraktyki/fakty": [
       "static/chunks/webpack-59c5c889f52620d6.js",
