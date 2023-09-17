@@ -28,30 +28,20 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
       status = 200;
       break;
     case 'POST':
-      console.log('s1');
       try {
-        console.log('s2');
-        console.log(process.env.ADMIN_PASSWORD!);
         if (
           await argon2.verify(process.env.ADMIN_PASSWORD!, req.body.password)
         ) {
-          console.log('s3');
           req.session.user = {
             isLoggedIn: true,
           };
-          console.log('s4');
           await req.session.save();
-          console.log('s5');
           data.response = {
             isPasswordCorrect: true,
           };
-          console.log('s6');
           data.comment = 'Correct password';
-          console.log('s7');
           status = 200;
-          console.log('s8');
         } else {
-          console.log('s9');
           data.response = {
             isPasswordCorrect: false,
           };
@@ -59,16 +49,13 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
           status = 401;
         }
       } catch (err) {
-        console.log('s11');
         console.log(err);
         status = 500;
         data.comment = `Failed to post: ${err}`;
       }
       break;
     case 'DELETE':
-      console.log('s12');
       req.session.destroy();
-      console.log('s13');
       data.response = {
         isLoggedIn: false,
       };
@@ -83,7 +70,6 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
       status = 405;
       break;
   }
-  console.log('s14');
   res.status(status!).json(data);
 }
 
