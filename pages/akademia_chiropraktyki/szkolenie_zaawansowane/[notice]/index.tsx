@@ -49,12 +49,8 @@ export const getServerSideProps = async (
   context: GetServerSidePropsContext
 ) => {
   try {
-    console.log(
-      `test link: ${process.env.NEXT_PUBLIC_PUBLIC_URL}/api/notices/advanced/${context.params?.notice}`
-    );
-
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_PUBLIC_URL}/api/notices/advanced/${context.params?.notice}`,
+      `https://dyczekpl.cfolks.pl/api/notices/advanced/${context.params?.notice}`,
       {
         method: `GET`,
         headers: {

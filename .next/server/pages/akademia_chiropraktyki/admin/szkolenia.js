@@ -248,7 +248,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_i18next_serverSideTranslations__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(5460);
 /* harmony import */ var next_i18next_serverSideTranslations__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_i18next_serverSideTranslations__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _components_akademiaAdminEditor_AkademiaAdminEditor__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(7244);
-/* harmony import */ var _components_adminPassFrame_AdminPassFrame__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(9327);
+/* harmony import */ var _components_adminPassFrame_AdminPassFrame__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(5297);
 /* harmony import */ var recoil__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(9755);
 /* harmony import */ var recoil__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(recoil__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var _recoilMain__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(4729);

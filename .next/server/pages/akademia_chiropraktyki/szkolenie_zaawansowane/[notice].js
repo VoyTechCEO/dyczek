@@ -82,8 +82,7 @@ const Akademia = ({ noticeData  })=>{
 };
 const getServerSideProps = async (context)=>{
     try {
-        console.log(`test link: ${"http://localhost:3000"}/api/notices/advanced/${context.params?.notice}`);
-        const res = await fetch(`${"http://localhost:3000"}/api/notices/advanced/${context.params?.notice}`, {
+        const res = await fetch(`https://dyczekpl.cfolks.pl/api/notices/advanced/${context.params?.notice}`, {
             method: `GET`,
             headers: {
                 "Content-Type": "application/json"
