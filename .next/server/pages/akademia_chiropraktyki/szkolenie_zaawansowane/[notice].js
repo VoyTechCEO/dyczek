@@ -82,6 +82,7 @@ const Akademia = ({ noticeData  })=>{
 };
 const getServerSideProps = async (context)=>{
     try {
+        console.log(`test link: ${"http://localhost:3000"}/api/notices/advanced/${context.params?.notice}`);
         const res = await fetch(`${"http://localhost:3000"}/api/notices/advanced/${context.params?.notice}`, {
             method: `GET`,
             headers: {
@@ -89,6 +90,7 @@ const getServerSideProps = async (context)=>{
             }
         });
         const data = await res.json();
+        console.log(`test data: ${data}`);
         const noticeData = data.response;
         return {
             props: {

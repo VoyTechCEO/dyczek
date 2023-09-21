@@ -49,6 +49,10 @@ export const getServerSideProps = async (
   context: GetServerSidePropsContext
 ) => {
   try {
+    console.log(
+      `test link: ${process.env.NEXT_PUBLIC_PUBLIC_URL}/api/notices/advanced/${context.params?.notice}`
+    );
+
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_PUBLIC_URL}/api/notices/advanced/${context.params?.notice}`,
       {
@@ -59,6 +63,8 @@ export const getServerSideProps = async (
       }
     );
     const data = await res.json();
+    console.log(`test data: ${data}`);
+
     const noticeData: AkademiaTraining = data.response;
 
     return {

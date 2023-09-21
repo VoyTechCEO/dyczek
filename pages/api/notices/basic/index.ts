@@ -16,7 +16,6 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
     case 'GET':
       try {
         const basicTraining = await prisma.noticeBasic.findMany();
-        console.log(basicTraining);
         status = 200;
         data.comment = 'Got';
         data.response = basicTraining[0];
@@ -70,7 +69,6 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
       status = 405;
       break;
   }
-  console.log(data);
   res.status(status).json(data);
 }
 

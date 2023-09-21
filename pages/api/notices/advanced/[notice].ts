@@ -15,17 +15,32 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   let noticeId: string | string[] = req.query.notice!;
   switch (req.method) {
     case 'GET':
+      console.log(1);
       try {
+        console.log(typeof noticeId);
+        console.log(noticeId);
+        console.log(noticeId[0]);
+        console.log(2);
+        console.log(await prisma.noticeAdvanced.findMany());
+        console.log(
+          await prisma.noticeAdvanced.findUnique({
+            where: {
+              id: typeof noticeId === `string` ? noticeId : noticeId[0],
+            },
+          })
+        );
         const advancedTraining: AkademiaTraining | null =
           await prisma.noticeAdvanced.findUnique({
             where: {
               id: typeof noticeId === `string` ? noticeId : noticeId[0],
             },
           });
+        console.log(3);
         status = 200;
         data.comment = 'Got';
         data.response = advancedTraining;
       } catch (err) {
+        console.log(4);
         console.log(err);
         data.comment = `Error: ${err}`;
         status = 500;
