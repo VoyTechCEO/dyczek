@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/ojQCJVKWAZNXwF8P8-xvo/_buildManifest.js",
-    "static/ojQCJVKWAZNXwF8P8-xvo/_ssgManifest.js"
+    "static/qJF1prjYEDJCl1oDmI15J/_buildManifest.js",
+    "static/qJF1prjYEDJCl1oDmI15J/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -61,7 +61,7 @@
       "static/chunks/918-b8a60561b56d2e89.js",
       "static/chunks/183-d4ea052c36ed824c.js",
       "static/css/f26006f2c08ac671.css",
-      "static/chunks/pages/akademia_chiropraktyki/admin/szkolenia-dfe4b1cfea6243de.js"
+      "static/chunks/pages/akademia_chiropraktyki/admin/szkolenia-8c31dcab18d0730f.js"
     ],
     "/akademia_chiropraktyki/fakty": [
       "static/chunks/webpack-59c5c889f52620d6.js",

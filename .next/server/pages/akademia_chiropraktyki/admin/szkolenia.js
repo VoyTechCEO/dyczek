@@ -167,7 +167,7 @@ const AkademiaDocument = ()=>{
                         }),
                         /*#__PURE__*/ jsx_runtime_.jsx(tinymce_react_namespaceObject.Editor, {
                             id: "EditorID",
-                            tinymceScriptSrc: "https://dyczekpl.cfolks.pl/tinymce/tinymce.min.js",
+                            tinymceScriptSrc: "http://localhost:3000" + "/tinymce/tinymce.min.js",
                             onInit: (evt, editor)=>editorRef.current = editor,
                             initialValue: "<p>This is the initial content of the editor.</p>",
                             init: {
