@@ -1,0 +1,20 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/dyczekpl/domains/dyczekpl.cfolks.pl/dyczek_next_app_3"
+PassengerBaseURI "/"
+PassengerNodejs "/home/dyczekpl/nodevenv/domains/dyczekpl.cfolks.pl/dyczek_next_app_3/18/bin/node"
+PassengerAppType node
+PassengerStartupFile .next/server/pages/index.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+DirectoryIndex disabled
+RewriteEngine On
+RewriteRule ^$ http://127.0.0.1:3000/ [P,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ http://127.0.0.1:3000/$1 [P,L]
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/dyczekpl/domains/dyczekpl.cfolks.pl/nowytestowy"
+PassengerBaseURI "/"
+PassengerNodejs "/home/dyczekpl/nodevenv/domains/dyczekpl.cfolks.pl/nowytestowy/18/bin/node"
+PassengerAppType node
+PassengerStartupFile .next/server/pages/index.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END

@@ -89,7 +89,6 @@ const getServerSideProps = async (context)=>{
             }
         });
         const data = await res.json();
-        console.log(`test data: ${data}`);
         const noticeData = data.response;
         return {
             props: {
@@ -101,7 +100,6 @@ const getServerSideProps = async (context)=>{
             }
         };
     } catch (err) {
-        console.log(err);
         return {
             redirect: {
                 destination: "/akademia_chiropraktyki/szkolenie_zaawansowane",

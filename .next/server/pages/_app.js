@@ -175,7 +175,6 @@ const AppWrapper = ({ children  })=>{
                 }
             });
             const data = await res.json();
-            console.log(data);
             setIsUserLoggedIn(data.response.isLoggedIn);
             setIsAppLoaded(true);
         } catch (err) {

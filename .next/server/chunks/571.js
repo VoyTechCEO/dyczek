@@ -29,7 +29,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 5297:
+/***/ 9327:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -65,7 +65,6 @@ const AdminPassFrame = ()=>{
                 })
             });
             const data = await res.json();
-            console.log(data);
             setLoginStatus(data.response.isPasswordCorrect);
             if (data.response.isPasswordCorrect) {
                 router.reload();
