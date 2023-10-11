@@ -60,8 +60,6 @@ export const getServerSideProps = async (
     );
     const data = await res.json();
     const noticeData: AkademiaTraining = data.response;
-    console.log(process.env.NEXT_PUBLIC_PUBLIC_URL);
-    console.log('https://dyczekpl.cfolks.pl  test');
 
     return {
       props: {

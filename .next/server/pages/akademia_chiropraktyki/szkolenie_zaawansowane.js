@@ -184,8 +184,6 @@ async function getStaticProps({ locale  }) {
 const Akademia = ()=>{
     const { t  } = (0,next_i18next__WEBPACK_IMPORTED_MODULE_9__.useTranslation)();
     const [advancedNoticesList, setAdvancedNoticesList] = (0,recoil__WEBPACK_IMPORTED_MODULE_13__.useRecoilState)(_recoilMain__WEBPACK_IMPORTED_MODULE_14__/* .advancedNoticesListState */ .IP);
-    console.log("http://localhost:3000");
-    console.log("https://dyczekpl.cfolks.pl  test");
     const getNoticesData = async ()=>{
         try {
             const res = await fetch(`/api/notices/advanced`, {
