@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/DiCtXqUOt6-gGQLL_QesR/_buildManifest.js",
-    "static/DiCtXqUOt6-gGQLL_QesR/_ssgManifest.js"
+    "static/5mLLH8aNnSqVlMHBG66IN/_buildManifest.js",
+    "static/5mLLH8aNnSqVlMHBG66IN/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -151,7 +151,7 @@
       "static/chunks/5-b54f7bae86bc64c0.js",
       "static/chunks/183-d4ea052c36ed824c.js",
       "static/css/6df124a65e0f83c9.css",
-      "static/chunks/pages/akademia_chiropraktyki/szkolenie_zaawansowane-d6fe7ac3e170e75e.js"
+      "static/chunks/pages/akademia_chiropraktyki/szkolenie_zaawansowane-9c6058a00cbb6822.js"
     ],
     "/akademia_chiropraktyki/szkolenie_zaawansowane/[notice]": [
       "static/chunks/webpack-59c5c889f52620d6.js",
@@ -262,7 +262,7 @@
       "static/chunks/212-94017e9edac6b4a2.js",
       "static/chunks/183-d4ea052c36ed824c.js",
       "static/css/173493e6a0cc820a.css",
-      "static/chunks/pages/akupunktura_kosmetyczna/pytania_i_odpowiedzi-9da18f48214ba5d2.js"
+      "static/chunks/pages/akupunktura_kosmetyczna/pytania_i_odpowiedzi-621cd57b954bafff.js"
     ],
     "/akupunktura_kosmetyczna/rezultaty": [
       "static/chunks/webpack-59c5c889f52620d6.js",
@@ -344,7 +344,7 @@
       "static/chunks/212-94017e9edac6b4a2.js",
       "static/chunks/183-d4ea052c36ed824c.js",
       "static/css/c891a7af47fd1dcd.css",
-      "static/chunks/pages/instytut_medycyny_orientalnej/teksty_zrodlowe-8a7080f693e0ad10.js"
+      "static/chunks/pages/instytut_medycyny_orientalnej/teksty_zrodlowe-2f90e726c96a1f59.js"
     ],
     "/instytut_medycyny_orientalnej/wydarzenia": [
       "static/chunks/webpack-59c5c889f52620d6.js",

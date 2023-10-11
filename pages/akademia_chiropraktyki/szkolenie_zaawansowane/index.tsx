@@ -34,6 +34,9 @@ const Akademia: NextPage = () => {
     advancedNoticesListState
   );
 
+  console.log(process.env.NEXT_PUBLIC_PUBLIC_URL);
+  console.log('https://dyczekpl.cfolks.pl  test');
+
   const getNoticesData = async () => {
     try {
       const res = await fetch(`/api/notices/advanced`, {
