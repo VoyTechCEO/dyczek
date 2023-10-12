@@ -82,7 +82,7 @@ const Akademia = ({ noticeData  })=>{
 };
 const getServerSideProps = async (context)=>{
     try {
-        const res = await fetch(`${"https://dyczekpl.cfolks.pl"}/api/notices/advanced/${context.params?.notice}`, {
+        const res = await fetch(`${"https://subdyczek.dyczekpl.cfolks.pl"}/api/notices/advanced/${context.params?.notice}`, {
             method: `GET`,
             headers: {
                 "Content-Type": "application/json"
