@@ -34,6 +34,8 @@ const Akademia: NextPage = () => {
     advancedNoticesListState
   );
 
+  console.log(`${process.env.NEXT_PUBLIC_PUBLIC_URL} testujemy`);
+
   const getNoticesData = async () => {
     try {
       const res = await fetch(`/api/notices/advanced`, {

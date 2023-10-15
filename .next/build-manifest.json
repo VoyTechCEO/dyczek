@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/xF41S6YIhjNbIKZfRsZod/_buildManifest.js",
-    "static/xF41S6YIhjNbIKZfRsZod/_ssgManifest.js"
+    "static/ZSOCmolJ45AO7EonMhwe1/_buildManifest.js",
+    "static/ZSOCmolJ45AO7EonMhwe1/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -151,7 +151,7 @@
       "static/chunks/5-b54f7bae86bc64c0.js",
       "static/chunks/183-d4ea052c36ed824c.js",
       "static/css/6df124a65e0f83c9.css",
-      "static/chunks/pages/akademia_chiropraktyki/szkolenie_zaawansowane-d6fe7ac3e170e75e.js"
+      "static/chunks/pages/akademia_chiropraktyki/szkolenie_zaawansowane-0a9b9af5e0cbadf4.js"
     ],
     "/akademia_chiropraktyki/szkolenie_zaawansowane/[notice]": [
       "static/chunks/webpack-59c5c889f52620d6.js",
