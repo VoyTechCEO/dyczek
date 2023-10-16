@@ -74,12 +74,10 @@ async function handler(req, res) {
     let noticeId = req.query.notice;
     switch(req.method){
         case "GET":
-            console.log(1);
             try {
                 console.log(typeof noticeId);
                 console.log(noticeId);
                 console.log(noticeId[0]);
-                console.log(2);
                 console.log(await _lib_prismaClient__WEBPACK_IMPORTED_MODULE_2__/* .prisma.noticeAdvanced.findMany */ ._.noticeAdvanced.findMany());
                 console.log(await _lib_prismaClient__WEBPACK_IMPORTED_MODULE_2__/* .prisma.noticeAdvanced.findUnique */ ._.noticeAdvanced.findUnique({
                     where: {
@@ -91,12 +89,10 @@ async function handler(req, res) {
                         id: typeof noticeId === `string` ? noticeId : noticeId[0]
                     }
                 });
-                console.log(3);
                 status = 200;
                 data.comment = "Got";
                 data.response = advancedTraining;
             } catch (err) {
-                console.log(4);
                 console.log(err);
                 data.comment = `Error: ${err}`;
                 status = 500;
